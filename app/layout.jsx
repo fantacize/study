@@ -6,7 +6,7 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata = {
-  title: "Philosophy Study Studio",
+  title: "Study Studio",
   description:
     "Study app with flashcards, MCQs, free response, matching, and cram tools.",
 };

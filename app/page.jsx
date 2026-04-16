@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState, useCallback } from "react";
 import { studyData } from "../data.js";
+import { amstudsData } from "../amstuds-data.js";
 import { cn } from "@/lib/utils";
 import { useLocalStorage, useStudyTimer } from "@/lib/hooks";
 import { Button } from "@/components/ui/button";
@@ -55,12 +56,58 @@ function formatTime(seconds) {
   return `${m}:${s.toString().padStart(2, "0")}`;
 }
 
+function LandingPage({ onSelect, darkMode, setDarkMode }) {
+  const subjects = [
+    { id: "philosophy", label: "Philosophy", description: "Chapters 1 & 2 — What Philosophy Is, Models of Human Nature", icon: "🏛️", color: "from-violet-500 to-purple-600" },
+    { id: "amstuds", label: "AmStuds", description: "Cold War, Affluent Society, Civil Rights, Vietnam, Nixon", icon: "🇺🇸", color: "from-blue-500 to-red-500" },
+  ];
+
+  return (
+    <div className="mx-auto flex min-h-[80vh] max-w-4xl flex-col items-center justify-center px-4 py-12">
+      <div className="absolute right-4 top-4">
+        <Button variant="outline" size="sm" onClick={() => setDarkMode((v) => !v)}>
+          {darkMode ? "Light" : "Dark"}
+        </Button>
+      </div>
+      <h1 className="mb-2 text-4xl font-bold tracking-tight">Study Studio</h1>
+      <p className="mb-10 text-lg text-muted-foreground">Pick a subject</p>
+      <div className="grid w-full gap-6 sm:grid-cols-2">
+        {subjects.map((s) => (
+          <Card
+            key={s.id}
+            className="group cursor-pointer transition-all hover:shadow-lg hover:-translate-y-1"
+            onClick={() => onSelect(s.id)}
+          >
+            <CardContent className="flex flex-col items-center p-8 text-center">
+              <div className={cn("mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br text-3xl", s.color)}>
+                {s.icon}
+              </div>
+              <h2 className="mb-2 text-2xl font-bold">{s.label}</h2>
+              <p className="text-sm text-muted-foreground">{s.description}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function Page() {
+  const [subject, setSubject] = useLocalStorage("study-subject", null);
+  const activeData = subject === "amstuds" ? amstudsData : studyData;
+
   const [chapter, setChapter] = useState("all");
   const [mode, setMode] = useState("overview");
   const [search, setSearch] = useState("");
   const [darkMode, setDarkMode] = useLocalStorage("study-dark-mode", false);
   const [showSummary, setShowSummary] = useState(false);
+
+  // Term IDs state
+  const [termIndex, setTermIndex] = useState(0);
+  const [termRevealed, setTermRevealed] = useState(false);
+  const [termDraft, setTermDraft] = useState("");
+  const [termScores, setTermScores] = useLocalStorage("study-term-scores", {});
+  const [termShuffled, setTermShuffled] = useState(false);
 
   // Dark mode effect
   useEffect(() => {
@@ -110,7 +157,7 @@ export default function Page() {
 
   // Filtered data
   const filteredFlashcards = useMemo(() => {
-    let cards = studyData.flashcards.filter((card) => {
+    let cards = activeData.flashcards.filter((card) => {
       const chapterMatch = chapter === "all" || card.chapter === chapter;
       const searchMatch = matchesSearch([card.tag, card.prompt, card.answer], search);
       return chapterMatch && searchMatch;
@@ -123,7 +170,7 @@ export default function Page() {
 
   const filteredQuiz = useMemo(
     () =>
-      studyData.quiz.filter((item) => {
+      activeData.quiz.filter((item) => {
         const chapterMatch = chapter === "all" || item.chapter === chapter;
         const searchMatch = matchesSearch(
           [item.tag, item.question, item.options.join(" "), item.explanation],
@@ -135,13 +182,13 @@ export default function Page() {
   );
 
   const missedQuizItems = useMemo(
-    () => studyData.quiz.filter((item) => missedQuestions.includes(item.question)),
+    () => activeData.quiz.filter((item) => missedQuestions.includes(item.question)),
     [missedQuestions]
   );
 
   const filteredFreeResponse = useMemo(
     () =>
-      studyData.shortAnswers.filter((item) => {
+      activeData.shortAnswers.filter((item) => {
         const chapterMatch = chapter === "all" || item.chapter === chapter;
         const searchMatch = matchesSearch([item.prompt, item.include.join(" ")], search);
         return chapterMatch && searchMatch;
@@ -151,7 +198,7 @@ export default function Page() {
 
   const filteredMatchingSets = useMemo(
     () =>
-      studyData.matchingSets.filter((set) => {
+      activeData.matchingSets.filter((set) => {
         const chapterMatch = chapter === "all" || set.chapter === chapter;
         const searchMatch = matchesSearch(
           [set.title, ...set.pairs.map((p) => p.term), ...set.pairs.map((p) => p.definition)],
@@ -164,7 +211,7 @@ export default function Page() {
 
   const filteredComparisons = useMemo(
     () =>
-      studyData.comparisons.filter((item) => {
+      activeData.comparisons.filter((item) => {
         const chapterMatch = chapter === "all" || item.chapter === chapter;
         const searchMatch = matchesSearch([item.title, item.summary, item.whyItMatters], search);
         return chapterMatch && searchMatch;
@@ -173,13 +220,13 @@ export default function Page() {
   );
 
   const overviewData = useMemo(() => {
-    const chapterMap = studyData.overview.chapterMap.filter(
+    const chapterMap = activeData.overview.chapterMap.filter(
       (entry) => chapter === "all" || entry.chapter.toLowerCase().replace(" ", "-") === chapter
     );
     return {
-      chapterMap: chapterMap.length ? chapterMap : studyData.overview.chapterMap,
-      likelyQuestions: studyData.overview.likelyQuestions.filter((q) => matchesSearch([q], search)),
-      cramChecklist: studyData.overview.cramChecklist.filter((item) => matchesSearch([item], search)),
+      chapterMap: chapterMap.length ? chapterMap : activeData.overview.chapterMap,
+      likelyQuestions: activeData.overview.likelyQuestions.filter((q) => matchesSearch([q], search)),
+      cramChecklist: activeData.overview.cramChecklist.filter((item) => matchesSearch([item], search)),
     };
   }, [chapter, search]);
 
@@ -195,10 +242,10 @@ export default function Page() {
 
   // ===== Overall mastery % =====
   const mastery = useMemo(() => {
-    const totalFlashcards = studyData.flashcards.length;
-    const totalQuiz = studyData.quiz.length;
-    const totalFR = studyData.shortAnswers.length;
-    const totalMatching = studyData.matchingSets.reduce((s, set) => s + set.pairs.length, 0);
+    const totalFlashcards = activeData.flashcards.length;
+    const totalQuiz = activeData.quiz.length;
+    const totalFR = activeData.shortAnswers.length;
+    const totalMatching = activeData.matchingSets.reduce((s, set) => s + set.pairs.length, 0);
     const totalItems = totalFlashcards + totalQuiz + totalFR + totalMatching;
     if (totalItems === 0) return 0;
 
@@ -515,14 +562,71 @@ export default function Page() {
     { label: "Matching score", value: `${matchingCorrect}/${matchingAttempts}` },
   ];
 
+  // Filtered term IDs
+  const filteredTermIds = useMemo(() => {
+    if (!activeData.termIds) return [];
+    return activeData.termIds.filter((t) => {
+      const chapterMatch = chapter === "all" || t.unit === chapter;
+      const searchMatch = matchesSearch([t.term, t.definition, t.tag], search);
+      return chapterMatch && searchMatch;
+    });
+  }, [activeData, chapter, search]);
+
+  const currentTerm = filteredTermIds[Math.min(termIndex, Math.max(filteredTermIds.length - 1, 0))];
+
+  const shuffledTermIds = useMemo(() => {
+    if (!termShuffled) return filteredTermIds;
+    return shuffle(filteredTermIds);
+  }, [filteredTermIds, termShuffled]);
+
+  const displayTerm = termShuffled
+    ? shuffledTermIds[Math.min(termIndex, Math.max(shuffledTermIds.length - 1, 0))]
+    : currentTerm;
+
+  const termList = termShuffled ? shuffledTermIds : filteredTermIds;
+
+  function nextTerm(step = 1) {
+    if (!termList.length) return;
+    setTermRevealed(false);
+    setTermDraft("");
+    setTermIndex((c) => (c + step + termList.length) % termList.length);
+  }
+
+  function scoreTerm(term, score) {
+    setTermScores((c) => ({ ...c, [term]: score }));
+    setTimeout(() => nextTerm(1), 300);
+  }
+
+  // Reset state when switching subjects
+  function selectSubject(id) {
+    setSubject(id);
+    setChapter("all");
+    setMode("overview");
+    setSearch("");
+  }
+
+  if (!subject) {
+    return <LandingPage onSelect={selectSubject} darkMode={darkMode} setDarkMode={setDarkMode} />;
+  }
+
+  const subjectLabel = subject === "amstuds" ? "AmStuds" : "Philosophy";
+  const subjectDesc = subject === "amstuds"
+    ? "Cold War, Affluent Society, Civil Rights, Vietnam, Nixon"
+    : "Active review for Chapters 1 & 2";
+
   return (
     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
       {/* Header */}
       <div className="mb-8 flex items-start justify-between print:hidden">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Philosophy Study Studio</h1>
+          <div className="flex items-center gap-3">
+            <Button variant="ghost" size="sm" className="text-muted-foreground" onClick={() => setSubject(null)}>
+              &larr; Back
+            </Button>
+            <h1 className="text-3xl font-bold tracking-tight">{subjectLabel} Study Studio</h1>
+          </div>
           <p className="mt-1 text-muted-foreground">
-            Active review for Chapters 1 & 2
+            {subjectDesc}
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -649,7 +753,7 @@ export default function Page() {
       <div className="mb-6 space-y-4 print:hidden">
         <div className="flex flex-wrap items-center gap-3">
           <div className="flex flex-wrap gap-2">
-            {studyData.chapters.map((ch) => (
+            {activeData.chapters.map((ch) => (
               <Button key={ch.id} variant={chapter === ch.id ? "default" : "outline"} size="sm" onClick={() => setChapter(ch.id)}>
                 {ch.label}
               </Button>
@@ -662,7 +766,7 @@ export default function Page() {
 
         <Tabs value={mode} onValueChange={setMode}>
           <TabsList>
-            {studyData.modes.map((m) => (
+            {activeData.modes.map((m) => (
               <TabsTrigger key={m.id} value={m.id}>
                 {m.label}
                 {m.id === "review-mistakes" && missedQuestions.length > 0 && (
@@ -704,6 +808,98 @@ export default function Page() {
           </Button>
         </div>
       </div>
+
+      {/* ===== TERM IDs ===== */}
+      {mode === "term-ids" && activeData.termIds && (
+        <div className="space-y-4 animate-in fade-in-0 slide-in-from-bottom-2 duration-300">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <h2 className="text-lg font-semibold">Term IDs</h2>
+              <Badge variant="secondary">{termList.length} terms</Badge>
+            </div>
+            <span className="text-sm text-muted-foreground">
+              {termList.length ? `${termIndex + 1} of ${termList.length}` : "0 of 0"}
+            </span>
+          </div>
+
+          <Card className="overflow-visible">
+            <CardContent className="space-y-4 p-6">
+              {displayTerm ? (
+                <>
+                  <div className="flex items-center gap-2">
+                    <Badge variant="secondary">{displayTerm.tag}</Badge>
+                    {termScores[displayTerm.term] && (
+                      <Badge variant={termScores[displayTerm.term] === "knew" ? "outline" : "secondary"}>
+                        {termScores[displayTerm.term] === "knew" ? "Confident" : "Needs work"}
+                      </Badge>
+                    )}
+                  </div>
+                  <h3 className="text-2xl font-bold">{displayTerm.term}</h3>
+                  <p className="text-sm text-muted-foreground">Write what you know about this term, then reveal the answer.</p>
+                  <Textarea
+                    placeholder="What is this term? Describe it..."
+                    className="min-h-[120px]"
+                    value={termDraft}
+                    onChange={(e) => setTermDraft(e.target.value)}
+                  />
+                  <div className="flex flex-wrap gap-2">
+                    <Button size="sm" onClick={() => setTermRevealed((v) => !v)}>
+                      {termRevealed ? "Hide answer" : "Reveal answer"}
+                    </Button>
+                    <Button variant="outline" size="sm" onClick={() => nextTerm(-1)}>Previous</Button>
+                    <Button variant="outline" size="sm" onClick={() => nextTerm(1)}>Next</Button>
+                    <Button variant="outline" size="sm" onClick={() => { setTermShuffled((v) => !v); setTermIndex(0); }}>
+                      {termShuffled ? "In order" : "Shuffle"}
+                    </Button>
+                  </div>
+                  {termRevealed && (
+                    <div className="rounded-lg border bg-muted/50 p-4">
+                      <p className="text-sm font-semibold mb-1">Definition:</p>
+                      <p className="text-sm leading-relaxed">{displayTerm.definition}</p>
+                      <div className="mt-4 flex gap-2">
+                        <Button
+                          size="sm"
+                          variant={termScores[displayTerm.term] === "knew" ? "default" : "outline"}
+                          className={cn(termScores[displayTerm.term] !== "knew" && "border-green-500 text-green-700 hover:bg-green-50 dark:text-green-400 dark:hover:bg-green-950")}
+                          onClick={() => scoreTerm(displayTerm.term, "knew")}
+                        >
+                          Knew it
+                        </Button>
+                        <Button
+                          size="sm"
+                          variant={termScores[displayTerm.term] === "didnt-know" ? "default" : "outline"}
+                          className={cn(termScores[displayTerm.term] !== "didnt-know" && "border-red-500 text-red-700 hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-950")}
+                          onClick={() => scoreTerm(displayTerm.term, "didnt-know")}
+                        >
+                          Didn't know
+                        </Button>
+                      </div>
+                    </div>
+                  )}
+                </>
+              ) : (
+                <p className="text-muted-foreground">No terms match this filter.</p>
+              )}
+            </CardContent>
+          </Card>
+
+          {/* Term ID progress */}
+          {Object.keys(termScores).length > 0 && (
+            <div className="rounded-lg border bg-card p-4">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-sm font-semibold">Progress</span>
+                <span className="text-sm text-muted-foreground">
+                  {Object.values(termScores).filter((v) => v === "knew").length} / {termList.length} confident
+                </span>
+              </div>
+              <Progress
+                value={termList.length ? (Object.values(termScores).filter((v) => v === "knew").length / termList.length) * 100 : 0}
+                className="h-2"
+              />
+            </div>
+          )}
+        </div>
+      )}
 
       {/* ===== OVERVIEW ===== */}
       {mode === "overview" && (
@@ -944,7 +1140,7 @@ export default function Page() {
               {freeResponsePrompt ? (
                 <>
                   <Badge variant="secondary">
-                    {freeResponsePrompt.chapter === "chapter-1" ? "Chapter 1" : "Chapter 2"}
+                    {activeData.chapters.find((c) => c.id === freeResponsePrompt.chapter)?.label || freeResponsePrompt.chapter}
                   </Badge>
                   <h3 className="text-lg font-semibold">{freeResponsePrompt.prompt}</h3>
                   <p className="text-sm text-muted-foreground">
@@ -1008,7 +1204,7 @@ export default function Page() {
             <CardContent className="space-y-4 p-6">
               {matchingSet ? (
                 <>
-                  <Badge variant="secondary">{matchingSet.chapter === "chapter-1" ? "Chapter 1" : "Chapter 2"}</Badge>
+                  <Badge variant="secondary">{activeData.chapters.find((c) => c.id === matchingSet.chapter)?.label || matchingSet.chapter}</Badge>
                   <h3 className="text-lg font-semibold">{matchingSet.title}</h3>
                   <p className="text-sm text-muted-foreground">Pick one term and one definition. Correct pairs lock in.</p>
                   <div className="grid gap-4 md:grid-cols-2">
@@ -1073,11 +1269,11 @@ export default function Page() {
             <p className="text-sm text-gray-600">Chapters 1 & 2 — Comparisons & Memory Anchors</p>
           </div>
           <div id="cram-content" className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 print:grid-cols-2 print:gap-2">
-            {studyData.comparisons.map((item, i) => (
+            {activeData.comparisons.map((item, i) => (
               <Card key={`${item.chapter}-${item.title}-${i}`} className="print:shadow-none print:border-gray-300">
                 <CardContent className="p-4 print:p-2">
                   <Badge variant="outline" className="mb-2 print:text-[10px]">
-                    {item.chapter === "chapter-1" ? "Ch 1" : "Ch 2"}
+                    {activeData.chapters.find((c) => c.id === item.chapter)?.label || item.chapter}
                   </Badge>
                   <h3 className="mb-1 font-semibold print:text-sm">{item.title}</h3>
                   <p className="text-sm text-muted-foreground print:text-xs">

@@ -182,6 +182,78 @@ The white moderate:
 
 ---
 
+## The Clergymen's Full Public Statement (April 12, 1963)
+
+### "An Appeal for Law and Order and Common Sense" - The Earlier Statement (January 1963)
+The eight ministers had previously published a statement with **eight chief claims**:
+1. Hatred and violence have no sanction in our religious and political traditions
+2. There may be disagreement concerning laws and social change without advocating defiance, anarchy, and subversion
+3. Laws may be tested in courts or changed by legislatures, but not ignored by whims of individuals
+4. Constitutions may be amended or judges impeached, but obedience to court decisions is required in the meantime
+5. No person's freedom is safe unless every person's freedom is equally protected
+6. Freedom of speech must be preserved and exercised without fear of recrimination or harassment
+7. Every human being is created in the image of God and is entitled to respect as a fellow human being with all basic rights, privileges, and responsibilities
+
+### The April 12 Statement (What King Responded To)
+> "We are now confronted by a series of demonstrations by some of our Negro citizens, directed and led in part by outsiders. We recognize the natural impatience of people who feel that their hopes are slow in being realized. But we are convinced that these demonstrations are unwise and untimely."
+
+> "We agree rather with certain local Negro leadership which has called for honest and open negotiation of racial issues in our area."
+
+> "When rights are consistently denied, a cause should be pressed in the courts and in negotiations among local leaders, and not in the streets."
+
+**The Eight Signers:**
+- C.C.J. Carpenter, D.D., LL.D. [Episcopal] Bishop of Alabama
+- Joseph A. Durick, D.D. [Roman Catholic] Auxiliary Bishop, Diocese of Mobile
+- Rabbi Hilton L. Grafman [Reformed] Temple Emanu-El, Birmingham
+- Bishop Paul Hardin [Methodist] Alabama-West Florida Conference
+- Bishop Nolan B. Harmon, North Alabama Conference of the Methodist Church
+- George M. Murray, D.D., LL.D., Bishop Coadjutor, Episcopal Diocese of Alabama
+- Edward V. Ramage, Moderator, Synod of the Alabama Presbyterian Church
+- Earl Stallings, Pastor, First Baptist Church, Birmingham
+
+---
+
+## Additional Key Quotes from the Presentation
+
+### On Civil Disobedience
+> "We had no alternative except that of preparing for direct action, whereby we would present our very bodies as a means of laying our case before the conscience of the local and national community."
+
+### On Nonviolent Gadflies (Socrates Analogy)
+> "Just as Socrates felt that it was necessary to create a tension in the mind so that individuals could rise from the bondage of myths and half-truths to the unfettered realm of creative analysis and objective appraisal, **we must see the need of having nonviolent gadflies** to create the kind of tension in society that will help men to rise from the dark depths of prejudice and racism to the majestic heights of understanding and brotherhood."
+
+### On the Necessity for Pressure
+- "History is the long and tragic story of the fact that privileged groups seldom give up their privileges voluntarily"
+- "Freedom is never voluntarily given by the oppressor; it must be demanded by the oppressed"
+
+---
+
+## Discussion Questions (from Primary Source Activity)
+
+### On Being an Outsider (Excerpt 1)
+1. What are King's reasons for being in Birmingham?
+2. How does King answer the charge of being an outsider?
+3. "Injustice anywhere is a threat to justice everywhere" is one of King's most famous quotes. What does this mean for people who have ignored the issues in Birmingham? What does this mean today for each of us living in the United States?
+
+### On Waiting (Excerpt 2)
+1. Choose an example from United States history that represents the "painful experience that freedom is never voluntarily given by the oppressor." Choose an example that illustrates his point that "justice too long delayed is justice denied."
+2. King's letter is a response to white moderates asking him to give the City of Birmingham time to act rather than engaging in nonviolent resistance. What case does he make against waiting? Is it persuasive?
+
+### On Just vs. Unjust Laws (Excerpt 3)
+1. King describes two types of law, just and unjust, how does he define each?
+2. Can you give other examples in the present of unjust laws you feel a moral obligation to disobey?
+3. Would you be willing to accept the consequences of disobeying an unjust law?
+4. What are the effects of segregation?
+
+### On Civil Disobedience and the White Moderate (Excerpt 4)
+1. King lists a number of historical examples of civil disobedience. For each example there were hundreds, thousands, even millions who chose to accept an unjust law. Why do citizens choose to be silent about a law they may find unjust?
+2. What are the social and legal consequences for civil disobedience?
+
+### On Extremism (Excerpt 5)
+1. Why does King welcome the label extremist?
+2. Based on this letter, what is King's view of the proper response of a wise person to a corrupt world?
+
+---
+
 ## Key Themes for Study
 1. **Interconnectedness**: Injustice anywhere threatens justice everywhere
 2. **Tension as tool**: Nonviolent action creates constructive tension that forces change
