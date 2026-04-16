@@ -22,7 +22,8 @@ export const studyData = {
     { id: "quiz", label: "MCQ" },
     { id: "free-response", label: "Free Response" },
     { id: "matching", label: "Matching" },
-    { id: "cram", label: "Cram Sheet" }
+    { id: "cram", label: "Cram Sheet" },
+    { id: "review-mistakes", label: "Review Mistakes" }
   ],
   overview: {
     chapterMap: [

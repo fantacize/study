@@ -1,28 +1,34 @@
-import { Fraunces, Manrope, Geist } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-display"
-});
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-body"
-});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
+const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata = {
   title: "Philosophy Study Studio",
-  description: "Next.js study app with flashcards, MCQs, free response, matching, and cram tools."
+  description:
+    "Study app with flashcards, MCQs, free response, matching, and cram tools.",
 };
 
 export default function RootLayout({ children }) {
+  // Inline script to prevent dark mode flash — only reads a boolean from localStorage
+  // No user input involved, static hardcoded string, no XSS risk
+  const darkModeScript = `try{if(localStorage.getItem("study-dark-mode")==="true")document.documentElement.classList.add("dark")}catch(e){}`;
+
   return (
-    <html lang="en" suppressHydrationWarning className={cn("font-sans", geist.variable)}>
-      <body suppressHydrationWarning className={`${fraunces.variable} ${manrope.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: darkModeScript }} />
+      </head>
+      <body
+        suppressHydrationWarning
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          geist.variable,
+          geistMono.variable
+        )}
+      >
         {children}
       </body>
     </html>

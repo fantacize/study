@@ -127,3 +127,19 @@
     @apply font-sans;
     }
 }
+
+@media print {
+  .print\:hidden {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 11px !important;
+  }
+
+  * {
+    box-shadow: none !important;
+  }
+}
