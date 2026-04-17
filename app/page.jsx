@@ -220,12 +220,12 @@ export default function Page() {
         );
         return chapterMatch && searchMatch;
       }),
-    [chapter, search]
+    [activeData, chapter, search]
   );
 
   const missedQuizItems = useMemo(
     () => activeData.quiz.filter((item) => missedQuestions.includes(item.question)),
-    [missedQuestions]
+    [activeData, missedQuestions]
   );
 
   const filteredFreeResponse = useMemo(
@@ -235,7 +235,7 @@ export default function Page() {
         const searchMatch = matchesSearch([item.prompt, item.include.join(" ")], search);
         return chapterMatch && searchMatch;
       }),
-    [chapter, search]
+    [activeData, chapter, search]
   );
 
   const filteredMatchingSets = useMemo(
@@ -248,7 +248,7 @@ export default function Page() {
         );
         return chapterMatch && searchMatch;
       }),
-    [chapter, search]
+    [activeData, chapter, search]
   );
 
   const filteredComparisons = useMemo(
@@ -258,7 +258,7 @@ export default function Page() {
         const searchMatch = matchesSearch([item.title, item.summary, item.whyItMatters], search);
         return chapterMatch && searchMatch;
       }),
-    [chapter, search]
+    [activeData, chapter, search]
   );
 
   const overviewData = useMemo(() => {
@@ -270,7 +270,7 @@ export default function Page() {
       likelyQuestions: activeData.overview.likelyQuestions.filter((q) => matchesSearch([q], search)),
       cramChecklist: activeData.overview.cramChecklist.filter((item) => matchesSearch([item], search)),
     };
-  }, [chapter, search]);
+  }, [activeData, chapter, search]);
 
   // Weak topics — sorted by accuracy ascending
   const weakTopics = useMemo(() => {
@@ -310,7 +310,7 @@ export default function Page() {
 
     const mastered = knewCount + quizMastered + frMastered + matchMastered;
     return Math.min(100, Math.round((mastered / totalItems) * 100));
-  }, [confidenceStats, tagStats, freeResponseScores, matchingCorrect, matchingAttempts]);
+  }, [activeData, confidenceStats, tagStats, freeResponseScores, matchingCorrect, matchingAttempts]);
 
   // Shuffled quiz options — shuffle options per question using seeded shuffle
   const shuffledQuizOptions = useMemo(() => {
@@ -719,6 +719,27 @@ export default function Page() {
     setChapter("all");
     setMode("overview");
     setSearch("");
+    setFlashcardIndex(0);
+    setFlashcardFlipped(false);
+    setQuizIndex(0);
+    setQuizAnswered(false);
+    setQuizSelectedIndex(null);
+    setFreeResponseIndex(0);
+    setFreeResponseChecklistOpen(false);
+    setMatchingSetIndex(0);
+    setMatchingSelectedTerm(null);
+    setMatchingSelectedDefinition(null);
+    setMatchingMatchedPairs([]);
+    setMatchingFeedback("");
+    setReviewIndex(0);
+    setReviewAnswered(false);
+    setReviewSelectedIndex(null);
+    setCartoonIndex(0);
+    setCartoonSection("description");
+    setTermIndex(0);
+    setTermRevealed(false);
+    setTermDraft("");
+    resetMockTest();
   }
 
   if (!subject) {
