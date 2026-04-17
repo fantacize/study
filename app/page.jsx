@@ -155,6 +155,23 @@ export default function Page() {
   const [reviewAnswered, setReviewAnswered] = useState(false);
   const [reviewSelectedIndex, setReviewSelectedIndex] = useState(null);
 
+  // Political Cartoons
+  const [cartoonIndex, setCartoonIndex] = useState(0);
+  const [cartoonSection, setCartoonSection] = useState("description"); // description, symbols, context, message, questions
+  const [cartoonAnswers, setCartoonAnswers] = useLocalStorage("study-cartoon-answers", {});
+
+  // Mock Test
+  const [mockTestActive, setMockTestActive] = useState(false);
+  const [mockTestConfig, setMockTestConfig] = useState({ mcqCount: 15, shortAnswerCount: 2, cartoonCount: 1, durationMin: 45 });
+  const [mockTestQuestions, setMockTestQuestions] = useState(null); // { mcq: [], short: [], cartoons: [] }
+  const [mockTestAnswers, setMockTestAnswers] = useState({ mcq: {}, short: {}, cartoon: {} });
+  const [mockTestComplete, setMockTestComplete] = useState(false);
+  const [mockTestTimeLeft, setMockTestTimeLeft] = useState(0);
+  const [mockTestStartTime, setMockTestStartTime] = useState(null);
+
+  // Spaced repetition — priority queue for flashcards
+  const [srSmartMode, setSrSmartMode] = useState(false);
+
   // Filtered data
   const filteredFlashcards = useMemo(() => {
     let cards = activeData.flashcards.filter((card) => {
@@ -165,8 +182,33 @@ export default function Page() {
     if (showToughOnly) {
       cards = cards.filter((card) => toughCards.includes(card.prompt));
     }
+    // Spaced repetition: prioritize cards marked "didnt-know" or tough, then untouched, then known
+    if (srSmartMode) {
+      const priority = (card) => {
+        if (confidenceStats[card.prompt] === "didnt-know") return 0;
+        if (toughCards.includes(card.prompt)) return 1;
+        if (!confidenceStats[card.prompt]) return 2;
+        return 3; // known
+      };
+      cards = [...cards].sort((a, b) => priority(a) - priority(b));
+    }
     return cards;
-  }, [chapter, search, showToughOnly, toughCards]);
+  }, [chapter, search, showToughOnly, toughCards, srSmartMode, confidenceStats, activeData]);
+
+  // Filtered political cartoons
+  const filteredCartoons = useMemo(() => {
+    if (!activeData.politicalCartoons) return [];
+    return activeData.politicalCartoons.filter((c) => {
+      const chapterMatch = chapter === "all" || c.chapter === chapter;
+      const searchMatch = matchesSearch(
+        [c.title, c.artist, c.description, c.message, (c.symbols || []).join(" ")],
+        search
+      );
+      return chapterMatch && searchMatch;
+    });
+  }, [activeData, chapter, search]);
+
+  const currentCartoon = filteredCartoons[Math.min(cartoonIndex, Math.max(filteredCartoons.length - 1, 0))];
 
   const filteredQuiz = useMemo(
     () =>
@@ -483,6 +525,80 @@ export default function Page() {
     const nextSet = filteredMatchingSets[next];
     setMatchingDefinitionOrder(shuffle(nextSet.pairs.map((_, i) => i)));
   }
+
+  // ===== Political Cartoons =====
+  function nextCartoon(direction = 1) {
+    if (!filteredCartoons.length) return;
+    const next = (cartoonIndex + direction + filteredCartoons.length) % filteredCartoons.length;
+    setCartoonIndex(next);
+    setCartoonSection("description");
+  }
+
+  function saveCartoonAnswer(cartoonTitle, questionIdx, value) {
+    setCartoonAnswers((c) => ({
+      ...c,
+      [cartoonTitle]: { ...(c[cartoonTitle] || {}), [questionIdx]: value },
+    }));
+  }
+
+  // ===== Mock Test =====
+  function startMockTest() {
+    const pool = activeData.quiz.filter((q) => chapter === "all" || q.chapter === chapter);
+    const shortPool = activeData.shortAnswers.filter((s) => chapter === "all" || s.chapter === chapter);
+    const cartoonPool = (activeData.politicalCartoons || []).filter((c) => chapter === "all" || c.chapter === chapter);
+    const mcq = shuffle(pool).slice(0, mockTestConfig.mcqCount);
+    const short = shuffle(shortPool).slice(0, mockTestConfig.shortAnswerCount);
+    const cartoons = shuffle(cartoonPool).slice(0, mockTestConfig.cartoonCount);
+    setMockTestQuestions({ mcq, short, cartoons });
+    setMockTestAnswers({ mcq: {}, short: {}, cartoon: {} });
+    setMockTestActive(true);
+    setMockTestComplete(false);
+    setMockTestTimeLeft(mockTestConfig.durationMin * 60);
+    setMockTestStartTime(Date.now());
+  }
+
+  function submitMockTest() {
+    setMockTestActive(false);
+    setMockTestComplete(true);
+  }
+
+  function resetMockTest() {
+    setMockTestActive(false);
+    setMockTestComplete(false);
+    setMockTestQuestions(null);
+    setMockTestAnswers({ mcq: {}, short: {}, cartoon: {} });
+  }
+
+  function mockTestMcqAnswer(idx, optionIdx) {
+    setMockTestAnswers((c) => ({ ...c, mcq: { ...c.mcq, [idx]: optionIdx } }));
+  }
+
+  function mockTestShortAnswer(idx, text) {
+    setMockTestAnswers((c) => ({ ...c, short: { ...c.short, [idx]: text } }));
+  }
+
+  function mockTestCartoonAnswer(idx, text) {
+    setMockTestAnswers((c) => ({ ...c, cartoon: { ...c.cartoon, [idx]: text } }));
+  }
+
+  const mockTestScore = useMemo(() => {
+    if (!mockTestQuestions || !mockTestComplete) return null;
+    const mcqCorrect = mockTestQuestions.mcq.reduce((count, q, idx) => {
+      return count + (mockTestAnswers.mcq[idx] === q.answerIndex ? 1 : 0);
+    }, 0);
+    return { mcqCorrect, mcqTotal: mockTestQuestions.mcq.length };
+  }, [mockTestQuestions, mockTestAnswers, mockTestComplete]);
+
+  // Mock test countdown timer
+  useEffect(() => {
+    if (!mockTestActive) return;
+    if (mockTestTimeLeft <= 0) {
+      submitMockTest();
+      return;
+    }
+    const t = setTimeout(() => setMockTestTimeLeft((v) => v - 1), 1000);
+    return () => clearTimeout(t);
+  }, [mockTestActive, mockTestTimeLeft]);
 
   function resetAllProgress() {
     setCardsReviewed(0);
@@ -954,6 +1070,97 @@ export default function Page() {
         </div>
       )}
 
+      {/* ===== CONNECTIONS ===== */}
+      {mode === "connections" && activeData.causeEffectChains && (
+        <div className="space-y-6 animate-in fade-in-0 slide-in-from-bottom-2 duration-300">
+          {/* Cause-Effect Chains */}
+          <div>
+            <h2 className="text-lg font-semibold mb-4">Cause → Effect Chains</h2>
+            <p className="text-sm text-muted-foreground mb-4">Follow how one event triggered the next. These chains are what essay questions test.</p>
+            <div className="space-y-4">
+              {(activeData.causeEffectChains || [])
+                .filter((c) => chapter === "all" || c.chapter === chapter)
+                .filter((c) => matchesSearch([c.title, ...c.chain.map((s) => s.event + " " + s.effect)], search))
+                .map((chain) => (
+                  <Card key={chain.title}>
+                    <CardHeader className="pb-3">
+                      <div className="flex items-center gap-2">
+                        <Badge variant="secondary">
+                          {activeData.chapters.find((ch) => ch.id === chain.chapter)?.label || chain.chapter}
+                        </Badge>
+                        <CardTitle className="text-base">{chain.title}</CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-0">
+                        {chain.chain.map((step, i) => (
+                          <div key={i} className="flex gap-3">
+                            <div className="flex flex-col items-center">
+                              <div className={cn(
+                                "flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold",
+                                i === 0 ? "bg-primary text-primary-foreground" :
+                                i === chain.chain.length - 1 ? "bg-destructive text-destructive-foreground" :
+                                "bg-muted text-muted-foreground"
+                              )}>
+                                {i + 1}
+                              </div>
+                              {i < chain.chain.length - 1 && (
+                                <div className="w-px flex-1 bg-border my-1" />
+                              )}
+                            </div>
+                            <div className="pb-4">
+                              <p className="text-sm font-semibold">{step.event}</p>
+                              <p className="text-sm text-muted-foreground">{step.effect}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+            </div>
+          </div>
+
+          {/* Cross-Unit Connections */}
+          {activeData.crossConnections && (
+            <div>
+              <h2 className="text-lg font-semibold mb-4">Cross-Unit Connections</h2>
+              <p className="text-sm text-muted-foreground mb-4">How themes link across units. Master these for essay questions that ask you to connect topics.</p>
+              <div className="grid gap-4 md:grid-cols-2">
+                {(activeData.crossConnections || [])
+                  .filter((c) => chapter === "all" || c.units.includes(chapter))
+                  .filter((c) => matchesSearch([c.title, c.explanation, ...c.examples], search))
+                  .map((conn) => (
+                    <Card key={conn.title}>
+                      <CardHeader className="pb-3">
+                        <div className="flex flex-wrap gap-1.5 mb-2">
+                          {conn.units.map((u) => (
+                            <Badge key={u} variant="outline" className="text-xs">
+                              {activeData.chapters.find((ch) => ch.id === u)?.label || u}
+                            </Badge>
+                          ))}
+                        </div>
+                        <CardTitle className="text-base">{conn.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="space-y-3">
+                        <p className="text-sm leading-relaxed">{conn.explanation}</p>
+                        <details className="group">
+                          <summary className="cursor-pointer text-sm font-medium text-primary hover:underline">
+                            Show examples ({conn.examples.length})
+                          </summary>
+                          <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-muted-foreground">
+                            {conn.examples.map((ex, i) => <li key={i}>{ex}</li>)}
+                          </ul>
+                        </details>
+                      </CardContent>
+                    </Card>
+                  ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
       {/* ===== FLASHCARDS ===== */}
       {mode === "flashcards" && (
         <div className="space-y-4 animate-in fade-in-0 slide-in-from-bottom-2 duration-300">
@@ -1034,7 +1241,392 @@ export default function Page() {
             >
               Tough only ({toughCards.length})
             </Button>
+            <Button
+              variant={srSmartMode ? "default" : "outline"} size="sm"
+              onClick={() => { setSrSmartMode((v) => !v); setFlashcardIndex(0); setFlashcardFlipped(false); }}
+              title="Spaced repetition: prioritize cards you didn't know, then tough, then untouched, then known"
+            >
+              {srSmartMode ? "Smart mode ON" : "Smart mode"}
+            </Button>
           </div>
+          {srSmartMode && (
+            <p className="text-xs text-muted-foreground">
+              Smart mode orders cards by weakness: Didn't know → Tough → New → Known last.
+            </p>
+          )}
+        </div>
+      )}
+
+      {/* ===== POLITICAL CARTOONS ===== */}
+      {mode === "cartoons" && (
+        <div className="space-y-4 animate-in fade-in-0 slide-in-from-bottom-2 duration-300">
+          <div className="flex items-center justify-between">
+            <h2 className="text-lg font-semibold">Political Cartoon Analysis</h2>
+            <span className="text-sm text-muted-foreground">
+              {filteredCartoons.length ? `${cartoonIndex + 1} of ${filteredCartoons.length}` : "0 of 0"}
+            </span>
+          </div>
+
+          {currentCartoon ? (
+            <Card>
+              <CardHeader>
+                <div className="flex flex-wrap items-center gap-2">
+                  <Badge variant="secondary">{currentCartoon.chapter}</Badge>
+                  <Badge variant="outline">{currentCartoon.year}</Badge>
+                </div>
+                <CardTitle className="text-xl">{currentCartoon.title}</CardTitle>
+                <p className="text-sm text-muted-foreground">
+                  <strong>Artist:</strong> {currentCartoon.artist} · <strong>Source:</strong> {currentCartoon.source}
+                </p>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {/* Section tabs */}
+                <div className="flex flex-wrap gap-2">
+                  {["description", "symbols", "context", "message", "questions"].map((s) => (
+                    <Button
+                      key={s}
+                      variant={cartoonSection === s ? "default" : "outline"}
+                      size="sm"
+                      onClick={() => setCartoonSection(s)}
+                      className="capitalize"
+                    >
+                      {s}
+                    </Button>
+                  ))}
+                </div>
+
+                {cartoonSection === "description" && (
+                  <div className="space-y-2">
+                    <h4 className="font-semibold">What's in the cartoon:</h4>
+                    <p className="text-sm leading-relaxed">{currentCartoon.description}</p>
+                    <p className="text-xs text-muted-foreground">
+                      Read the description carefully, then move through the sections to practice analysis.
+                    </p>
+                  </div>
+                )}
+
+                {cartoonSection === "symbols" && (
+                  <div className="space-y-2">
+                    <h4 className="font-semibold">Key symbols and their meanings:</h4>
+                    <ul className="list-disc space-y-1 pl-5 text-sm">
+                      {(currentCartoon.symbols || []).map((sym, i) => (
+                        <li key={i}>{sym}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {cartoonSection === "context" && (
+                  <div className="space-y-2">
+                    <h4 className="font-semibold">Historical context:</h4>
+                    <p className="text-sm leading-relaxed">{currentCartoon.context}</p>
+                  </div>
+                )}
+
+                {cartoonSection === "message" && (
+                  <div className="space-y-2">
+                    <h4 className="font-semibold">The cartoon's argument:</h4>
+                    <p className="text-sm leading-relaxed">{currentCartoon.message}</p>
+                  </div>
+                )}
+
+                {cartoonSection === "questions" && (
+                  <div className="space-y-3">
+                    <h4 className="font-semibold">Analysis questions — write your own answers:</h4>
+                    {(currentCartoon.questions || []).map((q, i) => (
+                      <div key={i} className="space-y-1">
+                        <p className="text-sm font-medium">{i + 1}. {q}</p>
+                        <Textarea
+                          placeholder="Your analysis..."
+                          className="min-h-[60px]"
+                          value={(cartoonAnswers[currentCartoon.title] || {})[i] || ""}
+                          onChange={(e) => saveCartoonAnswer(currentCartoon.title, i, e.target.value)}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          ) : (
+            <Card>
+              <CardContent className="p-6 text-sm text-muted-foreground">
+                No political cartoons match this filter.
+              </CardContent>
+            </Card>
+          )}
+
+          <div className="flex flex-wrap gap-2">
+            <Button variant="outline" size="sm" onClick={() => nextCartoon(-1)}>Previous</Button>
+            <Button variant="outline" size="sm" onClick={() => nextCartoon(1)}>Next</Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => { setCartoonIndex(Math.floor(Math.random() * filteredCartoons.length)); setCartoonSection("description"); }}
+              disabled={!filteredCartoons.length}
+            >
+              Random
+            </Button>
+          </div>
+        </div>
+      )}
+
+      {/* ===== MOCK TEST ===== */}
+      {mode === "mock-test" && (
+        <div className="space-y-4 animate-in fade-in-0 slide-in-from-bottom-2 duration-300">
+          {!mockTestActive && !mockTestComplete && (
+            <Card>
+              <CardHeader>
+                <CardTitle>Mock Test</CardTitle>
+                <p className="text-sm text-muted-foreground">
+                  Practice test format: MCQs, short answers, and a political cartoon analysis. Timed.
+                </p>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <div>
+                    <label className="text-sm font-medium">MCQs</label>
+                    <Input
+                      type="number"
+                      min="1"
+                      max="50"
+                      value={mockTestConfig.mcqCount}
+                      onChange={(e) => setMockTestConfig((c) => ({ ...c, mcqCount: Math.max(1, parseInt(e.target.value) || 1) }))}
+                    />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium">Short answers</label>
+                    <Input
+                      type="number"
+                      min="0"
+                      max="10"
+                      value={mockTestConfig.shortAnswerCount}
+                      onChange={(e) => setMockTestConfig((c) => ({ ...c, shortAnswerCount: Math.max(0, parseInt(e.target.value) || 0) }))}
+                    />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium">Cartoon analysis</label>
+                    <Input
+                      type="number"
+                      min="0"
+                      max="5"
+                      value={mockTestConfig.cartoonCount}
+                      onChange={(e) => setMockTestConfig((c) => ({ ...c, cartoonCount: Math.max(0, parseInt(e.target.value) || 0) }))}
+                    />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium">Duration (min)</label>
+                    <Input
+                      type="number"
+                      min="5"
+                      max="180"
+                      value={mockTestConfig.durationMin}
+                      onChange={(e) => setMockTestConfig((c) => ({ ...c, durationMin: Math.max(5, parseInt(e.target.value) || 45) }))}
+                    />
+                  </div>
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Chapter: <strong>{chapter === "all" ? "All chapters" : chapter}</strong>. Change chapter selector at top to scope the test.
+                </p>
+                <Button onClick={startMockTest} className="w-full">Start Mock Test</Button>
+              </CardContent>
+            </Card>
+          )}
+
+          {mockTestActive && mockTestQuestions && (
+            <>
+              <Card>
+                <CardContent className="flex items-center justify-between p-4">
+                  <Badge variant={mockTestTimeLeft <= 60 ? "destructive" : "secondary"} className="tabular-nums text-base">
+                    {formatTime(mockTestTimeLeft)} remaining
+                  </Badge>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" onClick={resetMockTest}>Cancel</Button>
+                    <Button size="sm" onClick={submitMockTest}>Submit</Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {mockTestQuestions.mcq.length > 0 && (
+                <Card>
+                  <CardHeader><CardTitle>Section 1: Multiple Choice ({mockTestQuestions.mcq.length})</CardTitle></CardHeader>
+                  <CardContent className="space-y-6">
+                    {mockTestQuestions.mcq.map((q, idx) => (
+                      <div key={idx} className="space-y-2">
+                        <p className="text-sm font-medium">{idx + 1}. {q.question}</p>
+                        <div className="grid gap-1">
+                          {q.options.map((opt, optIdx) => (
+                            <Button
+                              key={optIdx}
+                              variant={mockTestAnswers.mcq[idx] === optIdx ? "default" : "outline"}
+                              size="sm"
+                              className="h-auto justify-start whitespace-normal py-2 text-left"
+                              onClick={() => mockTestMcqAnswer(idx, optIdx)}
+                            >
+                              <span className="mr-2 text-muted-foreground">{String.fromCharCode(65 + optIdx)}.</span>
+                              {opt}
+                            </Button>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </CardContent>
+                </Card>
+              )}
+
+              {mockTestQuestions.short.length > 0 && (
+                <Card>
+                  <CardHeader><CardTitle>Section 2: Short Answer ({mockTestQuestions.short.length})</CardTitle></CardHeader>
+                  <CardContent className="space-y-4">
+                    {mockTestQuestions.short.map((s, idx) => (
+                      <div key={idx} className="space-y-2">
+                        <p className="text-sm font-medium">{idx + 1}. {s.prompt}</p>
+                        <Textarea
+                          placeholder="Your answer..."
+                          className="min-h-[120px]"
+                          value={mockTestAnswers.short[idx] || ""}
+                          onChange={(e) => mockTestShortAnswer(idx, e.target.value)}
+                        />
+                      </div>
+                    ))}
+                  </CardContent>
+                </Card>
+              )}
+
+              {mockTestQuestions.cartoons.length > 0 && (
+                <Card>
+                  <CardHeader><CardTitle>Section 3: Political Cartoon Analysis ({mockTestQuestions.cartoons.length})</CardTitle></CardHeader>
+                  <CardContent className="space-y-4">
+                    {mockTestQuestions.cartoons.map((c, idx) => (
+                      <div key={idx} className="space-y-3 rounded border p-4">
+                        <div>
+                          <h4 className="font-semibold">{c.title} ({c.year})</h4>
+                          <p className="text-xs text-muted-foreground">{c.artist} — {c.source}</p>
+                        </div>
+                        <div>
+                          <p className="text-xs font-semibold uppercase text-muted-foreground">Description</p>
+                          <p className="text-sm">{c.description}</p>
+                        </div>
+                        <div className="space-y-2">
+                          <p className="text-sm font-medium">Analyze this cartoon: What is its message? What symbols are used? What is the historical context? How might it have shaped public opinion?</p>
+                          <Textarea
+                            placeholder="Your analysis..."
+                            className="min-h-[150px]"
+                            value={mockTestAnswers.cartoon[idx] || ""}
+                            onChange={(e) => mockTestCartoonAnswer(idx, e.target.value)}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </CardContent>
+                </Card>
+              )}
+
+              <Button onClick={submitMockTest} className="w-full" size="lg">Submit Mock Test</Button>
+            </>
+          )}
+
+          {mockTestComplete && mockTestQuestions && (
+            <>
+              <Card>
+                <CardHeader><CardTitle>Mock Test Results</CardTitle></CardHeader>
+                <CardContent className="space-y-3">
+                  {mockTestScore && mockTestQuestions.mcq.length > 0 && (
+                    <div>
+                      <p className="text-lg font-semibold">
+                        MCQ Score: {mockTestScore.mcqCorrect} / {mockTestScore.mcqTotal}
+                        {" "}({Math.round((mockTestScore.mcqCorrect / mockTestScore.mcqTotal) * 100)}%)
+                      </p>
+                    </div>
+                  )}
+                  <p className="text-sm text-muted-foreground">
+                    Short answers and cartoon analysis are self-graded. Review below against the checklist.
+                  </p>
+                  <Button onClick={resetMockTest} variant="outline">Take Another Test</Button>
+                </CardContent>
+              </Card>
+
+              {mockTestQuestions.mcq.length > 0 && (
+                <Card>
+                  <CardHeader><CardTitle>MCQ Review</CardTitle></CardHeader>
+                  <CardContent className="space-y-3">
+                    {mockTestQuestions.mcq.map((q, idx) => {
+                      const userAnswer = mockTestAnswers.mcq[idx];
+                      const correct = userAnswer === q.answerIndex;
+                      return (
+                        <div key={idx} className={cn("rounded border p-3", correct ? "border-green-500 bg-green-50 dark:bg-green-950/30" : "border-red-500 bg-red-50 dark:bg-red-950/30")}>
+                          <p className="text-sm font-medium">{idx + 1}. {q.question}</p>
+                          <p className="text-xs mt-1">
+                            Your answer: <strong>{userAnswer !== undefined ? q.options[userAnswer] : "(blank)"}</strong>
+                          </p>
+                          {!correct && (
+                            <p className="text-xs text-green-700 dark:text-green-400">
+                              Correct: <strong>{q.options[q.answerIndex]}</strong>
+                            </p>
+                          )}
+                          <p className="text-xs mt-1 text-muted-foreground">{q.explanation}</p>
+                        </div>
+                      );
+                    })}
+                  </CardContent>
+                </Card>
+              )}
+
+              {mockTestQuestions.short.length > 0 && (
+                <Card>
+                  <CardHeader><CardTitle>Short Answer Review — check against checklist</CardTitle></CardHeader>
+                  <CardContent className="space-y-4">
+                    {mockTestQuestions.short.map((s, idx) => (
+                      <div key={idx} className="space-y-2 rounded border p-3">
+                        <p className="text-sm font-medium">{idx + 1}. {s.prompt}</p>
+                        <div>
+                          <p className="text-xs font-semibold uppercase text-muted-foreground">Your answer:</p>
+                          <p className="text-sm whitespace-pre-wrap">{mockTestAnswers.short[idx] || "(blank)"}</p>
+                        </div>
+                        <div>
+                          <p className="text-xs font-semibold uppercase text-muted-foreground">Checklist — did you include:</p>
+                          <ul className="list-disc pl-5 text-xs">
+                            {s.include.map((item, i) => <li key={i}>{item}</li>)}
+                          </ul>
+                        </div>
+                      </div>
+                    ))}
+                  </CardContent>
+                </Card>
+              )}
+
+              {mockTestQuestions.cartoons.length > 0 && (
+                <Card>
+                  <CardHeader><CardTitle>Cartoon Analysis Review</CardTitle></CardHeader>
+                  <CardContent className="space-y-4">
+                    {mockTestQuestions.cartoons.map((c, idx) => (
+                      <div key={idx} className="space-y-2 rounded border p-3">
+                        <h4 className="font-semibold">{c.title} ({c.year})</h4>
+                        <div>
+                          <p className="text-xs font-semibold uppercase text-muted-foreground">Your analysis:</p>
+                          <p className="text-sm whitespace-pre-wrap">{mockTestAnswers.cartoon[idx] || "(blank)"}</p>
+                        </div>
+                        <div>
+                          <p className="text-xs font-semibold uppercase text-muted-foreground">Symbols:</p>
+                          <ul className="list-disc pl-5 text-xs">
+                            {(c.symbols || []).map((sym, i) => <li key={i}>{sym}</li>)}
+                          </ul>
+                        </div>
+                        <div>
+                          <p className="text-xs font-semibold uppercase text-muted-foreground">Context:</p>
+                          <p className="text-xs">{c.context}</p>
+                        </div>
+                        <div>
+                          <p className="text-xs font-semibold uppercase text-muted-foreground">Message:</p>
+                          <p className="text-xs">{c.message}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </CardContent>
+                </Card>
+              )}
+            </>
+          )}
         </div>
       )}
 

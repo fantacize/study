@@ -483,6 +483,169 @@ export const studyData = {
       prompt: "How is virtue developed in Confucius?",
       answer:
         "Virtue is present in potential but must be cultivated through habits, roles, rituals, relationships, and morally guided practice."
+    },
+
+    // ── Deep Connection Flashcards ──
+    {
+      chapter: "chapter-1",
+      tag: "Connections",
+      prompt: "How do the Cave, Socrates, and Buddhism all connect thematically?",
+      answer:
+        "All three describe liberation from illusion. The Cave frees prisoners from shadows (false appearances). Socrates frees people from false certainty through questioning. Buddhism frees people from craving and attachment. Philosophy IS the process of waking up."
+    },
+    {
+      chapter: "chapter-1",
+      tag: "Connections",
+      prompt: "Why does the freed prisoner face hostility when returning to the cave?",
+      answer:
+        "Because truth threatens the comfortable illusions people have built their lives around. The prisoners mock what they don't understand, just as Athens executed Socrates for challenging public opinion. Philosophy is socially dangerous precisely because it works."
+    },
+    {
+      chapter: "chapter-1",
+      tag: "Myth of the Cave",
+      prompt: "What do the chains in the Myth of the Cave represent?",
+      answer:
+        "The chains represent habit, social conditioning, and unexamined assumptions that keep people locked into accepting appearances as reality. The chains are mental, not physical — people are trapped by what they've never thought to question."
+    },
+    {
+      chapter: "chapter-1",
+      tag: "Myth of the Cave",
+      prompt: "What does the sunlight represent in the Myth of the Cave?",
+      answer:
+        "The sunlight represents the highest form of reality and truth (for Plato, the Form of the Good). The freed prisoner's eyes hurt at first — truth is painful before it becomes clarifying. Full understanding comes gradually, not all at once."
+    },
+    {
+      chapter: "chapter-1",
+      tag: "Socrates",
+      prompt: "What is the Apology, and why does it matter?",
+      answer:
+        "The Apology is Plato's account of Socrates' trial speech. Socrates defends philosophy as his life's mission, says 'the unexamined life is not worth living,' and refuses to stop questioning even when facing death. It shows philosophy is not just academic — it requires moral courage."
+    },
+    {
+      chapter: "chapter-1",
+      tag: "Socrates",
+      prompt: "How does the Euthyphro problem challenge religious ethics?",
+      answer:
+        "Socrates asks: is something holy because the gods love it, or do the gods love it because it is holy? If the first, morality is arbitrary. If the second, morality is independent of the gods. Either way, you can't avoid thinking for yourself about what is right."
+    },
+    {
+      chapter: "chapter-1",
+      tag: "Pre-Socratics",
+      prompt: "Why is the shift from myth to reason historically important?",
+      answer:
+        "Thales didn't just propose a different answer (water instead of gods) — he proposed a different METHOD. Explaining the world through natural causes, observation, and reason rather than supernatural stories was the birth of both philosophy and science."
+    },
+    {
+      chapter: "chapter-1",
+      tag: "Ethics",
+      prompt: "How does ahimsa connect to the broader goals of philosophy?",
+      answer:
+        "Ahimsa (non-harm) connects to philosophy's emphasis on examining how we should live. It challenges the assumption that self-interest is natural or inevitable, offering a principle that values all beings — linking Eastern thought to Western ethical inquiry."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Connections",
+      prompt: "How does Plato's three-part soul compare to Freud's id/ego/superego?",
+      answer:
+        "Both describe inner conflict between competing drives. Plato's appetite ≈ Freud's id (desire). Plato's spirit ≈ partly ego (courage/ambition). Plato's reason ≈ partly superego (moral authority). KEY DIFFERENCE: Plato trusts reason to govern; Freud thinks unconscious forces are far more powerful than we admit."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Connections",
+      prompt: "What pattern connects every theory in Chapter 2?",
+      answer:
+        "Each theory defines the self differently, and each gains power by solving one problem while creating another. Dualism protects consciousness but can't explain interaction. Materialism fits science but loses subjective experience. Essentialism gives stability but ignores change. No theory wins completely."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Connections",
+      prompt: "How do Sartre's existentialism and Buddhism both challenge essentialism, but differently?",
+      answer:
+        "Both deny a fixed self. But Sartre says you CREATE yourself through radical choice (freedom is the point). Buddhism says you should RELEASE the illusion of self to end suffering (liberation is the point). Sartre's view is intensely individual; Buddhism dissolves individuality."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Connections",
+      prompt: "How does Aristotle's view of human nature differ from both essentialism and existentialism?",
+      answer:
+        "Aristotle IS an essentialist (humans have a purpose/telos), but his essentialism is developmental — you must CULTIVATE your nature through practice. Unlike rigid essentialism, he stresses becoming. Unlike Sartre, he says there IS a goal to aim at. He's the middle ground."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Connections",
+      prompt: "Why does the chapter compare Confucius and Aristotle?",
+      answer:
+        "Both see virtue as something cultivated through practice, not born with or chosen from nothing. Both emphasize habit, relationships, and structured development. They show that Eastern and Western traditions can independently arrive at similar ideas about moral growth."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Connections",
+      prompt: "How does the feminist view challenge BOTH dualism and materialism?",
+      answer:
+        "The feminist view says the real problem isn't mind vs body — it's that the 'rational isolated self' model ignores social relationships, emotion, embodiment, and power structures. The self isn't just mind, body, or brain — it's relational, situated, and intersectional."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Mind-Body",
+      prompt: "Why is the mind-body problem so hard to solve?",
+      answer:
+        "Because every answer creates a new problem. Dualism can't explain how non-physical mind moves physical body. Materialism can't explain why brain activity FEELS like something. Property dualism splits the difference but is vague. Functionalism works for AI but misses qualia (raw experience)."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Functionalism",
+      prompt: "What is the Turing Test and why does it matter for philosophy?",
+      answer:
+        "Alan Turing proposed: if a machine's outputs are indistinguishable from a human's, does it 'think'? This matters because functionalism says mental states ARE their functions. If a machine functions like a mind, functionalism says it IS a mind. But critics ask: can function capture EXPERIENCE?"
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Existentialism",
+      prompt: "Give an example of bad faith in everyday life.",
+      answer:
+        "A student says 'I'm just not a math person' — treating a changeable trait as fixed identity to avoid the effort of learning. A waiter who IS only a waiter, never a person with choices. Bad faith = hiding behind a role or label to avoid the anxiety of freedom."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Darwin",
+      prompt: "What does Darwin NOT prove about human nature?",
+      answer:
+        "Darwin does NOT prove: (1) life has no meaning, (2) morality is impossible, (3) humans have no dignity. He proves humans evolved and share ancestry with animals. The challenge is to FIXED UNIQUENESS, not to all value. Evolution describes origins, not purposes."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Abrahamic View",
+      prompt: "How does the Abrahamic view ground human dignity differently from secular views?",
+      answer:
+        "The Abrahamic view says dignity comes from DIVINE SOURCE — humans are created in God's image, so worth is inherent and non-negotiable. Secular views must ground dignity in reason, social contract, or sentiment — which can be argued away. The Abrahamic view makes dignity absolute but requires faith."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Buddhism",
+      prompt: "How does the Buddhist view of suffering connect to the no-self doctrine?",
+      answer:
+        "Buddhism says suffering comes from CLINGING — to pleasure, identity, permanence. The no-self doctrine says what you're clinging to (a fixed 'me') doesn't exist as you imagine it. Release the illusion of a permanent self, and the root of suffering dissolves. The cure for pain is not more self, but less."
+    },
+    {
+      chapter: "chapter-1",
+      tag: "Connections",
+      prompt: "How does REBT connect to both Socrates and the adversarial method?",
+      answer:
+        "All three use CHALLENGE as a tool. Socrates challenges people's definitions. The adversarial method challenges arguments through objection. REBT challenges irrational beliefs ('I MUST be perfect'). In each case, beliefs get stronger or get replaced. Challenge IS the method of philosophy."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Multiple Selves",
+      prompt: "How does Howard Gardner's work support the multiple-self view?",
+      answer:
+        "Gardner's theory of multiple intelligences (linguistic, logical, musical, bodily, interpersonal, etc.) shows the self isn't one unified rational thing but has many semi-independent capacities. This supports the idea that identity is plural and layered, not singular."
+    },
+    {
+      chapter: "chapter-1",
+      tag: "Upanishads",
+      prompt: "How do Brahman and Atman relate to Western metaphysics?",
+      answer:
+        "Brahman (ultimate reality) maps roughly to metaphysics — what is TRULY real behind appearances. Atman (true self) maps to self-knowledge — what am I really? The Upanishadic claim that Atman IS Brahman means knowing yourself truly means knowing reality itself. Western philosophy separates these; Indian thought unifies them."
     }
   ],
   quiz: [
@@ -1101,6 +1264,149 @@ export const studyData = {
       explanation:
         "This is the basic contrast. Dualism preserves a mental-physical distinction, while materialism reduces reality to the physical."
     },
+
+    // ── Deeper Connection MCQs ──
+    {
+      chapter: "chapter-1",
+      tag: "Connections",
+      question: "What do the Myth of the Cave, Socrates, and Buddhism have in common?",
+      options: [
+        "They all reject the existence of reality",
+        "They all describe liberation from some form of illusion or false belief",
+        "They all focus on politics rather than philosophy",
+        "They all argue that truth is impossible to find"
+      ],
+      answerIndex: 1,
+      explanation:
+        "All three share the theme of waking up: the Cave frees prisoners from shadows, Socrates frees people from false certainty, Buddhism frees from craving and attachment. Philosophy itself IS this process of liberation."
+    },
+    {
+      chapter: "chapter-1",
+      tag: "Connections",
+      question: "The freed prisoner is mocked when returning to the cave. This most closely parallels:",
+      options: [
+        "Thales proposing water as the basic element",
+        "Socrates being executed for challenging Athenian beliefs",
+        "Maslow's hierarchy of needs",
+        "The adversarial method of testing arguments"
+      ],
+      answerIndex: 1,
+      explanation:
+        "Both the prisoner's return and Socrates' trial show the same pattern: society punishes those who challenge comfortable illusions. Truth-tellers face resistance precisely because they threaten the status quo."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Connections",
+      question: "Plato's appetite is most similar to which part of Freud's model?",
+      options: [
+        "Ego",
+        "Superego",
+        "Id",
+        "Reason"
+      ],
+      answerIndex: 2,
+      explanation:
+        "Plato's appetite (desire for pleasure) maps to Freud's id (instinctual drive). Both describe a powerful force that must be managed. The key difference: Plato trusts reason to rule; Freud thinks unconscious forces are far more powerful than we admit."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Connections",
+      question: "Both Sartre and Buddhism deny a fixed self. How do they differ?",
+      options: [
+        "They are identical — both reject selfhood entirely",
+        "Sartre says create yourself through choice; Buddhism says release the illusion of self to end suffering",
+        "Sartre embraces attachment; Buddhism embraces radical freedom",
+        "Neither actually denies a fixed self"
+      ],
+      answerIndex: 1,
+      explanation:
+        "Sartre's answer to 'no fixed self' is radical freedom — you MAKE yourself. Buddhism's answer is liberation — RELEASE the self. Same starting point, opposite directions: one toward individual creation, one toward dissolving individuality."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Connections",
+      question: "Why are Aristotle and Confucius compared in Chapter 2?",
+      options: [
+        "Both reject the concept of virtue entirely",
+        "Both see virtue as cultivated through practice, habit, and relationships",
+        "Both are existentialists who deny fixed nature",
+        "Both are strict dualists"
+      ],
+      answerIndex: 1,
+      explanation:
+        "Both independently arrived at a developmental view of virtue: it exists in potential but must be cultivated through habit, roles, and practice. Eastern and Western traditions reached similar conclusions about moral growth."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Connections",
+      question: "The pattern 'each theory solves one problem while creating another' is best illustrated by:",
+      options: [
+        "Dualism protects consciousness but can't explain mind-body interaction",
+        "All theories are equally correct",
+        "Only materialism has problems; other theories are flawless",
+        "Philosophy always reaches final answers"
+      ],
+      answerIndex: 0,
+      explanation:
+        "This is THE key pattern of Chapter 2. Dualism saves consciousness but can't explain interaction. Materialism fits science but loses subjective experience. Essentialism gives stability but ignores change. No single theory wins completely — that's the point."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Connections",
+      question: "How does the feminist view challenge the mind-body debate itself?",
+      options: [
+        "It supports strict dualism",
+        "It says the real problem is the 'isolated rational self' model, not mind vs body",
+        "It rejects all social relationships",
+        "It agrees completely with materialism"
+      ],
+      answerIndex: 1,
+      explanation:
+        "The feminist view reframes the question: the self isn't just mind, body, or brain — it's relational, embodied, socially situated, and intersectional. The debate's premise (isolated thinker vs physical body) is itself too narrow."
+    },
+    {
+      chapter: "chapter-1",
+      tag: "Connections",
+      question: "The Euthyphro problem shows that:",
+      options: [
+        "Religion and philosophy are completely unrelated",
+        "You cannot avoid thinking for yourself about what is right, even if you believe in God",
+        "Socrates rejected all moral standards",
+        "The gods always agree on morality"
+      ],
+      answerIndex: 1,
+      explanation:
+        "Socrates asks: holy because the gods say so, or do the gods say so because it's holy? Either way, morality requires independent reasoning. Even believers must think about WHY something is right — divine command alone doesn't settle the question."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Connections",
+      question: "Where does Aristotle fit on the essentialism vs existentialism spectrum?",
+      options: [
+        "Pure essentialist — nature is completely fixed at birth",
+        "Pure existentialist — there is no human nature at all",
+        "Middle ground — humans have a purpose (telos) but must cultivate it through practice",
+        "He rejects both positions entirely"
+      ],
+      answerIndex: 2,
+      explanation:
+        "Aristotle IS an essentialist (humans have a telos/purpose), but a developmental one. Unlike rigid essentialism, he stresses BECOMING through habit and virtue. Unlike Sartre, he says there IS a goal to aim at. He bridges the two positions."
+    },
+    {
+      chapter: "chapter-2",
+      tag: "Mind-Body",
+      question: "Why is the mind-body problem considered unsolved?",
+      options: [
+        "Philosophers have never thought about it",
+        "Every proposed solution creates a new problem — dualism can't explain interaction, materialism can't explain experience",
+        "Only one theory exists and it works perfectly",
+        "Science has completely resolved it"
+      ],
+      answerIndex: 1,
+      explanation:
+        "Every answer spawns a new question. Dualism can't explain how non-physical mind moves physical body. Materialism can't explain why brain activity FEELS like something. Property dualism splits the difference but remains vague. Functionalism works for AI but misses qualia."
+    },
+
     {
       chapter: "chapter-2",
       tag: "Trap MCQ",
@@ -1278,6 +1584,96 @@ export const studyData = {
         {
           term: "Seven-selves diagram",
           definition: "A model showing that identity is socially layered and reflective."
+        }
+      ]
+    },
+    {
+      chapter: "chapter-2",
+      title: "Chapter 2: Theory → Problem It Creates",
+      pairs: [
+        {
+          term: "Dualism",
+          definition: "Protects consciousness but can't explain how mind moves body"
+        },
+        {
+          term: "Materialism",
+          definition: "Fits science but can't explain why brain activity FEELS like something"
+        },
+        {
+          term: "Essentialism",
+          definition: "Gives stability but ignores change, diversity, and social context"
+        },
+        {
+          term: "Existentialism",
+          definition: "Maximizes freedom but risks making identity groundless"
+        },
+        {
+          term: "Behaviorism",
+          definition: "Keeps explanation observable but may ignore inner life entirely"
+        },
+        {
+          term: "Functionalism",
+          definition: "Works for AI and Turing Test but misses raw subjective experience (qualia)"
+        }
+      ]
+    },
+    {
+      chapter: "chapter-1",
+      title: "Chapter 1: Parallel Liberation Themes",
+      pairs: [
+        {
+          term: "Myth of the Cave",
+          definition: "Liberation from shadows/appearances through education"
+        },
+        {
+          term: "Socrates' mission",
+          definition: "Liberation from false certainty through questioning"
+        },
+        {
+          term: "Buddhism in Chapter 1",
+          definition: "Liberation from craving and attachment through wisdom"
+        },
+        {
+          term: "REBT",
+          definition: "Liberation from irrational beliefs through challenging them"
+        },
+        {
+          term: "Adversarial method",
+          definition: "Liberation from weak arguments through criticism and objection"
+        },
+        {
+          term: "Self-actualization",
+          definition: "Liberation from mere survival toward growth and fulfillment"
+        }
+      ]
+    },
+    {
+      chapter: "chapter-2",
+      title: "Chapter 2: Cross-Theory Parallels",
+      pairs: [
+        {
+          term: "Plato's appetite",
+          definition: "Parallels Freud's id — instinctual desire"
+        },
+        {
+          term: "Plato's reason",
+          definition: "Parallels Freud's superego — moral governance"
+        },
+        {
+          term: "Aristotle's cultivation",
+          definition: "Parallels Confucius — virtue developed through practice"
+        },
+        {
+          term: "Sartre's no-fixed-self",
+          definition: "Parallels Buddhism — but toward freedom, not release"
+        },
+        {
+          term: "Feminist relational self",
+          definition: "Challenges both dualism AND materialism — self is social"
+        },
+        {
+          term: "Seven-selves diagram",
+          definition: "Parallels Gardner's multiple intelligences — identity is plural"
         }
       ]
     },
@@ -1628,6 +2024,98 @@ export const studyData = {
         "Functionalism allows that the same mental function could appear in different systems, including machines.",
         "Behaviorism is narrower because it stays closer to visible action."
       ]
+    },
+
+    // ── Deeper Analytical Prompts ──
+    {
+      chapter: "chapter-1",
+      prompt: "How do the Cave, Socrates, and Buddhism form a connected theme about liberation from illusion?",
+      include: [
+        "The Cave: prisoners mistake shadows for reality — liberation requires painful education.",
+        "Socrates: people mistake false certainty for wisdom — liberation requires admitting ignorance.",
+        "Buddhism: people mistake craving and attachment for happiness — liberation requires releasing the illusion.",
+        "All three say: comfortable illusion must be shattered before genuine understanding can begin.",
+        "Philosophy itself is the practice of this liberation — it IS the process of waking up."
+      ]
+    },
+    {
+      chapter: "chapter-1",
+      prompt: "Why does the freed prisoner face hostility, and why is this philosophically important?",
+      include: [
+        "The prisoners mock and threaten the freed one who returns with truth.",
+        "This parallels Socrates being executed by Athens for challenging public opinion.",
+        "It shows that truth is socially dangerous because it threatens comfortable beliefs.",
+        "It means philosophy requires moral courage, not just intelligence.",
+        "The pattern applies today: anyone who challenges groupthink faces resistance."
+      ]
+    },
+    {
+      chapter: "chapter-1",
+      prompt: "How does the Euthyphro problem challenge the idea that morality comes from divine command?",
+      include: [
+        "Socrates asks: is it holy because the gods say so, or do the gods say so because it is holy?",
+        "If the first: morality is arbitrary — whatever gods decide becomes right.",
+        "If the second: morality exists independently of the gods — they recognize it but don't create it.",
+        "Either way, you cannot avoid independent moral reasoning.",
+        "This matters because it shows philosophy can challenge even religious authority without dismissing religion."
+      ]
+    },
+    {
+      chapter: "chapter-2",
+      prompt: "Compare Plato's three-part soul with Freud's id/ego/superego. What do they share and where do they differ?",
+      include: [
+        "Both describe inner conflict between competing drives.",
+        "Plato's appetite ≈ Freud's id (desire/instinct).",
+        "Plato's reason ≈ partly Freud's superego (moral authority/governance).",
+        "Plato trusts reason to govern and achieve harmony.",
+        "Freud is more pessimistic: unconscious forces are far more powerful than we admit.",
+        "Both explain why people act against their own interests — inner conflict is real."
+      ]
+    },
+    {
+      chapter: "chapter-2",
+      prompt: "Explain the pattern: 'each theory solves one problem while creating another.' Give three examples from Chapter 2.",
+      include: [
+        "Dualism protects consciousness and subjective experience — but can't explain how mind and body interact.",
+        "Materialism fits science and brain research — but can't explain why brain activity FEELS like something (qualia).",
+        "Essentialism gives stability and moral grounding — but ignores change, diversity, and social context.",
+        "Existentialism maximizes freedom — but risks making identity arbitrary and groundless.",
+        "This pattern is the CENTRAL insight of Chapter 2: no single theory of human nature wins completely."
+      ]
+    },
+    {
+      chapter: "chapter-2",
+      prompt: "How do Sartre, Buddhism, and the feminist view each challenge essentialism in different ways?",
+      include: [
+        "Sartre: no fixed essence — you create yourself through radical choice. Freedom is the fundamental fact.",
+        "Buddhism: no permanent self at all — the ego is an illusion. Release it to end suffering.",
+        "Feminist view: the 'essential self' was always a narrow Western male model. The real self is relational, intersectional, and socially shaped.",
+        "All three reject a fixed built-in nature, but for completely different reasons and toward different goals.",
+        "Sartre → individual creation. Buddhism → dissolution of self. Feminism → social reconstruction of identity."
+      ]
+    },
+    {
+      chapter: "chapter-2",
+      prompt: "Why might Aristotle's view be considered a middle ground between essentialism and existentialism?",
+      include: [
+        "Aristotle IS an essentialist: humans have a telos (purpose/function).",
+        "But his essentialism is developmental — you must CULTIVATE your nature through practice and habit.",
+        "Unlike rigid essentialism: nature isn't fully realized at birth, it must be worked toward.",
+        "Unlike Sartre: there IS a goal to aim at — you're not creating from nothing.",
+        "Confucius reaches a similar position: virtue exists in potential but must be cultivated.",
+        "This makes Aristotle the most flexible essentialist in the chapter."
+      ]
+    },
+    {
+      chapter: "chapter-2",
+      prompt: "Why is the mind-body problem considered unsolvable in Chapter 2? Trace the problem through four theories.",
+      include: [
+        "Dualism: mind and body are distinct — but then how does non-physical mind cause physical body to move?",
+        "Materialism: mind IS brain — but then why does brain activity FEEL like something? Where do qualia come from?",
+        "Property dualism: one substance with mental AND physical properties — but this is vague. How do the properties relate?",
+        "Functionalism: mind is what it DOES — works for AI/Turing Test but can't capture the raw feel of experience.",
+        "Each theory patches one hole by opening another. That's why the chapter presents it as an ongoing debate, not a settled answer."
+      ]
     }
   ],
   comparisons: [
@@ -1804,6 +2292,56 @@ export const studyData = {
       title: "Feminist multiple-self vs isolated self",
       summary: "Relational, layered identity instead of isolated rational self.",
       whyItMatters: "Expands personhood to include social location, emotion, and lived experience."
+    },
+
+    // ── Deeper Connection Comparisons ──
+    {
+      chapter: "chapter-1",
+      title: "Cave → Socrates → Buddhism: the liberation theme",
+      summary: "All three describe waking up from comfortable illusion. The Cave from shadows, Socrates from false certainty, Buddhism from craving. Philosophy IS this waking-up process.",
+      whyItMatters: "This is the thread that unifies Chapter 1. If you can explain this connection, you understand the chapter's core argument."
+    },
+    {
+      chapter: "chapter-1",
+      title: "The freed prisoner's return vs the death of Socrates",
+      summary: "Both show truth-tellers punished by society. The cave prisoners mock the returner. Athens executes Socrates. Truth is dangerous because it threatens comfortable beliefs.",
+      whyItMatters: "Philosophy requires moral courage, not just intelligence. Knowing this pattern shows you understand why philosophy is 'risky' and 'difficult' as the chapter claims."
+    },
+    {
+      chapter: "chapter-2",
+      title: "Plato's three-part soul vs Freud's id/ego/superego",
+      summary: "Both describe inner conflict. Appetite ≈ id, spirit ≈ partly ego, reason ≈ partly superego. But Plato trusts reason to win; Freud says the unconscious is far more powerful than we admit.",
+      whyItMatters: "Connecting these two shows you can think across 2,400 years of philosophy. The comparison is deep but the difference in optimism is crucial."
+    },
+    {
+      chapter: "chapter-2",
+      title: "Sartre vs Buddhism on the no-fixed-self",
+      summary: "Both deny fixed essence. But Sartre says CREATE yourself through choice (freedom). Buddhism says RELEASE the self-illusion to end suffering (liberation). Same starting point, opposite directions.",
+      whyItMatters: "This is the sharpest comparison in Chapter 2 because it shows that rejecting essentialism doesn't lead to one conclusion — it leads to radically different philosophies."
+    },
+    {
+      chapter: "chapter-2",
+      title: "Aristotle as middle ground: essence that must be cultivated",
+      summary: "Aristotle says humans HAVE a purpose (telos) but must develop it through habit and practice. Not rigid essentialism (born complete) and not existentialism (no goal at all). Confucius independently reaches a similar position.",
+      whyItMatters: "Aristotle bridges the chapter's biggest divide. Understanding this shows sophisticated thinking about the essentialism/existentialism spectrum."
+    },
+    {
+      chapter: "chapter-2",
+      title: "The mind-body problem: every solution opens a new problem",
+      summary: "Dualism protects consciousness but can't explain interaction. Materialism fits science but loses experience. Property dualism is vague. Functionalism works for AI but misses qualia.",
+      whyItMatters: "This is the paradigm example of Chapter 2's central pattern: each theory solves one problem while creating another. No winner, only tradeoffs."
+    },
+    {
+      chapter: "chapter-2",
+      title: "Three challenges to essentialism: Sartre, Buddhism, Feminism",
+      summary: "Sartre: create yourself through choice. Buddhism: release the illusion of self. Feminism: the 'essential self' was always a narrow model. Same target, three different replacements.",
+      whyItMatters: "Showing that essentialism is challenged from multiple directions — and understanding WHY each challenge differs — demonstrates real philosophical thinking."
+    },
+    {
+      chapter: "chapter-1",
+      title: "Euthyphro problem: morality and divine command",
+      summary: "Holy because gods say so (morality is arbitrary)? Or gods say so because it's holy (morality is independent)? Either way, independent moral reasoning is unavoidable.",
+      whyItMatters: "This is one of the most powerful philosophical arguments ever made. It shows philosophy can challenge religious authority without dismissing religion."
     }
   ]
 };
