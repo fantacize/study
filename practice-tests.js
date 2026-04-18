@@ -1,15 +1,17 @@
 // Practice tests mirror midterm format:
-//   Section A: Multiple Choice (15 Qs)
+//   Section A: Multiple Choice (~22 Qs)
 //   Section B: Primary Source / Political Cartoon Analysis (2 sources, open response)
-//   Section C: Short Answer (3 prompts)
+//   Section C: Short Answer (5 prompts)
+//   Time: 60 minutes
 // Coverage: Foner chapters 23-26 (Cold War origins through end of Reagan admin, 1950-1989).
+// Supplemented by class notes / Obsidian topic files.
 
 export const practiceTests = [
   {
     id: "midterm-pt1",
     title: "Practice Midterm 1 — Cold War to Civil Rights",
     focus: "Chs 23-24 heavy, 25 light",
-    minutes: 45,
+    minutes: 60,
     mcq: [
       {
         question: "George Kennan's 'Long Telegram' argued that the Soviet Union could best be countered by:",
@@ -171,6 +173,83 @@ export const practiceTests = [
         answerIndex: 1,
         explanation: "Foner emphasizes the combination — NAACP legal strategy plus SCLC/SNCC direct action plus television.",
       },
+      {
+        question: "The Bretton Woods Conference (1944) established which two institutions?",
+        options: [
+          "United Nations and NATO",
+          "International Monetary Fund and World Bank",
+          "Warsaw Pact and COMECON",
+          "G7 and WTO",
+        ],
+        answerIndex: 1,
+        explanation: "IMF and World Bank; US dollar became the world's reserve currency. USSR participated but never ratified.",
+      },
+      {
+        question: "Ethel Rosenberg's conviction and execution (1953) is now widely viewed as problematic because:",
+        options: [
+          "She confessed at trial",
+          "Her brother David Greenglass admitted in 2001 that he had lied about her role to protect his wife",
+          "She was later posthumously pardoned",
+          "The evidence was fabricated by the FBI",
+        ],
+        answerIndex: 1,
+        explanation: "Greenglass admitted he lied about Ethel typing the spy notes. She was likely prosecuted as leverage against Julius, who was a genuine spy.",
+      },
+      {
+        question: "Emmett Till's murder (1955) galvanized the civil rights movement primarily because:",
+        options: [
+          "The killers were convicted and executed",
+          "His mother Mamie held an open-casket funeral and Jet magazine published photos of his mutilated body",
+          "Federal troops investigated",
+          "The UN condemned the killing",
+        ],
+        answerIndex: 1,
+        explanation: "Mamie Till Bradley: 'I want the world to see what they did to my baby.' The images made Southern violence undeniable.",
+      },
+      {
+        question: "The Southern Manifesto (1956) was:",
+        options: [
+          "A Supreme Court dissent by Justice Harlan",
+          "A document signed by 101 Southern congressmen denouncing Brown v. Board as judicial overreach",
+          "Eisenhower's speech supporting integration",
+          "A civil rights pamphlet",
+        ],
+        answerIndex: 1,
+        explanation: "Signed by most Southern senators and representatives; launched 'massive resistance' to school desegregation.",
+      },
+      {
+        question: "The 'domino theory,' articulated publicly by Eisenhower in 1954, held that:",
+        options: [
+          "Each communist state would inevitably become democratic",
+          "If one nation fell to communism, neighbors would follow in a chain reaction",
+          "Nuclear weapons would deter all wars",
+          "Europe would unite against the USSR",
+        ],
+        answerIndex: 1,
+        explanation: "Became the primary justification for Vietnam involvement. Critics argue it oversimplified national contexts.",
+      },
+      {
+        question: "Which of the following BEST distinguishes de jure from de facto segregation in the postwar US?",
+        options: [
+          "De jure was Northern; de facto was Southern",
+          "De jure was enforced by explicit laws (South); de facto was enforced by practice like redlining, restrictive covenants, and school zoning (North)",
+          "De jure ended with Brown; de facto ended with the 15th Amendment",
+          "They are identical categories",
+        ],
+        answerIndex: 1,
+        explanation: "De facto segregation was often harder to dismantle because there was no single law to challenge. Levittown illustrates it.",
+      },
+      {
+        question: "Which of King's philosophical sources does he use to argue that 'an unjust law is no law at all'?",
+        options: [
+          "John Locke",
+          "Augustine and Aquinas (natural law)",
+          "Hobbes",
+          "Jefferson",
+        ],
+        answerIndex: 1,
+        explanation: "King cites Augustine's maxim and Aquinas's framework, plus Buber (I-thou) and Tillich (sin as separation).",
+      },
     ],
     sources: [
       {
@@ -219,6 +298,29 @@ export const practiceTests = [
           "References Augustine ('unjust law is no law at all'), Buber (I-thou), Tillich (sin as separation)",
         ],
       },
+      {
+        prompt: "How did the 1949 'twin shocks' (Soviet atomic bomb + fall of China to Mao) reshape US Cold War strategy and domestic politics?",
+        rubric: [
+          "Ended US nuclear monopoly years earlier than expected",
+          "China became communist — 'Who lost China?' became toxic political question",
+          "Fueled the Second Red Scare, McCarthyism, and the Rosenberg prosecution",
+          "Helped produce NSC-68 (1950), which militarized containment",
+          "Set the stage for Korean War intervention and massive defense buildup",
+          "Transformed the Cold War from a primarily diplomatic/economic contest into a military-nuclear standoff",
+        ],
+      },
+      {
+        prompt: "Explain how the Marshall Plan and the Truman Doctrine worked together as instruments of containment. Cite at least one specific outcome of each.",
+        rubric: [
+          "Truman Doctrine (1947): ideological/political commitment to 'support free peoples'",
+          "Marshall Plan (1948-52): $13B to rebuild Western European economies",
+          "Doctrine justified aid to Greece (communist insurgency defeated) and Turkey (joined NATO 1952)",
+          "Plan rebuilt West Germany, France, UK, Italy — created loyal trading partners",
+          "Stalin refused and forbade Eastern Bloc — hardened the Iron Curtain division",
+          "Together: ideological frame + economic substance — template for later Cold War action",
+          "Marshall himself: 'seeds of totalitarian regimes are nurtured by misery and want'",
+        ],
+      },
     ],
   },
 
@@ -226,7 +328,7 @@ export const practiceTests = [
     id: "midterm-pt2",
     title: "Practice Midterm 2 — The Sixties and Conservative Turn",
     focus: "Chs 25-26 heavy",
-    minutes: 45,
+    minutes: 60,
     mcq: [
       {
         question: "In 1945 Ho Chi Minh's declaration of Vietnamese independence quoted prominently from:",
@@ -388,6 +490,83 @@ export const practiceTests = [
         answerIndex: 1,
         explanation: "Police attacked protesters outside the DNC in Chicago; protesters chanted 'the whole world is watching' as it was broadcast live.",
       },
+      {
+        question: "Operation Rolling Thunder (1965-1968) is best described as:",
+        options: [
+          "A ground invasion of North Vietnam",
+          "A sustained US air bombing campaign against North Vietnam that dropped more tonnage than all of WWII",
+          "A CIA counterinsurgency operation",
+          "A naval blockade",
+        ],
+        answerIndex: 1,
+        explanation: "3+ years of bombing. Failed to break North Vietnamese will; used napalm and Agent Orange (dioxin).",
+      },
+      {
+        question: "Diem's assassination in November 1963 was significant because:",
+        options: [
+          "It was carried out by North Vietnamese spies",
+          "It followed a US-backed coup, deepening American responsibility for South Vietnam",
+          "It ended the Vietnam War",
+          "It prompted the Geneva Accords",
+        ],
+        answerIndex: 1,
+        explanation: "Kennedy approved the coup. Diem's Catholic authoritarianism had alienated Buddhists (monk Thich Quang Duc's self-immolation in June 1963).",
+      },
+      {
+        question: "The Kent State shootings (May 1970) occurred in response to protests against:",
+        options: [
+          "Watergate",
+          "Nixon's invasion/bombing of Cambodia",
+          "The Civil Rights Act",
+          "The draft lottery",
+        ],
+        answerIndex: 1,
+        explanation: "Ohio National Guard killed 4 students. Jackson State killed 2 Black students days later with less media attention.",
+      },
+      {
+        question: "A. Philip Randolph's threat of a March on Washington in 1948 produced:",
+        options: [
+          "The Civil Rights Act of 1964",
+          "Truman's Executive Order 9981 desegregating the military",
+          "The Voting Rights Act of 1965",
+          "Brown v. Board of Education",
+        ],
+        answerIndex: 1,
+        explanation: "First major federal civil rights action since Reconstruction; demonstrated effectiveness of executive-branch pressure.",
+      },
+      {
+        question: "Nixon's visit to China (1972) is a key example of:",
+        options: [
+          "Continuing isolation of communist regimes",
+          "Détente — triangulation between the USSR and China to extract concessions",
+          "Abandonment of containment",
+          "A CIA covert operation",
+        ],
+        answerIndex: 1,
+        explanation: "By opening to Beijing, Nixon pressured Moscow. Led to SALT I with USSR later that year.",
+      },
+      {
+        question: "The Clark Doll Test, used as evidence in Brown v. Board, showed that:",
+        options: [
+          "Black and white children performed identically on standardized tests",
+          "Black children preferred white dolls, demonstrating the psychological damage of segregation",
+          "Segregated schools had equal resources",
+          "Integration had no effect on children",
+        ],
+        answerIndex: 1,
+        explanation: "Kenneth and Mamie Clark's study. NAACP used it to argue that 'separate' inherently meant unequal in its psychological effects.",
+      },
+      {
+        question: "Cesar Chavez is most associated with:",
+        options: [
+          "The NAACP",
+          "The United Farm Workers and Chicano movement — grape boycotts and nonviolent organizing",
+          "The Black Panther Party",
+          "The antiwar movement in Chicago",
+        ],
+        answerIndex: 1,
+        explanation: "UFW used boycotts and nonviolent protest modeled on civil rights movement to win farmworker contracts.",
+      },
     ],
     sources: [
       {
@@ -439,6 +618,30 @@ export const practiceTests = [
           "Set stage for Reagan's 'government is the problem' framing",
         ],
       },
+      {
+        prompt: "Why did the US treat Vietnam as a Cold War problem rather than a decolonization / nationalist struggle? What did this cost policymakers analytically?",
+        rubric: [
+          "Framed through containment (Kennan) and Domino Theory (Eisenhower 1954)",
+          "Ignored that Ho Chi Minh's 1945 declaration quoted the US Declaration of Independence",
+          "Prioritized alliance with France after WWII; paid 78% of French war costs by 1954",
+          "Failed to see Vietnamese nationalism as the dominant force",
+          "Led to successive escalations through Kennedy, LBJ, Nixon",
+          "Walter Lippmann had warned early about overextension",
+          "Ultimate cost: 58,000 US dead, 2M+ Vietnamese, and 'Vietnam Syndrome'",
+        ],
+      },
+      {
+        prompt: "Explain Tim O'Brien's inversion of courage in 'On the Rainy River.' How does his argument complicate traditional Vietnam-era narratives?",
+        rubric: [
+          "Traditional: courage = going to war; refusing to fight = cowardice",
+          "O'Brien inverts: he went because he was 'embarrassed not to' — social shame",
+          "Real courage would have been fleeing to Canada and defying hometown judgment",
+          "Elroy Berdahl at the Rainy River is a silent witness who allows him to choose",
+          "O'Brien: 'I was a coward. I went to the war.'",
+          "Complicates hero narratives; shows how community pressure can override conscience",
+          "Pairs with Caputo's 'Rumor of War' — idealism decays into purposeless violence",
+        ],
+      },
     ],
   },
 
@@ -446,7 +649,7 @@ export const practiceTests = [
     id: "midterm-pt3",
     title: "Practice Midterm 3 — Ford/Carter & Reagan Revolution",
     focus: "Ch 26 heavy (1970s crisis through end of Cold War)",
-    minutes: 45,
+    minutes: 60,
     mcq: [
       {
         question: "What directly triggered OPEC's 1973 oil embargo against the United States?",
@@ -603,6 +806,78 @@ export const practiceTests = [
         answerIndex: 1,
         explanation: "Foner treats the period as both a Cold War endgame and a domestic transformation that produced lasting inequality.",
       },
+      {
+        question: "The Moral Majority was founded by:",
+        options: [
+          "Pat Robertson",
+          "Jerry Falwell in 1979",
+          "Phyllis Schlafly",
+          "Billy Graham",
+        ],
+        answerIndex: 1,
+        explanation: "Falwell's 1979 religious-right organization mobilized evangelicals; ~4M members at peak. Key to Reagan's 1980 coalition.",
+      },
+      {
+        question: "The PATCO strike of 1981 ended when:",
+        options: [
+          "The union won wage increases",
+          "Reagan fired over 11,000 striking air traffic controllers and banned them from federal service for life",
+          "Federal mediation succeeded",
+          "Workers returned to work voluntarily",
+        ],
+        answerIndex: 1,
+        explanation: "PATCO firings signaled Reagan's hostility to organized labor and accelerated private-sector union decline.",
+      },
+      {
+        question: "The Iran-Contra Affair's central illegality was:",
+        options: [
+          "Nixon-style wiretapping",
+          "Selling arms to Iran (violating the embargo) and diverting profits to fund the Contras (violating the Boland Amendment)",
+          "Accepting foreign campaign donations",
+          "Bribing federal judges",
+        ],
+        answerIndex: 1,
+        explanation: "Oliver North on the NSC orchestrated the diversion. Reagan claimed ignorance; North was convicted (later overturned on technicality).",
+      },
+      {
+        question: "Archbishop Oscar Romero, assassinated in 1980, was:",
+        options: [
+          "A Sandinista leader",
+          "An El Salvadoran archbishop murdered by US-backed right-wing death squads while saying mass",
+          "A Contra commander",
+          "A Cuban dissident",
+        ],
+        answerIndex: 1,
+        explanation: "His murder symbolized Reagan's Latin America policy — backing brutal right-wing forces against leftist movements.",
+      },
+      {
+        question: "Gary Webb's Dark Alliance (1996) was:",
+        options: [
+          "A federal report exonerating the CIA",
+          "A San Jose Mercury News series alleging CIA-backed Contras sold crack cocaine in Los Angeles, fueling the epidemic",
+          "A novel by Oliver North",
+          "A Reagan administration memoir",
+        ],
+        answerIndex: 1,
+        explanation: "Establishment media attacked Webb; a 1998 CIA IG report substantially confirmed his main allegations. Webb died in 2004.",
+      },
+      {
+        question: "The INF Treaty (1987) eliminated:",
+        options: [
+          "All nuclear weapons held by the US and USSR",
+          "Intermediate-range nuclear missiles (ground-launched, 500-5,500 km)",
+          "Strategic bombers",
+          "Chemical weapons",
+        ],
+        answerIndex: 1,
+        explanation: "First arms-control treaty to eliminate an entire class of nuclear weapons. Signed by Reagan and Gorbachev.",
+      },
+      {
+        question: "The Soviet Union formally dissolved in:",
+        options: ["November 1989", "December 1991", "August 1991", "June 1987"],
+        answerIndex: 1,
+        explanation: "Dec 25-26, 1991 — Gorbachev resigned, Soviet flag lowered from Kremlin. 15 independent republics emerged.",
+      },
     ],
     sources: [
       {
@@ -654,6 +929,31 @@ export const practiceTests = [
           "Alexander: race-neutral on paper but racially stratified in effect",
           "Functions as a caste system replacing explicit segregation",
           "Linked to Reagan's Latin America policy via Contras / Gary Webb allegations",
+        ],
+      },
+      {
+        prompt: "To what extent did Reagan 'win' the Cold War? Give evidence on both sides and reach a reasoned conclusion.",
+        rubric: [
+          "For Reagan: massive military buildup + SDI pressured Soviet economy",
+          "For Reagan: 'Evil Empire' rhetoric shifted moral framing; 'tear down this wall' pressured Gorbachev",
+          "For Reagan: INF Treaty and Gorbachev summits produced concrete arms cuts",
+          "Against: USSR had deep internal contradictions (economic stagnation, nationalist pressures)",
+          "Against: Gorbachev's own Perestroika/Glasnost did the real work of reform",
+          "Against: Reagan initially opposed engagement; only in second term shifted toward negotiation",
+          "Reasoned conclusion: Reagan accelerated a process that was already underway; USSR's internal crisis was the primary cause",
+        ],
+      },
+      {
+        prompt: "Analyze the relationship between Reagan's domestic War on Drugs and his Central America policy. How do they illuminate each other?",
+        rubric: [
+          "Anti-Drug Abuse Act 1986: 100:1 crack/powder sentencing disparity; mandatory minimums",
+          "Prison population grew from ~300K (1972) to 2M+ (2000)",
+          "Disproportionately criminalized Black and Latino men",
+          "At same time: CIA-backed Contras in Nicaragua, death squads in El Salvador",
+          "Gary Webb's 1996 Dark Alliance alleged Contra involvement in LA crack trade",
+          "1998 CIA IG report substantially confirmed allegations",
+          "Pattern: anti-drug rhetoric at home while covert allies abroad involved in drug trade",
+          "Michelle Alexander's 'New Jim Crow' frames the domestic side as racial caste",
         ],
       },
     ],
