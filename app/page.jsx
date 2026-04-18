@@ -56,6 +56,8 @@ function formatTime(seconds) {
   return `${m}:${s.toString().padStart(2, "0")}`;
 }
 
+import Link from "next/link";
+
 function LandingPage({ onSelect, darkMode, setDarkMode }) {
   const subjects = [
     { id: "philosophy", label: "Philosophy", description: "Chapters 1 & 2 — What Philosophy Is, Models of Human Nature", icon: "🏛️", color: "from-violet-500 to-purple-600" },
@@ -87,6 +89,16 @@ function LandingPage({ onSelect, darkMode, setDarkMode }) {
             </CardContent>
           </Card>
         ))}
+      </div>
+      <div className="mt-8 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm">
+        <span className="text-muted-foreground">AmStuds midterm prep →</span>
+        <Link href="/primary-sources" className="font-medium underline-offset-4 hover:underline">
+          Primary Sources
+        </Link>
+        <span className="text-muted-foreground">·</span>
+        <Link href="/practice-test" className="font-medium underline-offset-4 hover:underline">
+          Practice Tests
+        </Link>
       </div>
     </div>
   );
@@ -262,8 +274,9 @@ export default function Page() {
   );
 
   const overviewData = useMemo(() => {
+    const currentTitle = activeData.chapters.find((c) => c.id === chapter)?.title;
     const chapterMap = activeData.overview.chapterMap.filter(
-      (entry) => chapter === "all" || entry.chapter.toLowerCase().replace(" ", "-") === chapter
+      (entry) => chapter === "all" || entry.chapter === currentTitle
     );
     return {
       chapterMap: chapterMap.length ? chapterMap : activeData.overview.chapterMap,

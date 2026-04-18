@@ -2,14 +2,11 @@ export const amstudsData = {
   chapters: [
     { id: "all", label: "All", title: "Full Review" },
     { id: "cold-war", label: "Cold War", title: "The Cold War" },
-    { id: "affluent-society", label: "Affluent Society", title: "An Affluent Society" },
-    { id: "civil-rights", label: "Civil Rights", title: "Civil Rights Movement" },
-    { id: "vietnam", label: "Vietnam", title: "The Vietnam War" },
-    { id: "nixon", label: "Nixon", title: "Nixon & Conservative Turn" },
-    { id: "birmingham-jail", label: "Birmingham Jail", title: "Letter from Birmingham Jail" },
-    { id: "primary-sources", label: "Primary Sources", title: "Primary Sources & Literature" },
-    { id: "1970s", label: "1970s", title: "1970s: From Malaise to Morning in America" },
-    { id: "reagan", label: "Reagan Era", title: "The Reagan Era & End of the Cold War" },
+    { id: "fifties-cr", label: "50s & Civil Rights", title: "The 1950s and Civil Rights" },
+    { id: "sixties", label: "The 60s", title: "The 60s" },
+    { id: "conservatism", label: "Conservatism", title: "Rise of Conservatism" },
+    { id: "ford-carter", label: "Ford/Carter", title: "Ford, Carter and the Economic Malaise" },
+    { id: "reagan-revolution", label: "Reagan", title: "The Reagan Revolution" },
   ],
   modes: [
     { id: "overview", label: "Overview" },
@@ -254,20 +251,20 @@ export const amstudsData = {
     { prompt: "What was the Marshall Plan?", answer: "US program of economic aid to rebuild Western Europe and prevent communist influence through alleviating poverty.", tag: "Cold War", chapter: "cold-war" },
     { prompt: "What was NATO?", answer: "North Atlantic Treaty Organization — mutual defense alliance where an attack on one member is considered an attack on all.", tag: "Cold War", chapter: "cold-war" },
     { prompt: "What was NSC-68?", answer: "1950 National Security Council report calling for massive military buildup to counter Soviet atomic threat.", tag: "Cold War", chapter: "cold-war" },
-    { prompt: "What was Levittown?", answer: "Mass-produced suburban housing ($8,990-$16,500) built by William Levitt. Affordable but racially exclusionary — no homes sold to Black families.", tag: "Affluent Society", chapter: "affluent-society" },
-    { prompt: "What was the Kitchen Debate?", answer: "1959 exchange between Nixon and Khrushchev arguing capitalism vs communism through consumer goods at a model American kitchen.", tag: "Affluent Society", chapter: "affluent-society" },
-    { prompt: "What is de jure vs de facto segregation?", answer: "De jure = by law (South). De facto = by custom/practice without laws (North, especially housing discrimination).", tag: "Civil Rights", chapter: "civil-rights" },
-    { prompt: "What was Brown v. Board of Education?", answer: "1954 Supreme Court ruling that 'separate educational facilities are inherently unequal,' overturning Plessy v. Ferguson.", tag: "Civil Rights", chapter: "civil-rights" },
-    { prompt: "Who was Emmett Till?", answer: "14-year-old Black boy murdered in Mississippi in 1955. His mother's open-casket funeral galvanized the civil rights movement.", tag: "Civil Rights", chapter: "civil-rights" },
-    { prompt: "What was the Montgomery Bus Boycott?", answer: "Year-long boycott (1955-56) sparked by Rosa Parks. Led by MLK; ended when Supreme Court declared bus segregation unconstitutional.", tag: "Civil Rights", chapter: "civil-rights" },
-    { prompt: "Who were the Little Rock Nine?", answer: "Nine Black students who enrolled at Little Rock Central High in 1957. Protected by 101st Airborne after Governor Faubus blocked them.", tag: "Civil Rights", chapter: "civil-rights" },
-    { prompt: "What was the Gulf of Tonkin Resolution?", answer: "1964 resolution giving the President unlimited authority to use force in Vietnam. Later revealed as based on exaggerated/fabricated attacks.", tag: "Vietnam", chapter: "vietnam" },
-    { prompt: "What was the Tet Offensive?", answer: "1968 surprise attacks during Tet holiday. Military failure for communists but shattered US claims the war was being won.", tag: "Vietnam", chapter: "vietnam" },
-    { prompt: "What was Vietnamization?", answer: "Nixon's policy of withdrawing US troops while transferring combat to South Vietnamese. Also ended the draft.", tag: "Vietnam", chapter: "vietnam" },
-    { prompt: "What was the Silent Majority?", answer: "Nixon's term for Americans who supported the war and traditional values but didn't protest. From his November 1969 speech.", tag: "Nixon", chapter: "nixon" },
-    { prompt: "What was the Southern Strategy?", answer: "Republican strategy to win Southern white voters by appealing to racial anxieties as Black voters registered as Democrats.", tag: "Nixon", chapter: "nixon" },
-    { prompt: "What was Watergate?", answer: "1972 break-in at DNC headquarters and cover-up that led to Nixon's resignation in 1974 — the only presidential resignation in US history.", tag: "Nixon", chapter: "nixon" },
-    { prompt: "What were the Stonewall Riots?", answer: "1969 police raid on a Greenwich Village gay bar sparked 5 days of rioting, launching the modern gay rights movement.", tag: "Nixon", chapter: "nixon" },
+    { prompt: "What was Levittown?", answer: "Mass-produced suburban housing ($8,990-$16,500) built by William Levitt. Affordable but racially exclusionary — no homes sold to Black families.", tag: "Affluent Society", chapter: "fifties-cr" },
+    { prompt: "What was the Kitchen Debate?", answer: "1959 exchange between Nixon and Khrushchev arguing capitalism vs communism through consumer goods at a model American kitchen.", tag: "Affluent Society", chapter: "fifties-cr" },
+    { prompt: "What is de jure vs de facto segregation?", answer: "De jure = by law (South). De facto = by custom/practice without laws (North, especially housing discrimination).", tag: "Civil Rights", chapter: "fifties-cr" },
+    { prompt: "What was Brown v. Board of Education?", answer: "1954 Supreme Court ruling that 'separate educational facilities are inherently unequal,' overturning Plessy v. Ferguson.", tag: "Civil Rights", chapter: "fifties-cr" },
+    { prompt: "Who was Emmett Till?", answer: "14-year-old Black boy murdered in Mississippi in 1955. His mother's open-casket funeral galvanized the civil rights movement.", tag: "Civil Rights", chapter: "fifties-cr" },
+    { prompt: "What was the Montgomery Bus Boycott?", answer: "Year-long boycott (1955-56) sparked by Rosa Parks. Led by MLK; ended when Supreme Court declared bus segregation unconstitutional.", tag: "Civil Rights", chapter: "fifties-cr" },
+    { prompt: "Who were the Little Rock Nine?", answer: "Nine Black students who enrolled at Little Rock Central High in 1957. Protected by 101st Airborne after Governor Faubus blocked them.", tag: "Civil Rights", chapter: "fifties-cr" },
+    { prompt: "What was the Gulf of Tonkin Resolution?", answer: "1964 resolution giving the President unlimited authority to use force in Vietnam. Later revealed as based on exaggerated/fabricated attacks.", tag: "Vietnam", chapter: "sixties" },
+    { prompt: "What was the Tet Offensive?", answer: "1968 surprise attacks during Tet holiday. Military failure for communists but shattered US claims the war was being won.", tag: "Vietnam", chapter: "sixties" },
+    { prompt: "What was Vietnamization?", answer: "Nixon's policy of withdrawing US troops while transferring combat to South Vietnamese. Also ended the draft.", tag: "Vietnam", chapter: "sixties" },
+    { prompt: "What was the Silent Majority?", answer: "Nixon's term for Americans who supported the war and traditional values but didn't protest. From his November 1969 speech.", tag: "Nixon", chapter: "conservatism" },
+    { prompt: "What was the Southern Strategy?", answer: "Republican strategy to win Southern white voters by appealing to racial anxieties as Black voters registered as Democrats.", tag: "Nixon", chapter: "conservatism" },
+    { prompt: "What was Watergate?", answer: "1972 break-in at DNC headquarters and cover-up that led to Nixon's resignation in 1974 — the only presidential resignation in US history.", tag: "Nixon", chapter: "conservatism" },
+    { prompt: "What were the Stonewall Riots?", answer: "1969 police raid on a Greenwich Village gay bar sparked 5 days of rioting, launching the modern gay rights movement.", tag: "Nixon", chapter: "conservatism" },
 
     // ── Cold War: Origins & Escalation ──
     { prompt: "What was the Bretton Woods Conference?", answer: "1944 meeting of 44 nations that created IMF, World Bank, and made US dollar the reserve currency. USSR participated but never ratified — viewed it as Western capitalist tool.", tag: "Cold War", chapter: "cold-war" },
@@ -284,92 +281,92 @@ export const amstudsData = {
     { prompt: "How did Cold War propaganda create a freedom paradox?", answer: "US defined itself as defender of freedom against totalitarianism while simultaneously restricting civil liberties, demanding conformity, and surveilling citizens through HUAC and loyalty oaths.", tag: "Cold War", chapter: "cold-war" },
 
     // ── Affluent Society: Additional ──
-    { prompt: "How did 1950s gender roles reverse WWII changes?", answer: "During WWII, women ran factories (Rosie the Riveter). Postwar culture pushed them back into domestic roles. TV shows, textbooks, and ads enforced the suburban housewife ideal as the norm.", tag: "Affluent Society", chapter: "affluent-society" },
-    { prompt: "What was the Green Book?", answer: "Travel guide listing safe businesses for African Americans during Jim Crow. Necessary because of discrimination and danger while traveling — connecting to King's 'sleeping in cars because no motel accepts you.'", tag: "Affluent Society", chapter: "affluent-society" },
-    { prompt: "How did the Beats challenge 1950s conformity?", answer: "Allen Ginsberg and Jack Kerouac rejected materialism and social norms. Ginsberg's 'America' directly challenged Cold War society. They were precursors to the 1960s counterculture.", tag: "Affluent Society", chapter: "affluent-society" },
+    { prompt: "How did 1950s gender roles reverse WWII changes?", answer: "During WWII, women ran factories (Rosie the Riveter). Postwar culture pushed them back into domestic roles. TV shows, textbooks, and ads enforced the suburban housewife ideal as the norm.", tag: "Affluent Society", chapter: "fifties-cr" },
+    { prompt: "What was the Green Book?", answer: "Travel guide listing safe businesses for African Americans during Jim Crow. Necessary because of discrimination and danger while traveling — connecting to King's 'sleeping in cars because no motel accepts you.'", tag: "Affluent Society", chapter: "fifties-cr" },
+    { prompt: "How did the Beats challenge 1950s conformity?", answer: "Allen Ginsberg and Jack Kerouac rejected materialism and social norms. Ginsberg's 'America' directly challenged Cold War society. They were precursors to the 1960s counterculture.", tag: "Affluent Society", chapter: "fifties-cr" },
 
     // ── Civil Rights: Additional ──
-    { prompt: "Why did the 1950s bring civil rights change?", answer: "WWII hypocrisy (fighting racism abroad while practicing it at home), Cold War pressure (Soviet propaganda exploited US racism), returning Black veterans, Great Migration creating political power in Northern cities, and TV making injustice visible.", tag: "Civil Rights", chapter: "civil-rights" },
-    { prompt: "What were the four major civil rights organizations?", answer: "NAACP (legal action, DuBois/Wells), CORE (direct action, James Farmer/Bayard Rustin), SNCC (student organizing, Ella Baker), SCLC (church-based campaigns, MLK/Abernathy).", tag: "Civil Rights", chapter: "civil-rights" },
-    { prompt: "What were the key Warren Court decisions?", answer: "Engel v. Vitale (no school prayer), Baker v. Carr (one person one vote), Griswold (right to privacy), Miranda (rights of accused), NYT v. Sullivan (press freedom), Loving (interracial marriage), Tinker (student free speech).", tag: "Civil Rights", chapter: "civil-rights" },
+    { prompt: "Why did the 1950s bring civil rights change?", answer: "WWII hypocrisy (fighting racism abroad while practicing it at home), Cold War pressure (Soviet propaganda exploited US racism), returning Black veterans, Great Migration creating political power in Northern cities, and TV making injustice visible.", tag: "Civil Rights", chapter: "fifties-cr" },
+    { prompt: "What were the four major civil rights organizations?", answer: "NAACP (legal action, DuBois/Wells), CORE (direct action, James Farmer/Bayard Rustin), SNCC (student organizing, Ella Baker), SCLC (church-based campaigns, MLK/Abernathy).", tag: "Civil Rights", chapter: "fifties-cr" },
+    { prompt: "What were the key Warren Court decisions?", answer: "Engel v. Vitale (no school prayer), Baker v. Carr (one person one vote), Griswold (right to privacy), Miranda (rights of accused), NYT v. Sullivan (press freedom), Loving (interracial marriage), Tinker (student free speech).", tag: "Civil Rights", chapter: "fifties-cr" },
 
     // ── Vietnam: Additional ──
-    { prompt: "How did French colonialism lead to the Vietnam War?", answer: "France controlled Vietnam 1887-1954, exploiting its economy and suppressing its culture. Ho Chi Minh's independence movement was anti-colonial before it was communist. US supported France to contain communism, inheriting a colonial war.", tag: "Vietnam", chapter: "vietnam" },
-    { prompt: "Who was Ngo Dinh Diem?", answer: "US-backed South Vietnamese leader. Catholic in Buddhist country, authoritarian, rigged elections with 98.2% vote. Strategic Hamlet Program failed. Overthrown and killed in 1963 coup tacitly approved by JFK.", tag: "Vietnam", chapter: "vietnam" },
-    { prompt: "Why did Ho Chi Minh quote the US Declaration of Independence?", answer: "His 1945 declaration opened with 'All men are created equal' — framing Vietnamese independence in American terms and highlighting the contradiction of US supporting French colonialism.", tag: "Vietnam", chapter: "vietnam" },
-    { prompt: "What was the 'Living Room War'?", answer: "Vietnam was the first war broadcast on TV. Graphic footage of combat, napalm, and body bags turned public opinion. Made it impossible to hide the war's reality from Americans.", tag: "Vietnam", chapter: "vietnam" },
-    { prompt: "How did the one-year tour rotation affect soldiers?", answer: "Unlike WWII (serve for duration), Vietnam used 365-day individual rotations. Destroyed unit cohesion, created 'short-timer' syndrome, and meant every soldier's war was his own personal countdown.", tag: "Vietnam", chapter: "vietnam" },
-    { prompt: "What was the average Vietnam soldier's experience?", answer: "Average age 19 (vs 26 in WWII). No front lines, no clear objectives. Progress measured by body count. Draft fell disproportionately on working class and minorities. College deferments let wealthy avoid service.", tag: "Vietnam", chapter: "vietnam" },
-    { prompt: "What was the Fall of Saigon?", answer: "April 30, 1975: North Vietnamese captured Saigon. Iconic helicopter evacuation from US Embassy roof. City renamed Ho Chi Minh City. Final US defeat after 58,000 American and 2+ million Vietnamese deaths.", tag: "Vietnam", chapter: "vietnam" },
-    { prompt: "What happened at Kent State?", answer: "May 1970: Ohio National Guard killed 4 students protesting Nixon's Cambodia invasion. Galvanized antiwar movement nationwide. Showed the war's violence had come home to American campuses.", tag: "Vietnam", chapter: "vietnam" },
-    { prompt: "What was the My Lai Massacre?", answer: "1968: US soldiers killed 347-504 unarmed Vietnamese civilians. Covered up for over a year. Exposure shattered remaining claims of American moral superiority in the war.", tag: "Vietnam", chapter: "vietnam" },
-    { prompt: "What were the Pentagon Papers?", answer: "Secret government study leaked by Daniel Ellsberg (1971) showing systematic government deception about Vietnam. Deepened the credibility gap between what government said and what was actually happening.", tag: "Vietnam", chapter: "vietnam" },
+    { prompt: "How did French colonialism lead to the Vietnam War?", answer: "France controlled Vietnam 1887-1954, exploiting its economy and suppressing its culture. Ho Chi Minh's independence movement was anti-colonial before it was communist. US supported France to contain communism, inheriting a colonial war.", tag: "Vietnam", chapter: "sixties" },
+    { prompt: "Who was Ngo Dinh Diem?", answer: "US-backed South Vietnamese leader. Catholic in Buddhist country, authoritarian, rigged elections with 98.2% vote. Strategic Hamlet Program failed. Overthrown and killed in 1963 coup tacitly approved by JFK.", tag: "Vietnam", chapter: "sixties" },
+    { prompt: "Why did Ho Chi Minh quote the US Declaration of Independence?", answer: "His 1945 declaration opened with 'All men are created equal' — framing Vietnamese independence in American terms and highlighting the contradiction of US supporting French colonialism.", tag: "Vietnam", chapter: "sixties" },
+    { prompt: "What was the 'Living Room War'?", answer: "Vietnam was the first war broadcast on TV. Graphic footage of combat, napalm, and body bags turned public opinion. Made it impossible to hide the war's reality from Americans.", tag: "Vietnam", chapter: "sixties" },
+    { prompt: "How did the one-year tour rotation affect soldiers?", answer: "Unlike WWII (serve for duration), Vietnam used 365-day individual rotations. Destroyed unit cohesion, created 'short-timer' syndrome, and meant every soldier's war was his own personal countdown.", tag: "Vietnam", chapter: "sixties" },
+    { prompt: "What was the average Vietnam soldier's experience?", answer: "Average age 19 (vs 26 in WWII). No front lines, no clear objectives. Progress measured by body count. Draft fell disproportionately on working class and minorities. College deferments let wealthy avoid service.", tag: "Vietnam", chapter: "sixties" },
+    { prompt: "What was the Fall of Saigon?", answer: "April 30, 1975: North Vietnamese captured Saigon. Iconic helicopter evacuation from US Embassy roof. City renamed Ho Chi Minh City. Final US defeat after 58,000 American and 2+ million Vietnamese deaths.", tag: "Vietnam", chapter: "sixties" },
+    { prompt: "What happened at Kent State?", answer: "May 1970: Ohio National Guard killed 4 students protesting Nixon's Cambodia invasion. Galvanized antiwar movement nationwide. Showed the war's violence had come home to American campuses.", tag: "Vietnam", chapter: "sixties" },
+    { prompt: "What was the My Lai Massacre?", answer: "1968: US soldiers killed 347-504 unarmed Vietnamese civilians. Covered up for over a year. Exposure shattered remaining claims of American moral superiority in the war.", tag: "Vietnam", chapter: "sixties" },
+    { prompt: "What were the Pentagon Papers?", answer: "Secret government study leaked by Daniel Ellsberg (1971) showing systematic government deception about Vietnam. Deepened the credibility gap between what government said and what was actually happening.", tag: "Vietnam", chapter: "sixties" },
 
     // ── Nixon: Additional ──
-    { prompt: "Why was 1968 the most turbulent election year?", answer: "Tet Offensive, MLK assassination (April 4, riots in 100+ cities), RFK assassination (June 5), Chicago Convention violence. Nixon won as 'law and order' candidate against this backdrop of chaos.", tag: "Nixon", chapter: "nixon" },
-    { prompt: "Who was George Wallace in 1968?", answer: "Third-party candidate who won 5 Southern states on explicit segregation. His 13.5% proved racial backlash was politically powerful. Nixon later absorbed Wallace voters via the Southern Strategy.", tag: "Nixon", chapter: "nixon" },
-    { prompt: "What happened at the 1968 Chicago Convention?", answer: "Antiwar protesters clashed violently with police outside the Democratic Convention. TV broadcast the chaos. Many viewers blamed protesters, not police — boosting Nixon's 'law and order' message.", tag: "Nixon", chapter: "nixon" },
-    { prompt: "What was détente in practice?", answer: "Nixon opened diplomatic relations with China (1972 visit), negotiated SALT arms limitation talks with USSR. Used China-USSR rivalry as leverage. Major shift from rigid confrontation to strategic flexibility.", tag: "Nixon", chapter: "nixon" },
-    { prompt: "How did stagflation define the 1970s economy?", answer: "Simultaneous stagnation, high unemployment, and rising inflation. Consumer prices nearly doubled 1968-1975. Undermined confidence in government economic management. No easy policy solution existed.", tag: "Nixon", chapter: "nixon" },
-    { prompt: "What was the Sexual Revolution?", answer: "1960s challenge to traditional sexual norms. Birth control pill (1960), Griswold v. Connecticut (right to contraception, 1965), Roe v. Wade (abortion rights, 1973). Part of broader challenge to 1950s conformity.", tag: "Nixon", chapter: "nixon" },
+    { prompt: "Why was 1968 the most turbulent election year?", answer: "Tet Offensive, MLK assassination (April 4, riots in 100+ cities), RFK assassination (June 5), Chicago Convention violence. Nixon won as 'law and order' candidate against this backdrop of chaos.", tag: "Nixon", chapter: "conservatism" },
+    { prompt: "Who was George Wallace in 1968?", answer: "Third-party candidate who won 5 Southern states on explicit segregation. His 13.5% proved racial backlash was politically powerful. Nixon later absorbed Wallace voters via the Southern Strategy.", tag: "Nixon", chapter: "conservatism" },
+    { prompt: "What happened at the 1968 Chicago Convention?", answer: "Antiwar protesters clashed violently with police outside the Democratic Convention. TV broadcast the chaos. Many viewers blamed protesters, not police — boosting Nixon's 'law and order' message.", tag: "Nixon", chapter: "conservatism" },
+    { prompt: "What was détente in practice?", answer: "Nixon opened diplomatic relations with China (1972 visit), negotiated SALT arms limitation talks with USSR. Used China-USSR rivalry as leverage. Major shift from rigid confrontation to strategic flexibility.", tag: "Nixon", chapter: "conservatism" },
+    { prompt: "How did stagflation define the 1970s economy?", answer: "Simultaneous stagnation, high unemployment, and rising inflation. Consumer prices nearly doubled 1968-1975. Undermined confidence in government economic management. No easy policy solution existed.", tag: "Nixon", chapter: "conservatism" },
+    { prompt: "What was the Sexual Revolution?", answer: "1960s challenge to traditional sexual norms. Birth control pill (1960), Griswold v. Connecticut (right to contraception, 1965), Roe v. Wade (abortion rights, 1973). Part of broader challenge to 1950s conformity.", tag: "Nixon", chapter: "conservatism" },
 
     // ── Birmingham Jail ──
-    { prompt: "What was King's response to being called an 'outsider'?", answer: "'Injustice anywhere is a threat to justice everywhere. We are caught in an inescapable network of mutuality.' Also: he was invited by local leaders and SCLC had Birmingham affiliates.", tag: "Birmingham Jail", chapter: "birmingham-jail" },
-    { prompt: "What are King's four steps of nonviolent campaign?", answer: "(1) Collection of facts — verify injustice exists, (2) Negotiation — attempt dialogue, (3) Self-purification — train in nonviolent discipline, (4) Direct action — only after steps 1-3 fail.", tag: "Birmingham Jail", chapter: "birmingham-jail" },
-    { prompt: "How did King distinguish just from unjust laws?", answer: "Just law uplifts human personality; unjust law degrades it. Just law: same rule for all. Unjust law: majority inflicts on minority but doesn't follow itself. Must disobey unjust laws 'openly, lovingly, with willingness to accept penalty.'", tag: "Birmingham Jail", chapter: "birmingham-jail" },
-    { prompt: "Why did King criticize the white moderate?", answer: "'The Negro's great stumbling block is not the KKK but the white moderate' — more devoted to 'order' than justice. Prefers 'negative peace' (absence of tension) over 'positive peace' (presence of justice). Paternalistically sets timetable for others' freedom.", tag: "Birmingham Jail", chapter: "birmingham-jail" },
-    { prompt: "How did King reframe the 'extremist' label?", answer: "'Was not Jesus an extremist for love? Was not Lincoln an extremist?' The question is not whether to be extreme, but what kind — for hate or love, for injustice or justice? Turns an accusation into a badge of honor.", tag: "Birmingham Jail", chapter: "birmingham-jail" },
-    { prompt: "What was King's case against waiting?", answer: "'Wait has almost always meant Never.' 340 years of waiting. Catalogs daily suffering: explaining to a child why Funtown is closed to colored children, sleeping in cars, being called 'boy.' 'The cup of endurance runs over.'", tag: "Birmingham Jail", chapter: "birmingham-jail" },
-    { prompt: "What is negative peace vs positive peace?", answer: "Negative peace = absence of tension (what moderates want). Positive peace = presence of justice (what the movement fights for). King argues that order without justice is just organized oppression.", tag: "Birmingham Jail", chapter: "birmingham-jail" },
-    { prompt: "What philosophers does King cite in Birmingham Jail?", answer: "St. Augustine ('unjust law is no law at all'), Aquinas (natural law), Martin Buber (I-thou vs I-it relationships), Paul Tillich ('sin is separation'), and Socrates (creating intellectual tension to free people from myths).", tag: "Birmingham Jail", chapter: "birmingham-jail" },
-    { prompt: "Why does King compare nonviolent protest to Socrates?", answer: "Just as Socrates created intellectual tension to free minds from myths, nonviolent activists create social tension to force communities to confront racism. Both methods seek truth through confrontation, not violence.", tag: "Birmingham Jail", chapter: "birmingham-jail" },
+    { prompt: "What was King's response to being called an 'outsider'?", answer: "'Injustice anywhere is a threat to justice everywhere. We are caught in an inescapable network of mutuality.' Also: he was invited by local leaders and SCLC had Birmingham affiliates.", tag: "Birmingham Jail", chapter: "fifties-cr" },
+    { prompt: "What are King's four steps of nonviolent campaign?", answer: "(1) Collection of facts — verify injustice exists, (2) Negotiation — attempt dialogue, (3) Self-purification — train in nonviolent discipline, (4) Direct action — only after steps 1-3 fail.", tag: "Birmingham Jail", chapter: "fifties-cr" },
+    { prompt: "How did King distinguish just from unjust laws?", answer: "Just law uplifts human personality; unjust law degrades it. Just law: same rule for all. Unjust law: majority inflicts on minority but doesn't follow itself. Must disobey unjust laws 'openly, lovingly, with willingness to accept penalty.'", tag: "Birmingham Jail", chapter: "fifties-cr" },
+    { prompt: "Why did King criticize the white moderate?", answer: "'The Negro's great stumbling block is not the KKK but the white moderate' — more devoted to 'order' than justice. Prefers 'negative peace' (absence of tension) over 'positive peace' (presence of justice). Paternalistically sets timetable for others' freedom.", tag: "Birmingham Jail", chapter: "fifties-cr" },
+    { prompt: "How did King reframe the 'extremist' label?", answer: "'Was not Jesus an extremist for love? Was not Lincoln an extremist?' The question is not whether to be extreme, but what kind — for hate or love, for injustice or justice? Turns an accusation into a badge of honor.", tag: "Birmingham Jail", chapter: "fifties-cr" },
+    { prompt: "What was King's case against waiting?", answer: "'Wait has almost always meant Never.' 340 years of waiting. Catalogs daily suffering: explaining to a child why Funtown is closed to colored children, sleeping in cars, being called 'boy.' 'The cup of endurance runs over.'", tag: "Birmingham Jail", chapter: "fifties-cr" },
+    { prompt: "What is negative peace vs positive peace?", answer: "Negative peace = absence of tension (what moderates want). Positive peace = presence of justice (what the movement fights for). King argues that order without justice is just organized oppression.", tag: "Birmingham Jail", chapter: "fifties-cr" },
+    { prompt: "What philosophers does King cite in Birmingham Jail?", answer: "St. Augustine ('unjust law is no law at all'), Aquinas (natural law), Martin Buber (I-thou vs I-it relationships), Paul Tillich ('sin is separation'), and Socrates (creating intellectual tension to free people from myths).", tag: "Birmingham Jail", chapter: "fifties-cr" },
+    { prompt: "Why does King compare nonviolent protest to Socrates?", answer: "Just as Socrates created intellectual tension to free minds from myths, nonviolent activists create social tension to force communities to confront racism. Both methods seek truth through confrontation, not violence.", tag: "Birmingham Jail", chapter: "fifties-cr" },
 
     // ── Primary Sources ──
-    { prompt: "What does Tim O'Brien's 'The Things They Carried' illustrate?", answer: "Catalogs physical and emotional burdens of Vietnam soldiers. Lieutenant Cross carries letters from Martha; others carry guilt, fear, grief. Shows the war as a weight — literal and psychological — that soldiers could never put down.", tag: "Primary Sources", chapter: "primary-sources" },
-    { prompt: "What is the meaning of 'On the Rainy River'?", answer: "O'Brien drives to the Canadian border to escape the draft but cannot cross. 'I was a coward. I went to the war.' Shows how the draft trapped young men between conscience and social shame — going to war was the path of least resistance.", tag: "Primary Sources", chapter: "primary-sources" },
-    { prompt: "What does Philip Caputo's memoir reveal?", answer: "Marine officer begins idealistic, ends disillusioned. Shows how Vietnam corrupted soldiers through impossible rules of engagement, body count pressure, and moral ambiguity. The war broke the people fighting it.", tag: "Primary Sources", chapter: "primary-sources" },
-    { prompt: "What did the Nixon-Ho Chi Minh letters reveal?", answer: "Nixon sought 'just peace'; Ho demanded unconditional US withdrawal and called the war 'aggression.' Showed the fundamental gap — US wanted negotiated settlement, Vietnam wanted the US gone.", tag: "Primary Sources", chapter: "primary-sources" },
+    { prompt: "What does Tim O'Brien's 'The Things They Carried' illustrate?", answer: "Catalogs physical and emotional burdens of Vietnam soldiers. Lieutenant Cross carries letters from Martha; others carry guilt, fear, grief. Shows the war as a weight — literal and psychological — that soldiers could never put down.", tag: "Primary Sources", chapter: "sixties" },
+    { prompt: "What is the meaning of 'On the Rainy River'?", answer: "O'Brien drives to the Canadian border to escape the draft but cannot cross. 'I was a coward. I went to the war.' Shows how the draft trapped young men between conscience and social shame — going to war was the path of least resistance.", tag: "Primary Sources", chapter: "sixties" },
+    { prompt: "What does Philip Caputo's memoir reveal?", answer: "Marine officer begins idealistic, ends disillusioned. Shows how Vietnam corrupted soldiers through impossible rules of engagement, body count pressure, and moral ambiguity. The war broke the people fighting it.", tag: "Primary Sources", chapter: "sixties" },
+    { prompt: "What did the Nixon-Ho Chi Minh letters reveal?", answer: "Nixon sought 'just peace'; Ho demanded unconditional US withdrawal and called the war 'aggression.' Showed the fundamental gap — US wanted negotiated settlement, Vietnam wanted the US gone.", tag: "Primary Sources", chapter: "sixties" },
 
     // ── 1970s Crisis ──
-    { prompt: "What was stagflation?", answer: "1970s combination of stagnant growth, high unemployment, AND high inflation — supposedly impossible under Keynesian theory. Shattered liberal economic confidence.", tag: "1970s", chapter: "1970s" },
-    { prompt: "What was the 1973 oil embargo?", answer: "OPEC Arab members cut off oil to US for supporting Israel in the Yom Kippur War. Prices quadrupled; gas lines; recession.", tag: "1970s", chapter: "1970s" },
-    { prompt: "What was the Iran Hostage Crisis?", answer: "Iranian revolutionaries seized US Embassy (Nov 1979); held 52 Americans for 444 days. Hostages released minutes after Reagan inauguration. Destroyed Carter's presidency.", tag: "1970s", chapter: "1970s" },
-    { prompt: "What was Operation Eagle Claw?", answer: "Failed 1980 military rescue of Iran hostages. Helicopter malfunctions in desert; aborted; collision killed 8 Americans. Symbolized American impotence.", tag: "1970s", chapter: "1970s" },
-    { prompt: "What was Carter's Malaise Speech?", answer: "1979 'Crisis of Confidence' speech diagnosing spiritual crisis in America — materialism, self-indulgence, loss of faith. Destroyed when Carter demanded Cabinet resignations 2 days later.", tag: "1970s", chapter: "1970s" },
-    { prompt: "How did 1970s family demographics change?", answer: "Divorce rose 65%, cohabitation 157%, single-parent households 40% in ONE decade. Traditional nuclear family ceased to be dominant American household. Fueled Religious Right backlash.", tag: "1970s", chapter: "1970s" },
-    { prompt: "What was the Moral Majority?", answer: "Jerry Falwell's religious political organization (1979). Mobilized evangelical Christians into reliable Republican voters. Claimed 4 million members; key to electing Reagan.", tag: "1970s", chapter: "1970s" },
-    { prompt: "How did Reagan's 1980 campaign differ from Carter's message?", answer: "Carter: Americans need moral reform and sacrifice. Reagan: America is great; government is the problem. Optimism vs. humility. Reagan won in a landslide.", tag: "1970s", chapter: "1970s" },
+    { prompt: "What was stagflation?", answer: "1970s combination of stagnant growth, high unemployment, AND high inflation — supposedly impossible under Keynesian theory. Shattered liberal economic confidence.", tag: "1970s", chapter: "ford-carter" },
+    { prompt: "What was the 1973 oil embargo?", answer: "OPEC Arab members cut off oil to US for supporting Israel in the Yom Kippur War. Prices quadrupled; gas lines; recession.", tag: "1970s", chapter: "ford-carter" },
+    { prompt: "What was the Iran Hostage Crisis?", answer: "Iranian revolutionaries seized US Embassy (Nov 1979); held 52 Americans for 444 days. Hostages released minutes after Reagan inauguration. Destroyed Carter's presidency.", tag: "1970s", chapter: "ford-carter" },
+    { prompt: "What was Operation Eagle Claw?", answer: "Failed 1980 military rescue of Iran hostages. Helicopter malfunctions in desert; aborted; collision killed 8 Americans. Symbolized American impotence.", tag: "1970s", chapter: "ford-carter" },
+    { prompt: "What was Carter's Malaise Speech?", answer: "1979 'Crisis of Confidence' speech diagnosing spiritual crisis in America — materialism, self-indulgence, loss of faith. Destroyed when Carter demanded Cabinet resignations 2 days later.", tag: "1970s", chapter: "ford-carter" },
+    { prompt: "How did 1970s family demographics change?", answer: "Divorce rose 65%, cohabitation 157%, single-parent households 40% in ONE decade. Traditional nuclear family ceased to be dominant American household. Fueled Religious Right backlash.", tag: "1970s", chapter: "ford-carter" },
+    { prompt: "What was the Moral Majority?", answer: "Jerry Falwell's religious political organization (1979). Mobilized evangelical Christians into reliable Republican voters. Claimed 4 million members; key to electing Reagan.", tag: "1970s", chapter: "ford-carter" },
+    { prompt: "How did Reagan's 1980 campaign differ from Carter's message?", answer: "Carter: Americans need moral reform and sacrifice. Reagan: America is great; government is the problem. Optimism vs. humility. Reagan won in a landslide.", tag: "1970s", chapter: "ford-carter" },
 
     // ── Reagan Era Domestic ──
-    { prompt: "What was Reagan's most famous inaugural line?", answer: "'Government is not the solution to our problem; government is the problem.' Philosophical foundation of Reaganism — rejected New Deal/Great Society premise.", tag: "Reagan", chapter: "reagan" },
-    { prompt: "What was Reaganomics?", answer: "Supply-side economics: cut taxes especially on wealthy, deregulate, reduce domestic spending, increase military spending. Promised growth would 'trickle down.'", tag: "Reagan", chapter: "reagan" },
-    { prompt: "How did Reagan's tax cuts change the top marginal rate?", answer: "From 70% (1980) to 50% (1981) to 28% (1986). Complete reversal of New Deal-era progressive taxation.", tag: "Reagan", chapter: "reagan" },
-    { prompt: "What was the Laffer Curve?", answer: "Arthur Laffer's claim that cutting tax rates could INCREASE revenue by stimulating growth. George H.W. Bush called it 'voodoo economics.' Revenue actually fell after Reagan tax cuts.", tag: "Reagan", chapter: "reagan" },
-    { prompt: "What did Reaganomics do to the national debt?", answer: "Tripled it — from $908 billion (1980) to $2.87 trillion (1989). Reagan added more debt than all previous presidents combined.", tag: "Reagan", chapter: "reagan" },
-    { prompt: "What happened to income inequality under Reagan?", answer: "Top 10% income share rose sharply, reversing 40 years of relative equality. Rich got richer; middle class stagnated; bottom 60% saw minimal gains.", tag: "Reagan", chapter: "reagan" },
-    { prompt: "What was the PATCO strike?", answer: "1981 air traffic controllers strike. Reagan fired 11,000 workers. Signaled open season on unions; accelerated decline of organized labor.", tag: "Reagan", chapter: "reagan" },
-    { prompt: "What was the 100:1 crack-powder sentencing disparity?", answer: "1986 Anti-Drug Abuse Act: 5g crack = 500g powder cocaine for sentencing. Same drug chemically; massive racial disparity. Reduced to 18:1 in 2010.", tag: "Reagan", chapter: "reagan" },
-    { prompt: "How did the US prison population change under War on Drugs?", answer: "From ~300,000 (1970) to ~2.4 million (2008). US became world's largest jailer. Disproportionate Black incarceration — 1 in 3 Black men imprisoned at some point.", tag: "Reagan", chapter: "reagan" },
+    { prompt: "What was Reagan's most famous inaugural line?", answer: "'Government is not the solution to our problem; government is the problem.' Philosophical foundation of Reaganism — rejected New Deal/Great Society premise.", tag: "Reagan", chapter: "reagan-revolution" },
+    { prompt: "What was Reaganomics?", answer: "Supply-side economics: cut taxes especially on wealthy, deregulate, reduce domestic spending, increase military spending. Promised growth would 'trickle down.'", tag: "Reagan", chapter: "reagan-revolution" },
+    { prompt: "How did Reagan's tax cuts change the top marginal rate?", answer: "From 70% (1980) to 50% (1981) to 28% (1986). Complete reversal of New Deal-era progressive taxation.", tag: "Reagan", chapter: "reagan-revolution" },
+    { prompt: "What was the Laffer Curve?", answer: "Arthur Laffer's claim that cutting tax rates could INCREASE revenue by stimulating growth. George H.W. Bush called it 'voodoo economics.' Revenue actually fell after Reagan tax cuts.", tag: "Reagan", chapter: "reagan-revolution" },
+    { prompt: "What did Reaganomics do to the national debt?", answer: "Tripled it — from $908 billion (1980) to $2.87 trillion (1989). Reagan added more debt than all previous presidents combined.", tag: "Reagan", chapter: "reagan-revolution" },
+    { prompt: "What happened to income inequality under Reagan?", answer: "Top 10% income share rose sharply, reversing 40 years of relative equality. Rich got richer; middle class stagnated; bottom 60% saw minimal gains.", tag: "Reagan", chapter: "reagan-revolution" },
+    { prompt: "What was the PATCO strike?", answer: "1981 air traffic controllers strike. Reagan fired 11,000 workers. Signaled open season on unions; accelerated decline of organized labor.", tag: "Reagan", chapter: "reagan-revolution" },
+    { prompt: "What was the 100:1 crack-powder sentencing disparity?", answer: "1986 Anti-Drug Abuse Act: 5g crack = 500g powder cocaine for sentencing. Same drug chemically; massive racial disparity. Reduced to 18:1 in 2010.", tag: "Reagan", chapter: "reagan-revolution" },
+    { prompt: "How did the US prison population change under War on Drugs?", answer: "From ~300,000 (1970) to ~2.4 million (2008). US became world's largest jailer. Disproportionate Black incarceration — 1 in 3 Black men imprisoned at some point.", tag: "Reagan", chapter: "reagan-revolution" },
 
     // ── Reagan Era Foreign ──
-    { prompt: "What did Reagan call the Soviet Union?", answer: "'The Evil Empire' — 1983 speech to evangelicals. Rejected détente's moral equivalence; framed Cold War as spiritual struggle between good and evil.", tag: "Reagan", chapter: "reagan" },
-    { prompt: "What was SDI / 'Star Wars'?", answer: "Strategic Defense Initiative (1983) — proposed space-based missile defense. Scientists said impossible; but Soviets feared it and could not afford to match. Sticking point at Reykjavik.", tag: "Reagan", chapter: "reagan" },
-    { prompt: "What was the INF Treaty?", answer: "1987 Intermediate-Range Nuclear Forces Treaty signed by Reagan and Gorbachev. Eliminated entire class of nuclear missiles — first time weapons actually destroyed, not just limited.", tag: "Reagan", chapter: "reagan" },
-    { prompt: "What was the Iran-Contra Affair?", answer: "Reagan admin secretly sold weapons to Iran (under arms embargo) to free hostages, then illegally diverted profits to fund Nicaraguan Contras (Boland Amendment banned funding).", tag: "Reagan", chapter: "reagan" },
-    { prompt: "Who was Oliver North?", answer: "NSC Lt. Col. who devised Contra diversion in Iran-Contra. Testified in Marine uniform at hearings. Convicted of 3 felonies; convictions overturned on appeal.", tag: "Reagan", chapter: "reagan" },
-    { prompt: "What was the Boland Amendment?", answer: "1982/1984 congressional ban on US funding of Nicaraguan Contras. Reagan admin circumvented it via Iran-Contra. The law whose violation triggered the scandal.", tag: "Reagan", chapter: "reagan" },
-    { prompt: "Who were the Contras?", answer: "Anti-Sandinista rebels in Nicaragua funded by CIA. Reagan called them 'moral equivalent of our founding fathers' despite documented atrocities against civilians.", tag: "Reagan", chapter: "reagan" },
-    { prompt: "What was the El Mozote Massacre?", answer: "1981 massacre by US-trained Salvadoran Atlacatl Battalion — 800+ civilians killed, mostly children/elderly. Most infamous atrocity of US-backed Salvadoran civil war.", tag: "Reagan", chapter: "reagan" },
-    { prompt: "What did Gary Webb's 'Dark Alliance' allege?", answer: "CIA-backed Contras trafficked cocaine into US black communities, helping fuel the crack epidemic. Mainstream papers attacked Webb; career destroyed. CIA IG report later confirmed core findings.", tag: "Reagan", chapter: "reagan" },
+    { prompt: "What did Reagan call the Soviet Union?", answer: "'The Evil Empire' — 1983 speech to evangelicals. Rejected détente's moral equivalence; framed Cold War as spiritual struggle between good and evil.", tag: "Reagan", chapter: "reagan-revolution" },
+    { prompt: "What was SDI / 'Star Wars'?", answer: "Strategic Defense Initiative (1983) — proposed space-based missile defense. Scientists said impossible; but Soviets feared it and could not afford to match. Sticking point at Reykjavik.", tag: "Reagan", chapter: "reagan-revolution" },
+    { prompt: "What was the INF Treaty?", answer: "1987 Intermediate-Range Nuclear Forces Treaty signed by Reagan and Gorbachev. Eliminated entire class of nuclear missiles — first time weapons actually destroyed, not just limited.", tag: "Reagan", chapter: "reagan-revolution" },
+    { prompt: "What was the Iran-Contra Affair?", answer: "Reagan admin secretly sold weapons to Iran (under arms embargo) to free hostages, then illegally diverted profits to fund Nicaraguan Contras (Boland Amendment banned funding).", tag: "Reagan", chapter: "reagan-revolution" },
+    { prompt: "Who was Oliver North?", answer: "NSC Lt. Col. who devised Contra diversion in Iran-Contra. Testified in Marine uniform at hearings. Convicted of 3 felonies; convictions overturned on appeal.", tag: "Reagan", chapter: "reagan-revolution" },
+    { prompt: "What was the Boland Amendment?", answer: "1982/1984 congressional ban on US funding of Nicaraguan Contras. Reagan admin circumvented it via Iran-Contra. The law whose violation triggered the scandal.", tag: "Reagan", chapter: "reagan-revolution" },
+    { prompt: "Who were the Contras?", answer: "Anti-Sandinista rebels in Nicaragua funded by CIA. Reagan called them 'moral equivalent of our founding fathers' despite documented atrocities against civilians.", tag: "Reagan", chapter: "reagan-revolution" },
+    { prompt: "What was the El Mozote Massacre?", answer: "1981 massacre by US-trained Salvadoran Atlacatl Battalion — 800+ civilians killed, mostly children/elderly. Most infamous atrocity of US-backed Salvadoran civil war.", tag: "Reagan", chapter: "reagan-revolution" },
+    { prompt: "What did Gary Webb's 'Dark Alliance' allege?", answer: "CIA-backed Contras trafficked cocaine into US black communities, helping fuel the crack epidemic. Mainstream papers attacked Webb; career destroyed. CIA IG report later confirmed core findings.", tag: "Reagan", chapter: "reagan-revolution" },
 
     // ── End of Cold War ──
-    { prompt: "Who was Mikhail Gorbachev?", answer: "Soviet leader 1985-91. Launched Perestroika and Glasnost to save Soviet communism by modernizing it. Instead unleashed forces that ended communism. Nobel Peace Prize 1990.", tag: "End of Cold War", chapter: "reagan" },
-    { prompt: "What were Perestroika and Glasnost?", answer: "Perestroika ('restructuring') = economic reform with limited market mechanisms. Glasnost ('openness') = reduced censorship, freed political prisoners, allowed criticism. Together they ended the USSR.", tag: "End of Cold War", chapter: "reagan" },
-    { prompt: "What was the Sinatra Doctrine?", answer: "Gorbachev's policy of letting Eastern European countries 'do it their way' (Sinatra reference). Abandoned Brezhnev Doctrine. Enabled peaceful 1989 revolutions.", tag: "End of Cold War", chapter: "reagan" },
-    { prompt: "How did the Berlin Wall actually fall?", answer: "Nov 9, 1989: East German spokesman Schabowski mistakenly said new travel regulations took effect 'immediately.' Crowds gathered; guards opened gates; celebrations followed. Accident of history.", tag: "End of Cold War", chapter: "reagan" },
-    { prompt: "What was the August 1991 coup?", answer: "Hardline Soviet communists tried to overthrow Gorbachev. Yeltsin defied them atop a tank. Coup collapsed in 3 days. Destroyed Gorbachev's authority; Yeltsin emerged as dominant.", tag: "End of Cold War", chapter: "reagan" },
-    { prompt: "When and how did the USSR officially dissolve?", answer: "December 25, 1991. Gorbachev resigned; Soviet flag lowered over the Kremlin. USSR split into 15 independent nations. Cold War officially over.", tag: "End of Cold War", chapter: "reagan" },
-    { prompt: "Did Reagan 'win' the Cold War?", answer: "Debated. Reagan's pressure (military buildup, SDI, moral clarity) contributed to Soviet strain. But Gorbachev's reforms were decisive, and USSR was already in terminal decline. Middle view: Reagan accelerated inevitable collapse.", tag: "End of Cold War", chapter: "reagan" },
+    { prompt: "Who was Mikhail Gorbachev?", answer: "Soviet leader 1985-91. Launched Perestroika and Glasnost to save Soviet communism by modernizing it. Instead unleashed forces that ended communism. Nobel Peace Prize 1990.", tag: "End of Cold War", chapter: "reagan-revolution" },
+    { prompt: "What were Perestroika and Glasnost?", answer: "Perestroika ('restructuring') = economic reform with limited market mechanisms. Glasnost ('openness') = reduced censorship, freed political prisoners, allowed criticism. Together they ended the USSR.", tag: "End of Cold War", chapter: "reagan-revolution" },
+    { prompt: "What was the Sinatra Doctrine?", answer: "Gorbachev's policy of letting Eastern European countries 'do it their way' (Sinatra reference). Abandoned Brezhnev Doctrine. Enabled peaceful 1989 revolutions.", tag: "End of Cold War", chapter: "reagan-revolution" },
+    { prompt: "How did the Berlin Wall actually fall?", answer: "Nov 9, 1989: East German spokesman Schabowski mistakenly said new travel regulations took effect 'immediately.' Crowds gathered; guards opened gates; celebrations followed. Accident of history.", tag: "End of Cold War", chapter: "reagan-revolution" },
+    { prompt: "What was the August 1991 coup?", answer: "Hardline Soviet communists tried to overthrow Gorbachev. Yeltsin defied them atop a tank. Coup collapsed in 3 days. Destroyed Gorbachev's authority; Yeltsin emerged as dominant.", tag: "End of Cold War", chapter: "reagan-revolution" },
+    { prompt: "When and how did the USSR officially dissolve?", answer: "December 25, 1991. Gorbachev resigned; Soviet flag lowered over the Kremlin. USSR split into 15 independent nations. Cold War officially over.", tag: "End of Cold War", chapter: "reagan-revolution" },
+    { prompt: "Did Reagan 'win' the Cold War?", answer: "Debated. Reagan's pressure (military buildup, SDI, moral clarity) contributed to Soviet strain. But Gorbachev's reforms were decisive, and USSR was already in terminal decline. Middle view: Reagan accelerated inevitable collapse.", tag: "End of Cold War", chapter: "reagan-revolution" },
   ],
 
   quiz: [
@@ -377,22 +374,22 @@ export const amstudsData = {
     { question: "What did the Truman Doctrine specifically propose?", options: ["Military invasion of the Soviet Union", "$400 million in aid to Greece and Turkey", "A nuclear arms treaty", "Economic sanctions on Eastern Europe"], answerIndex: 1, explanation: "Truman asked Congress for $400M to support Greece and Turkey against communist pressure.", tag: "Cold War", chapter: "cold-war" },
     { question: "What was the main purpose of the Marshall Plan?", options: ["To build nuclear weapons", "To rebuild Western Europe economically", "To create a military alliance", "To contain communism in Asia"], answerIndex: 1, explanation: "The Marshall Plan provided economic aid to rebuild Europe and prevent the poverty that bred communism.", tag: "Cold War", chapter: "cold-war" },
     { question: "What did NATO establish?", options: ["Free trade zone", "Mutual defense — attack on one = attack on all", "Nuclear disarmament", "European parliament"], answerIndex: 1, explanation: "NATO's key principle: an armed attack against one member is considered an attack against all.", tag: "Cold War", chapter: "cold-war" },
-    { question: "What was the significance of Plessy v. Ferguson (1896)?", options: ["Ended segregation", "Established 'separate but equal' as constitutional", "Desegregated the military", "Gave women the right to vote"], answerIndex: 1, explanation: "Plessy upheld 'separate but equal,' making segregated facilities legal for nearly 60 years.", tag: "Civil Rights", chapter: "civil-rights" },
-    { question: "What did Brown v. Board of Education (1954) rule?", options: ["Segregation was constitutional if equal", "Separate educational facilities are inherently unequal", "Schools could choose their own policies", "Only federal schools must desegregate"], answerIndex: 1, explanation: "Brown overturned Plessy, declaring separate educational facilities inherently unequal.", tag: "Civil Rights", chapter: "civil-rights" },
-    { question: "Who desegregated the US military with Executive Order 9981?", options: ["Eisenhower", "Truman", "Kennedy", "Roosevelt"], answerIndex: 1, explanation: "Truman issued Executive Order 9981 in 1948, influenced by A. Philip Randolph.", tag: "Civil Rights", chapter: "civil-rights" },
-    { question: "Which organization was led by Martin Luther King Jr.?", options: ["NAACP", "CORE", "SNCC", "SCLC"], answerIndex: 3, explanation: "MLK led the Southern Christian Leadership Conference (SCLC) along with Ralph Abernathy.", tag: "Civil Rights", chapter: "civil-rights" },
-    { question: "What triggered the Montgomery Bus Boycott?", options: ["Brown v. Board decision", "Emmett Till's murder", "Rosa Parks' arrest", "Little Rock Crisis"], answerIndex: 2, explanation: "Rosa Parks' arrest for refusing to give up her bus seat in 1955 sparked the year-long boycott.", tag: "Civil Rights", chapter: "civil-rights" },
-    { question: "Who sent the 101st Airborne to protect the Little Rock Nine?", options: ["Truman", "Kennedy", "Eisenhower", "Johnson"], answerIndex: 2, explanation: "Eisenhower sent federal troops after Governor Faubus blocked Black students from entering the school.", tag: "Civil Rights", chapter: "civil-rights" },
-    { question: "What was William Levitt's housing development known for?", options: ["Luxury homes for the wealthy", "Affordable mass-produced homes that excluded Black buyers", "Integrated communities", "Government-owned housing"], answerIndex: 1, explanation: "Levittown offered affordable homes but Levitt refused to sell to Black families.", tag: "Affluent Society", chapter: "affluent-society" },
-    { question: "What did John Kenneth Galbraith criticize in The Affluent Society?", options: ["Military spending", "America prioritizing private wealth over public services", "Immigration policy", "Cold War diplomacy"], answerIndex: 1, explanation: "Galbraith argued America neglected public needs (schools, infrastructure) while celebrating private consumption.", tag: "Affluent Society", chapter: "affluent-society" },
-    { question: "What did the Gulf of Tonkin Resolution authorize?", options: ["Diplomatic negotiations only", "Limited air strikes", "Unlimited presidential military authority in Vietnam", "A draft of 500,000 soldiers"], answerIndex: 2, explanation: "It gave the president full authority to deal with aggression in Vietnam — used to justify massive escalation.", tag: "Vietnam", chapter: "vietnam" },
-    { question: "Which president escalated US troops in Vietnam from 16,700 to 500,000?", options: ["Kennedy", "Johnson", "Nixon", "Eisenhower"], answerIndex: 1, explanation: "LBJ massively escalated using the Gulf of Tonkin Resolution.", tag: "Vietnam", chapter: "vietnam" },
-    { question: "What was the significance of the Tet Offensive?", options: ["US military victory that ended the war", "Communist military victory", "Turning point that shattered public confidence in the war", "Led to immediate US withdrawal"], answerIndex: 2, explanation: "Though a military failure for the communists, Tet destroyed US credibility about winning the war.", tag: "Vietnam", chapter: "vietnam" },
-    { question: "What did the War Powers Act require?", options: ["Congressional approval before any military action", "President must inform Congress within 48 hours of deploying troops", "Automatic declaration of war after 30 days", "Senate approval of all military budgets"], answerIndex: 1, explanation: "The 1973 act required notification within 48 hours and set a 90-day limit without Congressional approval.", tag: "Vietnam", chapter: "vietnam" },
-    { question: "What was Nixon's 'Southern Strategy'?", options: ["Withdrawing troops from the South", "Winning Southern white voters through racial appeals", "Building military bases in the South", "Supporting Southern civil rights"], answerIndex: 1, explanation: "Nixon strategist Kevin Phillips openly described winning white voters as Black voters joined the Democrats.", tag: "Nixon", chapter: "nixon" },
-    { question: "What event launched the modern gay rights movement?", options: ["March on Washington", "Stonewall Riots", "Occupation of Alcatraz", "ERA campaign"], answerIndex: 1, explanation: "The 1969 police raid on the Stonewall Inn sparked 5 days of rioting and launched gay pride movements.", tag: "Nixon", chapter: "nixon" },
-    { question: "What did Miranda v. Arizona (1966) establish?", options: ["Freedom of the press", "Right to privacy", "Rights of the accused must be read upon arrest", "School desegregation"], answerIndex: 2, explanation: "Miranda established that suspects must be informed of their rights — the 'Miranda rights.'", tag: "SCOTUS", chapter: "civil-rights" },
-    { question: "What did Tinker v. Des Moines (1969) establish?", options: ["Students can be expelled for protests", "Students retain free speech rights at school", "Schools can ban political symbols", "Teachers have no free speech"], answerIndex: 1, explanation: "The Court ruled students don't 'shed their constitutional rights at the schoolhouse gate.'", tag: "SCOTUS", chapter: "civil-rights" },
+    { question: "What was the significance of Plessy v. Ferguson (1896)?", options: ["Ended segregation", "Established 'separate but equal' as constitutional", "Desegregated the military", "Gave women the right to vote"], answerIndex: 1, explanation: "Plessy upheld 'separate but equal,' making segregated facilities legal for nearly 60 years.", tag: "Civil Rights", chapter: "fifties-cr" },
+    { question: "What did Brown v. Board of Education (1954) rule?", options: ["Segregation was constitutional if equal", "Separate educational facilities are inherently unequal", "Schools could choose their own policies", "Only federal schools must desegregate"], answerIndex: 1, explanation: "Brown overturned Plessy, declaring separate educational facilities inherently unequal.", tag: "Civil Rights", chapter: "fifties-cr" },
+    { question: "Who desegregated the US military with Executive Order 9981?", options: ["Eisenhower", "Truman", "Kennedy", "Roosevelt"], answerIndex: 1, explanation: "Truman issued Executive Order 9981 in 1948, influenced by A. Philip Randolph.", tag: "Civil Rights", chapter: "fifties-cr" },
+    { question: "Which organization was led by Martin Luther King Jr.?", options: ["NAACP", "CORE", "SNCC", "SCLC"], answerIndex: 3, explanation: "MLK led the Southern Christian Leadership Conference (SCLC) along with Ralph Abernathy.", tag: "Civil Rights", chapter: "fifties-cr" },
+    { question: "What triggered the Montgomery Bus Boycott?", options: ["Brown v. Board decision", "Emmett Till's murder", "Rosa Parks' arrest", "Little Rock Crisis"], answerIndex: 2, explanation: "Rosa Parks' arrest for refusing to give up her bus seat in 1955 sparked the year-long boycott.", tag: "Civil Rights", chapter: "fifties-cr" },
+    { question: "Who sent the 101st Airborne to protect the Little Rock Nine?", options: ["Truman", "Kennedy", "Eisenhower", "Johnson"], answerIndex: 2, explanation: "Eisenhower sent federal troops after Governor Faubus blocked Black students from entering the school.", tag: "Civil Rights", chapter: "fifties-cr" },
+    { question: "What was William Levitt's housing development known for?", options: ["Luxury homes for the wealthy", "Affordable mass-produced homes that excluded Black buyers", "Integrated communities", "Government-owned housing"], answerIndex: 1, explanation: "Levittown offered affordable homes but Levitt refused to sell to Black families.", tag: "Affluent Society", chapter: "fifties-cr" },
+    { question: "What did John Kenneth Galbraith criticize in The Affluent Society?", options: ["Military spending", "America prioritizing private wealth over public services", "Immigration policy", "Cold War diplomacy"], answerIndex: 1, explanation: "Galbraith argued America neglected public needs (schools, infrastructure) while celebrating private consumption.", tag: "Affluent Society", chapter: "fifties-cr" },
+    { question: "What did the Gulf of Tonkin Resolution authorize?", options: ["Diplomatic negotiations only", "Limited air strikes", "Unlimited presidential military authority in Vietnam", "A draft of 500,000 soldiers"], answerIndex: 2, explanation: "It gave the president full authority to deal with aggression in Vietnam — used to justify massive escalation.", tag: "Vietnam", chapter: "sixties" },
+    { question: "Which president escalated US troops in Vietnam from 16,700 to 500,000?", options: ["Kennedy", "Johnson", "Nixon", "Eisenhower"], answerIndex: 1, explanation: "LBJ massively escalated using the Gulf of Tonkin Resolution.", tag: "Vietnam", chapter: "sixties" },
+    { question: "What was the significance of the Tet Offensive?", options: ["US military victory that ended the war", "Communist military victory", "Turning point that shattered public confidence in the war", "Led to immediate US withdrawal"], answerIndex: 2, explanation: "Though a military failure for the communists, Tet destroyed US credibility about winning the war.", tag: "Vietnam", chapter: "sixties" },
+    { question: "What did the War Powers Act require?", options: ["Congressional approval before any military action", "President must inform Congress within 48 hours of deploying troops", "Automatic declaration of war after 30 days", "Senate approval of all military budgets"], answerIndex: 1, explanation: "The 1973 act required notification within 48 hours and set a 90-day limit without Congressional approval.", tag: "Vietnam", chapter: "sixties" },
+    { question: "What was Nixon's 'Southern Strategy'?", options: ["Withdrawing troops from the South", "Winning Southern white voters through racial appeals", "Building military bases in the South", "Supporting Southern civil rights"], answerIndex: 1, explanation: "Nixon strategist Kevin Phillips openly described winning white voters as Black voters joined the Democrats.", tag: "Nixon", chapter: "conservatism" },
+    { question: "What event launched the modern gay rights movement?", options: ["March on Washington", "Stonewall Riots", "Occupation of Alcatraz", "ERA campaign"], answerIndex: 1, explanation: "The 1969 police raid on the Stonewall Inn sparked 5 days of rioting and launched gay pride movements.", tag: "Nixon", chapter: "conservatism" },
+    { question: "What did Miranda v. Arizona (1966) establish?", options: ["Freedom of the press", "Right to privacy", "Rights of the accused must be read upon arrest", "School desegregation"], answerIndex: 2, explanation: "Miranda established that suspects must be informed of their rights — the 'Miranda rights.'", tag: "SCOTUS", chapter: "fifties-cr" },
+    { question: "What did Tinker v. Des Moines (1969) establish?", options: ["Students can be expelled for protests", "Students retain free speech rights at school", "Schools can ban political symbols", "Teachers have no free speech"], answerIndex: 1, explanation: "The Court ruled students don't 'shed their constitutional rights at the schoolhouse gate.'", tag: "SCOTUS", chapter: "fifties-cr" },
 
     // ── Cold War: Origins & Escalation ──
     { question: "What did the Bretton Woods Conference establish?", options: ["NATO military alliance", "IMF, World Bank, and dollar as reserve currency", "Division of Germany", "United Nations Security Council"], answerIndex: 1, explanation: "Bretton Woods (1944) created the postwar economic order with IMF, World Bank, and dollar-gold standard.", tag: "Cold War", chapter: "cold-war" },
@@ -407,107 +404,107 @@ export const amstudsData = {
     { question: "What was the paradox of Cold War propaganda?", options: ["It made the USSR look strong", "The US restricted freedoms at home while claiming to defend freedom abroad", "It was too expensive", "It only worked on children"], answerIndex: 1, explanation: "The US defined itself as defender of freedom while maintaining HUAC, loyalty oaths, blacklists, and surveillance of citizens.", tag: "Cold War", chapter: "cold-war" },
 
     // ── Affluent Society: Additional ──
-    { question: "What did the 1954 'How to Be a Good Wife' textbook advise?", options: ["Pursue a career alongside housework", "Have dinner ready, touch up makeup, let husband talk first", "Share household duties equally", "Invest in education for personal growth"], answerIndex: 1, explanation: "The textbook embodied 1950s gender norms: women's role was to create 'a place of peace and order' for husbands.", tag: "Affluent Society", chapter: "affluent-society" },
-    { question: "Why were 1950s gender roles a reversal, not tradition?", options: ["Women had always worked outside the home", "During WWII women ran factories (Rosie the Riveter), then were pushed back into domestic roles", "Men had previously done all housework", "The roles were imported from Europe"], answerIndex: 1, explanation: "The 1950s housewife ideal was a constructed response to postwar anxieties, not a timeless tradition.", tag: "Affluent Society", chapter: "affluent-society" },
+    { question: "What did the 1954 'How to Be a Good Wife' textbook advise?", options: ["Pursue a career alongside housework", "Have dinner ready, touch up makeup, let husband talk first", "Share household duties equally", "Invest in education for personal growth"], answerIndex: 1, explanation: "The textbook embodied 1950s gender norms: women's role was to create 'a place of peace and order' for husbands.", tag: "Affluent Society", chapter: "fifties-cr" },
+    { question: "Why were 1950s gender roles a reversal, not tradition?", options: ["Women had always worked outside the home", "During WWII women ran factories (Rosie the Riveter), then were pushed back into domestic roles", "Men had previously done all housework", "The roles were imported from Europe"], answerIndex: 1, explanation: "The 1950s housewife ideal was a constructed response to postwar anxieties, not a timeless tradition.", tag: "Affluent Society", chapter: "fifties-cr" },
 
     // ── Vietnam: Additional ──
-    { question: "How did Ho Chi Minh frame Vietnamese independence?", options: ["By citing Marx and Lenin exclusively", "By quoting the US Declaration of Independence", "By appealing to the United Nations", "By declaring war on France"], answerIndex: 1, explanation: "His 1945 declaration opened with 'All men are created equal' — highlighting US hypocrisy in supporting French colonialism.", tag: "Vietnam", chapter: "vietnam" },
-    { question: "Why did the US support Ngo Dinh Diem despite his flaws?", options: ["He was democratically elected", "He was anti-communist and the US feared losing South Vietnam", "He was a military hero", "France recommended him"], answerIndex: 1, explanation: "Diem was authoritarian, rigged elections, and alienated Buddhists — but the US backed him because he was anti-communist.", tag: "Vietnam", chapter: "vietnam" },
-    { question: "Why was Vietnam called the 'Living Room War'?", options: ["Fighting occurred in homes", "It was the first war broadcast on television", "Soldiers watched TV in barracks", "Congress debated it on live TV"], answerIndex: 1, explanation: "TV brought graphic footage of combat, napalm, and body bags into American homes, turning public opinion against the war.", tag: "Vietnam", chapter: "vietnam" },
-    { question: "How did the draft disproportionately affect certain groups?", options: ["Everyone served equally", "College deferments let wealthy avoid service; working class and minorities bore the burden", "Only volunteers went to Vietnam", "Women were drafted equally"], answerIndex: 1, explanation: "College deferments meant working class and minority Americans disproportionately served and died. African Americans were 11% of the population but 25% of early combat casualties.", tag: "Vietnam", chapter: "vietnam" },
-    { question: "What happened at Kent State in 1970?", options: ["A major battle was fought", "National Guard killed 4 student protesters after Cambodia invasion", "Students occupied the university", "A draft office was bombed"], answerIndex: 1, explanation: "Ohio National Guard shot and killed 4 students protesting Nixon's Cambodia invasion, galvanizing the antiwar movement.", tag: "Vietnam", chapter: "vietnam" },
-    { question: "What was the significance of the My Lai Massacre?", options: ["Major military victory", "Proved guerrilla tactics worked", "Exposed US soldiers killing 347-504 unarmed civilians, shattering moral claims", "Led to immediate withdrawal"], answerIndex: 2, explanation: "My Lai (1968) was covered up for a year. When exposed, it destroyed remaining claims of American moral superiority.", tag: "Vietnam", chapter: "vietnam" },
-    { question: "What happened during the Fall of Saigon?", options: ["US won a decisive battle", "North Vietnamese captured Saigon; iconic helicopter evacuation from US Embassy", "South Vietnam surrendered peacefully", "A ceasefire was negotiated"], answerIndex: 1, explanation: "April 30, 1975: Saigon fell, renamed Ho Chi Minh City. Helicopter evacuation became the iconic image of US defeat.", tag: "Vietnam", chapter: "vietnam" },
+    { question: "How did Ho Chi Minh frame Vietnamese independence?", options: ["By citing Marx and Lenin exclusively", "By quoting the US Declaration of Independence", "By appealing to the United Nations", "By declaring war on France"], answerIndex: 1, explanation: "His 1945 declaration opened with 'All men are created equal' — highlighting US hypocrisy in supporting French colonialism.", tag: "Vietnam", chapter: "sixties" },
+    { question: "Why did the US support Ngo Dinh Diem despite his flaws?", options: ["He was democratically elected", "He was anti-communist and the US feared losing South Vietnam", "He was a military hero", "France recommended him"], answerIndex: 1, explanation: "Diem was authoritarian, rigged elections, and alienated Buddhists — but the US backed him because he was anti-communist.", tag: "Vietnam", chapter: "sixties" },
+    { question: "Why was Vietnam called the 'Living Room War'?", options: ["Fighting occurred in homes", "It was the first war broadcast on television", "Soldiers watched TV in barracks", "Congress debated it on live TV"], answerIndex: 1, explanation: "TV brought graphic footage of combat, napalm, and body bags into American homes, turning public opinion against the war.", tag: "Vietnam", chapter: "sixties" },
+    { question: "How did the draft disproportionately affect certain groups?", options: ["Everyone served equally", "College deferments let wealthy avoid service; working class and minorities bore the burden", "Only volunteers went to Vietnam", "Women were drafted equally"], answerIndex: 1, explanation: "College deferments meant working class and minority Americans disproportionately served and died. African Americans were 11% of the population but 25% of early combat casualties.", tag: "Vietnam", chapter: "sixties" },
+    { question: "What happened at Kent State in 1970?", options: ["A major battle was fought", "National Guard killed 4 student protesters after Cambodia invasion", "Students occupied the university", "A draft office was bombed"], answerIndex: 1, explanation: "Ohio National Guard shot and killed 4 students protesting Nixon's Cambodia invasion, galvanizing the antiwar movement.", tag: "Vietnam", chapter: "sixties" },
+    { question: "What was the significance of the My Lai Massacre?", options: ["Major military victory", "Proved guerrilla tactics worked", "Exposed US soldiers killing 347-504 unarmed civilians, shattering moral claims", "Led to immediate withdrawal"], answerIndex: 2, explanation: "My Lai (1968) was covered up for a year. When exposed, it destroyed remaining claims of American moral superiority.", tag: "Vietnam", chapter: "sixties" },
+    { question: "What happened during the Fall of Saigon?", options: ["US won a decisive battle", "North Vietnamese captured Saigon; iconic helicopter evacuation from US Embassy", "South Vietnam surrendered peacefully", "A ceasefire was negotiated"], answerIndex: 1, explanation: "April 30, 1975: Saigon fell, renamed Ho Chi Minh City. Helicopter evacuation became the iconic image of US defeat.", tag: "Vietnam", chapter: "sixties" },
 
     // ── Nixon: Additional ──
-    { question: "What events made 1968 the most turbulent election year?", options: ["Stock market crash and recession", "Tet Offensive, MLK and RFK assassinations, Chicago Convention riots", "Nuclear war scare and Cuban Missile Crisis", "Watergate scandal and impeachment"], answerIndex: 1, explanation: "Tet shattered war confidence, MLK's murder sparked riots in 100+ cities, RFK was killed, and Chicago Convention erupted in violence.", tag: "Nixon", chapter: "nixon" },
-    { question: "How did George Wallace's 1968 campaign influence Nixon?", options: ["Wallace endorsed Nixon", "Wallace's 13.5% on segregation proved racial backlash was politically powerful — Nixon absorbed his voters", "Wallace ran as Nixon's VP", "Wallace had no lasting impact"], answerIndex: 1, explanation: "Wallace won 5 Southern states. Nixon's Southern Strategy was designed to capture Wallace's voters through coded racial appeals.", tag: "Nixon", chapter: "nixon" },
-    { question: "What specific articles of Watergate led to Nixon's downfall?", options: ["Tax evasion and bribery", "Obstruction of justice, abuse of power, and contempt of Congress", "Election fraud and ballot stuffing", "Foreign espionage and treason"], answerIndex: 1, explanation: "The House Judiciary Committee approved three articles: obstruction, abuse of power, contempt of Congress. Nixon resigned before the full House voted.", tag: "Nixon", chapter: "nixon" },
+    { question: "What events made 1968 the most turbulent election year?", options: ["Stock market crash and recession", "Tet Offensive, MLK and RFK assassinations, Chicago Convention riots", "Nuclear war scare and Cuban Missile Crisis", "Watergate scandal and impeachment"], answerIndex: 1, explanation: "Tet shattered war confidence, MLK's murder sparked riots in 100+ cities, RFK was killed, and Chicago Convention erupted in violence.", tag: "Nixon", chapter: "conservatism" },
+    { question: "How did George Wallace's 1968 campaign influence Nixon?", options: ["Wallace endorsed Nixon", "Wallace's 13.5% on segregation proved racial backlash was politically powerful — Nixon absorbed his voters", "Wallace ran as Nixon's VP", "Wallace had no lasting impact"], answerIndex: 1, explanation: "Wallace won 5 Southern states. Nixon's Southern Strategy was designed to capture Wallace's voters through coded racial appeals.", tag: "Nixon", chapter: "conservatism" },
+    { question: "What specific articles of Watergate led to Nixon's downfall?", options: ["Tax evasion and bribery", "Obstruction of justice, abuse of power, and contempt of Congress", "Election fraud and ballot stuffing", "Foreign espionage and treason"], answerIndex: 1, explanation: "The House Judiciary Committee approved three articles: obstruction, abuse of power, contempt of Congress. Nixon resigned before the full House voted.", tag: "Nixon", chapter: "conservatism" },
 
     // ── Birmingham Jail ──
-    { question: "Who was King responding to in the Birmingham Jail letter?", options: ["President Kennedy", "Eight white Alabama clergymen who called protests 'unwise and untimely'", "Malcolm X", "The Supreme Court"], answerIndex: 1, explanation: "Eight clergymen published a statement calling the Birmingham protests untimely. King's letter is a point-by-point response.", tag: "Birmingham Jail", chapter: "birmingham-jail" },
-    { question: "What does King mean by 'network of mutuality'?", options: ["Economic trade networks", "Everyone is interconnected — injustice anywhere threatens justice everywhere", "The civil rights organization structure", "International communist alliance"], answerIndex: 1, explanation: "King argued no one is an outsider to injustice: 'We are caught in an inescapable network of mutuality, tied in a single garment of destiny.'", tag: "Birmingham Jail", chapter: "birmingham-jail" },
-    { question: "According to King, what must happen before direct action?", options: ["Congressional approval", "Collection of facts, negotiation, self-purification, THEN direct action", "Media coverage arrangements", "Legal challenges in court"], answerIndex: 1, explanation: "King's four steps show protests were methodical: verify injustice, try dialogue, train in nonviolence, then demonstrate only after all else fails.", tag: "Birmingham Jail", chapter: "birmingham-jail" },
-    { question: "How does King define an unjust law?", options: ["Any law passed by Democrats", "A law that degrades human personality and the majority inflicts on the minority but doesn't follow itself", "Any federal law that overrides state law", "A law that is unpopular"], answerIndex: 1, explanation: "Just law uplifts; unjust law degrades. Unjust law = different treatment for majority vs minority. King cites Aquinas, Buber, and Tillich.", tag: "Birmingham Jail", chapter: "birmingham-jail" },
-    { question: "Why does King say the white moderate is MORE dangerous than the KKK?", options: ["They have more political power", "Their preference for 'order' over justice provides a veneer of reasonableness to inaction", "They fund segregation", "They control the media"], answerIndex: 1, explanation: "King: 'Shallow understanding from people of good will is more frustrating than absolute misunderstanding from people of ill will.'", tag: "Birmingham Jail", chapter: "birmingham-jail" },
-    { question: "What is King's distinction between negative and positive peace?", options: ["War vs diplomacy", "Negative = absence of tension; positive = presence of justice", "Before vs after civil rights legislation", "Northern vs Southern peace"], answerIndex: 1, explanation: "Moderates wanted negative peace (no tension). King wanted positive peace (actual justice). Order without justice is organized oppression.", tag: "Birmingham Jail", chapter: "birmingham-jail" },
-    { question: "How does King redefine 'extremism'?", options: ["He rejects the label entirely", "He lists Jesus, Lincoln, and Jefferson as 'extremists' — the question is extremism for what?", "He admits to being extreme", "He compares it to communism"], answerIndex: 1, explanation: "King forces a choice: either reject Jesus and Jefferson as extremists, or accept that fighting injustice makes you an extremist for love.", tag: "Birmingham Jail", chapter: "birmingham-jail" },
-    { question: "What does King mean by 'Wait has almost always meant Never'?", options: ["Political promises are always broken", "340 years of waiting proves that telling Black Americans to wait is really telling them to accept injustice permanently", "Legislation takes too long", "Courts are too slow"], answerIndex: 1, explanation: "King catalogs 340 years of suffering and daily humiliation to show that 'wait' is not neutral — it's choosing to let injustice continue.", tag: "Birmingham Jail", chapter: "birmingham-jail" },
-    { question: "What historical examples does King cite to justify civil disobedience?", options: ["American Revolution only", "Shadrach/Meshach/Abednego, early Christians, Socrates, Boston Tea Party, and everything Hitler did was 'legal'", "Only Biblical examples", "Only American examples"], answerIndex: 1, explanation: "King draws on Biblical, classical, and American history. His most powerful point: everything Hitler did was legal; helping Jews was illegal.", tag: "Birmingham Jail", chapter: "birmingham-jail" },
+    { question: "Who was King responding to in the Birmingham Jail letter?", options: ["President Kennedy", "Eight white Alabama clergymen who called protests 'unwise and untimely'", "Malcolm X", "The Supreme Court"], answerIndex: 1, explanation: "Eight clergymen published a statement calling the Birmingham protests untimely. King's letter is a point-by-point response.", tag: "Birmingham Jail", chapter: "fifties-cr" },
+    { question: "What does King mean by 'network of mutuality'?", options: ["Economic trade networks", "Everyone is interconnected — injustice anywhere threatens justice everywhere", "The civil rights organization structure", "International communist alliance"], answerIndex: 1, explanation: "King argued no one is an outsider to injustice: 'We are caught in an inescapable network of mutuality, tied in a single garment of destiny.'", tag: "Birmingham Jail", chapter: "fifties-cr" },
+    { question: "According to King, what must happen before direct action?", options: ["Congressional approval", "Collection of facts, negotiation, self-purification, THEN direct action", "Media coverage arrangements", "Legal challenges in court"], answerIndex: 1, explanation: "King's four steps show protests were methodical: verify injustice, try dialogue, train in nonviolence, then demonstrate only after all else fails.", tag: "Birmingham Jail", chapter: "fifties-cr" },
+    { question: "How does King define an unjust law?", options: ["Any law passed by Democrats", "A law that degrades human personality and the majority inflicts on the minority but doesn't follow itself", "Any federal law that overrides state law", "A law that is unpopular"], answerIndex: 1, explanation: "Just law uplifts; unjust law degrades. Unjust law = different treatment for majority vs minority. King cites Aquinas, Buber, and Tillich.", tag: "Birmingham Jail", chapter: "fifties-cr" },
+    { question: "Why does King say the white moderate is MORE dangerous than the KKK?", options: ["They have more political power", "Their preference for 'order' over justice provides a veneer of reasonableness to inaction", "They fund segregation", "They control the media"], answerIndex: 1, explanation: "King: 'Shallow understanding from people of good will is more frustrating than absolute misunderstanding from people of ill will.'", tag: "Birmingham Jail", chapter: "fifties-cr" },
+    { question: "What is King's distinction between negative and positive peace?", options: ["War vs diplomacy", "Negative = absence of tension; positive = presence of justice", "Before vs after civil rights legislation", "Northern vs Southern peace"], answerIndex: 1, explanation: "Moderates wanted negative peace (no tension). King wanted positive peace (actual justice). Order without justice is organized oppression.", tag: "Birmingham Jail", chapter: "fifties-cr" },
+    { question: "How does King redefine 'extremism'?", options: ["He rejects the label entirely", "He lists Jesus, Lincoln, and Jefferson as 'extremists' — the question is extremism for what?", "He admits to being extreme", "He compares it to communism"], answerIndex: 1, explanation: "King forces a choice: either reject Jesus and Jefferson as extremists, or accept that fighting injustice makes you an extremist for love.", tag: "Birmingham Jail", chapter: "fifties-cr" },
+    { question: "What does King mean by 'Wait has almost always meant Never'?", options: ["Political promises are always broken", "340 years of waiting proves that telling Black Americans to wait is really telling them to accept injustice permanently", "Legislation takes too long", "Courts are too slow"], answerIndex: 1, explanation: "King catalogs 340 years of suffering and daily humiliation to show that 'wait' is not neutral — it's choosing to let injustice continue.", tag: "Birmingham Jail", chapter: "fifties-cr" },
+    { question: "What historical examples does King cite to justify civil disobedience?", options: ["American Revolution only", "Shadrach/Meshach/Abednego, early Christians, Socrates, Boston Tea Party, and everything Hitler did was 'legal'", "Only Biblical examples", "Only American examples"], answerIndex: 1, explanation: "King draws on Biblical, classical, and American history. His most powerful point: everything Hitler did was legal; helping Jews was illegal.", tag: "Birmingham Jail", chapter: "fifties-cr" },
 
     // ── Primary Sources ──
-    { question: "In 'On the Rainy River,' why does O'Brien say 'I was a coward. I went to the war'?", options: ["He was afraid of combat", "Going to war was the path of least resistance — he was too ashamed to resist the draft", "He was forced at gunpoint", "He wanted adventure"], answerIndex: 1, explanation: "O'Brien couldn't face the social shame of fleeing to Canada. The 'courage' to resist was harder than the 'cowardice' of going to war.", tag: "Primary Sources", chapter: "primary-sources" },
-    { question: "What does 'The Things They Carried' reveal about the Vietnam experience?", options: ["Military strategy details", "The physical and emotional burdens soldiers carried — guilt, fear, grief, and the weight of killing", "Political negotiations", "Victory celebrations"], answerIndex: 1, explanation: "O'Brien catalogs literal and metaphorical weight: ammunition, letters, superstitions, guilt. The war was a burden that never left.", tag: "Primary Sources", chapter: "primary-sources" },
-    { question: "Why did Ho Chi Minh quote the US Declaration of Independence?", options: ["He admired American democracy", "To highlight the contradiction of the US supporting French colonialism against a nation seeking independence", "It was required by international law", "He was educated in America"], answerIndex: 1, explanation: "By quoting 'All men are created equal,' Ho framed Vietnamese independence in American terms, making US support for France hypocritical.", tag: "Primary Sources", chapter: "primary-sources" },
+    { question: "In 'On the Rainy River,' why does O'Brien say 'I was a coward. I went to the war'?", options: ["He was afraid of combat", "Going to war was the path of least resistance — he was too ashamed to resist the draft", "He was forced at gunpoint", "He wanted adventure"], answerIndex: 1, explanation: "O'Brien couldn't face the social shame of fleeing to Canada. The 'courage' to resist was harder than the 'cowardice' of going to war.", tag: "Primary Sources", chapter: "sixties" },
+    { question: "What does 'The Things They Carried' reveal about the Vietnam experience?", options: ["Military strategy details", "The physical and emotional burdens soldiers carried — guilt, fear, grief, and the weight of killing", "Political negotiations", "Victory celebrations"], answerIndex: 1, explanation: "O'Brien catalogs literal and metaphorical weight: ammunition, letters, superstitions, guilt. The war was a burden that never left.", tag: "Primary Sources", chapter: "sixties" },
+    { question: "Why did Ho Chi Minh quote the US Declaration of Independence?", options: ["He admired American democracy", "To highlight the contradiction of the US supporting French colonialism against a nation seeking independence", "It was required by international law", "He was educated in America"], answerIndex: 1, explanation: "By quoting 'All men are created equal,' Ho framed Vietnamese independence in American terms, making US support for France hypocritical.", tag: "Primary Sources", chapter: "sixties" },
 
     // ── 1970s Crisis ──
-    { question: "What made stagflation 'impossible' under existing economic theory?", options: ["It required supernatural causes", "Keynesian theory held that high inflation and high unemployment couldn't happen simultaneously", "It only happens in communist systems", "It was caused by aliens"], answerIndex: 1, explanation: "Keynesian economics assumed inflation and unemployment moved in opposite directions. Stagflation broke that framework and opened door to supply-side.", tag: "1970s", chapter: "1970s" },
-    { question: "What triggered the 1973 oil embargo?", options: ["Soviet invasion of Afghanistan", "OPEC's Arab members punishing US for supporting Israel in Yom Kippur War", "US nuclear testing", "A terrorist attack"], answerIndex: 1, explanation: "October 1973: Arab OPEC members embargoed oil to US and other Israel supporters after Yom Kippur War. Prices quadrupled.", tag: "1970s", chapter: "1970s" },
-    { question: "How long were Americans held hostage in Iran?", options: ["44 days", "144 days", "444 days", "1,444 days"], answerIndex: 2, explanation: "November 4, 1979 to January 20, 1981 — released minutes after Reagan inauguration as a final humiliation to Carter.", tag: "1970s", chapter: "1970s" },
-    { question: "What happened during Operation Eagle Claw?", options: ["Successful rescue of Iran hostages", "Failed rescue mission — helicopter crashed in desert, 8 Americans killed", "Assassination of Ayatollah Khomeini", "Bombing of Tehran"], answerIndex: 1, explanation: "Helicopter malfunctions forced mission abort; collision during withdrawal killed 8. Secretary Vance resigned. Symbolized American impotence.", tag: "1970s", chapter: "1970s" },
-    { question: "What did Carter's 'Malaise Speech' argue?", options: ["Government needed more spending", "America had a spiritual 'crisis of confidence' requiring self-reflection and sacrifice", "Communism was the main threat", "Tax cuts would solve everything"], answerIndex: 1, explanation: "Carter diagnosed materialism, self-indulgence, loss of faith. Brief approval boost destroyed by Cabinet reshuffle 2 days later.", tag: "1970s", chapter: "1970s" },
-    { question: "By how much did divorces rise in the 1970s?", options: ["10%", "30%", "65%", "200%"], answerIndex: 2, explanation: "Divorce rose 65%, cohabitation 157%, single-parent households 40% in ONE decade. Traditional nuclear family ceased to be dominant.", tag: "1970s", chapter: "1970s" },
-    { question: "Who founded the Moral Majority?", options: ["Pat Robertson", "Jerry Falwell", "Billy Graham", "James Dobson"], answerIndex: 1, explanation: "Falwell founded Moral Majority in 1979. Mobilized evangelical Christians into reliable Republican voters — 4 million members at peak.", tag: "1970s", chapter: "1970s" },
-    { question: "How did Reagan's 1980 message differ from Carter's malaise speech?", options: ["They agreed on everything", "Reagan said government is the problem; Carter said Americans need moral reform", "Reagan wanted higher taxes", "Reagan was more pessimistic than Carter"], answerIndex: 1, explanation: "Carter asked Americans to sacrifice and reform. Reagan said America was still great; government was the obstacle. Optimism beat honest pessimism.", tag: "1970s", chapter: "1970s" },
+    { question: "What made stagflation 'impossible' under existing economic theory?", options: ["It required supernatural causes", "Keynesian theory held that high inflation and high unemployment couldn't happen simultaneously", "It only happens in communist systems", "It was caused by aliens"], answerIndex: 1, explanation: "Keynesian economics assumed inflation and unemployment moved in opposite directions. Stagflation broke that framework and opened door to supply-side.", tag: "1970s", chapter: "ford-carter" },
+    { question: "What triggered the 1973 oil embargo?", options: ["Soviet invasion of Afghanistan", "OPEC's Arab members punishing US for supporting Israel in Yom Kippur War", "US nuclear testing", "A terrorist attack"], answerIndex: 1, explanation: "October 1973: Arab OPEC members embargoed oil to US and other Israel supporters after Yom Kippur War. Prices quadrupled.", tag: "1970s", chapter: "ford-carter" },
+    { question: "How long were Americans held hostage in Iran?", options: ["44 days", "144 days", "444 days", "1,444 days"], answerIndex: 2, explanation: "November 4, 1979 to January 20, 1981 — released minutes after Reagan inauguration as a final humiliation to Carter.", tag: "1970s", chapter: "ford-carter" },
+    { question: "What happened during Operation Eagle Claw?", options: ["Successful rescue of Iran hostages", "Failed rescue mission — helicopter crashed in desert, 8 Americans killed", "Assassination of Ayatollah Khomeini", "Bombing of Tehran"], answerIndex: 1, explanation: "Helicopter malfunctions forced mission abort; collision during withdrawal killed 8. Secretary Vance resigned. Symbolized American impotence.", tag: "1970s", chapter: "ford-carter" },
+    { question: "What did Carter's 'Malaise Speech' argue?", options: ["Government needed more spending", "America had a spiritual 'crisis of confidence' requiring self-reflection and sacrifice", "Communism was the main threat", "Tax cuts would solve everything"], answerIndex: 1, explanation: "Carter diagnosed materialism, self-indulgence, loss of faith. Brief approval boost destroyed by Cabinet reshuffle 2 days later.", tag: "1970s", chapter: "ford-carter" },
+    { question: "By how much did divorces rise in the 1970s?", options: ["10%", "30%", "65%", "200%"], answerIndex: 2, explanation: "Divorce rose 65%, cohabitation 157%, single-parent households 40% in ONE decade. Traditional nuclear family ceased to be dominant.", tag: "1970s", chapter: "ford-carter" },
+    { question: "Who founded the Moral Majority?", options: ["Pat Robertson", "Jerry Falwell", "Billy Graham", "James Dobson"], answerIndex: 1, explanation: "Falwell founded Moral Majority in 1979. Mobilized evangelical Christians into reliable Republican voters — 4 million members at peak.", tag: "1970s", chapter: "ford-carter" },
+    { question: "How did Reagan's 1980 message differ from Carter's malaise speech?", options: ["They agreed on everything", "Reagan said government is the problem; Carter said Americans need moral reform", "Reagan wanted higher taxes", "Reagan was more pessimistic than Carter"], answerIndex: 1, explanation: "Carter asked Americans to sacrifice and reform. Reagan said America was still great; government was the obstacle. Optimism beat honest pessimism.", tag: "1970s", chapter: "ford-carter" },
 
     // ── Reagan Era Domestic ──
-    { question: "What famous line defined Reagan's 1981 inaugural address?", options: ["'Ask not what your country can do for you'", "'Government is not the solution; government is the problem'", "'The only thing we have to fear is fear itself'", "'Tear down this wall'"], answerIndex: 1, explanation: "Reagan's philosophical foundation — rejected the New Deal/Great Society premise that government could solve problems.", tag: "Reagan", chapter: "reagan" },
-    { question: "What did Reagan's tax cuts do to the top marginal rate?", options: ["Increased it from 50% to 70%", "Cut it from 70% to 28% over 5 years", "Kept it flat", "Eliminated income taxes entirely"], answerIndex: 1, explanation: "Economic Recovery Tax Act (1981) cut 70%→50%; Tax Reform Act (1986) cut 50%→28%. Complete reversal of New Deal-era taxation.", tag: "Reagan", chapter: "reagan" },
-    { question: "What happened to the national debt under Reagan?", options: ["Eliminated", "Stayed flat", "Tripled — from $908B to $2.87 trillion", "Decreased by half"], answerIndex: 2, explanation: "Tax cuts + military buildup = massive deficits despite Reagan's fiscal conservatism rhetoric. Added more debt than all previous presidents combined.", tag: "Reagan", chapter: "reagan" },
-    { question: "Who called supply-side economics 'voodoo economics'?", options: ["Jimmy Carter", "Arthur Laffer", "George H.W. Bush (before becoming VP)", "Alan Greenspan"], answerIndex: 2, explanation: "Bush coined the term during 1980 Republican primary against Reagan — before becoming Reagan's running mate.", tag: "Reagan", chapter: "reagan" },
-    { question: "What was the 100:1 crack-powder sentencing disparity?", options: ["Rate of addiction", "5g of crack got same sentence as 500g of powder cocaine", "Ratio of black to white arrests", "Length of sentences in months"], answerIndex: 1, explanation: "Anti-Drug Abuse Act (1986). Same drug chemically — but crack (used in poor Black communities) got 100x harsher sentences. Reduced to 18:1 in 2010.", tag: "Reagan", chapter: "reagan" },
-    { question: "How did the US prison population change from 1970 to 2008?", options: ["Stayed the same", "Grew from ~300,000 to ~2.4 million", "Decreased by half", "Grew 10%"], answerIndex: 1, explanation: "8-fold increase. US became world's largest jailer, not because crime rose but because policy became radically more punitive (War on Drugs).", tag: "Reagan", chapter: "reagan" },
-    { question: "What did Reagan do during the 1981 PATCO strike?", options: ["Negotiated higher wages", "Fired 11,000 striking air traffic controllers", "Resigned in sympathy", "Ignored them"], answerIndex: 1, explanation: "Mass firing signaled open season on unions. Accelerated decline of organized labor from ~20% to ~6% of private-sector workforce.", tag: "Reagan", chapter: "reagan" },
+    { question: "What famous line defined Reagan's 1981 inaugural address?", options: ["'Ask not what your country can do for you'", "'Government is not the solution; government is the problem'", "'The only thing we have to fear is fear itself'", "'Tear down this wall'"], answerIndex: 1, explanation: "Reagan's philosophical foundation — rejected the New Deal/Great Society premise that government could solve problems.", tag: "Reagan", chapter: "reagan-revolution" },
+    { question: "What did Reagan's tax cuts do to the top marginal rate?", options: ["Increased it from 50% to 70%", "Cut it from 70% to 28% over 5 years", "Kept it flat", "Eliminated income taxes entirely"], answerIndex: 1, explanation: "Economic Recovery Tax Act (1981) cut 70%→50%; Tax Reform Act (1986) cut 50%→28%. Complete reversal of New Deal-era taxation.", tag: "Reagan", chapter: "reagan-revolution" },
+    { question: "What happened to the national debt under Reagan?", options: ["Eliminated", "Stayed flat", "Tripled — from $908B to $2.87 trillion", "Decreased by half"], answerIndex: 2, explanation: "Tax cuts + military buildup = massive deficits despite Reagan's fiscal conservatism rhetoric. Added more debt than all previous presidents combined.", tag: "Reagan", chapter: "reagan-revolution" },
+    { question: "Who called supply-side economics 'voodoo economics'?", options: ["Jimmy Carter", "Arthur Laffer", "George H.W. Bush (before becoming VP)", "Alan Greenspan"], answerIndex: 2, explanation: "Bush coined the term during 1980 Republican primary against Reagan — before becoming Reagan's running mate.", tag: "Reagan", chapter: "reagan-revolution" },
+    { question: "What was the 100:1 crack-powder sentencing disparity?", options: ["Rate of addiction", "5g of crack got same sentence as 500g of powder cocaine", "Ratio of black to white arrests", "Length of sentences in months"], answerIndex: 1, explanation: "Anti-Drug Abuse Act (1986). Same drug chemically — but crack (used in poor Black communities) got 100x harsher sentences. Reduced to 18:1 in 2010.", tag: "Reagan", chapter: "reagan-revolution" },
+    { question: "How did the US prison population change from 1970 to 2008?", options: ["Stayed the same", "Grew from ~300,000 to ~2.4 million", "Decreased by half", "Grew 10%"], answerIndex: 1, explanation: "8-fold increase. US became world's largest jailer, not because crime rose but because policy became radically more punitive (War on Drugs).", tag: "Reagan", chapter: "reagan-revolution" },
+    { question: "What did Reagan do during the 1981 PATCO strike?", options: ["Negotiated higher wages", "Fired 11,000 striking air traffic controllers", "Resigned in sympathy", "Ignored them"], answerIndex: 1, explanation: "Mass firing signaled open season on unions. Accelerated decline of organized labor from ~20% to ~6% of private-sector workforce.", tag: "Reagan", chapter: "reagan-revolution" },
 
     // ── Reagan Era Foreign ──
-    { question: "What did Reagan call the Soviet Union?", options: ["The Red Menace", "The Evil Empire", "The Bear", "Our Adversary"], answerIndex: 1, explanation: "March 1983 speech to National Association of Evangelicals. Framed Cold War as moral struggle between good and evil — rejected détente's moral equivalence.", tag: "Reagan", chapter: "reagan" },
-    { question: "What was SDI / 'Star Wars'?", options: ["A movie tie-in", "Proposed space-based anti-missile defense system", "Soviet weapons program", "Nuclear test series"], answerIndex: 1, explanation: "Strategic Defense Initiative (1983). Scientists said technology impossible; Soviets feared it anyway and couldn't afford to match. Sticking point at Reykjavik.", tag: "Reagan", chapter: "reagan" },
-    { question: "What did the INF Treaty (1987) accomplish?", options: ["Created NATO", "Eliminated entire class of intermediate-range nuclear missiles", "Started the Cold War", "Built the Berlin Wall"], answerIndex: 1, explanation: "First time nuclear weapons were actually destroyed, not just limited. Signed by Reagan and Gorbachev. Major arms control breakthrough.", tag: "Reagan", chapter: "reagan" },
-    { question: "What was the Iran-Contra Affair?", options: ["A diplomatic treaty", "Illegal secret arms sales to Iran funding banned Nicaraguan Contra war", "Cold War summit", "Middle East peace process"], answerIndex: 1, explanation: "Reagan admin violated the arms embargo on Iran to free hostages, then diverted profits to fund Contras after Congress banned such funding (Boland Amendment).", tag: "Reagan", chapter: "reagan" },
-    { question: "What law did the Iran-Contra Affair violate?", options: ["Freedom of Information Act", "Boland Amendment (banned Contra funding)", "War Powers Act", "Civil Rights Act"], answerIndex: 1, explanation: "Congress specifically banned US funding of Contras for purposes of overthrowing Sandinista government. Reagan admin circumvented via Iran arms sales.", tag: "Reagan", chapter: "reagan" },
-    { question: "How did Reagan describe the Contras?", options: ["'Terrorists'", "'Moral equivalent of our founding fathers'", "'Useful idiots'", "'Necessary evil'"], answerIndex: 1, explanation: "Reagan's rhetoric despite documented Contra atrocities: massacres, torture, attacks on civilians. The gap between rhetoric and reality was stark.", tag: "Reagan", chapter: "reagan" },
-    { question: "What did Gary Webb's 'Dark Alliance' expose?", options: ["Soviet spies in the CIA", "CIA-backed Contras trafficking cocaine into US black communities", "Bill Clinton scandals", "Weapons of mass destruction"], answerIndex: 1, explanation: "1996 investigative series. Mainstream papers attacked him; career destroyed; died 2004. CIA Inspector General's 1998 report later confirmed core allegations.", tag: "Reagan", chapter: "reagan" },
+    { question: "What did Reagan call the Soviet Union?", options: ["The Red Menace", "The Evil Empire", "The Bear", "Our Adversary"], answerIndex: 1, explanation: "March 1983 speech to National Association of Evangelicals. Framed Cold War as moral struggle between good and evil — rejected détente's moral equivalence.", tag: "Reagan", chapter: "reagan-revolution" },
+    { question: "What was SDI / 'Star Wars'?", options: ["A movie tie-in", "Proposed space-based anti-missile defense system", "Soviet weapons program", "Nuclear test series"], answerIndex: 1, explanation: "Strategic Defense Initiative (1983). Scientists said technology impossible; Soviets feared it anyway and couldn't afford to match. Sticking point at Reykjavik.", tag: "Reagan", chapter: "reagan-revolution" },
+    { question: "What did the INF Treaty (1987) accomplish?", options: ["Created NATO", "Eliminated entire class of intermediate-range nuclear missiles", "Started the Cold War", "Built the Berlin Wall"], answerIndex: 1, explanation: "First time nuclear weapons were actually destroyed, not just limited. Signed by Reagan and Gorbachev. Major arms control breakthrough.", tag: "Reagan", chapter: "reagan-revolution" },
+    { question: "What was the Iran-Contra Affair?", options: ["A diplomatic treaty", "Illegal secret arms sales to Iran funding banned Nicaraguan Contra war", "Cold War summit", "Middle East peace process"], answerIndex: 1, explanation: "Reagan admin violated the arms embargo on Iran to free hostages, then diverted profits to fund Contras after Congress banned such funding (Boland Amendment).", tag: "Reagan", chapter: "reagan-revolution" },
+    { question: "What law did the Iran-Contra Affair violate?", options: ["Freedom of Information Act", "Boland Amendment (banned Contra funding)", "War Powers Act", "Civil Rights Act"], answerIndex: 1, explanation: "Congress specifically banned US funding of Contras for purposes of overthrowing Sandinista government. Reagan admin circumvented via Iran arms sales.", tag: "Reagan", chapter: "reagan-revolution" },
+    { question: "How did Reagan describe the Contras?", options: ["'Terrorists'", "'Moral equivalent of our founding fathers'", "'Useful idiots'", "'Necessary evil'"], answerIndex: 1, explanation: "Reagan's rhetoric despite documented Contra atrocities: massacres, torture, attacks on civilians. The gap between rhetoric and reality was stark.", tag: "Reagan", chapter: "reagan-revolution" },
+    { question: "What did Gary Webb's 'Dark Alliance' expose?", options: ["Soviet spies in the CIA", "CIA-backed Contras trafficking cocaine into US black communities", "Bill Clinton scandals", "Weapons of mass destruction"], answerIndex: 1, explanation: "1996 investigative series. Mainstream papers attacked him; career destroyed; died 2004. CIA Inspector General's 1998 report later confirmed core allegations.", tag: "Reagan", chapter: "reagan-revolution" },
 
     // ── End of Cold War ──
-    { question: "What were Gorbachev's two signature reforms?", options: ["Communism and Capitalism", "Perestroika (restructuring) and Glasnost (openness)", "Détente and Containment", "Five-Year Plans"], answerIndex: 1, explanation: "Perestroika = economic reform; Glasnost = political openness. Intended to save Soviet communism; unleashed forces that ended it.", tag: "End of Cold War", chapter: "reagan" },
-    { question: "What was the Sinatra Doctrine?", options: ["US policy toward Cuba", "Gorbachev's policy letting Eastern European countries 'do it their way'", "Détente under Nixon", "Reagan's arms strategy"], answerIndex: 1, explanation: "Abandoned Brezhnev Doctrine of Soviet intervention. Made 1989 peaceful revolutions possible — Soviet tanks did NOT roll.", tag: "End of Cold War", chapter: "reagan" },
-    { question: "How did the Berlin Wall actually fall?", options: ["NATO invaded", "East German spokesman mistakenly said new travel rules took effect 'immediately'", "Reagan personally tore it down", "The US government bought East Germany"], answerIndex: 1, explanation: "November 9, 1989: Schabowski misread a note at a press conference. Crowds gathered; guards opened gates; celebrations followed. Accident of history.", tag: "End of Cold War", chapter: "reagan" },
-    { question: "What happened during the August 1991 coup?", options: ["Gorbachev was killed", "Hardliners tried to overthrow Gorbachev; Yeltsin defied them atop a tank; coup failed in 3 days", "The USSR invaded Poland", "The Cold War officially started"], answerIndex: 1, explanation: "Hardline communists arrested Gorbachev but Yeltsin's defiance and mass protests defeated the coup. Destroyed Gorbachev's authority; Yeltsin emerged dominant.", tag: "End of Cold War", chapter: "reagan" },
-    { question: "When did the USSR officially dissolve?", options: ["December 25, 1991", "November 9, 1989", "August 19, 1991", "January 1, 1992"], answerIndex: 0, explanation: "Christmas Day 1991: Gorbachev resigned; Soviet flag lowered over Kremlin. USSR split into 15 independent nations. Cold War officially over.", tag: "End of Cold War", chapter: "reagan" },
-    { question: "How many independent nations emerged from the USSR's collapse?", options: ["5", "10", "15", "20"], answerIndex: 2, explanation: "15 republics: Russia, Ukraine, Belarus, Moldova, Kazakhstan, Uzbekistan, Kyrgyzstan, Tajikistan, Turkmenistan, Azerbaijan, Armenia, Georgia, Lithuania, Latvia, Estonia.", tag: "End of Cold War", chapter: "reagan" },
+    { question: "What were Gorbachev's two signature reforms?", options: ["Communism and Capitalism", "Perestroika (restructuring) and Glasnost (openness)", "Détente and Containment", "Five-Year Plans"], answerIndex: 1, explanation: "Perestroika = economic reform; Glasnost = political openness. Intended to save Soviet communism; unleashed forces that ended it.", tag: "End of Cold War", chapter: "reagan-revolution" },
+    { question: "What was the Sinatra Doctrine?", options: ["US policy toward Cuba", "Gorbachev's policy letting Eastern European countries 'do it their way'", "Détente under Nixon", "Reagan's arms strategy"], answerIndex: 1, explanation: "Abandoned Brezhnev Doctrine of Soviet intervention. Made 1989 peaceful revolutions possible — Soviet tanks did NOT roll.", tag: "End of Cold War", chapter: "reagan-revolution" },
+    { question: "How did the Berlin Wall actually fall?", options: ["NATO invaded", "East German spokesman mistakenly said new travel rules took effect 'immediately'", "Reagan personally tore it down", "The US government bought East Germany"], answerIndex: 1, explanation: "November 9, 1989: Schabowski misread a note at a press conference. Crowds gathered; guards opened gates; celebrations followed. Accident of history.", tag: "End of Cold War", chapter: "reagan-revolution" },
+    { question: "What happened during the August 1991 coup?", options: ["Gorbachev was killed", "Hardliners tried to overthrow Gorbachev; Yeltsin defied them atop a tank; coup failed in 3 days", "The USSR invaded Poland", "The Cold War officially started"], answerIndex: 1, explanation: "Hardline communists arrested Gorbachev but Yeltsin's defiance and mass protests defeated the coup. Destroyed Gorbachev's authority; Yeltsin emerged dominant.", tag: "End of Cold War", chapter: "reagan-revolution" },
+    { question: "When did the USSR officially dissolve?", options: ["December 25, 1991", "November 9, 1989", "August 19, 1991", "January 1, 1992"], answerIndex: 0, explanation: "Christmas Day 1991: Gorbachev resigned; Soviet flag lowered over Kremlin. USSR split into 15 independent nations. Cold War officially over.", tag: "End of Cold War", chapter: "reagan-revolution" },
+    { question: "How many independent nations emerged from the USSR's collapse?", options: ["5", "10", "15", "20"], answerIndex: 2, explanation: "15 republics: Russia, Ukraine, Belarus, Moldova, Kazakhstan, Uzbekistan, Kyrgyzstan, Tajikistan, Turkmenistan, Azerbaijan, Armenia, Georgia, Lithuania, Latvia, Estonia.", tag: "End of Cold War", chapter: "reagan-revolution" },
   ],
 
   shortAnswers: [
     { prompt: "Explain how containment shaped US foreign policy from 1947 to 1950.", include: ["Kennan's Long Telegram recommended containing Soviet expansion", "Truman Doctrine committed US to supporting free peoples — $400M to Greece/Turkey", "Marshall Plan used economic aid to rebuild Europe and prevent communism", "NSC-68 called for massive military buildup against Soviet atomic threat", "NATO created mutual defense alliance in Western Europe"], chapter: "cold-war" },
     { prompt: "How was the Cold War fought without direct military conflict between the US and USSR?", include: ["Economic aid (Marshall Plan) to prevent communism", "Military alliances (NATO vs Warsaw Pact)", "Proxy conflicts and support for allied nations", "Propaganda and ideological competition (Kitchen Debate)", "Nuclear arms race and deterrence", "Berlin Airlift showed Western resolve without shooting"], chapter: "cold-war" },
-    { prompt: "Was the 1950s truly an 'affluent society'? Explain who benefited and who was left out.", include: ["Suburbanization and consumer culture created prosperity for white middle class", "Levittown excluded Black families — housing discrimination", "Harrington's Other America exposed 40-50 million in poverty", "Galbraith criticized prioritizing private wealth over public services", "Gender roles confined women to domestic sphere", "Beat Generation rejected conformity"], chapter: "affluent-society" },
-    { prompt: "Explain the legal strategy of the civil rights movement from Plessy to Brown.", include: ["Plessy v. Ferguson (1896) established 'separate but equal'", "NAACP used legal challenges to attack segregation", "Thurgood Marshall argued Brown v. Board before the Supreme Court", "Brown (1954) declared separate educational facilities inherently unequal", "Brown II ordered desegregation 'with all deliberate speed' — very slow in practice"], chapter: "civil-rights" },
-    { prompt: "How did nonviolent protest advance the civil rights movement?", include: ["Montgomery Bus Boycott lasted a year, ended bus segregation", "Sit-ins at lunch counters spread rapidly", "Freedom Riders tested desegregation rulings", "MLK's Letter from Birmingham Jail defended civil disobedience", "March on Washington brought 250,000+ people", "Television made protesters look peaceful and opponents look violent"], chapter: "civil-rights" },
-    { prompt: "Explain why the Vietnam War became increasingly unpopular in the United States.", include: ["Gulf of Tonkin Resolution based on exaggerated/fabricated attacks", "Massive escalation under LBJ — 500,000 troops", "Tet Offensive shattered claims the war was being won", "Pentagon Papers revealed government deception", "Draft disproportionately affected poor and minorities", "Counterculture movement and anti-war protests", "Media coverage brought war's brutality into American homes"], chapter: "vietnam" },
-    { prompt: "Describe the role of each president in the Vietnam War.", include: ["Truman: containment theory, $23M to France", "Eisenhower: supported French, sent 700 advisors", "JFK: increased advisors to 16,000", "LBJ: escalated to 500,000 troops using Gulf of Tonkin", "Nixon: Vietnamization, ended draft, bombed Cambodia, Watergate", "Ford: ordered final evacuation"], chapter: "vietnam" },
-    { prompt: "How did the 'Rights Revolution' of the 1960s extend beyond African Americans?", include: ["Women's movement — Friedan's Feminine Mystique, NOW, ERA", "Gay rights — Stonewall Riots 1969 launched pride movement", "Latino rights — Chicano movement, Cesar Chavez and United Farm Workers", "Native American rights — AIM (1968), Occupation of Alcatraz (1969)", "Environmental movement — Rachel Carson's Silent Spring", "SCOTUS expanded rights: privacy, free speech, due process"], chapter: "nixon" },
-    { prompt: "How did Nixon represent a 'conservative turn' in American politics?", include: ["Silent Majority speech appealed to traditional values", "Southern Strategy used racial anxiety to win white Southern voters", "Opposed counterculture and anti-war movement", "YAF and Sharon Statement represented conservative youth", "Despite conservative rhetoric, created EPA and opened relations with China", "Watergate destroyed public trust in government"], chapter: "nixon" },
+    { prompt: "Was the 1950s truly an 'affluent society'? Explain who benefited and who was left out.", include: ["Suburbanization and consumer culture created prosperity for white middle class", "Levittown excluded Black families — housing discrimination", "Harrington's Other America exposed 40-50 million in poverty", "Galbraith criticized prioritizing private wealth over public services", "Gender roles confined women to domestic sphere", "Beat Generation rejected conformity"], chapter: "fifties-cr" },
+    { prompt: "Explain the legal strategy of the civil rights movement from Plessy to Brown.", include: ["Plessy v. Ferguson (1896) established 'separate but equal'", "NAACP used legal challenges to attack segregation", "Thurgood Marshall argued Brown v. Board before the Supreme Court", "Brown (1954) declared separate educational facilities inherently unequal", "Brown II ordered desegregation 'with all deliberate speed' — very slow in practice"], chapter: "fifties-cr" },
+    { prompt: "How did nonviolent protest advance the civil rights movement?", include: ["Montgomery Bus Boycott lasted a year, ended bus segregation", "Sit-ins at lunch counters spread rapidly", "Freedom Riders tested desegregation rulings", "MLK's Letter from Birmingham Jail defended civil disobedience", "March on Washington brought 250,000+ people", "Television made protesters look peaceful and opponents look violent"], chapter: "fifties-cr" },
+    { prompt: "Explain why the Vietnam War became increasingly unpopular in the United States.", include: ["Gulf of Tonkin Resolution based on exaggerated/fabricated attacks", "Massive escalation under LBJ — 500,000 troops", "Tet Offensive shattered claims the war was being won", "Pentagon Papers revealed government deception", "Draft disproportionately affected poor and minorities", "Counterculture movement and anti-war protests", "Media coverage brought war's brutality into American homes"], chapter: "sixties" },
+    { prompt: "Describe the role of each president in the Vietnam War.", include: ["Truman: containment theory, $23M to France", "Eisenhower: supported French, sent 700 advisors", "JFK: increased advisors to 16,000", "LBJ: escalated to 500,000 troops using Gulf of Tonkin", "Nixon: Vietnamization, ended draft, bombed Cambodia, Watergate", "Ford: ordered final evacuation"], chapter: "sixties" },
+    { prompt: "How did the 'Rights Revolution' of the 1960s extend beyond African Americans?", include: ["Women's movement — Friedan's Feminine Mystique, NOW, ERA", "Gay rights — Stonewall Riots 1969 launched pride movement", "Latino rights — Chicano movement, Cesar Chavez and United Farm Workers", "Native American rights — AIM (1968), Occupation of Alcatraz (1969)", "Environmental movement — Rachel Carson's Silent Spring", "SCOTUS expanded rights: privacy, free speech, due process"], chapter: "conservatism" },
+    { prompt: "How did Nixon represent a 'conservative turn' in American politics?", include: ["Silent Majority speech appealed to traditional values", "Southern Strategy used racial anxiety to win white Southern voters", "Opposed counterculture and anti-war movement", "YAF and Sharon Statement represented conservative youth", "Despite conservative rhetoric, created EPA and opened relations with China", "Watergate destroyed public trust in government"], chapter: "conservatism" },
 
     // ── New Short Answers ──
     { prompt: "How did the three wartime conferences (Yalta, Potsdam, Bretton Woods) set the stage for the Cold War?", include: ["Bretton Woods (1944) created separate economic systems — West capitalist, Soviet communist", "Yalta (1945): Stalin pledged free elections in Eastern Europe, then violated promise", "Potsdam (1945): Truman more confrontational than FDR, hinted at atomic bomb", "Each conference deepened mutual suspicion between US and USSR", "By Potsdam, the wartime alliance was effectively dead"], chapter: "cold-war" },
     { prompt: "Analyze how Cold War fear affected American democracy at home.", include: ["HUAC investigated 'subversive' activities — Hollywood Ten jailed, 300+ blacklisted", "McCarthyism: loyalty oaths, guilt by association, careers destroyed without trials", "Rosenberg execution driven by Cold War hysteria — disproportionate punishment", "Duck and Cover normalized living under nuclear threat", "Freedom paradox: defending freedom abroad while restricting it at home", "Lippmann predicted this — permanent militarization would distort American democracy"], chapter: "cold-war" },
-    { prompt: "Analyze King's argument in the Letter from Birmingham Jail.", include: ["Outsider argument: 'Injustice anywhere is a threat to justice everywhere' — network of mutuality", "Four steps of nonviolent campaign show protests were methodical, not reckless", "Just vs unjust laws: unjust law degrades personality, must be disobeyed openly", "White moderate is greatest stumbling block — prefers order over justice", "Negative peace (no tension) vs positive peace (presence of justice)", "Reframes extremism: Jesus, Lincoln, Jefferson were all extremists for love", "Case against waiting: 340 years, Funtown closed to colored children"], chapter: "birmingham-jail" },
-    { prompt: "How did King use philosophy to defend civil disobedience in the Birmingham Jail letter?", include: ["St. Augustine: 'an unjust law is no law at all'", "Aquinas: just law rooted in eternal/natural law; unjust law is not", "Martin Buber: segregation substitutes I-it for I-thou relationships", "Paul Tillich: 'sin is separation' — segregation is ultimate human separation", "Socrates: created intellectual tension to free minds from myths, just as nonviolence creates social tension", "Everything Hitler did was 'legal'; helping Jews was 'illegal'"], chapter: "birmingham-jail" },
-    { prompt: "How did the soldier experience in Vietnam differ from World War II?", include: ["Average age 19 vs 26 in WWII", "One-year individual rotation destroyed unit cohesion (WWII served for duration)", "No front lines, no clear objectives — progress measured by body count", "Draft disproportionately affected working class and minorities — college deferments for wealthy", "Guerrilla warfare with no visible enemy vs conventional WWII battles", "Soldiers returned to hostility rather than victory parades", "PTSD, substance abuse, and suicide haunted a generation"], chapter: "vietnam" },
-    { prompt: "How do primary sources from Vietnam (O'Brien, Caputo, Ho Chi Minh) reveal different perspectives on the war?", include: ["O'Brien (Things They Carried): physical and emotional burdens — war as inescapable weight", "O'Brien (On the Rainy River): draft as moral trap — 'I was a coward. I went to the war'", "Caputo (Rumor of War): idealism corrupted by impossible rules, body count pressure, moral ambiguity", "Ho Chi Minh Declaration: quoted US Declaration of Independence — framing independence in American terms", "Ho Chi Minh letters: insisted fight was anti-colonial, not Cold War communist expansion", "Together they show the war was a tragedy for both sides — not just a policy failure"], chapter: "primary-sources" },
-    { prompt: "How did 1968 transform American politics?", include: ["Tet Offensive shattered confidence in Vietnam War", "MLK assassination (April 4) — riots in 100+ cities", "RFK assassination (June 5) — killed progressive hope", "Chicago Convention violence — police vs protesters on live TV", "George Wallace won 5 Southern states on segregation — proved racial backlash power", "Nixon won as 'law and order' candidate — ended New Deal liberal consensus", "Marked beginning of conservative era in American politics"], chapter: "nixon" },
+    { prompt: "Analyze King's argument in the Letter from Birmingham Jail.", include: ["Outsider argument: 'Injustice anywhere is a threat to justice everywhere' — network of mutuality", "Four steps of nonviolent campaign show protests were methodical, not reckless", "Just vs unjust laws: unjust law degrades personality, must be disobeyed openly", "White moderate is greatest stumbling block — prefers order over justice", "Negative peace (no tension) vs positive peace (presence of justice)", "Reframes extremism: Jesus, Lincoln, Jefferson were all extremists for love", "Case against waiting: 340 years, Funtown closed to colored children"], chapter: "fifties-cr" },
+    { prompt: "How did King use philosophy to defend civil disobedience in the Birmingham Jail letter?", include: ["St. Augustine: 'an unjust law is no law at all'", "Aquinas: just law rooted in eternal/natural law; unjust law is not", "Martin Buber: segregation substitutes I-it for I-thou relationships", "Paul Tillich: 'sin is separation' — segregation is ultimate human separation", "Socrates: created intellectual tension to free minds from myths, just as nonviolence creates social tension", "Everything Hitler did was 'legal'; helping Jews was 'illegal'"], chapter: "fifties-cr" },
+    { prompt: "How did the soldier experience in Vietnam differ from World War II?", include: ["Average age 19 vs 26 in WWII", "One-year individual rotation destroyed unit cohesion (WWII served for duration)", "No front lines, no clear objectives — progress measured by body count", "Draft disproportionately affected working class and minorities — college deferments for wealthy", "Guerrilla warfare with no visible enemy vs conventional WWII battles", "Soldiers returned to hostility rather than victory parades", "PTSD, substance abuse, and suicide haunted a generation"], chapter: "sixties" },
+    { prompt: "How do primary sources from Vietnam (O'Brien, Caputo, Ho Chi Minh) reveal different perspectives on the war?", include: ["O'Brien (Things They Carried): physical and emotional burdens — war as inescapable weight", "O'Brien (On the Rainy River): draft as moral trap — 'I was a coward. I went to the war'", "Caputo (Rumor of War): idealism corrupted by impossible rules, body count pressure, moral ambiguity", "Ho Chi Minh Declaration: quoted US Declaration of Independence — framing independence in American terms", "Ho Chi Minh letters: insisted fight was anti-colonial, not Cold War communist expansion", "Together they show the war was a tragedy for both sides — not just a policy failure"], chapter: "sixties" },
+    { prompt: "How did 1968 transform American politics?", include: ["Tet Offensive shattered confidence in Vietnam War", "MLK assassination (April 4) — riots in 100+ cities", "RFK assassination (June 5) — killed progressive hope", "Chicago Convention violence — police vs protesters on live TV", "George Wallace won 5 Southern states on segregation — proved racial backlash power", "Nixon won as 'law and order' candidate — ended New Deal liberal consensus", "Marked beginning of conservative era in American politics"], chapter: "conservatism" },
 
     // ── 1970s Crisis ──
-    { prompt: "How did the crises of the 1970s pave the way for Reagan's 1980 victory?", include: ["Stagflation broke faith in Keynesian economics and liberal government", "Oil shocks (1973, 1979) exposed American economic vulnerability", "Vietnam defeat and Fall of Saigon (1975) humiliated US foreign policy", "Iran Hostage Crisis (444 days) symbolized American impotence", "Family demographics shifted radically — fueled Religious Right backlash", "Carter's malaise speech diagnosed crisis but asked for sacrifice", "Reagan offered optimistic alternative: cut taxes, rebuild military, restore greatness"], chapter: "1970s" },
-    { prompt: "Compare Carter's and Reagan's diagnoses of America's problems in 1979-80.", include: ["Carter: spiritual crisis of confidence, materialism, self-indulgence", "Carter's solution: sacrifice, humility, lowered expectations", "Reagan: government is the problem — too big, too intrusive, too expensive", "Reagan's solution: cut taxes, deregulate, rebuild military, restore pride", "Tonal difference: Carter self-critical and somber; Reagan optimistic and aspirational", "Americans preferred Reagan's optimism to Carter's honest pessimism", "Lesson that shaped politics for 40+ years: optimism beats accurate diagnosis"], chapter: "1970s" },
-    { prompt: "Why did the Religious Right become so politically powerful by 1980?", include: ["Roe v. Wade (1973) and Engel v. Vitale (1962) mobilized evangelicals", "IRS attacks on segregated Christian academies (the real trigger) challenged evangelical institutions", "1970s family demographic collapse (divorce, cohabitation, single parents) alarmed traditionalists", "Jerry Falwell founded Moral Majority (1979) — mobilized 4 million members", "Televangelists reached millions directly, bypassing denominational structures", "Voter registration drives through churches turned out previously disengaged voters", "Defeated liberal senators (McGovern, Church, Bayh, Culver) and helped elect Reagan 1980", "Transformed white evangelicals into most reliable Republican voting bloc"], chapter: "1970s" },
+    { prompt: "How did the crises of the 1970s pave the way for Reagan's 1980 victory?", include: ["Stagflation broke faith in Keynesian economics and liberal government", "Oil shocks (1973, 1979) exposed American economic vulnerability", "Vietnam defeat and Fall of Saigon (1975) humiliated US foreign policy", "Iran Hostage Crisis (444 days) symbolized American impotence", "Family demographics shifted radically — fueled Religious Right backlash", "Carter's malaise speech diagnosed crisis but asked for sacrifice", "Reagan offered optimistic alternative: cut taxes, rebuild military, restore greatness"], chapter: "ford-carter" },
+    { prompt: "Compare Carter's and Reagan's diagnoses of America's problems in 1979-80.", include: ["Carter: spiritual crisis of confidence, materialism, self-indulgence", "Carter's solution: sacrifice, humility, lowered expectations", "Reagan: government is the problem — too big, too intrusive, too expensive", "Reagan's solution: cut taxes, deregulate, rebuild military, restore pride", "Tonal difference: Carter self-critical and somber; Reagan optimistic and aspirational", "Americans preferred Reagan's optimism to Carter's honest pessimism", "Lesson that shaped politics for 40+ years: optimism beats accurate diagnosis"], chapter: "ford-carter" },
+    { prompt: "Why did the Religious Right become so politically powerful by 1980?", include: ["Roe v. Wade (1973) and Engel v. Vitale (1962) mobilized evangelicals", "IRS attacks on segregated Christian academies (the real trigger) challenged evangelical institutions", "1970s family demographic collapse (divorce, cohabitation, single parents) alarmed traditionalists", "Jerry Falwell founded Moral Majority (1979) — mobilized 4 million members", "Televangelists reached millions directly, bypassing denominational structures", "Voter registration drives through churches turned out previously disengaged voters", "Defeated liberal senators (McGovern, Church, Bayh, Culver) and helped elect Reagan 1980", "Transformed white evangelicals into most reliable Republican voting bloc"], chapter: "ford-carter" },
 
     // ── Reagan Era ──
-    { prompt: "Analyze the results of Reaganomics — who won, who lost, and what were the costs?", include: ["Cut top marginal tax rate from 70% to 28% over 5 years", "Deregulated banking, broadcasting, environmental enforcement", "Tripled military spending from $100B to $300B/year", "Strong economic growth 1983-88 after 1982 recession", "Winners: top 10% (income share rose sharply), Wall Street, defense contractors, yuppies", "Losers: working class (wages stagnated), manufacturing (Rust Belt collapse), unions (PATCO precedent)", "National debt tripled ($908B → $2.87 trillion)", "Income inequality reversed 40 years of relative equality", "Homelessness exploded; Savings & Loan crisis required $160B bailout"], chapter: "reagan" },
-    { prompt: "How did Reagan's policies end the Cold War — or did they?", include: ["Military buildup (tripled to $300B/year) strained Soviet ability to compete", "SDI / 'Star Wars' threatened Soviet nuclear strategy — couldn't afford to match", "'Evil Empire' rhetoric rejected détente and moral equivalence", "Support for anti-Soviet forces: Contras, Mujahideen, Solidarity", "Reagan-Gorbachev summits produced INF Treaty (1987) — first actual nuclear reduction", "'Tear down this wall' speech (1987) — wall fell 2 years later", "Counterargument: USSR already in terminal decline before Reagan", "Gorbachev's Perestroika/Glasnost were decisive — Reagan's pressure accelerated collapse", "Historians generally credit BOTH Reagan's pressure AND Gorbachev's reforms"], chapter: "reagan" },
-    { prompt: "Explain the Iran-Contra Affair and why it mattered.", include: ["Reagan admin sold weapons to Iran (under arms embargo) to free hostages in Lebanon", "Diverted profits to fund Contras in Nicaragua — Congress had banned funding via Boland Amendment", "Oliver North (NSC) devised and ran the operation", "Exposed November 1986 when Lebanese magazine published details", "Multiple convictions (North, Poindexter) overturned on appeal; Bush Sr. pardoned 6 others", "Reagan denied knowledge but polls showed most Americans didn't believe him", "Violated federal law, arms embargo, and constitutional oversight", "Showed how anti-communist imperative could override legal constraints", "Hypocrisy: We sold arms to the same Iran that held hostages for 444 days"], chapter: "reagan" },
-    { prompt: "How did Reagan's War on Drugs affect Black communities?", include: ["Escalated Nixon's drug war with mandatory minimums (1984 Sentencing Reform Act)", "100:1 crack-powder disparity (1986) — 5g crack = 500g powder cocaine sentencing", "Crack was cheaper, used in Black communities; powder was whiter/wealthier", "Black youth arrested 4x more than white youth for drug possession (similar usage rates)", "Mass incarceration: 300,000 (1970) → 2.4 million (2008)", "1 in 3 Black American men could expect to be imprisoned at some point", "Gary Webb's Dark Alliance alleged CIA-Contra cocaine trafficking fueled crack epidemic", "CIA Inspector General (1998) confirmed agency worked with known drug traffickers", "Legacy: 'New Jim Crow' — race-neutral laws with racially disparate enforcement"], chapter: "reagan" },
-    { prompt: "How did the Soviet Union actually collapse in 1989-1991?", include: ["Gorbachev's Perestroika and Glasnost reforms (1985+) unleashed unintended forces", "Economic reforms disrupted supply chains; made things worse short-term", "Glasnost allowed criticism that discredited the system", "Sinatra Doctrine — Gorbachev refused to send tanks against Eastern European protests", "1989: Poland, Hungary, East Germany, Czechoslovakia, Romania all collapsed peacefully", "Berlin Wall fell November 9, 1989 — partly by accident (Schabowski's press conference)", "Baltic states declared independence; Ukraine followed", "August 1991 hardline coup failed — Yeltsin emerged dominant", "December 25, 1991: Gorbachev resigned; Soviet flag lowered; USSR dissolved into 15 nations"], chapter: "reagan" },
+    { prompt: "Analyze the results of Reaganomics — who won, who lost, and what were the costs?", include: ["Cut top marginal tax rate from 70% to 28% over 5 years", "Deregulated banking, broadcasting, environmental enforcement", "Tripled military spending from $100B to $300B/year", "Strong economic growth 1983-88 after 1982 recession", "Winners: top 10% (income share rose sharply), Wall Street, defense contractors, yuppies", "Losers: working class (wages stagnated), manufacturing (Rust Belt collapse), unions (PATCO precedent)", "National debt tripled ($908B → $2.87 trillion)", "Income inequality reversed 40 years of relative equality", "Homelessness exploded; Savings & Loan crisis required $160B bailout"], chapter: "reagan-revolution" },
+    { prompt: "How did Reagan's policies end the Cold War — or did they?", include: ["Military buildup (tripled to $300B/year) strained Soviet ability to compete", "SDI / 'Star Wars' threatened Soviet nuclear strategy — couldn't afford to match", "'Evil Empire' rhetoric rejected détente and moral equivalence", "Support for anti-Soviet forces: Contras, Mujahideen, Solidarity", "Reagan-Gorbachev summits produced INF Treaty (1987) — first actual nuclear reduction", "'Tear down this wall' speech (1987) — wall fell 2 years later", "Counterargument: USSR already in terminal decline before Reagan", "Gorbachev's Perestroika/Glasnost were decisive — Reagan's pressure accelerated collapse", "Historians generally credit BOTH Reagan's pressure AND Gorbachev's reforms"], chapter: "reagan-revolution" },
+    { prompt: "Explain the Iran-Contra Affair and why it mattered.", include: ["Reagan admin sold weapons to Iran (under arms embargo) to free hostages in Lebanon", "Diverted profits to fund Contras in Nicaragua — Congress had banned funding via Boland Amendment", "Oliver North (NSC) devised and ran the operation", "Exposed November 1986 when Lebanese magazine published details", "Multiple convictions (North, Poindexter) overturned on appeal; Bush Sr. pardoned 6 others", "Reagan denied knowledge but polls showed most Americans didn't believe him", "Violated federal law, arms embargo, and constitutional oversight", "Showed how anti-communist imperative could override legal constraints", "Hypocrisy: We sold arms to the same Iran that held hostages for 444 days"], chapter: "reagan-revolution" },
+    { prompt: "How did Reagan's War on Drugs affect Black communities?", include: ["Escalated Nixon's drug war with mandatory minimums (1984 Sentencing Reform Act)", "100:1 crack-powder disparity (1986) — 5g crack = 500g powder cocaine sentencing", "Crack was cheaper, used in Black communities; powder was whiter/wealthier", "Black youth arrested 4x more than white youth for drug possession (similar usage rates)", "Mass incarceration: 300,000 (1970) → 2.4 million (2008)", "1 in 3 Black American men could expect to be imprisoned at some point", "Gary Webb's Dark Alliance alleged CIA-Contra cocaine trafficking fueled crack epidemic", "CIA Inspector General (1998) confirmed agency worked with known drug traffickers", "Legacy: 'New Jim Crow' — race-neutral laws with racially disparate enforcement"], chapter: "reagan-revolution" },
+    { prompt: "How did the Soviet Union actually collapse in 1989-1991?", include: ["Gorbachev's Perestroika and Glasnost reforms (1985+) unleashed unintended forces", "Economic reforms disrupted supply chains; made things worse short-term", "Glasnost allowed criticism that discredited the system", "Sinatra Doctrine — Gorbachev refused to send tanks against Eastern European protests", "1989: Poland, Hungary, East Germany, Czechoslovakia, Romania all collapsed peacefully", "Berlin Wall fell November 9, 1989 — partly by accident (Schabowski's press conference)", "Baltic states declared independence; Ukraine followed", "August 1991 hardline coup failed — Yeltsin emerged dominant", "December 25, 1991: Gorbachev resigned; Soviet flag lowered; USSR dissolved into 15 nations"], chapter: "reagan-revolution" },
   ],
 
   matchingSets: [
@@ -519,13 +516,13 @@ export const amstudsData = {
       { term: "NSC-68", definition: "National Security Council (1950)" },
       { term: "Critique of Containment", definition: "Walter Lippmann (1947)" },
     ]},
-    { title: "Civil Rights Organizations & Leaders", chapter: "civil-rights", pairs: [
+    { title: "Civil Rights Organizations & Leaders", chapter: "fifties-cr", pairs: [
       { term: "NAACP", definition: "W.E.B. DuBois and Ida Wells" },
       { term: "CORE", definition: "James Farmer and Bayard Rustin" },
       { term: "SNCC", definition: "Ella Baker" },
       { term: "SCLC", definition: "Martin Luther King Jr." },
     ]},
-    { title: "Supreme Court Cases & Rulings", chapter: "civil-rights", pairs: [
+    { title: "Supreme Court Cases & Rulings", chapter: "fifties-cr", pairs: [
       { term: "Engel v. Vitale (1962)", definition: "No mandatory prayer in schools — 1st Amendment" },
       { term: "Griswold v. Connecticut (1965)", definition: "Right to privacy / contraception" },
       { term: "Miranda v. Arizona (1966)", definition: "Rights of the accused — 5th Amendment" },
@@ -533,14 +530,14 @@ export const amstudsData = {
       { term: "Tinker v. Des Moines (1969)", definition: "Students retain free speech at school — 1st Amendment" },
       { term: "Roe v. Wade (1973)", definition: "Abortion is constitutional right — 14th Amendment" },
     ]},
-    { title: "Civil Rights Tactics & Examples", chapter: "civil-rights", pairs: [
+    { title: "Civil Rights Tactics & Examples", chapter: "fifties-cr", pairs: [
       { term: "Boycotts", definition: "Montgomery Bus Boycott (1955-56)" },
       { term: "Sit-ins", definition: "Greensboro lunch counter protests (1960)" },
       { term: "Freedom Rides", definition: "Testing desegregation on interstate buses" },
       { term: "Legal action", definition: "Brown v. Board argued by Thurgood Marshall" },
       { term: "Mass demonstrations", definition: "March on Washington (1963)" },
     ]},
-    { title: "Presidents & Vietnam Involvement", chapter: "vietnam", pairs: [
+    { title: "Presidents & Vietnam Involvement", chapter: "sixties", pairs: [
       { term: "Truman", definition: "$23M to France, containment theory" },
       { term: "Eisenhower", definition: "700 advisors, supported French" },
       { term: "Kennedy", definition: "16,000 advisors, Domino Theory" },
@@ -548,7 +545,7 @@ export const amstudsData = {
       { term: "Nixon", definition: "Vietnamization, bombed Cambodia" },
       { term: "Ford", definition: "Final evacuation of Vietnam" },
     ]},
-    { title: "Rights Movements of the 1960s-70s", chapter: "nixon", pairs: [
+    { title: "Rights Movements of the 1960s-70s", chapter: "conservatism", pairs: [
       { term: "Women's Movement", definition: "Betty Friedan, NOW, ERA" },
       { term: "Gay Rights", definition: "Stonewall Riots (1969)" },
       { term: "Chicano Movement", definition: "Cesar Chavez, United Farm Workers" },
@@ -568,7 +565,7 @@ export const amstudsData = {
       { term: "HUAC / Hollywood Ten", definition: "Blacklist of 300+ — guilt by association" },
       { term: "Rosenberg Execution (1953)", definition: "Espionage case — disproportionate Cold War punishment" },
     ]},
-    { title: "Birmingham Jail: King's Six Key Arguments", chapter: "birmingham-jail", pairs: [
+    { title: "Birmingham Jail: King's Six Key Arguments", chapter: "fifties-cr", pairs: [
       { term: "Outsider Argument", definition: "'Injustice anywhere threatens justice everywhere'" },
       { term: "Four Steps", definition: "Facts → Negotiation → Self-purification → Direct action" },
       { term: "Just vs Unjust Laws", definition: "Unjust law degrades personality — disobey openly" },
@@ -576,14 +573,14 @@ export const amstudsData = {
       { term: "Extremism Reframed", definition: "Jesus, Lincoln, Jefferson were all extremists" },
       { term: "Case Against Waiting", definition: "'Wait has almost always meant Never' — 340 years" },
     ]},
-    { title: "Birmingham Jail: Philosophers King Cites", chapter: "birmingham-jail", pairs: [
+    { title: "Birmingham Jail: Philosophers King Cites", chapter: "fifties-cr", pairs: [
       { term: "St. Augustine", definition: "'An unjust law is no law at all'" },
       { term: "Thomas Aquinas", definition: "Just law rooted in eternal/natural law" },
       { term: "Martin Buber", definition: "I-thou vs I-it relationships" },
       { term: "Paul Tillich", definition: "'Sin is separation'" },
       { term: "Socrates", definition: "Creating tension to free minds from myths" },
     ]},
-    { title: "Vietnam Primary Sources & Authors", chapter: "primary-sources", pairs: [
+    { title: "Vietnam Primary Sources & Authors", chapter: "sixties", pairs: [
       { term: "The Things They Carried", definition: "Tim O'Brien — physical/emotional burdens of soldiers" },
       { term: "On the Rainy River", definition: "Tim O'Brien — 'I was a coward. I went to the war'" },
       { term: "A Rumor of War", definition: "Philip Caputo — idealism corrupted by the war" },
@@ -591,7 +588,7 @@ export const amstudsData = {
       { term: "Letter to Minority of One", definition: "Ho Chi Minh — war as anti-colonial, not Cold War" },
       { term: "Speech After Tet", definition: "RFK — declared Vietnam policy a failure" },
     ]},
-    { title: "Vietnam War Escalation Timeline", chapter: "vietnam", pairs: [
+    { title: "Vietnam War Escalation Timeline", chapter: "sixties", pairs: [
       { term: "French defeat at Dien Bien Phu", definition: "1954 — ended French rule" },
       { term: "Geneva Accords", definition: "1954 — divided Vietnam at 17th parallel" },
       { term: "Gulf of Tonkin Resolution", definition: "1964 — unlimited presidential war authority" },
@@ -601,7 +598,7 @@ export const amstudsData = {
       { term: "Pentagon Papers", definition: "1971 — exposed government deception" },
       { term: "Fall of Saigon", definition: "1975 — final US defeat" },
     ]},
-    { title: "1968 Crisis Events", chapter: "nixon", pairs: [
+    { title: "1968 Crisis Events", chapter: "conservatism", pairs: [
       { term: "Tet Offensive (January)", definition: "Shattered public confidence in Vietnam War" },
       { term: "MLK Assassination (April 4)", definition: "Riots in 100+ cities" },
       { term: "RFK Assassination (June 5)", definition: "Killed progressive Democratic hope" },
@@ -611,7 +608,7 @@ export const amstudsData = {
     ]},
 
     // ── 1970s & Reagan Era ──
-    { title: "1970s Crises in One Decade", chapter: "1970s", pairs: [
+    { title: "1970s Crises in One Decade", chapter: "ford-carter", pairs: [
       { term: "1973 Oil Embargo", definition: "OPEC cut off oil; prices quadrupled; gas lines" },
       { term: "Fall of Saigon (1975)", definition: "First American military defeat" },
       { term: "Three Mile Island (1979)", definition: "Partial nuclear meltdown in Pennsylvania" },
@@ -620,7 +617,7 @@ export const amstudsData = {
       { term: "Carter's Malaise Speech (1979)", definition: "Diagnosed spiritual 'crisis of confidence'" },
       { term: "Operation Eagle Claw (1980)", definition: "Failed hostage rescue — 8 Americans killed" },
     ]},
-    { title: "1970s Family Transformation (1970→1980)", chapter: "1970s", pairs: [
+    { title: "1970s Family Transformation (1970→1980)", chapter: "ford-carter", pairs: [
       { term: "Divorces", definition: "Up 65%" },
       { term: "Unmarried couples", definition: "Up 157%" },
       { term: "Persons living alone", definition: "Up 58%" },
@@ -628,7 +625,7 @@ export const amstudsData = {
       { term: "Children with two parents", definition: "Down 18%" },
       { term: "Dual-income families", definition: "Up 19%" },
     ]},
-    { title: "Reagan's Tax Cuts Over Time", chapter: "reagan", pairs: [
+    { title: "Reagan's Tax Cuts Over Time", chapter: "reagan-revolution", pairs: [
       { term: "1944-1980 (pre-Reagan)", definition: "Top marginal rate 70-94%" },
       { term: "1981 Economic Recovery Tax Act", definition: "Top rate cut 70% → 50%" },
       { term: "1986 Tax Reform Act", definition: "Top rate cut 50% → 28%" },
@@ -636,7 +633,7 @@ export const amstudsData = {
       { term: "Result: Top 10% income share", definition: "Rose from ~32% to ~44%" },
       { term: "Result: Middle class living standards", definition: "Stagnant or slightly declined" },
     ]},
-    { title: "Reagan's Cold War Strategy", chapter: "reagan", pairs: [
+    { title: "Reagan's Cold War Strategy", chapter: "reagan-revolution", pairs: [
       { term: "Military Buildup", definition: "Tripled defense from $100B to $300B/year" },
       { term: "SDI / 'Star Wars'", definition: "Proposed space-based missile defense" },
       { term: "'Evil Empire' Speech (1983)", definition: "Rejected moral equivalence with USSR" },
@@ -644,7 +641,7 @@ export const amstudsData = {
       { term: "Reykjavik Summit (1986)", definition: "Nearly eliminated all nuclear weapons" },
       { term: "INF Treaty (1987)", definition: "Eliminated entire class of nuclear missiles" },
     ]},
-    { title: "Iran-Contra Players", chapter: "reagan", pairs: [
+    { title: "Iran-Contra Players", chapter: "reagan-revolution", pairs: [
       { term: "Ronald Reagan", definition: "President — denied knowledge, avoided impeachment" },
       { term: "Oliver North", definition: "NSC Lt. Col. who designed Contra diversion" },
       { term: "John Poindexter", definition: "National Security Advisor — convicted, overturned" },
@@ -652,7 +649,7 @@ export const amstudsData = {
       { term: "George H.W. Bush", definition: "VP — pardoned 6 Iran-Contra figures in 1992" },
       { term: "Lawrence Walsh", definition: "Independent counsel who investigated for years" },
     ]},
-    { title: "End of Cold War Key Figures", chapter: "reagan", pairs: [
+    { title: "End of Cold War Key Figures", chapter: "reagan-revolution", pairs: [
       { term: "Mikhail Gorbachev", definition: "Soviet leader who launched Perestroika/Glasnost" },
       { term: "Boris Yeltsin", definition: "Defied 1991 coup atop a tank; first Russian president" },
       { term: "Ronald Reagan", definition: "US president who pressured USSR with buildup + SDI" },
@@ -660,7 +657,7 @@ export const amstudsData = {
       { term: "Vaclav Havel", definition: "Czech playwright who led Velvet Revolution" },
       { term: "Lech Walesa", definition: "Polish Solidarity leader; Nobel Peace Prize 1983" },
     ]},
-    { title: "Revolutions of 1989", chapter: "reagan", pairs: [
+    { title: "Revolutions of 1989", chapter: "reagan-revolution", pairs: [
       { term: "Poland (June)", definition: "Solidarity won semi-free elections" },
       { term: "Hungary (May-Sep)", definition: "Opened border with Austria" },
       { term: "East Germany (Nov 9)", definition: "Berlin Wall fell by accident of a press conference" },
@@ -673,35 +670,35 @@ export const amstudsData = {
   comparisons: [
     { title: "Containment vs Isolationism", summary: "Containment actively engaged the world to stop communism; isolationism would have avoided foreign entanglements entirely.", whyItMatters: "Containment committed the US to decades of Cold War interventions from Europe to Vietnam.", chapter: "cold-war" },
     { title: "NATO vs Warsaw Pact", summary: "NATO united the West in mutual defense; the Warsaw Pact was the Soviet counter-alliance. Together they formalized the Cold War's two-bloc system.", whyItMatters: "Created the military framework for Cold War confrontation and made Europe a potential nuclear battlefield.", chapter: "cold-war" },
-    { title: "De jure vs De facto Segregation", summary: "De jure segregation was enforced by law (South); de facto segregation existed through custom and housing discrimination (North).", whyItMatters: "Civil rights legislation could end de jure segregation but de facto segregation proved much harder to dismantle.", chapter: "civil-rights" },
-    { title: "Plessy v. Ferguson vs Brown v. Board", summary: "Plessy (1896) upheld 'separate but equal'; Brown (1954) declared separate facilities inherently unequal.", whyItMatters: "Brown overturned 58 years of legal segregation but 'with all deliberate speed' meant change was painfully slow.", chapter: "civil-rights" },
-    { title: "MLK's Nonviolence vs Malcolm X / Black Power", summary: "MLK advocated nonviolent civil disobedience influenced by Gandhi; Malcolm X and Black Power emphasized self-defense and Black pride.", whyItMatters: "Shows the movement wasn't monolithic — different strategies reflected different experiences and goals.", chapter: "civil-rights" },
-    { title: "Affluent America vs The Other America", summary: "Suburban prosperity existed alongside 40-50 million Americans in poverty. Galbraith and Harrington exposed this contradiction.", whyItMatters: "The 'affluent society' label hid massive inequality. Harrington's book influenced LBJ's War on Poverty.", chapter: "affluent-society" },
-    { title: "Conformity vs Beat Generation", summary: "1950s mainstream culture valued suburban conformity; Beats (Ginsberg, Kerouac) rejected materialism and social norms.", whyItMatters: "The Beats were precursors to the 1960s counterculture that challenged the entire system.", chapter: "affluent-society" },
-    { title: "Hawks vs Doves (Vietnam)", summary: "Hawks supported escalation and military victory; Doves wanted negotiation and withdrawal.", whyItMatters: "This division tore American society apart and reshaped politics for decades.", chapter: "vietnam" },
-    { title: "Counterculture vs Conservative Turn", summary: "1960s counterculture challenged authority and tradition; simultaneously, a conservative movement (YAF, Silent Majority) pushed back.", whyItMatters: "Nixon's election showed the conservative backlash was politically powerful — reshaping the Republican Party.", chapter: "nixon" },
-    { title: "Nixon's Contradictions", summary: "Nixon appealed to conservatives but created the EPA and opened relations with China. He pursued détente while secretly bombing Cambodia.", whyItMatters: "Shows how presidents can't be simply categorized; Watergate ultimately destroyed his legacy.", chapter: "nixon" },
+    { title: "De jure vs De facto Segregation", summary: "De jure segregation was enforced by law (South); de facto segregation existed through custom and housing discrimination (North).", whyItMatters: "Civil rights legislation could end de jure segregation but de facto segregation proved much harder to dismantle.", chapter: "fifties-cr" },
+    { title: "Plessy v. Ferguson vs Brown v. Board", summary: "Plessy (1896) upheld 'separate but equal'; Brown (1954) declared separate facilities inherently unequal.", whyItMatters: "Brown overturned 58 years of legal segregation but 'with all deliberate speed' meant change was painfully slow.", chapter: "fifties-cr" },
+    { title: "MLK's Nonviolence vs Malcolm X / Black Power", summary: "MLK advocated nonviolent civil disobedience influenced by Gandhi; Malcolm X and Black Power emphasized self-defense and Black pride.", whyItMatters: "Shows the movement wasn't monolithic — different strategies reflected different experiences and goals.", chapter: "fifties-cr" },
+    { title: "Affluent America vs The Other America", summary: "Suburban prosperity existed alongside 40-50 million Americans in poverty. Galbraith and Harrington exposed this contradiction.", whyItMatters: "The 'affluent society' label hid massive inequality. Harrington's book influenced LBJ's War on Poverty.", chapter: "fifties-cr" },
+    { title: "Conformity vs Beat Generation", summary: "1950s mainstream culture valued suburban conformity; Beats (Ginsberg, Kerouac) rejected materialism and social norms.", whyItMatters: "The Beats were precursors to the 1960s counterculture that challenged the entire system.", chapter: "fifties-cr" },
+    { title: "Hawks vs Doves (Vietnam)", summary: "Hawks supported escalation and military victory; Doves wanted negotiation and withdrawal.", whyItMatters: "This division tore American society apart and reshaped politics for decades.", chapter: "sixties" },
+    { title: "Counterculture vs Conservative Turn", summary: "1960s counterculture challenged authority and tradition; simultaneously, a conservative movement (YAF, Silent Majority) pushed back.", whyItMatters: "Nixon's election showed the conservative backlash was politically powerful — reshaping the Republican Party.", chapter: "conservatism" },
+    { title: "Nixon's Contradictions", summary: "Nixon appealed to conservatives but created the EPA and opened relations with China. He pursued détente while secretly bombing Cambodia.", whyItMatters: "Shows how presidents can't be simply categorized; Watergate ultimately destroyed his legacy.", chapter: "conservatism" },
 
     // ── New Comparisons ──
     { title: "Kennan vs Lippmann on Containment", summary: "Kennan recommended containing Soviet expansion through political and economic means. Lippmann called containment 'a strategic monstrosity' that committed the US to fight everywhere.", whyItMatters: "Lippmann's prediction of overextension came true in Vietnam. The debate shows containment was contested from the start.", chapter: "cold-war" },
     { title: "FDR at Yalta vs Truman at Potsdam", summary: "FDR was conciliatory and gravely ill; Truman was confrontational and used the atomic bomb as leverage. Same ally, same issue — radically different approach.", whyItMatters: "The shift from FDR to Truman helped harden the Cold War. US policy went from accommodation to confrontation.", chapter: "cold-war" },
     { title: "Korea vs Vietnam", summary: "Both were containment wars in Asia against communist expansion. Korea ended in stalemate at roughly the same line; Vietnam ended in US defeat and communist unification.", whyItMatters: "Korea set the precedent for intervention; Vietnam showed its limits. Korea was 3 years; Vietnam was 20+.", chapter: "cold-war" },
     { title: "Hollywood Ten vs Rosenbergs", summary: "The Ten exercised First Amendment rights and were jailed for contempt. The Rosenbergs were convicted of espionage (Julius guilty, Ethel's case weak) and executed.", whyItMatters: "Both show Cold War fear overriding proportional justice — but at different scales of severity.", chapter: "cold-war" },
-    { title: "Negative Peace vs Positive Peace (King)", summary: "Negative peace = absence of tension (what moderates want). Positive peace = presence of justice (what the movement fights for). Order without justice is organized oppression.", whyItMatters: "King's most powerful reframing. Applies whenever someone agrees a problem exists but opposes every proposed solution.", chapter: "birmingham-jail" },
-    { title: "King's Extremism vs Moderate 'Reasonableness'", summary: "King redefines extremism: Jesus and Jefferson were extremists. The 'reasonable' moderate who says 'I agree but not now' enables injustice through inaction.", whyItMatters: "Forces a choice: either reject history's moral heroes or accept that fighting injustice requires extreme commitment.", chapter: "birmingham-jail" },
-    { title: "French Colonialism vs American Intervention in Vietnam", summary: "France explicitly exploited Vietnam for 70 years. The US claimed to be defending freedom but backed an authoritarian regime. Ho Chi Minh fought both as anti-colonial resistance.", whyItMatters: "America inherited a colonial war and repackaged it as Cold War containment. Ho used American ideals against America.", chapter: "vietnam" },
-    { title: "WWII Soldiers vs Vietnam Soldiers", summary: "WWII: avg age 26, served for duration, clear enemies, welcomed home as heroes. Vietnam: avg age 19, one-year rotations, guerrilla war, returned to hostility. Draft hit poor and minorities hardest.", whyItMatters: "The contrast explains why Vietnam caused PTSD at unprecedented rates and why veterans felt betrayed.", chapter: "vietnam" },
-    { title: "O'Brien's 'Cowardice' vs Caputo's Disillusionment", summary: "O'Brien went to war because he was 'too cowardly' to resist the draft. Caputo went idealistic and was corrupted by the war. Both show the war destroyed whatever you brought to it.", whyItMatters: "Together they cover the full arc: trapped into going, then broken by the experience.", chapter: "primary-sources" },
-    { title: "1950s Gender Roles vs Feminist Movement", summary: "1950s pushed women into domestic roles after WWII. Friedan's Feminine Mystique (1963) identified 'the problem that has no name.' Second-wave feminism demanded equality in work, law, and body.", whyItMatters: "The 1950s housewife ideal was a constructed norm, not timeless tradition. Feminism challenged it directly.", chapter: "nixon" },
+    { title: "Negative Peace vs Positive Peace (King)", summary: "Negative peace = absence of tension (what moderates want). Positive peace = presence of justice (what the movement fights for). Order without justice is organized oppression.", whyItMatters: "King's most powerful reframing. Applies whenever someone agrees a problem exists but opposes every proposed solution.", chapter: "fifties-cr" },
+    { title: "King's Extremism vs Moderate 'Reasonableness'", summary: "King redefines extremism: Jesus and Jefferson were extremists. The 'reasonable' moderate who says 'I agree but not now' enables injustice through inaction.", whyItMatters: "Forces a choice: either reject history's moral heroes or accept that fighting injustice requires extreme commitment.", chapter: "fifties-cr" },
+    { title: "French Colonialism vs American Intervention in Vietnam", summary: "France explicitly exploited Vietnam for 70 years. The US claimed to be defending freedom but backed an authoritarian regime. Ho Chi Minh fought both as anti-colonial resistance.", whyItMatters: "America inherited a colonial war and repackaged it as Cold War containment. Ho used American ideals against America.", chapter: "sixties" },
+    { title: "WWII Soldiers vs Vietnam Soldiers", summary: "WWII: avg age 26, served for duration, clear enemies, welcomed home as heroes. Vietnam: avg age 19, one-year rotations, guerrilla war, returned to hostility. Draft hit poor and minorities hardest.", whyItMatters: "The contrast explains why Vietnam caused PTSD at unprecedented rates and why veterans felt betrayed.", chapter: "sixties" },
+    { title: "O'Brien's 'Cowardice' vs Caputo's Disillusionment", summary: "O'Brien went to war because he was 'too cowardly' to resist the draft. Caputo went idealistic and was corrupted by the war. Both show the war destroyed whatever you brought to it.", whyItMatters: "Together they cover the full arc: trapped into going, then broken by the experience.", chapter: "sixties" },
+    { title: "1950s Gender Roles vs Feminist Movement", summary: "1950s pushed women into domestic roles after WWII. Friedan's Feminine Mystique (1963) identified 'the problem that has no name.' Second-wave feminism demanded equality in work, law, and body.", whyItMatters: "The 1950s housewife ideal was a constructed norm, not timeless tradition. Feminism challenged it directly.", chapter: "conservatism" },
 
     // ── 1970s & Reagan Era ──
-    { title: "Carter's Malaise Speech vs Reagan's 1980 Campaign", summary: "Carter diagnosed a spiritual crisis and asked Americans to sacrifice. Reagan said government was the problem and promised restoration of greatness. Opposite emotional appeals to same anxieties.", whyItMatters: "Shows how optimistic framing beats accurate diagnosis in American politics — lesson that shaped political strategy for 40+ years.", chapter: "1970s" },
-    { title: "Feminism vs Religious Right", summary: "1960s-70s feminism sought equal rights, reproductive freedom, and workplace access. Religious Right (Moral Majority, Phyllis Schlafly) mobilized around abortion, ERA, family values to fight back.", whyItMatters: "The 'culture wars' that dominate American politics trace directly to this clash. Evangelicals became the most reliable GOP voters.", chapter: "1970s" },
-    { title: "New Deal Economics vs Reaganomics", summary: "New Deal: progressive taxation (top 70-94%), regulation, labor rights, social insurance. Reaganomics: cut top rate to 28%, deregulate, break unions, cut domestic spending. Complete reversal.", whyItMatters: "Reaganomics dominated American economic policy for 40+ years — even Democrats (Clinton, Obama) operated within its framework. Inequality returned to Gilded Age levels.", chapter: "reagan" },
-    { title: "Nixon's War on Drugs vs Reagan's War on Drugs", summary: "Nixon declared the war (1971) — Ehrlichman later admitted it targeted hippies and Black people. Reagan massively escalated — mandatory minimums, 100:1 crack/powder disparity, 'Just Say No.'", whyItMatters: "Mass incarceration (300K → 2.4M) and racialized enforcement are Reagan's doing. Destroyed generations in Black communities while CIA worked with Contra drug traffickers.", chapter: "reagan" },
-    { title: "Reagan's Moral Rhetoric vs Reagan's Policy Reality", summary: "Reagan called USSR 'Evil Empire' while his admin secretly sold arms to Iran. Called Contras 'freedom fighters' while they massacred civilians. Waged War on Drugs while CIA worked with traffickers.", whyItMatters: "The gap between Reagan's rhetoric and his actions illustrates how Cold War logic could override stated American values.", chapter: "reagan" },
-    { title: "Did Reagan Win the Cold War or Did Gorbachev Lose It?", summary: "Reagan pressure (buildup, SDI, moral clarity) strained USSR. Gorbachev's Perestroika/Glasnost unleashed forces that killed the system. USSR was already in terminal decline before Reagan.", whyItMatters: "Historians generally credit BOTH. Reagan accelerated inevitable collapse; Gorbachev enabled peaceful dissolution. Neither could have produced the outcome alone.", chapter: "reagan" },
-    { title: "Berlin Blockade (1948) vs Fall of Berlin Wall (1989)", summary: "1948: Soviets blockaded Berlin; US airlifted supplies for 11 months. 1989: Wall fell by accident of a press conference; crowds chipped it apart. Same city framed Cold War's beginning and end.", whyItMatters: "Shows 45 years of Cold War tensions — beginning in confrontation, ending in spontaneous celebration. Both moments turned on resolve and chance.", chapter: "reagan" },
+    { title: "Carter's Malaise Speech vs Reagan's 1980 Campaign", summary: "Carter diagnosed a spiritual crisis and asked Americans to sacrifice. Reagan said government was the problem and promised restoration of greatness. Opposite emotional appeals to same anxieties.", whyItMatters: "Shows how optimistic framing beats accurate diagnosis in American politics — lesson that shaped political strategy for 40+ years.", chapter: "ford-carter" },
+    { title: "Feminism vs Religious Right", summary: "1960s-70s feminism sought equal rights, reproductive freedom, and workplace access. Religious Right (Moral Majority, Phyllis Schlafly) mobilized around abortion, ERA, family values to fight back.", whyItMatters: "The 'culture wars' that dominate American politics trace directly to this clash. Evangelicals became the most reliable GOP voters.", chapter: "ford-carter" },
+    { title: "New Deal Economics vs Reaganomics", summary: "New Deal: progressive taxation (top 70-94%), regulation, labor rights, social insurance. Reaganomics: cut top rate to 28%, deregulate, break unions, cut domestic spending. Complete reversal.", whyItMatters: "Reaganomics dominated American economic policy for 40+ years — even Democrats (Clinton, Obama) operated within its framework. Inequality returned to Gilded Age levels.", chapter: "reagan-revolution" },
+    { title: "Nixon's War on Drugs vs Reagan's War on Drugs", summary: "Nixon declared the war (1971) — Ehrlichman later admitted it targeted hippies and Black people. Reagan massively escalated — mandatory minimums, 100:1 crack/powder disparity, 'Just Say No.'", whyItMatters: "Mass incarceration (300K → 2.4M) and racialized enforcement are Reagan's doing. Destroyed generations in Black communities while CIA worked with Contra drug traffickers.", chapter: "reagan-revolution" },
+    { title: "Reagan's Moral Rhetoric vs Reagan's Policy Reality", summary: "Reagan called USSR 'Evil Empire' while his admin secretly sold arms to Iran. Called Contras 'freedom fighters' while they massacred civilians. Waged War on Drugs while CIA worked with traffickers.", whyItMatters: "The gap between Reagan's rhetoric and his actions illustrates how Cold War logic could override stated American values.", chapter: "reagan-revolution" },
+    { title: "Did Reagan Win the Cold War or Did Gorbachev Lose It?", summary: "Reagan pressure (buildup, SDI, moral clarity) strained USSR. Gorbachev's Perestroika/Glasnost unleashed forces that killed the system. USSR was already in terminal decline before Reagan.", whyItMatters: "Historians generally credit BOTH. Reagan accelerated inevitable collapse; Gorbachev enabled peaceful dissolution. Neither could have produced the outcome alone.", chapter: "reagan-revolution" },
+    { title: "Berlin Blockade (1948) vs Fall of Berlin Wall (1989)", summary: "1948: Soviets blockaded Berlin; US airlifted supplies for 11 months. 1989: Wall fell by accident of a press conference; crowds chipped it apart. Same city framed Cold War's beginning and end.", whyItMatters: "Shows 45 years of Cold War tensions — beginning in confrontation, ending in spontaneous celebration. Both moments turned on resolve and chance.", chapter: "reagan-revolution" },
   ],
 
   // === CAUSE-EFFECT CHAINS — show how one event led to the next ===
@@ -738,7 +735,7 @@ export const amstudsData = {
     },
     {
       title: "From Plessy to Civil Rights Legislation",
-      chapter: "civil-rights",
+      chapter: "fifties-cr",
       chain: [
         { event: "Plessy v. Ferguson (1896)", effect: "Supreme Court legalizes 'separate but equal' — Jim Crow for 58 years" },
         { event: "WWII (1941-45)", effect: "Black soldiers fight racism abroad, return unwilling to accept it at home" },
@@ -756,7 +753,7 @@ export const amstudsData = {
     },
     {
       title: "Vietnam: From Colony to American War",
-      chapter: "vietnam",
+      chapter: "sixties",
       chain: [
         { event: "French colonialism (1887-1954)", effect: "70 years of exploitation; Ho Chi Minh's independence movement begins" },
         { event: "Ho Chi Minh declares independence (1945)", effect: "Quotes US Declaration — frames fight as anti-colonial, not communist" },
@@ -775,7 +772,7 @@ export const amstudsData = {
     },
     {
       title: "1968: The Year Everything Broke",
-      chapter: "nixon",
+      chapter: "conservatism",
       chain: [
         { event: "Tet Offensive (January)", effect: "Shatters public confidence that war is being won" },
         { event: "LBJ declines to run (March)", effect: "Sitting president admits the war has made him unelectable" },
@@ -789,7 +786,7 @@ export const amstudsData = {
     },
     {
       title: "The Rights Revolution Expands",
-      chapter: "nixon",
+      chapter: "conservatism",
       chain: [
         { event: "Civil rights movement succeeds (1964-65)", effect: "Proves organized activism can change law; model for other groups" },
         { event: "Friedan's Feminine Mystique (1963)", effect: "Names 'the problem that has no name'; launches second-wave feminism" },
@@ -804,7 +801,7 @@ export const amstudsData = {
     },
     {
       title: "Watergate: From Break-in to Resignation",
-      chapter: "nixon",
+      chapter: "conservatism",
       chain: [
         { event: "Burglars caught at DNC headquarters (June 1972)", effect: "Initially dismissed as minor crime" },
         { event: "Nixon wins landslide reelection (Nov 1972)", effect: "Cover-up seems to work" },
@@ -818,7 +815,7 @@ export const amstudsData = {
     },
     {
       title: "From Malaise to Morning in America (1973-1980)",
-      chapter: "1970s",
+      chapter: "ford-carter",
       chain: [
         { event: "1973 Oil Embargo", effect: "Prices quadruple; gas lines; recession; American consumer confidence shaken" },
         { event: "Fall of Saigon (1975)", effect: "First US military defeat; 'Vietnam Syndrome' of reluctance to use force" },
@@ -837,7 +834,7 @@ export const amstudsData = {
     },
     {
       title: "Reaganomics: Theory to Reality",
-      chapter: "reagan",
+      chapter: "reagan-revolution",
       chain: [
         { event: "Stagflation discredits Keynesianism", effect: "Opens intellectual space for supply-side alternatives" },
         { event: "Reagan elected on tax-cut promises (1980)", effect: "Mandate to cut taxes and reduce government" },
@@ -855,7 +852,7 @@ export const amstudsData = {
     },
     {
       title: "End of the Cold War (1985-1991)",
-      chapter: "reagan",
+      chapter: "reagan-revolution",
       chain: [
         { event: "Gorbachev takes power (March 1985)", effect: "New generation of Soviet leadership committed to reform" },
         { event: "Perestroika and Glasnost announced", effect: "Economic reform + political openness intended to save Soviet system" },
@@ -876,7 +873,7 @@ export const amstudsData = {
     },
     {
       title: "From War on Drugs to Mass Incarceration",
-      chapter: "reagan",
+      chapter: "reagan-revolution",
       chain: [
         { event: "Nixon declares War on Drugs (1971)", effect: "Ehrlichman later admits target was hippies and Black people" },
         { event: "Reagan escalates dramatically (1981+)", effect: "Drug war becomes central federal focus" },
@@ -1138,7 +1135,7 @@ export const amstudsData = {
       artist: "Herbert Block (Herblock)",
       year: "1960",
       source: "Washington Post",
-      chapter: "affluent-society",
+      chapter: "fifties-cr",
       description: "A split-level suburban home. Upstairs: comfortable middle-class family watching TV in a bright, clean living room. Downstairs: a crumbling, cracked foundation labeled with problems — 'poverty,' 'slums,' 'overcrowded schools,' 'neglected public needs.' The upstairs family is oblivious to the collapsing foundation.",
       symbols: [
         "Upstairs = visible middle-class prosperity, suburban consumer culture",
@@ -1185,7 +1182,7 @@ export const amstudsData = {
       artist: "Herbert Block (Herblock)",
       year: "October 24, 1973",
       source: "Washington Post",
-      chapter: "nixon",
+      chapter: "conservatism",
       description: "Nixon depicted trying to hide or cover up scandals. In various cartoons from this period, Herblock showed Nixon with tape over scandals involving aides Haldeman, Mitchell, Ehrlichman. Often showed Nixon hiding behind flags, manipulating the Constitution, or buried in tape spools (representing the White House recordings).",
       symbols: [
         "Tape spools = the secret Oval Office recordings",
@@ -1208,7 +1205,7 @@ export const amstudsData = {
       artist: "Various civil rights era cartoonists",
       year: "1957-1959",
       source: "Various newspapers",
-      chapter: "civil-rights",
+      chapter: "fifties-cr",
       description: "Governor Orval Faubus of Arkansas depicted as a bigot blocking Black students from entering Little Rock Central High School. Often shown standing defiantly in schoolhouse door with Confederate flag or segregation sign, while federal soldiers or the ghost of Eisenhower loom in the background.",
       symbols: [
         "Faubus blocking door = Southern resistance to desegregation",
@@ -1232,7 +1229,7 @@ export const amstudsData = {
       artist: "Volkswagen advertisement",
       year: "1979",
       source: "Time Magazine",
-      chapter: "1970s",
+      chapter: "ford-carter",
       description: "A man in a business suit holds a gas pump nozzle to his temple like a gun, expression of despair. Tagline: 'Or buy a Volkswagen.' Ad appeared during the second oil shock. Nearby images show gas lines stretching around blocks and 'SORRY NO GAS' signs.",
       symbols: [
         "Gas pump as gun = desperation of American drivers",
@@ -1255,7 +1252,7 @@ export const amstudsData = {
       artist: "Reliance Group advertisement",
       year: "July 20, 1981",
       source: "Time Magazine",
-      chapter: "1970s",
+      chapter: "ford-carter",
       description: "Close-up of a bald eagle's face with piercing eyes. Caption: 'IS THE AMERICAN ENTREPRENEUR AN ENDANGERED SPECIES?' Text argues that entrepreneurial spirit is threatened by regulation, and free enterprise must be defended.",
       symbols: [
         "Bald eagle = American identity, freedom, national symbol",
@@ -1278,7 +1275,7 @@ export const amstudsData = {
       artist: "Hal Riney / Tuesday Team (Reagan '84 campaign)",
       year: "1984",
       source: "Reagan reelection campaign ad",
-      chapter: "reagan",
+      chapter: "reagan-revolution",
       description: "Not a cartoon but iconic campaign imagery. Soft-focus images: sunrise over small town, wedding, workers heading to jobs, family raising flag. Gentle voiceover: 'It's morning again in America. Today more men and women will go to work than ever before in our country's history...' Ends with Reagan image and 'Prepared for America' slogan.",
       symbols: [
         "Sunrise = new beginning, hope, restoration",
@@ -1301,7 +1298,7 @@ export const amstudsData = {
       artist: "Time Magazine cover",
       year: "1983",
       source: "Time Magazine",
-      chapter: "reagan",
+      chapter: "reagan-revolution",
       description: "Cover showing Reagan in heroic pose with space-based weapons arrayed around him — lasers, satellites, missiles being shot down. Stars and satellites in background. Caption: 'DEFENDING DEFENSE: Budget Battles and Star Wars.'",
       symbols: [
         "Reagan as cosmic defender = heroic, God-like framing",
@@ -1324,7 +1321,7 @@ export const amstudsData = {
       artist: "Various critical cartoonists",
       year: "1981-1989",
       source: "Various publications",
-      chapter: "reagan",
+      chapter: "reagan-revolution",
       description: "Reagan depicted as a grandfatherly figure with a secret interior filled with corporate executives, defense contractors, or oil barons. Sometimes shown as a horse (from the Trojan myth) with the wealthy hidden inside. Another version: Reagan's genial smile hides a cabinet of right-wing ideologues.",
       symbols: [
         "Grandfatherly Reagan = public persona, reassuring",
@@ -1347,7 +1344,7 @@ export const amstudsData = {
       artist: "Various international cartoonists",
       year: "November 1989",
       source: "Global press",
-      chapter: "reagan",
+      chapter: "reagan-revolution",
       description: "Common imagery: Crowds chipping at the Berlin Wall with hammers, East and West Germans embracing on top of the wall, hammer and sickle falling or dissolving. Some show a domino effect across Eastern Europe — communism's fall toppling like dominoes.",
       symbols: [
         "Wall crumbling = end of Cold War division",
@@ -1371,7 +1368,7 @@ export const amstudsData = {
       artist: "Various civil rights era cartoons",
       year: "1963",
       source: "Various publications",
-      chapter: "birmingham-jail",
+      chapter: "fifties-cr",
       description: "King behind bars writing the Letter on newspaper margins. Sometimes with scripture in background, sometimes with fire hoses and police dogs of Bull Connor in background, sometimes with the 8 white clergymen pointing at him accusingly.",
       symbols: [
         "Prison bars = unjust law imprisoning a moral leader",
@@ -1395,7 +1392,7 @@ export const amstudsData = {
       artist: "Various anti-war cartoonists",
       year: "1965-1973",
       source: "Various publications",
-      chapter: "vietnam",
+      chapter: "sixties",
       description: "Common imagery: US soldiers sinking in swamp/mud labeled 'VIETNAM' or 'QUAGMIRE.' Sometimes LBJ or Nixon holding soldiers' legs from the edge while more troops flail in the water. Vietnam map shown as a deepening bog, with figures like Dien Bien Phu tombstone visible.",
       symbols: [
         "Swamp/mud = unwinnable, draining conflict",
@@ -1419,7 +1416,7 @@ export const amstudsData = {
       artist: "Based on Nick Ut photograph",
       year: "1972",
       source: "Associated Press (photo) and derivative cartoons",
-      chapter: "vietnam",
+      chapter: "sixties",
       description: "Iconic photo by Nick Ut: 9-year-old Phan Thi Kim Phuc running naked down road, burned by napalm, screaming. Behind her, other children flee; US-allied soldiers walk casually. Photo became basis for anti-war cartoons and commentary. Political cartoons often adapted the image to critique US moral responsibility.",
       symbols: [
         "Kim Phuc's burns = civilian cost of American weapons",
@@ -1442,69 +1439,53 @@ export const amstudsData = {
 
   overview: {
     chapterMap: [
-      { chapter: "Cold War", points: [
+      { chapter: "The Cold War", points: [
         "Post-WWII alliance breakdown between US and USSR",
         "Containment strategy from Kennan's Long Telegram shaped decades of policy",
         "Truman Doctrine, Marshall Plan, NATO built the Western alliance",
         "NSC-68 called for massive military buildup",
         "Berlin Airlift showed resolve without direct conflict",
         "Nuclear arms race created existential anxiety (Duck and Cover)",
+        "Home front: HUAC, Hollywood Ten, McCarthyism, Rosenberg execution",
+        "Korean War (1950-53): first hot war, ended in stalemate at 38th parallel",
       ]},
-      { chapter: "Affluent Society", points: [
-        "Suburbanization, consumer culture, and conformity defined the 1950s",
-        "Levittown: affordable housing but racially exclusionary",
+      { chapter: "The 1950s and Civil Rights", points: [
+        "Suburbanization, consumer culture, conformity defined the 1950s",
+        "Levittown: affordable housing but racially exclusionary (de facto segregation)",
         "Kitchen Debate: capitalism vs communism through consumer goods",
-        "Galbraith criticized private wealth over public services",
-        "Harrington exposed 40-50 million in hidden poverty",
-        "Beat Generation rejected conformity and materialism",
-      ]},
-      { chapter: "Civil Rights", points: [
+        "Galbraith: private wealth, public squalor. Harrington: 40-50M invisible poor.",
+        "Beat Generation (Ginsberg, Kerouac) rejected conformity and materialism",
         "Plessy (1896) legalized segregation; Brown (1954) overturned it",
-        "Key tactics: boycotts, sit-ins, Freedom Rides, legal action, marches",
-        "Key figures: MLK, Rosa Parks, Thurgood Marshall, Ella Baker",
-        "Key organizations: NAACP, CORE, SNCC, SCLC",
-        "TV made nonviolent protesters sympathetic and opponents look violent",
-        "Civil Rights Act (1964) and Voting Rights Act (1965) were landmark legislation",
+        "Montgomery Boycott (1955-56), Little Rock (1957), Emmett Till (1955) drove the movement",
+        "Orgs: NAACP (legal), CORE (direct action), SCLC (church-based), SNCC (youth)",
+        "King's Birmingham Jail (1963): outsider, four steps, just/unjust laws, white moderate critique, extremism reframed",
+        "King cites Augustine, Aquinas, Buber, Tillich, Socrates to build philosophical case",
       ]},
-      { chapter: "Vietnam War", points: [
-        "Rooted in containment and Domino Theory",
-        "Gulf of Tonkin Resolution gave president unlimited war authority",
+      { chapter: "The 60s", points: [
+        "Vietnam rooted in containment and Domino Theory",
+        "French colonialism ended at Dien Bien Phu (1954); Geneva Accords split at 17th parallel",
+        "Gulf of Tonkin Resolution (1964) gave president unlimited war authority",
         "Escalation under LBJ: 16,700 to 500,000 troops",
-        "Tet Offensive (1968) shattered public confidence",
-        "Nixon's Vietnamization withdrew troops but bombed Cambodia",
-        "58,000 Americans and 2+ million Vietnamese died",
-        "War Powers Act (1973) limited presidential military power",
+        "Rolling Thunder (1965-68): more bombs than all WWII; napalm, Agent Orange",
+        "Tet Offensive (1968) shattered public confidence; Cronkite editorial; LBJ out",
+        "Nixon's Vietnamization withdrew troops but secretly bombed Cambodia and Laos",
+        "58,000 Americans and 2+ million Vietnamese died; Fall of Saigon 1975",
+        "Primary sources: O'Brien (Things They Carried, Rainy River), Caputo (Rumor of War)",
+        "Ho Chi Minh quoted US Declaration; RFK's five illusions speech after Tet",
+        "Rights movements: Friedan/NOW, Stonewall, Chavez, AIM Alcatraz, Silent Spring → EPA",
+        "Warren Court expanded rights: Miranda, Loving, Griswold, Tinker, Engel",
       ]},
-      { chapter: "Nixon & Conservative Turn", points: [
+      { chapter: "Rise of Conservatism", points: [
+        "YAF's Sharon Statement (1960) outlined conservative principles",
         "1968: most turbulent year — Tet, MLK/RFK assassinations, Chicago Convention, Nixon wins",
-        "Rights Revolution: women, gay, Latino, Native American, environmental movements",
-        "Conservative backlash: YAF, Sharon Statement, Silent Majority, George Wallace",
-        "Nixon's Southern Strategy realigned party politics by absorbing racial backlash voters",
-        "Détente eased Cold War tensions; opened China relations",
-        "Watergate scandal destroyed public trust; Nixon resigned 1974",
-        "Stagflation defined the economic crisis of the 1970s",
+        "Conservative backlash: Silent Majority, George Wallace, law-and-order politics",
+        "Nixon's Southern Strategy (Kevin Phillips) realigned Southern whites to GOP",
+        "Vietnamization: public withdrawal + secret bombing of Cambodia and Laos",
+        "Détente: Nixon visits China 1972; SALT I with USSR. Triangulation.",
+        "Watergate scandal destroyed public trust; Nixon resigned Aug 1974",
+        "'-gate' suffix became permanent shorthand for political scandal",
       ]},
-      { chapter: "Birmingham Jail", points: [
-        "King responds to 8 white clergymen who called protests 'unwise and untimely'",
-        "Outsider argument: 'Injustice anywhere is a threat to justice everywhere'",
-        "Four steps: facts → negotiation → self-purification → direct action",
-        "Just vs unjust laws: unjust law degrades personality, must disobey openly",
-        "White moderate is greatest stumbling block — prefers order over justice",
-        "Negative peace (no tension) vs positive peace (presence of justice)",
-        "Reframes extremism: Jesus, Lincoln, Jefferson were extremists for love",
-        "Case against waiting: 340 years, 'Wait has almost always meant Never'",
-        "Cites Augustine, Aquinas, Buber, Tillich, Socrates to build philosophical case",
-      ]},
-      { chapter: "Primary Sources", points: [
-        "O'Brien (Things They Carried): physical and emotional burdens soldiers carried",
-        "O'Brien (On the Rainy River): 'I was a coward. I went to the war' — draft as moral trap",
-        "Caputo (Rumor of War): idealism corrupted by impossible rules and body count pressure",
-        "Ho Chi Minh quoted US Declaration of Independence to frame Vietnamese independence",
-        "Nixon-Ho letters reveal fundamental gap: negotiated peace vs unconditional withdrawal",
-        "RFK speech after Tet declared Vietnam policy a failure",
-        "Together these sources show the war as tragedy for all sides, not just policy failure",
-      ]},
-      { chapter: "1970s: Malaise to Morning in America", points: [
+      { chapter: "Ford, Carter and the Economic Malaise", points: [
         "Stagflation broke Keynesian economics; oil shocks (1973, 1979) exposed energy vulnerability",
         "Fall of Saigon (1975) was first American military defeat; Vietnam Syndrome set in",
         "Iran Hostage Crisis: 52 Americans held 444 days; failed Eagle Claw rescue killed 8",
@@ -1515,7 +1496,7 @@ export const amstudsData = {
         "Reagan's 1980 campaign: 'Government is the problem' — optimism vs Carter pessimism",
         "Reagan won 44 states; dissolved New Deal coalition and began conservative era",
       ]},
-      { chapter: "Reagan Era & End of Cold War", points: [
+      { chapter: "The Reagan Revolution", points: [
         "Reagan's 1981 inaugural: 'Government is not the solution; government is the problem'",
         "Reaganomics: cut top tax rate 70% → 28%; tripled military spending to $300B/year",
         "Tripled national debt ($908B → $2.87 trillion); widened income inequality dramatically",
