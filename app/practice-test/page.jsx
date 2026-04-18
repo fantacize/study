@@ -2,7 +2,30 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { practiceTests } from "../../practice-tests.js";
+import { questionPool } from "../../practice-tests.js";
+
+const TEST_LENGTH = { mcq: 22, sources: 2, shortAnswer: 5, minutes: 60 };
+
+function shuffle(arr) {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+function generateTest(label) {
+  return {
+    id: `${label}-${Date.now()}`,
+    title: `Practice Test ${label}`,
+    focus: "Randomized — full midterm scope (Chs 23-26)",
+    minutes: TEST_LENGTH.minutes,
+    mcq: shuffle(questionPool.mcq).slice(0, TEST_LENGTH.mcq),
+    sources: shuffle(questionPool.sources).slice(0, TEST_LENGTH.sources),
+    shortAnswer: shuffle(questionPool.shortAnswer).slice(0, TEST_LENGTH.shortAnswer),
+  };
+}
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -45,7 +68,8 @@ export default function PracticeTestPage() {
     }
   }, [elapsed, limitSec, activeTest, submitted]);
 
-  function startTest(t) {
+  function startTest(label) {
+    const t = generateTest(label);
     setActiveTest(t);
     setMcqAnswers({});
     setSourceResponses({});
@@ -87,21 +111,38 @@ export default function PracticeTestPage() {
           </div>
         </header>
         <main className="mx-auto max-w-6xl px-4 py-6">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {practiceTests.map((t) => (
-              <Card key={t.id} className="flex flex-col">
+          <div className="mb-6 rounded-lg border border-border bg-card p-4">
+            <p className="text-sm">
+              Pool: <strong>{questionPool.mcq.length} MCQ</strong> ·{" "}
+              <strong>{questionPool.sources.length} primary sources</strong> ·{" "}
+              <strong>{questionPool.shortAnswer.length} short answer prompts</strong>.
+              Each test pulls a fresh random {TEST_LENGTH.mcq}/{TEST_LENGTH.sources}/
+              {TEST_LENGTH.shortAnswer} selection covering everything (Chs 23-26).
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+            {["A", "B", "C"].map((label) => (
+              <Card key={label} className="flex flex-col">
                 <CardHeader>
                   <div className="flex flex-wrap items-center gap-2">
-                    <Badge>{t.minutes} min</Badge>
-                    <Badge variant="secondary">{t.mcq.length} MCQ · {t.sources.length} sources · {t.shortAnswer.length} SA</Badge>
+                    <Badge>{TEST_LENGTH.minutes} min</Badge>
+                    <Badge variant="secondary">
+                      {TEST_LENGTH.mcq} MCQ · {TEST_LENGTH.sources} sources · {TEST_LENGTH.shortAnswer} SA
+                    </Badge>
                   </div>
-                  <CardTitle className="mt-2 text-lg">{t.title}</CardTitle>
+                  <CardTitle className="mt-2 text-lg">Practice Test {label}</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1">
-                  <p className="text-sm text-muted-foreground">{t.focus}</p>
+                  <p className="text-sm text-muted-foreground">
+                    Randomized pull from the full question pool. Click start — fresh selection
+                    every time.
+                  </p>
                 </CardContent>
                 <div className="p-4 pt-0">
-                  <Button className="w-full" onClick={() => startTest(t)}>Start test</Button>
+                  <Button className="w-full" onClick={() => startTest(label)}>
+                    Start test {label}
+                  </Button>
                 </div>
               </Card>
             ))}
@@ -112,8 +153,8 @@ export default function PracticeTestPage() {
             <ul className="space-y-1 text-sm text-muted-foreground">
               <li>• Set aside the full time. Don't pause for lookup — simulate exam conditions.</li>
               <li>• MCQ scores automatically. Open response is self-scored against a model rubric.</li>
-              <li>• After submit, re-take any section by starting the test again.</li>
-              <li>• Primary sources load from the class PDFs — click image to zoom.</li>
+              <li>• Start again = new random test. Keep going until the whole pool feels familiar.</li>
+              <li>• Primary sources load from class PDFs — click image to zoom on /primary-sources.</li>
             </ul>
           </div>
         </main>
@@ -311,8 +352,8 @@ export default function PracticeTestPage() {
               your answer honestly. Hit 70% or more of the rubric bullets = solid answer.
             </p>
             <div className="mt-4 flex gap-2">
-              <Button onClick={() => startTest(activeTest)}>Retake this test</Button>
-              <Button variant="outline" onClick={exitTest}>Pick a different test</Button>
+              <Button onClick={() => startTest("retry")}>New random test</Button>
+              <Button variant="outline" onClick={exitTest}>Back to selector</Button>
             </div>
           </section>
         )}
