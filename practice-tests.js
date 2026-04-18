@@ -729,7 +729,789 @@ export const questionPool = {
       ],
       "answerIndex": 1,
       "explanation": "Dec 25-26, 1991 — Gorbachev resigned, Soviet flag lowered from Kremlin. 15 independent republics emerged."
+    }    ,
+    {
+      "question": "Potsdam (July-August 1945) differed from Yalta because:",
+      "options": [
+        "Stalin was replaced by Khrushchev",
+        "Truman replaced FDR and was far more confrontational; Attlee replaced Churchill mid-conference",
+        "The Cold War was officially declared",
+        "The USSR withdrew from Eastern Europe"
+      ],
+      "answerIndex": 1,
+      "explanation": "Truman was told of the successful atomic test mid-conference and adopted a harder line than FDR had taken."
+    },
+    {
+      "question": "Churchill's 'Iron Curtain' speech was delivered at:",
+      "options": [
+        "Fulton, Missouri, in March 1946 at Westminster College",
+        "Potsdam, Germany, in 1945",
+        "The UN in New York, 1947",
+        "Yalta, Crimea, 1945"
+      ],
+      "answerIndex": 0,
+      "explanation": "Truman sat on stage as Churchill declared an 'iron curtain' had descended from Stettin to Trieste."
+    },
+    {
+      "question": "Lord Ismay's famous summary of NATO's purpose was to keep the:",
+      "options": [
+        "Americans out, Germans in, Russians down",
+        "Russians out, Americans in, Germans down",
+        "French out, British in, Germans down",
+        "Germans out, Americans down, British in"
+      ],
+      "answerIndex": 1,
+      "explanation": "NATO simultaneously deterred Soviet aggression, anchored US commitment to Europe, and contained German resurgence."
+    },
+    {
+      "question": "Walter Lippmann's 1947 critique of containment argued that:",
+      "options": [
+        "Containment was insufficiently aggressive",
+        "Containment was reactive — letting the USSR set the agenda — and would lead to overextension",
+        "Containment required nuclear first use",
+        "Containment would fail within a decade"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lippmann coined the term 'Cold War' in this critique. Vietnam later proved his overextension warning prophetic."
+    },
+    {
+      "question": "At the peak of the Berlin Airlift, a plane landed at Tempelhof approximately every:",
+      "options": [
+        "5 minutes",
+        "30 seconds",
+        "2 minutes",
+        "1 hour"
+      ],
+      "answerIndex": 1,
+      "explanation": "At peak tempo a plane landed every 30 seconds. Total: 2.3M tons over 11 months."
+    },
+    {
+      "question": "The Warsaw Pact was formed in 1955 specifically in response to:",
+      "options": [
+        "The Korean War armistice",
+        "West Germany joining NATO",
+        "The Soviet atomic bomb test",
+        "Sputnik's launch"
+      ],
+      "answerIndex": 1,
+      "explanation": "Rearmament of West Germany (1955) was seen in Moscow as a direct provocation, triggering the Warsaw Pact."
+    },
+    {
+      "question": "The Hollywood Ten were blacklisted after refusing to answer which HUAC question?",
+      "options": [
+        "Have you ever criticized the US government?",
+        "Are you now or have you ever been a member of the Communist Party?",
+        "Do you support the Soviet Union?",
+        "Have you traveled abroad?"
+      ],
+      "answerIndex": 1,
+      "explanation": "They invoked First Amendment protections. The Waldorf Statement by studio executives created the blacklist."
+    },
+    {
+      "question": "During the Korean War, Truman described the US military intervention as a:",
+      "options": [
+        "Declared war",
+        "Police action under UN authority",
+        "Peacekeeping operation",
+        "Nuclear exchange"
+      ],
+      "answerIndex": 1,
+      "explanation": "Truman avoided a congressional declaration. The USSR was boycotting the Security Council, so it couldn't veto the UN resolution."
+    },
+    {
+      "question": "The 'Candy Bomber' of the Berlin Airlift was:",
+      "options": [
+        "Curtis LeMay",
+        "Gail Halvorsen, who dropped candy on handkerchief-parachutes to Berlin children",
+        "Jimmy Doolittle",
+        "Chuck Yeager"
+      ],
+      "answerIndex": 1,
+      "explanation": "Halvorsen's small gesture became a major propaganda coup — Berliners saw Americans as saviors, not occupiers."
+    },
+    {
+      "question": "The 1957 Sputnik launch alarmed Americans primarily because:",
+      "options": [
+        "It threatened TV signals",
+        "It demonstrated Soviet rocket technology capable of delivering nuclear warheads to the US",
+        "It was detected over Washington DC",
+        "It broadcast communist propaganda"
+      ],
+      "answerIndex": 1,
+      "explanation": "Sputnik shocked US confidence in technological superiority. Led to NASA (1958) and huge education investments (NDEA 1958)."
+    },
+    {
+      "question": "The 1960 U-2 incident involved:",
+      "options": [
+        "A Soviet submarine in US waters",
+        "An American spy plane shot down over Soviet territory, with pilot Francis Gary Powers captured",
+        "A Cuban defector",
+        "Nuclear test detection"
+      ],
+      "answerIndex": 1,
+      "explanation": "Eisenhower was caught lying about the mission's nature. Collapsed the planned Paris summit with Khrushchev."
+    },
+    {
+      "question": "Beat writer Allen Ginsberg's most famous poem, first performed in 1955, was:",
+      "options": [
+        "'America'",
+        "'Howl'",
+        "'On the Road'",
+        "'Coney Island of the Mind'"
+      ],
+      "answerIndex": 1,
+      "explanation": "'Howl' was subject of a 1957 obscenity trial; its acquittal expanded First Amendment protections for literature."
+    },
+    {
+      "question": "The Little Boxes song (1962) by Malvina Reynolds satirized:",
+      "options": [
+        "Corporate America",
+        "Suburban conformity — 'little boxes made of ticky-tacky, and they all look just the same'",
+        "The military-industrial complex",
+        "The Catholic Church"
+      ],
+      "answerIndex": 1,
+      "explanation": "Captured mid-60s countercultural critique of suburbia as mass-produced conformity."
+    },
+    {
+      "question": "The Greensboro sit-ins (February 1960) were started by:",
+      "options": [
+        "SCLC clergy",
+        "Four freshmen from North Carolina Agricultural and Technical College",
+        "The NAACP",
+        "The Black Panthers"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ezell Blair, Franklin McCain, Joseph McNeil, David Richmond. Spread to 54 cities within two months. Led to SNCC's founding."
+    },
+    {
+      "question": "The Freedom Rides of 1961 tested:",
+      "options": [
+        "School integration",
+        "The Boynton v. Virginia (1960) ruling against segregation in interstate bus terminals",
+        "Voting rights laws",
+        "Restaurant integration"
+      ],
+      "answerIndex": 1,
+      "explanation": "CORE organizers rode interstate buses through the South. Riders were beaten; a bus was firebombed in Anniston, Alabama."
+    },
+    {
+      "question": "Birmingham's Public Safety Commissioner in 1963 was:",
+      "options": [
+        "George Wallace",
+        "Bull Connor, notorious for using fire hoses and police dogs on protesters (including children)",
+        "Strom Thurmond",
+        "Orval Faubus"
+      ],
+      "answerIndex": 1,
+      "explanation": "The Children's Crusade brought national TV coverage of Connor's violence — transformed public opinion."
+    },
+    {
+      "question": "King's 'I Have a Dream' speech was delivered at:",
+      "options": [
+        "The 1965 Selma march",
+        "The August 1963 March on Washington",
+        "The 1968 Memphis sanitation strike",
+        "The 1966 Meredith March"
+      ],
+      "answerIndex": 1,
+      "explanation": "March on Washington for Jobs and Freedom drew ~250,000 people. A. Philip Randolph and Bayard Rustin organized it."
+    },
+    {
+      "question": "The 16th Street Baptist Church bombing (September 1963) killed four girls in:",
+      "options": [
+        "Montgomery, Alabama",
+        "Birmingham, Alabama",
+        "Selma, Alabama",
+        "Atlanta, Georgia"
+      ],
+      "answerIndex": 1,
+      "explanation": "Addie Mae Collins, Denise McNair, Carole Robertson, Cynthia Wesley. Came weeks after the March on Washington."
+    },
+    {
+      "question": "The Civil Rights Act of 1964 primarily banned:",
+      "options": [
+        "Employment discrimination only",
+        "Discrimination in public accommodations, employment, and federally funded programs on the basis of race, color, religion, sex, or national origin",
+        "School segregation only",
+        "Voting discrimination"
+      ],
+      "answerIndex": 1,
+      "explanation": "LBJ pushed it through after JFK's assassination. Title VII created the EEOC. Voting discrimination was addressed separately in 1965."
+    },
+    {
+      "question": "The Voting Rights Act of 1965 was passed in the aftermath of:",
+      "options": [
+        "Little Rock",
+        "'Bloody Sunday' on the Edmund Pettus Bridge in Selma, Alabama",
+        "The Montgomery Bus Boycott",
+        "The March on Washington"
+      ],
+      "answerIndex": 1,
+      "explanation": "State troopers attacked peaceful marchers led by John Lewis. Televised violence forced LBJ's hand — signed VRA on August 6."
+    },
+    {
+      "question": "Malcolm X's position shifted significantly after:",
+      "options": [
+        "His conversion to Protestantism",
+        "His 1964 hajj to Mecca, where he encountered multiracial Islam",
+        "His arrest",
+        "His meeting with MLK"
+      ],
+      "answerIndex": 1,
+      "explanation": "He broke with the Nation of Islam, founded the OAAU, and moved toward a broader human-rights framework. Assassinated February 1965."
+    },
+    {
+      "question": "The Immigration and Nationality Act of 1965 (Hart-Celler):",
+      "options": [
+        "Restored 1920s quotas",
+        "Abolished national-origins quotas, dramatically reshaping US demographic composition",
+        "Prohibited all Asian immigration",
+        "Created the H-1B visa"
+      ],
+      "answerIndex": 1,
+      "explanation": "Unintended consequence: massive increase in Asian and Latin American immigration over subsequent decades."
+    },
+    {
+      "question": "Cesar Chavez and Dolores Huerta co-founded:",
+      "options": [
+        "La Raza Unida",
+        "The United Farm Workers, which waged the Delano grape strike and boycott (1965-70)",
+        "MEChA",
+        "The Brown Berets"
+      ],
+      "answerIndex": 1,
+      "explanation": "UFW won contracts for farmworkers in 1970. Huerta is less famous than Chavez but equally central."
+    },
+    {
+      "question": "The Occupation of Alcatraz (1969-71) by Indians of All Tribes was significant because it:",
+      "options": [
+        "Successfully reclaimed the island permanently",
+        "Drew national attention to broken treaties and federal mistreatment of Native Americans",
+        "Led to Alaska Native Claims Settlement Act",
+        "Resulted in armed combat"
+      ],
+      "answerIndex": 1,
+      "explanation": "The 19-month occupation energized AIM and Native activism. Richard Oakes led it."
+    },
+    {
+      "question": "The Stonewall riots of June 1969 occurred at a bar in:",
+      "options": [
+        "San Francisco's Castro district",
+        "Greenwich Village, New York City",
+        "Los Angeles",
+        "Chicago"
+      ],
+      "answerIndex": 1,
+      "explanation": "Routine police raid sparked unprecedented resistance. Within a year, gay pride organizations existed in every major US city."
+    },
+    {
+      "question": "The Pentagon Papers were leaked in 1971 by:",
+      "options": [
+        "Bob Woodward",
+        "Daniel Ellsberg, a former RAND Corporation analyst",
+        "Edward Snowden",
+        "Mark Felt"
+      ],
+      "answerIndex": 1,
+      "explanation": "The papers revealed systematic government deception about Vietnam. NYT v. United States affirmed press freedom to publish."
+    },
+    {
+      "question": "Walter Cronkite's February 27, 1968 editorial concluded Vietnam would end in:",
+      "options": [
+        "American victory",
+        "A stalemate",
+        "Communist victory",
+        "Nuclear war"
+      ],
+      "answerIndex": 1,
+      "explanation": "LBJ reportedly said 'If I've lost Cronkite, I've lost Middle America.' LBJ withdrew from the race a month later."
+    },
+    {
+      "question": "The 1968 Democratic National Convention in Chicago was marked by:",
+      "options": [
+        "A peaceful handover to McCarthy",
+        "Police attacks on antiwar protesters, televised nationally while protesters chanted 'The whole world is watching'",
+        "Kennedy's endorsement of Humphrey",
+        "A united party"
+      ],
+      "answerIndex": 1,
+      "explanation": "The 'Chicago 8' trial followed. The chaos helped Nixon win the general election."
+    },
+    {
+      "question": "The My Lai massacre (March 1968) was:",
+      "options": [
+        "A Viet Cong attack on civilians",
+        "The killing of ~500 unarmed Vietnamese civilians by US Army soldiers, exposed by reporter Seymour Hersh in 1969",
+        "A staged propaganda event",
+        "A French colonial atrocity"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lt. William Calley was the only soldier convicted. Hugh Thompson Jr., a helicopter pilot, tried to stop the massacre."
+    },
+    {
+      "question": "Nixon's 'Madman Theory' held that:",
+      "options": [
+        "Only insane leaders should have nukes",
+        "Appearing unpredictable and willing to use nuclear force would pressure Hanoi into concessions",
+        "The Soviets were irrational",
+        "MacArthur was mentally unfit"
+      ],
+      "answerIndex": 1,
+      "explanation": "Nixon and Kissinger tried to use this theory in 1969. Hanoi was unpersuaded."
+    },
+    {
+      "question": "The Kent State shootings (May 4, 1970) were triggered by protests against:",
+      "options": [
+        "The draft",
+        "Nixon's announcement of the US invasion of Cambodia",
+        "Watergate",
+        "The Pentagon Papers"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ohio National Guard killed 4 students, wounded 9. Neil Young's 'Ohio' became the anti-war anthem."
+    },
+    {
+      "question": "The 1972 SALT I agreement between Nixon and Brezhnev:",
+      "options": [
+        "Eliminated all nuclear weapons",
+        "Froze the number of intercontinental ballistic missile launchers and limited anti-ballistic missile systems",
+        "Created NATO",
+        "Ended the Cold War"
+      ],
+      "answerIndex": 1,
+      "explanation": "First major arms-control treaty. The ABM Treaty signed alongside it restricted missile defense."
+    },
+    {
+      "question": "The Watergate break-in (June 1972) targeted:",
+      "options": [
+        "The CIA",
+        "Democratic National Committee headquarters at the Watergate office complex",
+        "The Pentagon",
+        "The Republican National Committee"
+      ],
+      "answerIndex": 1,
+      "explanation": "Five burglars connected to CREEP (Committee to Re-Elect the President) were arrested. Cover-up brought Nixon down."
+    },
+    {
+      "question": "The Saturday Night Massacre (October 1973) involved Nixon firing:",
+      "options": [
+        "His entire cabinet",
+        "Special Prosecutor Archibald Cox — leading AG Richardson and Deputy AG Ruckelshaus to resign rather than comply",
+        "The FBI director",
+        "The Vice President"
+      ],
+      "answerIndex": 1,
+      "explanation": "Solicitor General Robert Bork carried out the firing. Public outrage was immediate."
+    },
+    {
+      "question": "The 26th Amendment (1971) lowered the voting age to:",
+      "options": [
+        "16",
+        "18",
+        "17",
+        "21"
+      ],
+      "answerIndex": 1,
+      "explanation": "Argument: if draftable at 18, votable at 18. Ratified rapidly amid Vietnam-era youth activism."
+    },
+    {
+      "question": "Roe v. Wade (1973) grounded the right to abortion in:",
+      "options": [
+        "The 13th Amendment",
+        "A right to privacy derived from the 14th Amendment's Due Process Clause",
+        "The 19th Amendment",
+        "The Commerce Clause"
+      ],
+      "answerIndex": 1,
+      "explanation": "Justice Blackmun's opinion built on Griswold v. Connecticut (1965) privacy reasoning."
+    },
+    {
+      "question": "Title IX (1972) prohibited sex discrimination in:",
+      "options": [
+        "Housing",
+        "Any education program receiving federal funding",
+        "Private employment only",
+        "Voting registration"
+      ],
+      "answerIndex": 1,
+      "explanation": "Transformed women's athletics and opened university programs previously closed to women."
+    },
+    {
+      "question": "The War Powers Resolution (1973) requires the president to:",
+      "options": [
+        "Obtain UN approval before military action",
+        "Notify Congress within 48 hours of deploying US forces and withdraw within 60 days without congressional authorization",
+        "Hold a public referendum",
+        "Consult only the Joint Chiefs"
+      ],
+      "answerIndex": 1,
+      "explanation": "Direct response to Vietnam. Every president since has argued the resolution is unconstitutional."
+    },
+    {
+      "question": "Gerald Ford's most controversial act as president was:",
+      "options": [
+        "Ending the Vietnam War",
+        "Pardoning Richard Nixon for any crimes committed while in office",
+        "Recognizing China",
+        "Signing the Helsinki Accords"
+      ],
+      "answerIndex": 1,
+      "explanation": "The September 1974 pardon likely cost Ford the 1976 election against Carter."
+    },
+    {
+      "question": "Carter's Camp David Accords (1978) produced:",
+      "options": [
+        "The end of the Cold War",
+        "The Egypt-Israel peace treaty — first Arab-Israeli peace agreement",
+        "The Palestinian state",
+        "NATO expansion"
+      ],
+      "answerIndex": 1,
+      "explanation": "Carter personally mediated between Sadat and Begin. Remains Carter's most enduring foreign-policy achievement."
+    },
+    {
+      "question": "The Three Mile Island accident (March 1979) was:",
+      "options": [
+        "A nuclear weapons test",
+        "A partial meltdown at a Pennsylvania commercial nuclear reactor, which halted US nuclear power expansion",
+        "An oil-rig explosion",
+        "A chemical plant fire"
+      ],
+      "answerIndex": 1,
+      "explanation": "No deaths, but the accident combined with 'The China Syndrome' movie (released 12 days earlier) crushed public nuclear confidence."
+    },
+    {
+      "question": "Proposition 13 (California, 1978) initiated the tax revolt by:",
+      "options": [
+        "Eliminating income tax",
+        "Capping property taxes at 1% of assessed value, starting a nationwide anti-tax movement",
+        "Raising corporate taxes",
+        "Creating a state lottery"
+      ],
+      "answerIndex": 1,
+      "explanation": "Howard Jarvis's movement laid groundwork for Reagan's 1980 tax-cut campaign."
+    },
+    {
+      "question": "The 1979 Iranian Revolution overthrew:",
+      "options": [
+        "The Ayatollah Khomeini",
+        "Shah Mohammad Reza Pahlavi, whom the US had supported since the 1953 CIA-backed coup restored him",
+        "Mossadegh",
+        "Nasser"
+      ],
+      "answerIndex": 1,
+      "explanation": "Khomeini returned from Paris exile in February 1979. Hostage crisis began that November."
+    },
+    {
+      "question": "Reagan's assassination attempt (March 30, 1981) was by:",
+      "options": [
+        "John Hinckley Jr., who hoped to impress actress Jodie Foster",
+        "A KGB agent",
+        "A Contra sympathizer",
+        "A disgruntled federal employee"
+      ],
+      "answerIndex": 0,
+      "explanation": "Reagan survived; Press Secretary James Brady was permanently disabled. Led to the Brady Bill (1993) after long delay."
+    },
+    {
+      "question": "Reagan fired striking air traffic controllers in 1981 — the union was:",
+      "options": [
+        "The Teamsters",
+        "PATCO (Professional Air Traffic Controllers Organization)",
+        "The AFL-CIO",
+        "The UAW"
+      ],
+      "answerIndex": 1,
+      "explanation": "Over 11,000 fired, union decertified, strikers banned from federal service for life. Accelerated private-sector union decline."
+    },
+    {
+      "question": "Reagan's 'Evil Empire' speech (1983) was delivered to:",
+      "options": [
+        "The UN",
+        "The National Association of Evangelicals in Orlando",
+        "Congress",
+        "A NATO summit"
+      ],
+      "answerIndex": 1,
+      "explanation": "Moral framing fused anti-communism with religious right politics. Gorbachev later cited it as offensive but clarifying."
+    },
+    {
+      "question": "The Savings & Loan Crisis (late 1980s) resulted from:",
+      "options": [
+        "Stock market fraud",
+        "1980s deregulation that let S&Ls make risky investments, combined with fraud and the real estate crash",
+        "Soviet espionage",
+        "The oil crisis"
+      ],
+      "answerIndex": 1,
+      "explanation": "Cost taxpayers ~$124 billion. Neil Bush (president's son) was implicated. Exemplified deregulation's costs."
+    },
+    {
+      "question": "Reagan's Strategic Defense Initiative (SDI, 1983), nicknamed 'Star Wars,' proposed:",
+      "options": [
+        "First-strike nuclear policy",
+        "A space-based missile defense system using lasers and interceptors",
+        "Nuclear arms reduction",
+        "Joint space exploration with USSR"
+      ],
+      "answerIndex": 1,
+      "explanation": "Technologically implausible at the time but strategically pressured Soviet economy. Critics called it destabilizing."
+    },
+    {
+      "question": "The Reagan Doctrine committed the US to:",
+      "options": [
+        "Containing communism without military action",
+        "Actively supporting anti-communist insurgencies ('freedom fighters') against Soviet-aligned governments",
+        "Abolishing nuclear weapons",
+        "Recognizing China"
+      ],
+      "answerIndex": 1,
+      "explanation": "Applied in Nicaragua (Contras), Afghanistan (Mujahideen), Angola (UNITA). Shifted from containment to rollback."
+    },
+    {
+      "question": "Oliver North testified in 1987 that he:",
+      "options": [
+        "Had never heard of the Contras",
+        "Directed the diversion of Iran arms-sale profits to the Contras — and was 'ordered' to do so",
+        "Worked for the CIA",
+        "Resigned in protest"
+      ],
+      "answerIndex": 1,
+      "explanation": "His conviction was later vacated on a technicality (immunized testimony was used at trial). Became a right-wing hero."
+    },
+    {
+      "question": "Reagan's 1987 Berlin speech demanded:",
+      "options": [
+        "'Ich bin ein Berliner'",
+        "'Mr. Gorbachev, tear down this wall!'",
+        "'We are all Berliners now'",
+        "'The free world stands with Berlin'"
+      ],
+      "answerIndex": 1,
+      "explanation": "Delivered at the Brandenburg Gate in June 1987. Became symbolic when the wall fell 29 months later."
+    },
+    {
+      "question": "The AIDS crisis emerged as a major public health issue in the early 1980s. Reagan:",
+      "options": [
+        "Led an immediate national response",
+        "Was publicly silent about AIDS until 1985, despite tens of thousands of deaths — criticized by activists like ACT UP",
+        "Proposed national quarantine",
+        "Ended HIV research funding"
+      ],
+      "answerIndex": 1,
+      "explanation": "First public mention in 1985. Press secretary Larry Speakes joked about it in 1982. ACT UP formed in 1987."
+    },
+    {
+      "question": "The 1986 Tax Reform Act:",
+      "options": [
+        "Raised the top rate",
+        "Cut the top marginal rate from 50% to 28% and eliminated many deductions — a bipartisan supply-side measure",
+        "Created a flat tax",
+        "Introduced the alternative minimum tax"
+      ],
+      "answerIndex": 1,
+      "explanation": "Reagan's 1981 act had already cut rates from 70%. 1986 act simplified the code and lowered further."
+    },
+    {
+      "question": "The INF Treaty (1987) signed by Reagan and Gorbachev was historic because it:",
+      "options": [
+        "Ended the Cold War",
+        "Was the first treaty to eliminate an entire class of nuclear weapons (intermediate-range missiles)",
+        "Banned all nuclear testing",
+        "Created the European Union"
+      ],
+      "answerIndex": 1,
+      "explanation": "Removed US Pershings and Soviet SS-20s from Europe. First real arms reduction (vs. limitation) treaty."
+    },
+    {
+      "question": "Gorbachev's reforms Perestroika and Glasnost meant:",
+      "options": [
+        "Repression and censorship",
+        "Economic restructuring and political openness",
+        "Militarization and expansion",
+        "Isolation and purges"
+      ],
+      "answerIndex": 1,
+      "explanation": "Perestroika (restructuring) targeted the economy; Glasnost (openness) reduced censorship. Intended to save the USSR; accelerated its collapse."
+    },
+    {
+      "question": "The Berlin Wall fell on November 9, 1989 when:",
+      "options": [
+        "US troops tore it down",
+        "An East German press conference mistakenly announced open travel, prompting crowds to surge to the Wall",
+        "Gorbachev ordered it down",
+        "A bomb destroyed it"
+      ],
+      "answerIndex": 1,
+      "explanation": "Spokesman Günter Schabowski misread a note. Guards, unable to reach higher authority, opened the gates."
+    },
+    {
+      "question": "The revolutions of 1989 in Eastern Europe were remarkable for being:",
+      "options": [
+        "Bloody civil wars",
+        "Mostly peaceful (with Romania the major exception) — Poland, Hungary, East Germany, Czechoslovakia all transitioned without war",
+        "Led by the USSR",
+        "Reversed within a year"
+      ],
+      "answerIndex": 1,
+      "explanation": "Solidarity in Poland, Velvet Revolution in Czechoslovakia. Romania's Ceaușescu was executed by firing squad."
+    },
+    {
+      "question": "The Soviet Union formally dissolved with Gorbachev's resignation on:",
+      "options": [
+        "August 19, 1991",
+        "December 25-26, 1991",
+        "November 9, 1989",
+        "January 1, 1992"
+      ],
+      "answerIndex": 1,
+      "explanation": "Gorbachev resigned Dec 25; the Soviet flag was lowered Dec 26. 15 republics became independent states."
+    },
+    {
+      "question": "Which 1957 event was a major psychological turning point in the Cold War space competition?",
+      "options": [
+        "Yuri Gagarin's orbital flight",
+        "Sputnik I, the first artificial satellite, launched by the USSR",
+        "Apollo 11",
+        "Space Shuttle launch"
+      ],
+      "answerIndex": 1,
+      "explanation": "Sputnik triggered 'Sputnik crisis' panic, led to NASA's creation (1958), National Defense Education Act, and the space race."
+    },
+    {
+      "question": "The term 'military-industrial complex' was famously warned against by:",
+      "options": [
+        "John F. Kennedy in his inaugural address",
+        "Dwight D. Eisenhower in his 1961 Farewell Address",
+        "Franklin D. Roosevelt in a fireside chat",
+        "Harry Truman in the Truman Doctrine speech"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ike warned that a permanent arms industry could distort democracy. Ironic, given his own buildup via NSC-68 implementation."
+    },
+    {
+      "question": "The Bay of Pigs invasion (April 1961) was:",
+      "options": [
+        "A successful Kennedy operation",
+        "A failed CIA-backed Cuban exile invasion intended to overthrow Castro",
+        "A Soviet missile deployment",
+        "A defection event"
+      ],
+      "answerIndex": 1,
+      "explanation": "Planned under Eisenhower, executed under Kennedy. The disaster pushed Castro firmly toward the USSR."
+    },
+    {
+      "question": "During the Cuban Missile Crisis (October 1962), Kennedy chose:",
+      "options": [
+        "Immediate air strikes",
+        "A naval 'quarantine' of Cuba while pursuing diplomacy, ultimately trading US Jupiter missiles in Turkey for Soviet missile removal",
+        "Nuclear first strike",
+        "UN mediation alone"
+      ],
+      "answerIndex": 1,
+      "explanation": "The Turkey swap was kept secret to preserve Kennedy's public image of firmness. Closest the world came to nuclear war."
+    },
+    {
+      "question": "LBJ's 'Great Society' programs included all EXCEPT:",
+      "options": [
+        "Medicare and Medicaid",
+        "Head Start and Job Corps",
+        "The Voting Rights Act and Civil Rights Act",
+        "The Interstate Highway System"
+      ],
+      "answerIndex": 3,
+      "explanation": "Interstate Highway Act (1956) was Eisenhower. Everything else was LBJ's Great Society."
+    },
+    {
+      "question": "The Watts Riots (August 1965) occurred in:",
+      "options": [
+        "Detroit",
+        "Los Angeles, sparked by a traffic stop, lasting 6 days",
+        "New York City",
+        "Chicago"
+      ],
+      "answerIndex": 1,
+      "explanation": "34 dead, 1000+ injured. Exposed Northern urban inequality just as the Voting Rights Act passed — 'the bill is signed, the city burns.'"
+    },
+    {
+      "question": "The Black Panther Party was founded in 1966 in:",
+      "options": [
+        "Harlem, by Malcolm X's followers",
+        "Oakland, California, by Huey Newton and Bobby Seale",
+        "Chicago, by Fred Hampton",
+        "Los Angeles, by Eldridge Cleaver"
+      ],
+      "answerIndex": 1,
+      "explanation": "Originally formed for police accountability and community self-defense. Ran free breakfast programs."
+    },
+    {
+      "question": "Phyllis Schlafly successfully mobilized opposition to:",
+      "options": [
+        "The Civil Rights Act",
+        "The Equal Rights Amendment, arguing it would harm traditional gender roles",
+        "Roe v. Wade",
+        "The Voting Rights Act"
+      ],
+      "answerIndex": 1,
+      "explanation": "STOP ERA campaign blocked ratification by the 1982 deadline. A key figure in the New Right."
+    },
+    {
+      "question": "The Equal Rights Amendment (ERA) ultimately:",
+      "options": [
+        "Was ratified in 1982",
+        "Failed to be ratified by enough states within the 1982 deadline, despite passing Congress in 1972",
+        "Was struck down by the Supreme Court",
+        "Was never voted on"
+      ],
+      "answerIndex": 1,
+      "explanation": "Needed 38 states; fell 3 short. Some states have ratified since but debate over deadline continues."
+    },
+    {
+      "question": "The Iran-Contra Affair's Boland Amendment prohibited:",
+      "options": [
+        "US diplomatic recognition of Iran",
+        "US funding of the Nicaraguan Contras",
+        "Arms sales to the Middle East",
+        "Covert operations anywhere"
+      ],
+      "answerIndex": 1,
+      "explanation": "Passed by Congress after CIA covert operations revealed. Iran-Contra diversion was designed to circumvent it."
+    },
+    {
+      "question": "The 1983 US invasion of Grenada (Operation Urgent Fury) was justified by:",
+      "options": [
+        "Soviet missile deployment",
+        "Protecting American medical students and reversing a Marxist coup",
+        "Drug trafficking",
+        "UN request"
+      ],
+      "answerIndex": 1,
+      "explanation": "Small-scale but symbolic — first US military action since Vietnam to clearly 'succeed.' Reagan called it a rescue."
+    },
+    {
+      "question": "The Helsinki Accords (1975) included commitments on:",
+      "options": [
+        "Arms limits only",
+        "Human rights, which dissidents in Eastern Europe later used to pressure their governments",
+        "Ending the Cold War",
+        "Trade tariffs only"
+      ],
+      "answerIndex": 1,
+      "explanation": "Signed by Ford. Human-rights provisions empowered Charter 77, Solidarity, and other dissident movements."
+    },
+    {
+      "question": "Operation Eagle Claw (April 1980) was:",
+      "options": [
+        "A successful rescue of Iran hostages",
+        "A failed military rescue that ended with a helicopter-plane collision killing 8 servicemen in Iran",
+        "A CIA operation in Nicaragua",
+        "A bombing of Tripoli"
+      ],
+      "answerIndex": 1,
+      "explanation": "Secretary of State Cyrus Vance resigned in protest before it launched. Symbolized American impotence."
     }
+
   ],
   "sources": [
     {
