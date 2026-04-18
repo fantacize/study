@@ -99,13 +99,12 @@ const DECKS = [
   },
 ];
 
-function padPage(n, total) {
-  const width = String(total).length >= 2 ? 2 : 1;
-  return String(n).padStart(width, "0");
+function padPage(n) {
+  return String(n).padStart(2, "0");
 }
 
 function deckImageUrl(slug, pageNum, totalPages) {
-  const n = padPage(pageNum, totalPages);
+  const n = padPage(pageNum);
   return `/primary-sources/${slug}/page-${n}.jpg`;
 }
 
