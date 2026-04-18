@@ -1510,7 +1510,921 @@ export const questionPool = {
       ],
       "answerIndex": 1,
       "explanation": "Secretary of State Cyrus Vance resigned in protest before it launched. Symbolized American impotence."
+    }    ,
+    {
+      "question": "Kennan's 'X Article' in Foreign Affairs (July 1947) argued Soviet behavior derived primarily from:",
+      "options": [
+        "Rational territorial ambitions fixable through negotiation",
+        "Internal ideological needs plus deep Russian insecurity — a combination that would not respond to concessions",
+        "Stalin's personality alone, which would vanish with his death",
+        "Economic weakness that would force accommodation within a decade"
+      ],
+      "answerIndex": 1,
+      "explanation": "Kennan diagnosed a structural hostility rooted in Marxist-Leninist doctrine AND pre-revolutionary Russian insecurity — hence 'patient but firm' containment, not negotiation-centered policy."
+    },
+    {
+      "question": "The 1947 National Security Act did NOT create:",
+      "options": [
+        "The Department of Defense (originally National Military Establishment)",
+        "The Central Intelligence Agency",
+        "The National Security Council",
+        "The Federal Bureau of Investigation"
+      ],
+      "answerIndex": 3,
+      "explanation": "FBI was reorganized under J. Edgar Hoover in 1935. The 1947 act created the DoD, CIA, NSC — the Cold War's institutional architecture."
+    },
+    {
+      "question": "Stalin's rejection of the Marshall Plan is best explained by his belief that it would:",
+      "options": [
+        "Rebuild Germany militarily",
+        "Pull Eastern European satellites out of Soviet economic orbit and expose USSR's inability to match Western aid",
+        "Replace the UN",
+        "Require him to hold free elections in Poland"
+      ],
+      "answerIndex": 1,
+      "explanation": "Czechoslovakia briefly accepted; Stalin forced reversal. The Molotov Plan and later COMECON were thin substitutes."
+    },
+    {
+      "question": "Alger Hiss's 1950 perjury conviction mattered politically because:",
+      "options": [
+        "It proved Soviet control of the White House",
+        "It vindicated Nixon's HUAC role and lent credibility to broader accusations of communist infiltration in government",
+        "It forced Truman's resignation",
+        "It led to the Rosenberg trial"
+      ],
+      "answerIndex": 1,
+      "explanation": "Hiss was a senior State Department figure present at Yalta. His fall gave McCarthy's later claims traction among moderates."
+    },
+    {
+      "question": "Which statement about Brown v. Board is MOST accurate per Foner's reading?",
+      "options": [
+        "Brown's immediate implementation ended de facto school segregation",
+        "Brown was a moral landmark but its 'all deliberate speed' implementation (Brown II, 1955) enabled a decade of 'massive resistance'",
+        "Brown overturned both Plessy and Jim Crow simultaneously",
+        "Brown was a 6-3 decision written by Felix Frankfurter"
+      ],
+      "answerIndex": 1,
+      "explanation": "Foner emphasizes the gap between Brown's symbolic power and its slow, resisted enforcement — hence the need for direct action."
+    },
+    {
+      "question": "The 1956 Southern Manifesto was signed by approximately:",
+      "options": [
+        "All Southern governors",
+        "101 members of Congress from the former Confederacy, who declared Brown a 'clear abuse of judicial power'",
+        "The entire Supreme Court",
+        "10 segregationist senators"
+      ],
+      "answerIndex": 1,
+      "explanation": "Signed by 19 senators and 82 representatives. Notably, LBJ (as Senate majority leader, and a Texan) refused to sign."
+    },
+    {
+      "question": "The NAACP's Legal Defense Fund's strategy before Brown focused on:",
+      "options": [
+        "Direct constitutional challenge to Plessy immediately",
+        "Incremental cases exposing graduate-school inequalities (Sweatt, McLaurin, Sipuel) to build precedent",
+        "Mass protests outside courthouses",
+        "Congressional lobbying for a new civil rights amendment"
+      ],
+      "answerIndex": 1,
+      "explanation": "Marshall and Charles Hamilton Houston built the precedent slowly — graduate law schools were the wedge because 'separate' there was obviously unequal."
+    },
+    {
+      "question": "In Letter from Birmingham Jail, King's 'I must make two honest confessions' refers to disappointments with:",
+      "options": [
+        "The Kennedy brothers and J. Edgar Hoover",
+        "The white moderate and the white church",
+        "The NAACP and the Urban League",
+        "Congress and the Supreme Court"
+      ],
+      "answerIndex": 1,
+      "explanation": "King confesses near-despair over white moderates who preferred 'order' and white churches silent in the face of injustice. Both targets are allies, not enemies."
+    },
+    {
+      "question": "King invokes Reinhold Niebuhr's argument that:",
+      "options": [
+        "Individuals can be moral but groups/institutions rarely are — so justice requires pressure, not appeals to conscience",
+        "Original sin makes reform impossible",
+        "Only government can redistribute wealth",
+        "Nonviolence will fail against dictators"
+      ],
+      "answerIndex": 0,
+      "explanation": "Niebuhr's 'Moral Man and Immoral Society' undergirds King's argument that negotiation alone cannot move structural injustice — direct action creates the pressure."
+    },
+    {
+      "question": "The 'Birmingham movement' of 1963 deliberately provoked Bull Connor because organizers believed:",
+      "options": [
+        "Negotiation with moderate whites was working",
+        "Nationally televised brutality against nonviolent protesters (including children) would force federal intervention",
+        "Local elections would solve segregation",
+        "MLK needed a prison sentence for credibility"
+      ],
+      "answerIndex": 1,
+      "explanation": "Wyatt Tee Walker's 'Project C' banked on visible confrontation. The Children's Crusade (May 1963) made Connor's violence prime-time."
+    },
+    {
+      "question": "Levittown excluded Black buyers through:",
+      "options": [
+        "Voluntary neighborhood agreements only",
+        "Explicit restrictive covenants (until Shelley v. Kraemer, 1948) and, after that, refusal to sell by the developer",
+        "Federal law",
+        "Local zoning boards"
+      ],
+      "answerIndex": 1,
+      "explanation": "Shelley v. Kraemer (1948) made racial covenants judicially unenforceable, but Levitt continued refusing sales — de facto segregation replaced de jure."
+    },
+    {
+      "question": "Michael Harrington's 'The Other America' (1962) directly influenced:",
+      "options": [
+        "Nixon's New Federalism",
+        "Kennedy and Johnson's War on Poverty programs, including the Economic Opportunity Act (1964)",
+        "Reagan's tax cuts",
+        "The Equal Rights Amendment"
+      ],
+      "answerIndex": 1,
+      "explanation": "Dwight Macdonald's New Yorker review put the book on Kennedy's desk. Sargent Shriver's OEO work traces to Harrington's diagnosis."
+    },
+    {
+      "question": "The Eisenhower-era 'New Look' defense policy relied on:",
+      "options": [
+        "Massive conventional armies in Europe",
+        "'Massive retaliation' via nuclear deterrence, which was cheaper than large standing forces",
+        "Preemptive nuclear strikes",
+        "UN peacekeepers"
+      ],
+      "answerIndex": 1,
+      "explanation": "Secretary of State John Foster Dulles articulated massive retaliation (1954). 'More bang for the buck' — but it escalated the nuclear arms race."
+    },
+    {
+      "question": "The 1956 Hungarian Revolution ended when:",
+      "options": [
+        "NATO forces intervened",
+        "Soviet tanks crushed the uprising while the US, despite Radio Free Europe encouragement, did nothing militarily",
+        "The UN negotiated a ceasefire",
+        "Khrushchev accepted Hungarian neutrality"
+      ],
+      "answerIndex": 1,
+      "explanation": "Eisenhower had no intention of risking WWIII over Hungary — exposing limits of 'rollback' rhetoric. Imre Nagy was executed in 1958."
+    },
+    {
+      "question": "The 1957 Civil Rights Act, the first since Reconstruction, primarily:",
+      "options": [
+        "Banned literacy tests",
+        "Created the Civil Rights Division at DOJ and the Civil Rights Commission but was heavily weakened by Southern senators — largely symbolic",
+        "Desegregated schools",
+        "Guaranteed voting rights"
+      ],
+      "answerIndex": 1,
+      "explanation": "LBJ (as Senate majority leader) shepherded a bill weak enough to pass. Actual enforcement teeth came in 1964/1965."
+    },
+    {
+      "question": "The Little Rock Nine's first attempt to enter Central High (September 1957) was blocked by:",
+      "options": [
+        "Local police only",
+        "The Arkansas National Guard, deployed by Gov. Orval Faubus over direct federal objection",
+        "US marshals",
+        "Student protesters alone"
+      ],
+      "answerIndex": 1,
+      "explanation": "Eisenhower federalized the Arkansas Guard and sent the 101st Airborne — first federal troops in the South on civil rights since Reconstruction."
+    },
+    {
+      "question": "Elvis Presley's 1956 national TV appearances symbolized which 1950s tension that Foner highlights?",
+      "options": [
+        "Union-management conflict",
+        "White appropriation of Black musical forms and anxieties over sexuality that exposed the decade's surface conformity",
+        "Pro-war vs. pacifist debates",
+        "States' rights disputes"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ed Sullivan filmed Elvis from the waist up. Foner reads this as a cultural fault line beneath 1950s consensus."
+    },
+    {
+      "question": "The 'kitchen' in Nixon's 1959 Kitchen Debate symbolized:",
+      "options": [
+        "A new domestic policy",
+        "A domestic, female-coded space reframed as proof of capitalist abundance — gendering the Cold War",
+        "Soviet agricultural failure",
+        "A planned economy"
+      ],
+      "answerIndex": 1,
+      "explanation": "Nixon's argument fused consumer goods, suburban domesticity, and Cold War superiority. The housewife ideology was central to the claim."
+    },
+    {
+      "question": "The term 'military-industrial complex' originated in:",
+      "options": [
+        "JFK's inaugural address",
+        "Eisenhower's January 17, 1961 Farewell Address",
+        "The Port Huron Statement",
+        "An article by C. Wright Mills"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ike's warning was striking coming from a former general — and came right as JFK's administration was expanding that very complex."
+    },
+    {
+      "question": "The Port Huron Statement (1962) critiqued:",
+      "options": [
+        "Only the Cold War",
+        "Racism, Cold War militarism, and 'the loneliness, estrangement, [and] isolation' of mass society — calling for 'participatory democracy'",
+        "Only capitalism",
+        "Only the Catholic Church"
+      ],
+      "answerIndex": 1,
+      "explanation": "SDS's founding document, drafted largely by Tom Hayden. Participatory democracy became a New Left watchword."
+    },
+    {
+      "question": "Which of the following BEST explains why the Bay of Pigs (1961) failed politically even beyond military defeat?",
+      "options": [
+        "UN condemnation",
+        "It discredited Kennedy, locked him into proving toughness — arguably contributing to escalations in Vietnam and the Cuban Missile Crisis posture",
+        "Soviet retaliation against Berlin",
+        "Cuban defection of US agents"
+      ],
+      "answerIndex": 1,
+      "explanation": "Kennedy privately blamed CIA and JCS but publicly took the fall. His later Vietnam decisions sit partly in Bay of Pigs's shadow."
+    },
+    {
+      "question": "The Cuban Missile Crisis was resolved, secretly, by:",
+      "options": [
+        "Khrushchev's unilateral retreat",
+        "A quid pro quo: Soviet withdrawal from Cuba in exchange for US pledge not to invade Cuba AND a secret removal of US Jupiter missiles from Turkey",
+        "UN inspectors",
+        "A Vatican-brokered deal"
+      ],
+      "answerIndex": 1,
+      "explanation": "The Turkey concession remained secret for decades. Publicly, Kennedy appeared to win through pure firmness — a distortion that shaped later crisis management."
+    },
+    {
+      "question": "Kennedy's 'Ich bin ein Berliner' speech (June 1963) came soon after:",
+      "options": [
+        "The fall of the Berlin Wall",
+        "The Berlin Wall's construction in August 1961 and the Cuban Missile Crisis — a moment of maximal Cold War tension",
+        "SALT I",
+        "Helsinki Accords"
+      ],
+      "answerIndex": 1,
+      "explanation": "Symbolic identification with West Berliners. JFK's assassination five months later froze the speech's imagery as iconic."
+    },
+    {
+      "question": "Which Warren Court decision established that indigent defendants have a right to counsel in felony cases?",
+      "options": [
+        "Miranda v. Arizona (1966)",
+        "Gideon v. Wainwright (1963)",
+        "Mapp v. Ohio (1961)",
+        "Escobedo v. Illinois (1964)"
+      ],
+      "answerIndex": 1,
+      "explanation": "Clarence Gideon hand-wrote his appeal from prison. Unanimous decision incorporated the 6th Amendment right against the states."
+    },
+    {
+      "question": "Mapp v. Ohio (1961) applied the exclusionary rule against:",
+      "options": [
+        "Federal agents only",
+        "State and local police — extending the 4th Amendment's remedy for illegal searches to the states",
+        "The CIA only",
+        "Private security firms"
+      ],
+      "answerIndex": 1,
+      "explanation": "Part of the Warren Court's 'selective incorporation' of Bill of Rights against states. Criminal-procedure revolution."
+    },
+    {
+      "question": "New York Times v. Sullivan (1964) set which standard for libel of public officials?",
+      "options": [
+        "Negligence standard",
+        "'Actual malice' — knowing falsity or reckless disregard for the truth",
+        "Strict liability",
+        "Intent to harm only"
+      ],
+      "answerIndex": 1,
+      "explanation": "Arose from an ad about Montgomery protests. Made aggressive civil-rights-era reporting legally safer. Still governs defamation law."
+    },
+    {
+      "question": "The Gulf of Tonkin Resolution (Aug 7, 1964) passed the Senate with:",
+      "options": [
+        "A unanimous vote",
+        "88-2 — only Sens. Wayne Morse (OR) and Ernest Gruening (AK) voted no",
+        "A filibuster",
+        "A divided 51-49"
+      ],
+      "answerIndex": 1,
+      "explanation": "Morse called it a 'historic mistake.' The lopsided vote haunted senators once Pentagon Papers revealed pre-drafting."
+    },
+    {
+      "question": "Operation Rolling Thunder's failure is usually explained by:",
+      "options": [
+        "Insufficient tonnage",
+        "North Vietnam's dispersed, pre-industrial economy absorbed bombing; Soviet/Chinese resupply continued; bombing hardened rather than softened resolve",
+        "Technological malfunctions",
+        "Weather alone"
+      ],
+      "answerIndex": 1,
+      "explanation": "Strategic bombing theory (from WWII) assumed an industrial target set that Vietnam didn't have. Over 3 years; more tonnage than WWII."
+    },
+    {
+      "question": "The Tet Offensive's key psychological moment in the US was the VC attack on:",
+      "options": [
+        "Danang airbase",
+        "The US Embassy compound in Saigon — briefly held, televised, incompatible with official optimism",
+        "The DMZ",
+        "Cam Ranh Bay"
+      ],
+      "answerIndex": 1,
+      "explanation": "Although quickly repelled, the embassy image — with a dead American in the courtyard — demolished 'light at the end of the tunnel.'"
+    },
+    {
+      "question": "Nixon's 'Silent Majority' speech framed the antiwar movement as:",
+      "options": [
+        "A reasonable voice to be heard",
+        "A vocal minority trying to impose its will through the streets — contrasted with patriotic Americans who wanted 'peace with honor'",
+        "A foreign-influenced conspiracy only",
+        "A natural extension of free speech"
+      ],
+      "answerIndex": 1,
+      "explanation": "November 3, 1969. Reframed dissent as illegitimate pressure on a democratic majority. Effective political move — support for war rose temporarily."
+    },
+    {
+      "question": "The 'plumbers' unit in the Nixon White House was initially assembled to:",
+      "options": [
+        "Plan the Vietnam drawdown",
+        "Plug leaks — especially after Daniel Ellsberg released the Pentagon Papers — by burglarizing his psychiatrist's office",
+        "Research Watergate",
+        "Monitor congressional staff"
+      ],
+      "answerIndex": 1,
+      "explanation": "Same operatives (Hunt, Liddy) later led the Watergate break-in. The Ellsberg burglary led to dismissal of charges against him."
+    },
+    {
+      "question": "The Huston Plan (1970) proposed:",
+      "options": [
+        "A national service program",
+        "Expanded domestic surveillance including burglary, mail opening, and electronic surveillance — approved then rescinded by Nixon at Hoover's objection",
+        "Drug decriminalization",
+        "UN reform"
+      ],
+      "answerIndex": 1,
+      "explanation": "Even Hoover found it too aggressive. Foreshadowed Watergate-era abuses of executive power."
+    },
+    {
+      "question": "The Pentagon Papers case (NYT v. US, 1971) established that prior restraint:",
+      "options": [
+        "Was unconstitutional in all cases",
+        "Carries a 'heavy presumption' against constitutionality — government must meet a very high bar to stop publication",
+        "Was routinely permitted for classified material",
+        "Required congressional approval"
+      ],
+      "answerIndex": 1,
+      "explanation": "6-3 decision. Not an absolute bar, but practically made prior restraint on newspapers almost impossible."
+    },
+    {
+      "question": "United States v. Nixon (1974) ruled that:",
+      "options": [
+        "Executive privilege is absolute",
+        "Executive privilege exists but yields to a specific, demonstrated need for evidence in a criminal prosecution",
+        "Presidents cannot be subpoenaed",
+        "Only Congress can discipline presidents"
+      ],
+      "answerIndex": 1,
+      "explanation": "Unanimous (8-0, Rehnquist recused). Nixon complied and resigned 16 days later. Cited again for Trump-era subpoenas."
+    },
+    {
+      "question": "The 'Nixon shock' of August 15, 1971 ended which element of the postwar economic order?",
+      "options": [
+        "The Marshall Plan",
+        "Bretton Woods dollar-gold convertibility — Nixon closed the 'gold window' and imposed wage/price controls",
+        "The UN charter",
+        "GATT"
+      ],
+      "answerIndex": 1,
+      "explanation": "Began floating exchange rates. Combined with oil shocks, transformed global finance and helped produce stagflation."
+    },
+    {
+      "question": "The 1973 oil embargo targeted the US specifically because of:",
+      "options": [
+        "CIA operations in Iran",
+        "US resupply of Israel during the Yom Kippur War (Nickel Grass airlift)",
+        "OPEC competition with US oil companies",
+        "US support for Saudi democratic reformers"
+      ],
+      "answerIndex": 1,
+      "explanation": "Arab OPEC retaliated against Israel's backers. Prices quadrupled over months; helped end the postwar boom."
+    },
+    {
+      "question": "The Church Committee (1975-76) revealed:",
+      "options": [
+        "IRS tax fraud",
+        "CIA assassination plots against foreign leaders and FBI COINTELPRO surveillance of US citizens including MLK",
+        "Only Watergate details",
+        "Federal Reserve corruption"
+      ],
+      "answerIndex": 1,
+      "explanation": "Led to FISA (1978) and permanent intelligence oversight committees. A major moment in post-Watergate accountability."
+    },
+    {
+      "question": "The 1975 Helsinki Final Act was significant because, beyond recognizing postwar European borders, it:",
+      "options": [
+        "Dissolved NATO",
+        "Included 'Basket Three' human-rights commitments that Eastern European dissidents (Charter 77, Solidarity) later used to pressure their regimes",
+        "Merged the two Germanies",
+        "Banned nuclear weapons"
+      ],
+      "answerIndex": 1,
+      "explanation": "Soviets cared mainly about border recognition. The human-rights pledge proved a delayed-fuse weapon against them."
+    },
+    {
+      "question": "Jimmy Carter's July 1979 speech is often called the 'Malaise Speech' even though he:",
+      "options": [
+        "Used the word repeatedly",
+        "Never actually used the word 'malaise' — the label was applied by critics to a speech that diagnosed a 'crisis of confidence'",
+        "Gave the speech twice",
+        "Withdrew it immediately"
+      ],
+      "answerIndex": 1,
+      "explanation": "Speech polled well initially. The cabinet reshuffle 2 days later undercut it — critics then branded it 'malaise' to wound Carter."
+    },
+    {
+      "question": "Carter's 1980 defeat is typically explained by which combination?",
+      "options": [
+        "Watergate and Ford pardon",
+        "Stagflation + Iran hostage crisis + conservative coalition (religious right + Reagan Democrats) mobilizing",
+        "The Iran-Iraq War only",
+        "Soviet invasion of Afghanistan alone"
+      ],
+      "answerIndex": 1,
+      "explanation": "The Moral Majority (1979) and religious right were newly mobilized. Hostages + economy created perception of American decline."
+    },
+    {
+      "question": "The 1981 Economic Recovery Tax Act cut top marginal rates from:",
+      "options": [
+        "50% to 28%",
+        "70% to 50% (with further cuts in 1986 to 28%)",
+        "90% to 50%",
+        "40% to 20%"
+      ],
+      "answerIndex": 1,
+      "explanation": "1981: 70→50. 1986 Tax Reform: 50→28. Biggest change in tax progressivity since the income tax was created."
+    },
+    {
+      "question": "The Laffer Curve argues tax cuts increase revenue when rates are:",
+      "options": [
+        "On wages specifically",
+        "On the 'prohibitive' side of the peak — above which further rate increases depress activity enough to lose revenue",
+        "Flat across income",
+        "Progressive"
+      ],
+      "answerIndex": 1,
+      "explanation": "A genuine economic claim at very high rates. Applied by Reaganites to any rate cut regardless of position on the curve."
+    },
+    {
+      "question": "The PATCO strike (1981) was notable because:",
+      "options": [
+        "PATCO had endorsed Carter",
+        "PATCO had endorsed Reagan; his firing of 11,000+ members thus signaled hostility to labor even from allied unions",
+        "The strike was illegal at every level",
+        "Controllers won higher wages"
+      ],
+      "answerIndex": 1,
+      "explanation": "PATCO was one of few unions to back Reagan in 1980. Firing them signaled the new era of anti-union governance."
+    },
+    {
+      "question": "Sandra Day O'Connor (1981) was historically significant because she was:",
+      "options": [
+        "The first Catholic justice",
+        "The first woman on the Supreme Court, a Reagan appointee whose later centrist votes often disappointed conservatives",
+        "The first Black woman justice",
+        "The youngest justice in history"
+      ],
+      "answerIndex": 1,
+      "explanation": "Reagan had promised during 1980 campaign. She was a swing vote on abortion (upheld Casey's 'undue burden' standard)."
+    },
+    {
+      "question": "The Reagan Doctrine, articulated by 1985, committed the US to:",
+      "options": [
+        "Containment only",
+        "Rolling back Soviet-aligned governments by supporting anti-communist insurgencies (Contras, Mujahideen, UNITA, RENAMO)",
+        "Direct military confrontation with the USSR",
+        "Disarmament"
+      ],
+      "answerIndex": 1,
+      "explanation": "Shift from containment to rollback. Critics noted the US armed brutal forces (some of which, like the Mujahideen, produced long-term blowback)."
+    },
+    {
+      "question": "The Boland Amendments (1982-84) prohibited:",
+      "options": [
+        "Aid to El Salvador",
+        "US intelligence agencies from spending funds to overthrow the Nicaraguan government — the Contra aid restriction that Iran-Contra violated",
+        "Nuclear cooperation with Israel",
+        "Arms sales to Iran"
+      ],
+      "answerIndex": 1,
+      "explanation": "A Democratic Congress tried to rein in Reagan's Contra policy. NSC staff (outside CIA) rerouted funding — Oliver North's scheme."
+    },
+    {
+      "question": "Archbishop Oscar Romero (El Salvador) was assassinated in 1980 while:",
+      "options": [
+        "Addressing the UN",
+        "Celebrating mass, by a right-wing death squad linked to US-backed Salvadoran military figures",
+        "Meeting Castro",
+        "Leading a protest march"
+      ],
+      "answerIndex": 1,
+      "explanation": "Romero had denounced state violence and appealed to Carter to halt US military aid. His death prefigured the Salvadoran civil war's brutality."
+    },
+    {
+      "question": "The Sandinistas (FSLN) came to power in Nicaragua in:",
+      "options": [
+        "1972, ousting a communist regime",
+        "1979, overthrowing the Somoza dictatorship — which the US had backed for decades",
+        "1983, with Cuban troops",
+        "1985, via election"
+      ],
+      "answerIndex": 1,
+      "explanation": "Somoza fled after prolonged revolution. Reagan later backed Contras to overthrow the Sandinistas."
+    },
+    {
+      "question": "The Iran-Contra Affair was first exposed in:",
+      "options": [
+        "A Washington Post story",
+        "Lebanese magazine Ash-Shiraa (November 1986) reporting US arms sales to Iran",
+        "A congressional hearing",
+        "A CIA leak"
+      ],
+      "answerIndex": 1,
+      "explanation": "Once the arms-for-hostages story broke, Attorney General Meese discovered the diversion-to-Contras within days — the scandal metastasized."
+    },
+    {
+      "question": "Oliver North's televised 1987 testimony reframed him publicly as:",
+      "options": [
+        "A criminal",
+        "A patriotic soldier 'just following orders' — his Marine uniform and folksy demeanor turned him into a right-wing hero",
+        "A Soviet agent",
+        "A conscientious objector"
+      ],
+      "answerIndex": 1,
+      "explanation": "His charisma complicated accountability. Conviction later vacated on technicality (immunized testimony)."
+    },
+    {
+      "question": "The 1986 Anti-Drug Abuse Act's 100:1 disparity meant:",
+      "options": [
+        "Crack triggered the same mandatory minimum as 100× the amount of powder cocaine",
+        "Crack was decriminalized below 100g",
+        "Powder was punished 100× more heavily",
+        "100 grams of crack triggered 1 year"
+      ],
+      "answerIndex": 0,
+      "explanation": "5g crack = 5yr mandatory minimum; 500g powder for the same. Racially stratified in enforcement. Reduced to 18:1 in 2010 (Fair Sentencing Act)."
+    },
+    {
+      "question": "Michelle Alexander's 'The New Jim Crow' (2010) argues:",
+      "options": [
+        "Drug policy is race-neutral and fair",
+        "Mass incarceration functions as a racial caste system — 'colorblind' on paper but producing outcomes analogous to pre-1965 segregation",
+        "Jim Crow never ended legally",
+        "Reagan personally designed the War on Drugs"
+      ],
+      "answerIndex": 1,
+      "explanation": "Felony status bars voting, jury service, housing, employment — replicating effects of earlier disenfranchisement."
+    },
+    {
+      "question": "Reagan's response to AIDS was notable for:",
+      "options": [
+        "Immediate declaration of a national emergency",
+        "Years of public silence — his first substantive public remarks came in 1987 after tens of thousands of deaths",
+        "Massive federal research funding starting 1982",
+        "Quarantine of those infected"
+      ],
+      "answerIndex": 1,
+      "explanation": "White House press briefings joked about the 'gay plague' in 1982. ACT UP (founded 1987) emerged in protest."
+    },
+    {
+      "question": "Which best describes 'Reaganomics' results by the end of Reagan's term?",
+      "options": [
+        "Balanced budgets, declining inequality",
+        "Long expansion and falling inflation, BUT tripled national debt and significantly widened income inequality",
+        "High inflation, low employment",
+        "Falling debt, rising inequality"
+      ],
+      "answerIndex": 1,
+      "explanation": "Volcker's earlier rate hikes broke inflation; Reagan gets political credit. Debt rose from $908B to $2.87T. Top 1% share of income rose sharply."
+    },
+    {
+      "question": "The Iran hostages were released at:",
+      "options": [
+        "Carter's final speech",
+        "Minutes after Reagan's January 20, 1981 inauguration — a deliberately timed humiliation of Carter",
+        "Midnight January 21, 1981",
+        "During the 1980 election"
+      ],
+      "answerIndex": 1,
+      "explanation": "Agreement (Algiers Accords) was negotiated by Carter but Iran delayed release to humiliate him. Fueled later 'October Surprise' conspiracy theories."
+    },
+    {
+      "question": "Phyllis Schlafly's STOP ERA campaign succeeded by arguing the ERA would:",
+      "options": [
+        "Increase abortion rights",
+        "End traditional gender privileges (alimony, exemption from draft, single-sex facilities) and harm housewives specifically",
+        "Require same-sex marriage immediately",
+        "Eliminate Social Security"
+      ],
+      "answerIndex": 1,
+      "explanation": "She reframed the ERA as a threat to women who valued traditional roles. Successfully blocked ratification in remaining states."
+    },
+    {
+      "question": "Jerry Falwell's Moral Majority (1979) differed from earlier evangelical politics by:",
+      "options": [
+        "Avoiding electoral politics",
+        "Explicitly fusing evangelical identity with Republican voter mobilization — treating political engagement as a religious duty",
+        "Opposing Reagan",
+        "Endorsing abortion rights"
+      ],
+      "answerIndex": 1,
+      "explanation": "Falwell, Paul Weyrich, Richard Viguerie built the infrastructure. The trigger, per Randall Balmer, was IRS action against segregated Christian academies."
+    },
+    {
+      "question": "The 'Solidarity' movement originated in:",
+      "options": [
+        "East Germany, 1989",
+        "Poland, 1980, as an independent trade union at the Gdańsk shipyards led by Lech Wałęsa",
+        "Czechoslovakia, 1968",
+        "Hungary, 1956"
+      ],
+      "answerIndex": 1,
+      "explanation": "Forced briefly underground by martial law (1981). Re-emerged to win partial 1989 elections — catalyst for the Eastern European collapse."
+    },
+    {
+      "question": "The 1986 Chernobyl disaster is often cited as contributing to Soviet collapse because it:",
+      "options": [
+        "Killed Gorbachev's family",
+        "Exposed Soviet institutional decay, accelerated Gorbachev's commitment to Glasnost, and drained resources and legitimacy",
+        "Triggered NATO intervention",
+        "Caused the 1991 coup"
+      ],
+      "answerIndex": 1,
+      "explanation": "Gorbachev later cited Chernobyl as a turning point in his commitment to openness — secrecy had made disaster worse."
+    },
+    {
+      "question": "Gorbachev's decision NOT to intervene militarily in Eastern Europe in 1989 is known as:",
+      "options": [
+        "The Brezhnev Doctrine",
+        "The Sinatra Doctrine — letting satellite states do it 'their way'",
+        "The Truman Doctrine",
+        "The Monroe Doctrine"
+      ],
+      "answerIndex": 1,
+      "explanation": "Foreign Ministry spokesman Gennadi Gerasimov coined it. Reversed the Brezhnev Doctrine (1968) that had justified crushing the Prague Spring."
+    },
+    {
+      "question": "The Berlin Wall fell on November 9, 1989 primarily because of:",
+      "options": [
+        "US military pressure",
+        "An East German press conference where Günter Schabowski garbled travel-reform guidance, leading crowds to surge the checkpoints — guards opened gates without orders",
+        "A UN resolution",
+        "Gorbachev's direct order"
+      ],
+      "answerIndex": 1,
+      "explanation": "The collapse was partly accidental. Decisions made at individual checkpoints (especially Bornholmer Straße) cascaded outward."
+    },
+    {
+      "question": "The August 1991 Soviet coup against Gorbachev failed because:",
+      "options": [
+        "Gorbachev crushed it personally",
+        "Boris Yeltsin rallied public resistance from a tank outside the Russian parliament; military units refused to fire on civilians",
+        "Chinese intervention",
+        "UN sanctions"
+      ],
+      "answerIndex": 1,
+      "explanation": "3 days of standoff. Yeltsin emerged as the new center of power; Gorbachev returned weakened. USSR dissolved months later."
+    },
+    {
+      "question": "Which best captures why 'Foner's Seagull 7th edition' treats the 1980s as contradictory?",
+      "options": [
+        "Reagan was both popular and unpopular",
+        "Foreign-policy success (end of Cold War) coexisted with domestic inequality, deregulation costs (S&L crisis, AIDS delay), and a politicized turn that polarized America",
+        "Reagan tripled the economy",
+        "The Cold War was renewed"
+      ],
+      "answerIndex": 1,
+      "explanation": "Foner frames the period as a political realignment with lasting domestic costs alongside the Cold War endgame."
+    },
+    {
+      "question": "Which Cold War doctrine did the 1961 Bay of Pigs fiasco most directly violate?",
+      "options": [
+        "Containment",
+        "Eisenhower's injunction against 'military-industrial complex' overreach",
+        "Kennan's warning that containment remain defensive rather than seeking regime change",
+        "Marshall Plan principles"
+      ],
+      "answerIndex": 2,
+      "explanation": "Rollback operations were exactly what Kennan cautioned against. Bay of Pigs was a textbook regime-change failure."
+    },
+    {
+      "question": "Ralph Ellison's 'Invisible Man' (1952) captured which postwar tension that Foner emphasizes?",
+      "options": [
+        "Labor unrest",
+        "Black Americans' double consciousness — simultaneously celebrated as symbol of 'free world' values and denied full citizenship",
+        "Red Scare paranoia",
+        "Anti-immigration sentiment"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ellison made invisibility the central metaphor. Foner uses him to link civil rights to the broader postwar contradiction."
+    },
+    {
+      "question": "Betty Friedan was influenced, per her own account, by which source method?",
+      "options": [
+        "Sociological surveys of men",
+        "Letters she received from Smith College classmates describing domestic dissatisfaction — the 'problem that has no name' was crowdsourced",
+        "Papal encyclicals",
+        "USSR propaganda"
+      ],
+      "answerIndex": 1,
+      "explanation": "Feminine Mystique grew from reunion questionnaires. Later critics noted her focus on educated, white, middle-class women's experience."
+    },
+    {
+      "question": "SNCC's shift toward Black Power after 1966 was most closely associated with:",
+      "options": [
+        "John Lewis",
+        "Stokely Carmichael (Kwame Ture), who popularized 'Black Power' during the Meredith March",
+        "Ella Baker",
+        "Julian Bond"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lewis was displaced as chair. Carmichael's slogan marked a shift from integrationist to nationalist framing."
+    },
+    {
+      "question": "Malcolm X's post-1964 position most directly contradicted which of his earlier views?",
+      "options": [
+        "Nonviolence",
+        "Absolute separation of Blacks and whites — after Mecca, he argued for multiracial human-rights coalitions",
+        "Support for Black business",
+        "Critique of integration"
+      ],
+      "answerIndex": 1,
+      "explanation": "His hajj exposed him to multiracial Islam. He broke with the Nation of Islam; founded OAAU. Assassinated February 1965."
+    },
+    {
+      "question": "The 1965 Watts uprising followed which triggering incident?",
+      "options": [
+        "An assassination",
+        "A traffic stop of Marquette Frye by the California Highway Patrol that escalated amid longstanding tensions over police conduct and inequality",
+        "A school closure",
+        "A factory closing"
+      ],
+      "answerIndex": 1,
+      "explanation": "34 dead, 1000+ injured. Exposed how 1964 Civil Rights Act + 1965 Voting Rights Act had not addressed Northern urban poverty and policing."
+    },
+    {
+      "question": "The Kerner Commission (1968) famously concluded:",
+      "options": [
+        "Communists were behind urban unrest",
+        "America was moving 'toward two societies, one black, one white — separate and unequal' — blaming white racism and segregation",
+        "Riots were spontaneous",
+        "Federal jobs programs were unnecessary"
+      ],
+      "answerIndex": 1,
+      "explanation": "LBJ created the commission after 1967 riots (Detroit, Newark). He shelved its recommendations — the report embarrassed his Great Society claims."
+    },
+    {
+      "question": "Gloria Steinem and Ms. magazine (launched 1972) represented which branch of 1970s feminism?",
+      "options": [
+        "Radical separatist feminism",
+        "Liberal feminism emphasizing reform through law, media, and workplace equality",
+        "Marxist feminism",
+        "Ecofeminism"
+      ],
+      "answerIndex": 1,
+      "explanation": "Liberal feminism sought reform within existing institutions. Distinguished from radical and socialist strands critiquing patriarchy more fundamentally."
+    },
+    {
+      "question": "The 1973 Roe v. Wade trimester framework was largely replaced by which standard after 1992?",
+      "options": [
+        "Strict scrutiny",
+        "The 'undue burden' test from Planned Parenthood v. Casey (1992), written by O'Connor, Kennedy, Souter",
+        "Rational basis review",
+        "Complete prohibition"
+      ],
+      "answerIndex": 1,
+      "explanation": "Casey preserved Roe's core but allowed more regulation. Dobbs (2022) later overturned both."
+    },
+    {
+      "question": "Which best explains the 'Reagan Democrats'?",
+      "options": [
+        "Liberal ideologues",
+        "Traditionally Democratic working-class and ethnic white voters — especially in the industrial Midwest — who swung to Reagan over cultural issues, taxes, and national strength",
+        "Black voters",
+        "Hispanic voters"
+      ],
+      "answerIndex": 1,
+      "explanation": "Stanley Greenberg's Macomb County, Michigan study documented the realignment. Racial resentment and economic anxiety both present."
+    },
+    {
+      "question": "Reagan's 1985 Bitburg controversy involved:",
+      "options": [
+        "A summit with Gorbachev",
+        "Laying a wreath at a German military cemetery that included Waffen-SS graves, sparking backlash from Jewish groups and WWII veterans",
+        "A NATO exercise",
+        "An assassination attempt"
+      ],
+      "answerIndex": 1,
+      "explanation": "Reagan refused to cancel after learning of SS graves, then added Bergen-Belsen. Elie Wiesel publicly pleaded with him to reconsider."
+    },
+    {
+      "question": "Which best describes the difference between Perestroika and Glasnost?",
+      "options": [
+        "Perestroika was foreign policy; Glasnost was economic reform",
+        "Perestroika restructured the economy toward limited market mechanisms; Glasnost opened political/cultural life (press freedom, criticism, dissidents released)",
+        "They were identical",
+        "Perestroika was Gorbachev's; Glasnost was Yeltsin's"
+      ],
+      "answerIndex": 1,
+      "explanation": "Both Gorbachev's. Unintended effect: openness revealed the system's failures, accelerating its delegitimization."
+    },
+    {
+      "question": "The 1987 INF Treaty was signed despite conservative opposition from:",
+      "options": [
+        "All of NATO",
+        "Figures including Richard Perle, Howard Phillips, Phyllis Schlafly — who called Reagan 'a useful idiot for Kremlin propaganda'",
+        "Gorbachev himself",
+        "Margaret Thatcher"
+      ],
+      "answerIndex": 1,
+      "explanation": "The right felt betrayed by Reagan's summitry. Reagan's response: 'I know enough about communism.' Thatcher, notably, backed the treaty."
+    },
+    {
+      "question": "Reagan's Strategic Defense Initiative (SDI) violated which 1972 treaty?",
+      "options": [
+        "SALT II",
+        "The Anti-Ballistic Missile (ABM) Treaty, which restricted strategic missile defense",
+        "NPT",
+        "INF"
+      ],
+      "answerIndex": 1,
+      "explanation": "Reagan reinterpreted ABM rather than withdraw. US formally withdrew in 2002 under Bush."
+    },
+    {
+      "question": "Which best describes the 1988 Dukakis-Bush race's 'Willie Horton' ad?",
+      "options": [
+        "A Democratic positive ad",
+        "A Republican ad attacking Dukakis's furlough program by highlighting a Black convict who committed violent crimes while on furlough — widely seen as racially coded",
+        "A bipartisan PSA",
+        "A civil-rights commercial"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lee Atwater's strategy. Hugely effective politically. Became shorthand for racialized campaign tactics."
+    },
+    {
+      "question": "The 1981 air traffic control strike's long-term legacy included:",
+      "options": [
+        "Stronger unions",
+        "A template that other employers followed — demonstrating it was safe to permanently replace striking workers, contributing to union density's decline",
+        "Air traffic privatization",
+        "Creation of TSA"
+      ],
+      "answerIndex": 1,
+      "explanation": "Private-sector strike activity dropped sharply after 1981. Union membership in the private sector had been ~20%; by 2000 it was around 9%."
+    },
+    {
+      "question": "Which 1978 Supreme Court case, concerning affirmative action in medical school admissions, produced a fractured ruling?",
+      "options": [
+        "Grutter v. Bollinger",
+        "Regents of the University of California v. Bakke — Powell's controlling opinion allowed race as one factor but struck down fixed quotas",
+        "Brown v. Board",
+        "Adarand v. Pena"
+      ],
+      "answerIndex": 1,
+      "explanation": "Foreshadowed decades of affirmative-action litigation. Quotas out, 'diversity' framework in — until SFFA v. Harvard (2023)."
+    },
+    {
+      "question": "The 1983 KAL 007 shootdown by the USSR reinforced which Reagan framing?",
+      "options": [
+        "Diplomatic opportunity with Moscow",
+        "The 'Evil Empire' characterization — a Korean civilian airliner was shot down with 269 aboard, including a US congressman",
+        "Nuclear cooperation",
+        "Détente's promise"
+      ],
+      "answerIndex": 1,
+      "explanation": "Reagan's March 1983 'Evil Empire' speech gained new resonance after September's shootdown. Hardened Soviet image just as SDI was announced."
+    },
+    {
+      "question": "The 1986 Reykjavik Summit nearly produced:",
+      "options": [
+        "A US-Soviet nuclear war",
+        "An agreement to eliminate all nuclear weapons — collapsed over SDI when Reagan refused to confine it to the laboratory",
+        "A NATO dissolution pact",
+        "A merger of Germanies"
+      ],
+      "answerIndex": 1,
+      "explanation": "Closer than most know. Gorbachev later cited Reykjavik as the turning point; INF Treaty followed 14 months later."
+    },
+    {
+      "question": "Which best explains why Gorbachev's reforms accelerated rather than prevented collapse?",
+      "options": [
+        "They were too slow",
+        "Glasnost delegitimized the regime by exposing its history and failures; Perestroika disrupted the planned economy without installing a functional market; nationalist movements in republics exploited openness — the system lost coherence faster than reform could replace it",
+        "They had Western funding",
+        "They copied Chinese reforms"
+      ],
+      "answerIndex": 1,
+      "explanation": "Contrast with Deng Xiaoping's China: economic reform without political opening. Gorbachev did the opposite; outcome: Soviet collapse."
     }
+
 
   ],
   "sources": [
