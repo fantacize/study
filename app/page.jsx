@@ -501,22 +501,24 @@ export default function Page() {
   }
 
   function nextReview() {
-    // On advancing, if last answer was correct, remove from missedQuestions now
-    let pool = missedQuizItems;
-    if (reviewAnswered && reviewItem && reviewSelectedIndex === reviewItem.answerIndex) {
+    if (!missedQuizItems.length) return;
+    const wasCorrect =
+      reviewAnswered && reviewItem && reviewSelectedIndex === reviewItem.answerIndex;
+
+    if (wasCorrect) {
+      // Remove this question from missed list. Keep same index — shifted list exposes next item.
       const cleared = reviewItem.question;
       setMissedQuestions((c) => c.filter((q) => q !== cleared));
-      pool = missedQuizItems.filter((it) => it.question !== cleared);
+      const newLen = missedQuizItems.length - 1;
+      setReviewAnswered(false);
+      setReviewSelectedIndex(null);
+      setReviewIndex((c) => (newLen <= 0 ? 0 : c >= newLen ? 0 : c));
+    } else {
+      // Wrong or unanswered → advance like normal
+      setReviewAnswered(false);
+      setReviewSelectedIndex(null);
+      setReviewIndex((c) => (c + 1) % missedQuizItems.length);
     }
-    setReviewAnswered(false);
-    setReviewSelectedIndex(null);
-    if (!pool.length) {
-      setReviewIndex(0);
-      return;
-    }
-    // Stay at same index if possible (since current item was removed, same index = next item)
-    // Otherwise wrap
-    setReviewIndex((c) => (c >= pool.length ? 0 : c));
   }
 
   function prevReview() {
