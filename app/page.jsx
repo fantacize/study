@@ -135,7 +135,7 @@ export default function Page() {
   const [confidenceStats, setConfidenceStats] = useLocalStorage("study-confidence", {});
 
   // Quiz
-  const [quizIndex, setQuizIndex] = useState(0);
+  const [quizIndex, setQuizIndex] = useLocalStorage("study-quiz-index", 0);
   const [quizAnswered, setQuizAnswered] = useState(false);
   const [quizSelectedIndex, setQuizSelectedIndex] = useState(null);
   const [quizResults, setQuizResults] = useLocalStorage("study-quiz-results", []);
@@ -497,16 +497,33 @@ export default function Page() {
     if (!reviewItem || reviewAnswered) return;
     setReviewSelectedIndex(index);
     setReviewAnswered(true);
-    if (index === reviewItem.answerIndex) {
-      setMissedQuestions((c) => c.filter((q) => q !== reviewItem.question));
-    }
+    // Defer removal from missedQuestions to nextReview so current item doesn't shift
   }
 
   function nextReview() {
+    // On advancing, if last answer was correct, remove from missedQuestions now
+    let pool = missedQuizItems;
+    if (reviewAnswered && reviewItem && reviewSelectedIndex === reviewItem.answerIndex) {
+      const cleared = reviewItem.question;
+      setMissedQuestions((c) => c.filter((q) => q !== cleared));
+      pool = missedQuizItems.filter((it) => it.question !== cleared);
+    }
+    setReviewAnswered(false);
+    setReviewSelectedIndex(null);
+    if (!pool.length) {
+      setReviewIndex(0);
+      return;
+    }
+    // Stay at same index if possible (since current item was removed, same index = next item)
+    // Otherwise wrap
+    setReviewIndex((c) => (c >= pool.length ? 0 : c));
+  }
+
+  function prevReview() {
     if (!missedQuizItems.length) return;
     setReviewAnswered(false);
     setReviewSelectedIndex(null);
-    setReviewIndex((c) => (c + 1) % missedQuizItems.length);
+    setReviewIndex((c) => (c - 1 + missedQuizItems.length) % missedQuizItems.length);
   }
 
   function updateDraft(value) {
@@ -662,6 +679,7 @@ export default function Page() {
 
       if (mode === "review-mistakes") {
         if (e.key === "ArrowRight" || e.key === "ArrowDown") { e.preventDefault(); nextReview(); }
+        if (e.key === "ArrowLeft" || e.key === "ArrowUp") { e.preventDefault(); prevReview(); }
         if (e.key >= "1" && e.key <= "4" && reviewItem && !reviewAnswered) {
           answerReview(parseInt(e.key) - 1);
         }
@@ -1971,7 +1989,8 @@ export default function Page() {
                 </CardContent>
               </Card>
               <div className="flex gap-2">
-                <Button size="sm" onClick={nextReview}>Next mistake</Button>
+                <Button variant="outline" size="sm" onClick={prevReview}>← Previous</Button>
+                <Button size="sm" onClick={nextReview}>Next →</Button>
               </div>
             </>
           )}
