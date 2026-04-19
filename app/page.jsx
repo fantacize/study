@@ -493,8 +493,10 @@ export default function Page() {
     }
   }
 
-  function answerReview(index) {
+  function answerReview(index, expectedQuestion) {
     if (!reviewItem || reviewAnswered) return;
+    // Guard against clicks landing on a stale/remounted button after state change
+    if (expectedQuestion && reviewItem.question !== expectedQuestion) return;
     setReviewSelectedIndex(index);
     setReviewAnswered(true);
     // Defer removal from missedQuestions to nextReview so current item doesn't shift
@@ -683,7 +685,7 @@ export default function Page() {
         if (e.key === "ArrowRight" || e.key === "ArrowDown") { e.preventDefault(); nextReview(); }
         if (e.key === "ArrowLeft" || e.key === "ArrowUp") { e.preventDefault(); prevReview(); }
         if (e.key >= "1" && e.key <= "4" && reviewItem && !reviewAnswered) {
-          answerReview(parseInt(e.key) - 1);
+          answerReview(parseInt(e.key) - 1, reviewItem.question);
         }
       }
 
@@ -1978,7 +1980,7 @@ export default function Page() {
                             isWrong && "border-red-500 bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-400",
                             reviewAnswered && "pointer-events-none"
                           )}
-                          onClick={() => answerReview(i)} disabled={reviewAnswered}
+                          onClick={() => answerReview(i, reviewItem.question)} disabled={reviewAnswered}
                         >
                           <span className="mr-2 text-muted-foreground">{i + 1}.</span>{option}
                         </Button>
