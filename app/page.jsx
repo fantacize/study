@@ -451,6 +451,14 @@ export default function Page() {
     if (timedMode) timer.start(45, () => handleQuizTimeout());
   }
 
+  function prevQuiz() {
+    if (!filteredQuiz.length) return;
+    setQuizAnswered(false);
+    setQuizSelectedIndex(null);
+    setQuizIndex((c) => (c - 1 + filteredQuiz.length) % filteredQuiz.length);
+    if (timedMode) timer.start(45, () => handleQuizTimeout());
+  }
+
   const handleQuizTimeout = useCallback(() => {
     if (!quizAnswered && quizItem) {
       setQuizAnswered(true);
@@ -643,6 +651,7 @@ export default function Page() {
 
       if (mode === "quiz") {
         if (e.key === "ArrowRight" || e.key === "ArrowDown") { e.preventDefault(); nextQuiz(); }
+        if (e.key === "ArrowLeft" || e.key === "ArrowUp") { e.preventDefault(); prevQuiz(); }
         if (e.key >= "1" && e.key <= "4" && quizItem && !quizAnswered && shuffledQuizOptions) {
           const pressedIdx = parseInt(e.key) - 1;
           if (pressedIdx < shuffledQuizOptions.order.length) {
@@ -1729,7 +1738,8 @@ export default function Page() {
           </Card>
 
           <div className="flex gap-2">
-            <Button size="sm" onClick={nextQuiz}>Next question</Button>
+            <Button variant="outline" size="sm" onClick={prevQuiz}>← Previous</Button>
+            <Button size="sm" onClick={nextQuiz}>Next →</Button>
             <Button variant="outline" size="sm" onClick={resetQuiz}>Reset</Button>
           </div>
 
