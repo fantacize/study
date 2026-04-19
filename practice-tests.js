@@ -2725,6 +2725,350 @@ export const questionPool = {
         "Pattern: anti-drug rhetoric at home while covert allies abroad involved in drug trade",
         "Michelle Alexander's 'New Jim Crow' frames the domestic side as racial caste"
       ]
+    }    ,
+    {
+      "prompt": "Compare the views of George Kennan (Long Telegram / X Article) and Walter Lippmann on containment. What did each get right about the long Cold War, and what did each miss?",
+      "rubric": [
+        "Kennan: Soviet hostility was structural (ideology + Russian insecurity), not negotiable; recommended 'patient but firm' containment primarily through political and economic means",
+        "Lippmann: coined 'Cold War'; called containment a 'strategic monstrosity' — reactive, unlimited, forced US to defend peripheral areas and support any anti-communist regime",
+        "Kennan got it right that USSR had internal contradictions that would cause collapse (1991)",
+        "Lippmann got it right about overextension — Vietnam was exactly the disaster he predicted",
+        "Kennan later agreed his recommendation was distorted into NSC-68's militarized containment",
+        "Lippmann missed that a Germany settlement alone wasn't possible in 1947 — Stalin wanted satellite buffer zones",
+        "Together: the Kennan-Lippmann debate shows containment was contested from the start, not a consensus"
+      ]
+    },
+    {
+      "prompt": "Explain the domestic consequences of the Cold War on American democracy between 1947 and 1954. How did foreign policy reshape civil liberties, culture, and everyday life?",
+      "rubric": [
+        "HUAC and the Hollywood Ten (1947) — First Amendment overridden; blacklist hit 300+ people",
+        "Federal Loyalty Program (1947, Truman EO 9835) — investigated 4 million employees",
+        "McCarthyism (1950-54) — baseless accusations ruined careers; ended when Welch asked 'have you no sense of decency'",
+        "McCarran Internal Security Act (1950), Smith Act prosecutions of CP leaders",
+        "Rosenberg execution (1953) — Ethel's case especially weak (Greenglass admitted lying in 2001)",
+        "Duck and Cover, bomb shelters, conformity pressure — kids grew up with nuclear anxiety",
+        "Civil rights leaders smeared as communists; FBI (Hoover) surveilled MLK for decades",
+        "Paradox: a war waged for 'freedom' required Americans to give up significant civil liberties"
+      ]
+    },
+    {
+      "prompt": "Assess the Korean War as a test case for containment. What did it establish, and what did it cost?",
+      "rubric": [
+        "First 'hot' war of Cold War — proved containment could mean American soldiers dying",
+        "Truman called it a 'police action' under UN authority (USSR boycotting Security Council)",
+        "MacArthur's Inchon landing (Sep 1950) succeeded; his drive to Yalu triggered massive Chinese intervention",
+        "Truman fired MacArthur (April 1951) for wanting nuclear weapons and defying civilian control — established limited-war doctrine",
+        "Ended in stalemate at the 38th parallel — DMZ remains most militarized border today",
+        "Cost: 37,000 US dead, 2-3 million Korean and Chinese dead, no peace treaty (still technically at war)",
+        "Defense spending tripled and never returned to pre-war levels; validated NSC-68",
+        "Established pattern for later Cold War interventions including Vietnam"
+      ]
+    },
+    {
+      "prompt": "Why is the 1950s 'affluent society' an incomplete portrait of the decade? Name at least four groups or phenomena excluded from the prosperity narrative.",
+      "rubric": [
+        "Racial exclusion from suburbia: Levittown whites-only; redlining; GI Bill / FHA favored white borrowers",
+        "40-50 million in poverty (Harrington's The Other America, 1962) — invisible to suburban middle class",
+        "Women: pushed back into domestic roles after WWII; Friedan's 'problem that has no name'",
+        "Beat Generation (Ginsberg, Kerouac, Burroughs) rejected consumer conformity",
+        "Black Americans still under Jim Crow (legally until Brown, de facto beyond)",
+        "Galbraith: private wealth existed beside public squalor — underfunded infrastructure, schools",
+        "Native Americans, Latinos, migrant workers largely absent from the 'affluent society' picture",
+        "LGBTQ+ Americans persecuted (Lavender Scare paralleled Red Scare)",
+        "Conclusion: the decade was genuinely prosperous for many AND exclusionary/coercive for many — both are true"
+      ]
+    },
+    {
+      "prompt": "Trace the legal, tactical, and organizational evolution of the civil rights movement from Plessy v. Ferguson (1896) through the March on Washington (1963). Identify at least three turning points and their significance.",
+      "rubric": [
+        "Plessy (1896): 'separate but equal' legalized Jim Crow; Harlan's lone dissent — 'Constitution is color-blind'",
+        "NAACP LDF (Marshall) built precedent incrementally: Sweatt, McLaurin, Sipuel in grad schools",
+        "Brown I (1954): 'separate educational facilities are inherently unequal'",
+        "Brown II (1955): 'all deliberate speed' enabled massive resistance",
+        "Emmett Till (1955): open casket + Jet photos galvanized movement",
+        "Montgomery Bus Boycott (1955-56): Rosa Parks (NAACP secretary, trained), 381 days; made MLK national figure",
+        "Little Rock (1957): Eisenhower sent 101st Airborne; first federal troops for Black rights since Reconstruction",
+        "Greensboro sit-ins (1960) → SNCC; Freedom Rides (1961) tested Boynton ruling",
+        "Birmingham (1963): Bull Connor's violence on TV; King's Letter from Birmingham Jail",
+        "March on Washington (Aug 1963): 'I Have a Dream'; ~250k attendees; set stage for Civil Rights Act 1964",
+        "Pattern: combination of legal strategy + direct action + TV coverage — no single tactic was sufficient"
+      ]
+    },
+    {
+      "prompt": "Reconstruct King's 'Letter from Birmingham Jail.' Identify all five of his major arguments and explain which philosophical or religious sources he uses to support them.",
+      "rubric": [
+        "1. 'Outsider' rebuttal: 'injustice anywhere is a threat to justice everywhere'; 'network of mutuality'; Paul/prophets traveled beyond home",
+        "2. Four steps of nonviolent campaign: facts → negotiation → self-purification → direct action; Birmingham activists completed all four; Socratic 'creative tension'",
+        "3. Case against waiting: 340 years; 'wait has almost always meant never'; litany of suffering (Funtown, 'nobodiness')",
+        "4. Just vs. unjust laws: Augustine ('unjust law is no law at all'), Aquinas (natural law), Buber (I-thou vs I-it), Tillich (sin is separation); break openly, lovingly, accept penalty",
+        "5. White moderate critique: more devoted to 'order' than justice; 'negative peace' vs 'positive peace'; Niebuhr on groups needing pressure",
+        "6. Extremism reframed: Jesus, Paul, Luther, Lincoln, Jefferson were all 'extremists' — question is for what",
+        "Audience: eight moderate clergymen who called protests 'unwise and untimely' — not open racists; that's why the argument lands where it does"
+      ]
+    },
+    {
+      "prompt": "Explain the Vietnam War as a clash between two fundamentally incompatible frameworks: the US Cold War lens (containment, domino theory) and the Vietnamese national-liberation lens. Use specific evidence.",
+      "rubric": [
+        "US frame: Kennan's containment + Eisenhower's Domino Theory (1954) — any loss meant a chain reaction",
+        "US paid 78% of French war costs by 1954; prioritized European alliance over decolonization",
+        "Ho Chi Minh quoted the US Declaration of Independence in his 1945 declaration — appeal to US founding ideals",
+        "Ho's Viet Minh fought Japan with US OSS support during WWII",
+        "Geneva Accords (1954) promised reunification elections; Diem + Eisenhower blocked them (Ho would win 80%)",
+        "NLF / Viet Cong included nationalists and peasants angered by Diem — not all doctrinaire communists",
+        "Americans never solved the question: was this a civil war, a liberation war, or a proxy Cold War battle? They treated it as the third; it was more the first two",
+        "Consequence: 58,000 US dead, 2M+ Vietnamese, Cambodia destabilized (Khmer Rouge), Vietnam Syndrome"
+      ]
+    },
+    {
+      "prompt": "Why did the Tet Offensive (January 1968) become a strategic defeat for the US despite being a tactical loss for the communist side? What does that reveal about how modern wars are fought and decided?",
+      "rubric": [
+        "Tactically: NVA/VC lost ~45,000 troops; failed to hold any major city; VC effectively destroyed",
+        "Strategically: simultaneous attacks on 100+ cities including US Embassy shattered 'light at the end of the tunnel'",
+        "Westmoreland had publicly claimed victory was near — Tet was incompatible with that narrative",
+        "Walter Cronkite's Feb 27, 1968 editorial declared stalemate; LBJ reportedly said 'If I've lost Cronkite, I've lost Middle America'",
+        "LBJ withdrew from 1968 race (March 31); started Paris peace talks",
+        "Broader lesson: perception, media, and political will — not body counts — decide modern wars",
+        "Pentagon Papers (1971) later showed administration had lied systematically about progress — credibility gap predated Tet but Tet crystallized it",
+        "Shaped Vietnam Syndrome and eventually the War Powers Act (1973)"
+      ]
+    },
+    {
+      "prompt": "Compare the civil rights movement of the 1950s-early 1960s with the later Black Power movement. What changed after 1965, and why?",
+      "rubric": [
+        "Early movement: integrationist, nonviolent, interracial coalitions (MLK, SCLC, SNCC, NAACP, CORE)",
+        "Strategic victories: Brown, Civil Rights Act 1964, Voting Rights Act 1965",
+        "But: Watts uprising 1965 (days after VRA signed) exposed Northern/urban problems the movement hadn't addressed",
+        "Kerner Commission 1968: 'two societies, one Black, one white — separate and unequal'",
+        "Black Power: Stokely Carmichael popularized term on Meredith March 1966; became SNCC chair",
+        "Malcolm X (assassinated 1965) had shifted toward Black nationalism then multiracial human rights after Mecca",
+        "Black Panther Party (founded Oakland 1966) — police accountability, community programs, armed self-defense",
+        "Shift reflected exhaustion with slow progress, frustration with Northern de facto segregation, assassinations (Malcolm, MLK), Vietnam draft inequality",
+        "Legacies: lasting effect on Black political culture; internal FBI repression (COINTELPRO); tension with liberal establishment"
+      ]
+    },
+    {
+      "prompt": "Explain how Nixon's 1968 victory represented a realignment of American politics. What coalition did he build, and what political formula did his strategists (Kevin Phillips, etc.) develop?",
+      "rubric": [
+        "Context: 1968 was most turbulent year — Tet, MLK assassination April, RFK assassination June, Chicago DNC police riot August",
+        "LBJ withdrew; Humphrey nominated without winning a primary",
+        "Nixon ran as 'law and order' candidate; appealed to 'Silent Majority' (Nov 1969 speech)",
+        "Southern Strategy (Kevin Phillips, 1970): Republicans would accept 10-20% of Black vote; flip Southern whites",
+        "Wallace ran as third-party segregationist, splitting Democratic vote in the Deep South",
+        "Coalition: Southern whites, suburban homeowners, Catholic 'ethnic' working class (Reagan Democrats precursor), law-and-order voters",
+        "Long-term effect: Solid Democratic South became Solid Republican South by 1990s",
+        "Also began shift of Republican Party from big-business/Wall Street orientation to populist/cultural conservatism"
+      ]
+    },
+    {
+      "prompt": "Trace the Watergate scandal from the 1972 break-in through Nixon's 1974 resignation. Identify the key decisions, revelations, and institutional responses.",
+      "rubric": [
+        "June 17, 1972: five burglars caught at DNC Watergate headquarters; connected to CREEP",
+        "Woodward/Bernstein reporting (Washington Post); Deep Throat (Mark Felt, FBI Assoc. Director) as key source",
+        "Senate Watergate Committee (1973) hearings televised; Alexander Butterfield revealed secret taping system",
+        "Saturday Night Massacre (Oct 1973): Nixon fired special prosecutor Cox; AG Richardson and deputy Ruckelshaus resigned; Bork carried it out",
+        "US v. Nixon (July 1974): unanimous SCOTUS ordered tape release; rejected absolute executive privilege",
+        "Tapes proved Nixon directed cover-up (June 23, 1972 'smoking gun' tape)",
+        "House Judiciary Committee approved articles of impeachment (obstruction, abuse of power, contempt)",
+        "Aug 9, 1974: Nixon resigned — first US president to do so",
+        "Institutional fallout: War Powers Resolution (1973), FECA amendments (campaign finance), Ethics in Government Act, FISA (1978)",
+        "Cultural fallout: '-gate' suffix; deep cynicism about executive power"
+      ]
+    },
+    {
+      "prompt": "How did the 1970s economic crises (stagflation, oil shocks) delegitimize postwar Keynesian liberalism and open political space for supply-side conservatism?",
+      "rubric": [
+        "Postwar consensus assumed Keynesian tools (fiscal stimulus, Phillips curve) could manage inflation/unemployment tradeoff",
+        "Stagflation (simultaneous high inflation + stagnation) broke the Phillips curve",
+        "1973 OPEC embargo (Arab response to US support for Israel in Yom Kippur War) quadrupled oil prices",
+        "1979 oil shock after Iranian Revolution compounded it",
+        "Nixon Shock (Aug 1971): ended Bretton Woods dollar-gold convertibility; imposed wage/price controls — unusual for a Republican",
+        "Volcker's Fed rate hikes (1979+) finally broke inflation but with major unemployment cost",
+        "Opening for alternatives: supply-side (Laffer), monetarism (Friedman), deregulation",
+        "Reagan coalition: promised 'Morning in America' optimism vs Carter malaise — won 44 states in 1980",
+        "Shift permanent: from 1981 onward, the tax-cutting, deregulation frame dominated both parties"
+      ]
+    },
+    {
+      "prompt": "Why did Jimmy Carter lose the 1980 election? Identify at least four distinct factors — economic, foreign policy, cultural, and political.",
+      "rubric": [
+        "Economic: stagflation, gas lines, double-digit inflation, 'misery index' high",
+        "Foreign: Iran Hostage Crisis (Nov 1979 – Jan 1981, 444 days); failed Operation Eagle Claw (April 1980, 8 dead)",
+        "Foreign: Soviet invasion of Afghanistan (Dec 1979) made Carter look weak; he boycotted Moscow Olympics",
+        "Cultural: rise of Moral Majority (founded 1979); IRS attacks on segregated Christian academies mobilized evangelicals",
+        "Family demographic shifts: divorce +65%, cohabitation +157% during the decade; traditionalists alarmed",
+        "Political missteps: Malaise Speech (July 1979) + cabinet reshuffle 2 days later undermined him",
+        "Kennedy primary challenge weakened Carter going into general election",
+        "Reagan: sunny optimism + concrete promises (tax cuts, rebuild military, restore greatness) vs Carter's honest pessimism",
+        "Hostages released minutes after Reagan inauguration — symbolic humiliation of Carter"
+      ]
+    },
+    {
+      "prompt": "Evaluate Reaganomics. Did supply-side economics deliver what it promised? Use specific evidence and distinguish political claims from empirical outcomes.",
+      "rubric": [
+        "1981 ERTA: cut top marginal rate from 70% to 50%; 1986 TRA cut further to 28%",
+        "Supply-side theory (Laffer): cuts would generate enough growth to be self-financing",
+        "Reality: national debt roughly tripled ($908B → $2.87T by end of Reagan presidency)",
+        "Income inequality rose sharply — top 1% share of income increased significantly",
+        "Inflation did fall — but that was primarily Volcker's Fed, not Reagan's tax policy",
+        "Long 1983-89 expansion happened — but 1981-82 Volcker recession was severe and PATCO firing broke unions",
+        "Deregulation: S&L crisis cost ~$124 billion bailout; Neil Bush implicated",
+        "Empirically: Laffer's self-financing promise failed; cuts did not pay for themselves",
+        "Politically: Reaganomics permanently shifted acceptable economic orthodoxy — Democrats (Clinton) later adopted much of it",
+        "Verdict depends on metric: growth ✓, inflation ✓, debt ✗, inequality ✗, wage stagnation ✗"
+      ]
+    },
+    {
+      "prompt": "Connect Reagan's domestic War on Drugs to his Central America foreign policy. What do they reveal when examined together?",
+      "rubric": [
+        "Domestic: Anti-Drug Abuse Act 1986 created 100:1 crack/powder sentencing disparity",
+        "Mandatory minimums, three-strikes laws, militarized police",
+        "US prison population grew from ~300K (1972) to 2M+ (2000) — disproportionately Black and Latino men",
+        "Foreign: Reagan Doctrine backed 'freedom fighters' globally — Contras in Nicaragua, Mujahideen in Afghanistan, UNITA in Angola",
+        "El Salvador: US-backed Salvadoran military linked to Oscar Romero's assassination (1980) and El Mozote massacre (1981, Atlacatl Battalion)",
+        "Grenada invasion (1983) — first 'successful' US military action since Vietnam",
+        "Iran-Contra (1985-87): illegal arms to Iran funded Contras despite Boland Amendment",
+        "Gary Webb's Dark Alliance (1996): CIA-backed Contras trafficked crack into LA; 1998 CIA IG report substantially confirmed",
+        "Connection: rhetoric of 'fighting drugs' at home while US-linked actors profited from drug trade abroad",
+        "Michelle Alexander's 'New Jim Crow': mass incarceration as race-neutral-on-paper racial caste system"
+      ]
+    },
+    {
+      "prompt": "To what extent did Ronald Reagan 'win' the Cold War? Make a reasoned argument with specific evidence for and against.",
+      "rubric": [
+        "For Reagan: massive military buildup pressured Soviet economy that couldn't match US spending",
+        "For Reagan: SDI ('Star Wars,' 1983) — technologically implausible but psychologically threatening to Soviets",
+        "For Reagan: 'Evil Empire' rhetoric shifted moral framing; 'Tear down this wall' (1987) at Brandenburg Gate",
+        "For Reagan: INF Treaty (1987) first eliminated a class of nuclear weapons",
+        "Against: USSR had deep internal contradictions — stagnant economy, nationalist movements, falling oil revenues",
+        "Against: Chernobyl (1986) exposed institutional decay; Afghan quagmire drained Soviet resources",
+        "Against: Gorbachev's Perestroika and Glasnost (1985+) did the decisive reforming — unintentionally accelerated collapse",
+        "Against: Reykjavik 1986 — Reagan's SDI refusal nearly blocked total denuclearization deal Gorbachev proposed",
+        "Reasoned conclusion: Reagan accelerated a process already underway; credit is shared — primary cause was internal Soviet crisis + Gorbachev's unwillingness to use force (Sinatra Doctrine, 1989)",
+        "1989 revolutions: Poland (Solidarity), Hungary, East Germany, Czechoslovakia — mostly peaceful; Berlin Wall fell Nov 9",
+        "USSR formally dissolved Dec 25-26, 1991 — 15 republics"
+      ]
+    },
+    {
+      "prompt": "Why did the rights revolution of the 1960s-70s generate such a strong conservative backlash? Identify at least three specific movements or rulings that triggered organized opposition.",
+      "rubric": [
+        "Engel v. Vitale (1962) banned mandatory school prayer — mobilized evangelicals",
+        "Roe v. Wade (1973) on abortion — became most durable organizing issue for religious right",
+        "ERA (passed Congress 1972) triggered Phyllis Schlafly's STOP ERA campaign; fell 3 states short by 1982",
+        "School busing and affirmative action (Bakke 1978) inflamed white suburban backlash",
+        "IRS attacks on segregated Christian academies (Bob Jones University) — Randall Balmer argues this was the real spark for organized religious right",
+        "Gay rights after Stonewall (1969) — Anita Bryant's Save Our Children (1977)",
+        "Environmental / regulatory state growth — Sagebrush Rebellion (1979) in Western states",
+        "Counterculture + rising crime + urban unrest fueled law-and-order coalition",
+        "Organizational infrastructure: Moral Majority (Falwell 1979), YAF, Heritage Foundation (1973), Paul Weyrich and Richard Viguerie's direct mail",
+        "Result: Reagan's 1980 coalition — evangelicals + working-class whites + business conservatives + Cold Warriors"
+      ]
+    },
+    {
+      "prompt": "How did television transform civil rights politics, Vietnam, and the 1968 election? Use specific moments to show its power.",
+      "rubric": [
+        "Civil rights: Little Rock 1957 — Elizabeth Eckford walking past screaming mob — shocked Northern viewers",
+        "Civil rights: Birmingham 1963 — Bull Connor's fire hoses and dogs, especially on children (Children's Crusade)",
+        "Civil rights: Bloody Sunday 1965 — Selma's Edmund Pettus Bridge; state troopers attacking marchers",
+        "Vietnam: first 'living room war' — nightly combat footage",
+        "Vietnam: Buddhist monk Thich Quang Duc self-immolation (1963); Saigon Execution photo (Eddie Adams, 1968); Napalm Girl (1972)",
+        "Vietnam: Cronkite's Feb 1968 'stalemate' editorial after Tet — LBJ: 'I've lost Middle America'",
+        "1968 Chicago DNC: police attacking protesters; chant 'The whole world is watching' broadcast live",
+        "Kent State 1970 — John Filo photo of Mary Ann Vecchio over Jeffrey Miller's body",
+        "Broader lesson: TV broke government control of the narrative; made brutality and inequality visible nationwide",
+        "Contrast with 1950s sitcom image of white suburban family — same medium but incompatible realities"
+      ]
+    },
+    {
+      "prompt": "Explain HUAC, the Hollywood Ten, and the Rosenberg case. How did the Red Scare distort American justice?",
+      "rubric": [
+        "HUAC (House Un-American Activities Committee): created 1938; post-WWII focused on communism; used subpoenas and public shaming",
+        "Hollywood Ten (1947): writers/directors refused to name names — invoked First Amendment",
+        "Waldorf Statement (Nov 25, 1947): studio executives declared no communist/uncooperative witness would work",
+        "Blacklist: eventually 300+ people; Trumbo won Oscars under pseudonyms (Robert Rich for The Brave One); Kirk Douglas + Preminger broke blacklist (1960)",
+        "Ironic: HUAC chair J. Parnell Thomas was himself imprisoned for fraud",
+        "Rosenbergs: Julius was a genuine spy (confirmed by Venona decrypts)",
+        "Ethel's case was much weaker; her brother David Greenglass admitted in 2001 that he had lied about her typing the spy notes",
+        "Judge Kaufman sentenced both to death — first peacetime execution for espionage in US history",
+        "Fuchs (who gave the Soviets far more) got 14 years; Greenglass got 15; Gold got 30 — Rosenberg sentence massively disproportionate",
+        "Global protests (Pope, Einstein, Sartre); Eisenhower refused clemency",
+        "Lessons: constitutional rights bend under fear; guilt-by-association can destroy lives; the Cold War damaged American democracy internally"
+      ]
+    },
+    {
+      "prompt": "Compare the Iran-Contra Affair (1985-87) with Watergate (1972-74) as presidential scandals. What do the differences reveal about how scandal politics changed between the early 1970s and the late 1980s?",
+      "rubric": [
+        "Watergate: domestic political sabotage (DNC break-in, enemies lists); cover-up revealed by tapes",
+        "Nixon resigned (Aug 1974) — first US president ever to do so",
+        "Institutional response: War Powers Act, FECA amendments, Ethics in Government Act, FISA, independent counsel statute",
+        "Iran-Contra: foreign-policy illegality — arms sales violated Iran embargo; Boland Amendment banned Contra funding; diversion scheme illegal on both sides",
+        "Oliver North convicted; conviction later vacated on immunity technicality; became right-wing hero",
+        "Reagan claimed ignorance — 'I don't recall'; approval briefly dipped but he finished term popular",
+        "No presidential resignation; no equivalent institutional reform",
+        "Differences reveal: more partisan media landscape, stronger executive-defense norms, greater willingness of Congress to let it slide",
+        "Parallel: both involved cover-ups and abuses of executive power, both deepened cynicism about government — but political consequences sharply diverged",
+        "Later pattern: presidential accountability became more politically contested; similar future scandals often produced no consequence"
+      ]
+    },
+    {
+      "prompt": "What does Tim O'Brien's 'On the Rainy River' reveal about the Vietnam-era experience that official history and strategic analysis miss?",
+      "rubric": [
+        "Official history: draft lottery, casualty counts, policy decisions",
+        "O'Brien's complication: the moral interior — shame, social pressure, bad-faith courage",
+        "Received draft notice June 1968, shortly after graduating Macalester College",
+        "Opposed the war intellectually: 'certain blood was being shed for uncertain reasons'",
+        "Elroy Berdahl at Tip Top Lodge — silent witness; took him fishing 20 yards from Canadian freedom",
+        "O'Brien's crisis: conscience vs. shame; fear of family/town judgment outweighed fear of death",
+        "Famous line: 'I would go to the war — I would kill and maybe die — because I was embarrassed not to'",
+        "Inverted courage: going to war was cowardly; fleeing to Canada would have been brave",
+        "Closing: 'I survived, but it's not a happy ending. I was a coward. I went to the war.'",
+        "Value: exposes how social pressure produces political outcomes; complicates hero narratives; humanizes the draftees who would become the war's statistics"
+      ]
+    },
+    {
+      "prompt": "How do the women's movement, gay rights, Chicano, and Native American movements of the 1960s-70s compare in origins, tactics, and legacies?",
+      "rubric": [
+        "Common model: post-Black civil-rights movement; drew from its tactics (direct action, legal strategy, grassroots organizing)",
+        "Women's: Friedan's Feminine Mystique (1963); NOW (1966); ERA passed Congress 1972, ratification failed 1982; Roe v. Wade (1973)",
+        "Women's: liberal feminism (Steinem, Ms., 1972) vs. radical and socialist strands",
+        "Gay rights: Stonewall riots (June 1969, Greenwich Village) — organized resistance to police raid",
+        "Gay rights: GLF, later GAA; annual pride marches; fighting employment discrimination; early AIDS activism (ACT UP, 1987)",
+        "Chicano: Cesar Chavez + Dolores Huerta founded UFW; Delano grape boycott (1965-70); won farmworker contracts",
+        "Chicano: La Raza Unida (1970), Brown Berets, MEChA student movement",
+        "Native American: AIM (1968); Occupation of Alcatraz (1969-71, 19 months); Wounded Knee (1973)",
+        "Common challenges: internal divisions (moderate vs radical), backlash, tension with liberal establishment",
+        "Legacies: transformed law, culture, and identity politics; provided organizational models; also fueled conservative backlash culminating in Moral Majority"
+      ]
+    },
+    {
+      "prompt": "Explain the significance of the Cuban Missile Crisis (October 1962) as both a near-catastrophe and a model for Cold War crisis management.",
+      "rubric": [
+        "Context: Bay of Pigs failure (1961) pushed Castro toward USSR; Khrushchev placed nuclear missiles in Cuba",
+        "October 14: U-2 photos confirmed missile sites",
+        "ExComm debate: hawks wanted air strikes; Kennedy chose naval 'quarantine' (not 'blockade,' which was an act of war)",
+        "Thirteen-day standoff; closest the world came to nuclear war",
+        "Resolution: public — Soviet missile withdrawal in exchange for US pledge not to invade Cuba",
+        "Secret quid pro quo: US Jupiter missiles in Turkey removed (kept secret for decades)",
+        "Hotline established between Washington and Moscow afterward",
+        "Partial Test Ban Treaty (1963) followed",
+        "Kennedy appeared publicly to win through pure firmness — a distortion that shaped later crisis management (Nixon tried to replicate the 'Madman Theory')",
+        "Lessons: back-channel diplomacy matters; nuclear escalation is easy to start, hard to stop; direct communication crucial"
+      ]
+    },
+    {
+      "prompt": "Explain the Marshall Plan (1948-52) as both humanitarian aid and strategic containment. Why was it arguably the most successful US foreign policy initiative?",
+      "rubric": [
+        "Context: Europe devastated after WWII — cities bombed, trade networks broken, 40M dead, famines",
+        "Communist parties surging in France, Italy, Greece — democratic gains, not invasion",
+        "Marshall's Harvard speech (June 5, 1947): 'The seeds of totalitarian regimes are nurtured by misery and want'",
+        "$13 billion distributed 1948-52 (~$150B today), 16 Western European nations",
+        "Open to all European nations including USSR — Stalin refused and forced Eastern Bloc to refuse",
+        "Czechoslovakia initially accepted; Stalin forced reversal, contributing to 1948 communist coup there",
+        "Results: industrial production +35% over pre-war by 1952; GDP +15-25% in recipient countries; communist parties' vote shares collapsed",
+        "Foundation for European integration (European Coal and Steel Community 1951 → EEC → EU)",
+        "Rebuilt Germany as prosperous democratic ally — different lesson from Versailles (1919) punishment approach",
+        "Strategic success: prevented democratic communist takeovers while creating durable alliance",
+        "Model for economic diplomacy that US has struggled to replicate in Vietnam, Iraq, Afghanistan"
+      ]
     }
   ]
 };
