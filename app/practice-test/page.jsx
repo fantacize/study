@@ -271,15 +271,33 @@ export default function PracticeTestPage() {
                     open deck ↗
                   </Link>
                 </div>
-                <div className="grid gap-4 md:grid-cols-[1fr_1fr]">
-                  <div className="rounded border border-border bg-muted/30 p-2">
+                <div className="space-y-4">
+                  <a
+                    href={`/primary-sources/${s.slug}/page-${padPage(s.page)}.jpg?v=2`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block rounded-lg border-2 border-border bg-muted/30 p-3 transition hover:border-foreground/40"
+                  >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={`/primary-sources/${s.slug}/page-${padPage(s.page)}.jpg`}
+                      src={`/primary-sources/${s.slug}/page-${padPage(s.page)}.jpg?v=2`}
                       alt={s.title}
-                      className="mx-auto h-auto max-w-full"
+                      className="mx-auto block h-auto max-h-[800px] w-auto max-w-full rounded shadow"
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none";
+                        const sib = e.currentTarget.nextElementSibling;
+                        if (sib) sib.style.display = "block";
+                      }}
                     />
-                  </div>
+                    <div
+                      style={{ display: "none" }}
+                      className="rounded bg-red-50 p-4 text-center text-sm text-red-700 dark:bg-red-950 dark:text-red-200"
+                    >
+                      Image failed to load at <code>/primary-sources/{s.slug}/page-{padPage(s.page)}.jpg</code>.
+                      Try hard-refresh (Cmd+Shift+R) or visit the full deck →
+                    </div>
+                    <p className="mt-2 text-center text-xs text-muted-foreground">Click image to open full-size in a new tab</p>
+                  </a>
                   <div>
                     <p className="mb-2 text-sm font-medium">Prompt</p>
                     <p className="mb-3 rounded bg-muted/50 p-3 text-sm">{s.prompt}</p>

@@ -2463,6 +2463,96 @@ export const questionPool = {
       "page": 10,
       "title": "Reagan Era Slide Deck",
       "prompt": "Name the Reagan policy or event depicted on this page. Identify the rhetorical strategy (optimism, anti-government, anti-communism, moral-cultural appeal) and describe how it connected Reagan's domestic coalition (evangelicals, working-class whites, business conservatives) with his foreign policy goals."
+    }    ,
+    {
+      "slug": "affluent-society",
+      "page": 7,
+      "title": "Affluent Society Deck — cartoon / advertisement page",
+      "prompt": "Identify whether this is an advertisement, cartoon, or document excerpt. What argument or sales pitch does it make? How does the visual/textual rhetoric connect to 1950s consumer culture or its critics (Galbraith, Harrington, Beats)?"
+    },
+    {
+      "slug": "affluent-society",
+      "page": 12,
+      "title": "Affluent Society Deck — middle of unit",
+      "prompt": "Identify the 1950s theme this page addresses (consumerism, suburbia, gender roles, Cold War fear, or conformity). Pick one specific element of the image or text and connect it to either a specific historical development or a critic of 1950s culture."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 6,
+      "title": "Civil Rights 1950s — Jim Crow / Plessy section",
+      "prompt": "Identify what this page documents. Explain how it illustrates de jure or de facto segregation. What legal or political response would eventually challenge what is shown?"
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 14,
+      "title": "Civil Rights 1950s — movement tactics",
+      "prompt": "Identify the event, organization, or tactic depicted. Explain how it fits King's 'four steps' framework (facts → negotiation → self-purification → direct action) or how it departs from nonviolent discipline."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 4,
+      "title": "Letter from Birmingham Jail — argument passage",
+      "prompt": "Identify which of King's five major arguments this passage develops (outsider, four steps, case against waiting, just vs unjust laws, white moderate, extremism reframed). Explain the rhetorical move and name at least one philosophical or religious source King uses to support it."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 11,
+      "title": "Letter from Birmingham Jail — later sections",
+      "prompt": "Summarize the argument on this page in one sentence. Then explain how King uses a specific example (biblical figure, historical parallel, or personal anecdote) to make his case more persuasive to the moderate clergymen audience."
+    },
+    {
+      "slug": "cold-war-dbq",
+      "page": 4,
+      "title": "Cold War DBQ — middle documents",
+      "prompt": "Identify which Cold War document or cartoon this is (Marshall Plan excerpt, NSC-68, home-front propaganda, etc.). Explain what fear or hope it is designed to provoke in its audience, and cite one specific historical development it responds to."
+    },
+    {
+      "slug": "vietnam-war",
+      "page": 6,
+      "title": "Vietnam War Deck — escalation / combat",
+      "prompt": "Identify the phase of the Vietnam War this page addresses (French era, Diem/Geneva, Gulf of Tonkin, Tet, Vietnamization, Fall of Saigon). Explain one cause and one consequence of the event depicted, connecting it to a specific US policy document or decision."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 7,
+      "title": "Vietnam Primary Sources — O'Brien or Caputo excerpt",
+      "prompt": "Identify the author and passage. Describe the emotional or moral argument being made. How does this literary source complicate the official US narrative of the Vietnam War? Cite at least one specific claim it undermines."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 14,
+      "title": "Vietnam Primary Sources — late-war document",
+      "prompt": "Identify the source. Whose perspective does it represent (US policymaker, soldier, Vietnamese nationalist, antiwar American)? Explain how this perspective differs from the dominant framing of the war at the time it was produced."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 12,
+      "title": "Nixon Era Deck — middle of unit",
+      "prompt": "Identify the Nixon-era event, speech, or policy on this page. Explain how it fits Nixon's political strategy (Silent Majority, Southern Strategy, Vietnamization, detente) and name one specific consequence — intended or unintended."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 22,
+      "title": "Nixon Era Deck — Watergate / end of 60s",
+      "prompt": "Identify the event. Explain how it either revealed abuse of executive power or represented a broader cultural/political shift. Connect it to either Pentagon Papers, War Powers Resolution, or Watergate's legacy for public trust."
+    },
+    {
+      "slug": "seventies-malaise",
+      "page": 7,
+      "title": "1970s Deck — oil shock / stagflation",
+      "prompt": "Identify the 1970s phenomenon (oil crisis, stagflation, family demographic shift, Iran hostages, religious right rise). Explain its economic or political effect and connect it to Carter's or Reagan's 1980 campaign framing."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 18,
+      "title": "Reagan Era Deck — foreign policy",
+      "prompt": "Identify the Reagan foreign-policy event or doctrine (SDI, Reagan Doctrine, Latin American intervention, Iran-Contra, INF Treaty, Berlin speech). Explain the strategy and name one specific supporter and one specific critic of the approach."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 26,
+      "title": "Reagan Era Deck — domestic / end of era",
+      "prompt": "Identify the Reagan domestic policy or end-of-Cold-War moment. Explain the policy's consequence for one specific group of Americans, and connect it to either Reaganomics, War on Drugs, or the broader conservative realignment."
     }
   ],
   "shortAnswer": [
