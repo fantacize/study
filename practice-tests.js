@@ -2423,7 +2423,283 @@ export const questionPool = {
       ],
       "answerIndex": 1,
       "explanation": "Contrast with Deng Xiaoping's China: economic reform without political opening. Gorbachev did the opposite; outcome: Soviet collapse."
+    }    ,
+    {
+      "question": "Henry Steele Commager's 1947 Harper's essay 'Who Is Loyal to America?' argued that:",
+      "options": [
+        "Loyalty must be proven through HUAC testimony",
+        "Loyalty oaths and conformity tests threaten the dissent that has always defined genuine American freedom",
+        "Only naturalized citizens should be subject to loyalty tests",
+        "Communism was the main threat to American democracy"
+      ],
+      "answerIndex": 1,
+      "explanation": "Commager, a prominent historian, warned that loyalty programs would produce a conformist, fearful society that betrayed American traditions of dissent. A key 'Voices of Freedom' reading in Foner."
+    },
+    {
+      "question": "Oscar Handlin's 1952 essay 'The Immigration Fight Has Only Begun' criticized:",
+      "options": [
+        "Open-borders immigration policy",
+        "The McCarran-Walter Act's racially restrictive quotas and its Cold War paranoia toward immigrants",
+        "Ellis Island processing procedures",
+        "Birthright citizenship"
+      ],
+      "answerIndex": 1,
+      "explanation": "Handlin argued the 1952 McCarran-Walter Act preserved 1924 national-origins quotas and treated immigrants as security threats. Foner uses Handlin to show how the Red Scare narrowed American definitions of belonging."
+    },
+    {
+      "question": "Eisenhower's Farewell Address (January 17, 1961) warned specifically against:",
+      "options": [
+        "The Soviet nuclear threat",
+        "The 'military-industrial complex' — unwarranted influence of defense industry on government",
+        "Communist infiltration of universities",
+        "Federal deficits"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ike warned a permanent defense industry could distort democracy. Striking coming from a general who had implemented NSC-68's buildup. One of the most-quoted presidential farewells in US history."
+    },
+    {
+      "question": "Reverend William H. Borders's 1957 sermon 'Confronting Segregation' argued that:",
+      "options": [
+        "Black Americans should wait for gradual change",
+        "Segregation violated Christian theology and required active Christian resistance, not mere patience",
+        "Northern liberals should lead the movement",
+        "The Supreme Court would solve segregation without protest"
+      ],
+      "answerIndex": 1,
+      "explanation": "Borders pastored Atlanta's Wheat Street Baptist Church. His sermon shows the theological argument Black clergy made against segregation, anticipating King's Letter from Birmingham Jail."
+    },
+    {
+      "question": "The Southern Manifesto (1956) declared that Brown v. Board of Education was:",
+      "options": [
+        "A victory for constitutional government",
+        "'A clear abuse of judicial power' that states should resist through 'all lawful means'",
+        "A necessary correction to Plessy",
+        "A proper reading of the 14th Amendment"
+      ],
+      "answerIndex": 1,
+      "explanation": "Signed by 101 Southern members of Congress — 19 senators and 82 representatives. Launched the 'massive resistance' strategy. Notably, LBJ (as Senate Majority Leader from Texas) refused to sign."
+    },
+    {
+      "question": "Clyde Warrior's 1964 manifesto 'To Survive as a People' argued that:",
+      "options": [
+        "Native Americans should fully assimilate",
+        "Native American self-determination required rejecting federal paternalism and controlling their own institutions",
+        "Only integration would save Native communities",
+        "Tribes should disband voluntarily"
+      ],
+      "answerIndex": 1,
+      "explanation": "Warrior was a Ponca activist and founder of the National Indian Youth Council (1961). Foreshadowed AIM (1968) and the self-determination era — rejection of the 1950s termination policy."
+    },
+    {
+      "question": "The National Organization for Women (NOW) Statement of Purpose (1966) declared that:",
+      "options": [
+        "Women should focus on home and family",
+        "'True equality for all women' required action to bring women into 'full participation in the mainstream of American society'",
+        "The ERA was unnecessary",
+        "Feminism was a Marxist project"
+      ],
+      "answerIndex": 1,
+      "explanation": "Drafted largely by Betty Friedan. Framed women's rights as a civil rights issue and pushed for legal enforcement of equal-opportunity laws. Key Foner 'Voices of Freedom' text."
+    },
+    {
+      "question": "Barry Commoner's 1971 book 'The Closing Circle' argued that:",
+      "options": [
+        "Population control was the central environmental issue",
+        "Post-WWII synthetic chemistry (plastics, pesticides, fertilizers) was the root cause of ecological crisis — not population alone",
+        "Nuclear power would solve energy problems",
+        "Environmentalism should be apolitical"
+      ],
+      "answerIndex": 1,
+      "explanation": "Commoner blamed industrial production choices, not overpopulation (contra Paul Ehrlich). Shifted environmental focus toward corporate accountability. Foner uses him to show the radical side of the movement."
+    },
+    {
+      "question": "The Sagebrush Rebellion (1979) was:",
+      "options": [
+        "A labor strike in the Sierra Nevada",
+        "A Western state movement demanding transfer of federal lands to state control, blending anti-regulatory, anti-government politics",
+        "A radical environmentalist protest",
+        "A Mexican-American land-rights movement"
+      ],
+      "answerIndex": 1,
+      "explanation": "Nevada led; other Western states followed. Merged ranching interests, libertarianism, and anti-federal sentiment — a critical piece of the New Right coalition Reagan rode to victory."
+    },
+    {
+      "question": "The 1948 presidential election was notable because:",
+      "options": [
+        "Truman lost decisively",
+        "Truman won despite a Democratic split (Dixiecrats and Henry Wallace's Progressives) and Chicago Tribune's 'Dewey Defeats Truman' headline",
+        "There was no winner",
+        "The Republicans took the White House"
+      ],
+      "answerIndex": 1,
+      "explanation": "Dixiecrats (Strom Thurmond) walked out over civil rights platform; Wallace ran Progressive. Truman's whistle-stop campaign ('Give 'em hell, Harry') pulled off biggest upset in US electoral history."
+    },
+    {
+      "question": "Truman's Fair Deal (1949) proposed:",
+      "options": [
+        "Dismantling the New Deal",
+        "National health insurance, federal aid to education, civil rights legislation, and expanded Social Security — mostly blocked by a conservative coalition in Congress",
+        "Returning to pre-New Deal laissez-faire",
+        "Only military expansion"
+      ],
+      "answerIndex": 1,
+      "explanation": "Coined in Truman's 1949 inaugural. Most of it (universal healthcare, civil rights, federal education aid) died in Congress — previewed unfinished business that LBJ would later revisit."
+    },
+    {
+      "question": "The Interstate Highway Act (1956), Eisenhower's most significant domestic legacy, was justified as:",
+      "options": [
+        "Urban renewal",
+        "A defense measure — highways for military mobilization in case of nuclear war",
+        "A jobs program",
+        "A tourism initiative"
+      ],
+      "answerIndex": 1,
+      "explanation": "Officially the 'National System of Interstate and Defense Highways.' Reshaped suburbs, accelerated decline of railroads, cemented car-dependent urban form. Largest public works project in US history."
+    },
+    {
+      "question": "Sputnik (October 1957) led directly to which pair of US responses?",
+      "options": [
+        "Marshall Plan and NATO",
+        "NASA (1958) and the National Defense Education Act (1958), which poured federal funds into science/math/foreign language education",
+        "Peace Corps and VISTA",
+        "CIA and NSC"
+      ],
+      "answerIndex": 1,
+      "explanation": "Panic that the USSR was outpacing US in science triggered massive federal intervention in education. Shaped a generation of American scientists and engineers."
+    },
+    {
+      "question": "The 1960 Kennedy-Nixon televised debates showed:",
+      "options": [
+        "Nixon dominant on both radio and TV",
+        "Radio listeners thought Nixon won; TV viewers thought Kennedy won — dramatizing TV's political power",
+        "Kennedy dominant in every medium",
+        "A tied debate"
+      ],
+      "answerIndex": 1,
+      "explanation": "Nixon had just been sick; looked pale, sweaty, no makeup. Kennedy looked tanned and poised. First televised presidential debates — permanently changed campaigning."
+    },
+    {
+      "question": "Kennedy's New Frontier emphasized:",
+      "options": [
+        "Retrenchment of federal programs",
+        "Vigor, national mission, space exploration ('Man on the moon'), the Peace Corps, and expanding opportunities",
+        "Isolationism",
+        "Returning to pre-New Deal policies"
+      ],
+      "answerIndex": 1,
+      "explanation": "JFK's inaugural ('ask not what your country can do for you') captured it. Peace Corps (1961), Alliance for Progress, space race commitment — policy achievements came later under LBJ."
+    },
+    {
+      "question": "LBJ's Great Society programs included which of the following?",
+      "options": [
+        "Medicare and Medicaid only",
+        "Medicare, Medicaid, Head Start, Job Corps, VISTA, the Elementary and Secondary Education Act, PBS, the NEA/NEH, and the Voting Rights Act",
+        "Only civil rights legislation",
+        "Tax cuts and deregulation"
+      ],
+      "answerIndex": 1,
+      "explanation": "One of the most sweeping legislative periods in US history. Its health and anti-poverty infrastructure remains central to American social policy."
+    },
+    {
+      "question": "Medicare and Medicaid (both 1965) differ in that:",
+      "options": [
+        "Medicare is for the poor; Medicaid is for the elderly",
+        "Medicare is federal health insurance for those 65+ regardless of income; Medicaid is means-tested federal-state coverage for the poor",
+        "Both are income-tested",
+        "Both are state-only programs"
+      ],
+      "answerIndex": 1,
+      "explanation": "Title XVIII (Medicare) and Title XIX (Medicaid) of the Social Security Act amendments, 1965. LBJ signed at Harry Truman's library — a callback to Truman's failed 1949 national health insurance push."
+    },
+    {
+      "question": "Freedom Summer (1964) focused on:",
+      "options": [
+        "Desegregating lunch counters",
+        "Voter registration in Mississippi — organized by SNCC, CORE, NAACP coalition (Council of Federated Organizations)",
+        "Integrating bus lines",
+        "Desegregating public pools"
+      ],
+      "answerIndex": 1,
+      "explanation": "Brought ~1,000 mostly white Northern volunteers South. Chaney, Goodman, Schwerner were murdered June 21, 1964; FBI investigation under LBJ pressure forced prosecutions — national attention helped pass Voting Rights Act."
+    },
+    {
+      "question": "The Mississippi Freedom Democratic Party (MFDP) challenged the regular Mississippi delegation at the 1964 Democratic convention and:",
+      "options": [
+        "Was seated fully",
+        "Was offered a compromise of 2 at-large seats, rejected it as insufficient — Fannie Lou Hamer's nationally televised testimony electrified the nation",
+        "Was completely ignored",
+        "Dropped out voluntarily"
+      ],
+      "answerIndex": 1,
+      "explanation": "Hamer's 'I question America' speech showed the moral case for voting rights. LBJ, fearing Southern walkouts, offered the compromise. Radicalized many SNCC activists."
+    },
+    {
+      "question": "The Indian Self-Determination and Education Assistance Act (1975):",
+      "options": [
+        "Ended all federal recognition of tribes",
+        "Allowed tribal governments to administer federal programs — a legal shift away from the 1950s termination policy",
+        "Transferred all lands to states",
+        "Dissolved the BIA"
+      ],
+      "answerIndex": 1,
+      "explanation": "Responded to AIM activism (Alcatraz 1969, Wounded Knee 1973) and Clyde Warrior–era demands. Reaffirmed sovereignty rather than assimilation."
+    },
+    {
+      "question": "The 1973 War Powers Resolution requires the president to:",
+      "options": [
+        "Get UN approval before deploying troops",
+        "Notify Congress within 48 hours of deploying US forces and withdraw within 60 days absent congressional authorization",
+        "Hold a public referendum on war",
+        "Consult only the Joint Chiefs"
+      ],
+      "answerIndex": 1,
+      "explanation": "Passed over Nixon's veto. A direct response to Vietnam and Cambodia. Every president since has argued parts are unconstitutional; few have complied fully."
+    },
+    {
+      "question": "The Three Mile Island nuclear accident (March 1979) occurred:",
+      "options": [
+        "One year after 'The China Syndrome' film",
+        "Twelve days after 'The China Syndrome' film — whose fictional plot resembled the real event closely",
+        "A decade before any nuclear film",
+        "Without any cultural resonance"
+      ],
+      "answerIndex": 1,
+      "explanation": "The coincidence amplified public panic and effectively ended new US commercial reactor construction for decades."
+    },
+    {
+      "question": "The Panama Canal Treaty (1978), a major Carter foreign-policy achievement, provided for:",
+      "options": [
+        "Canal destruction",
+        "Gradual transfer of canal control from the US to Panama by 1999",
+        "Permanent US occupation",
+        "Sale of the canal to Britain"
+      ],
+      "answerIndex": 1,
+      "explanation": "Narrowly ratified. Reagan had famously opposed it during the 1976 primaries ('We built it, we paid for it, it's ours'). Became a rallying point for conservative nationalism."
+    },
+    {
+      "question": "The 1980 Bob Jones University v. United States case, important context for the religious right's rise, concerned:",
+      "options": [
+        "School prayer",
+        "The IRS revoking tax-exempt status from segregated Christian academies — which Randall Balmer argues was the real trigger for evangelical political mobilization",
+        "Contraception",
+        "Pornography"
+      ],
+      "answerIndex": 1,
+      "explanation": "Not abortion or school prayer but IRS action against segregated Christian schools organized the religious right. The abortion framing came later as the more sympathetic public cause."
+    },
+    {
+      "question": "The Equal Rights Amendment (ERA), passed by Congress in 1972, ultimately:",
+      "options": [
+        "Was ratified by 1982",
+        "Fell three states short of ratification by the 1982 deadline, largely due to Phyllis Schlafly's STOP ERA campaign",
+        "Was struck down by the Supreme Court",
+        "Was vetoed by the president"
+      ],
+      "answerIndex": 1,
+      "explanation": "Schlafly argued ERA would end alimony, single-sex facilities, draft exemption. Her successful mobilization demonstrated the organizational power of the conservative women's movement."
     }
+
 
 
   ],
@@ -3068,6 +3344,78 @@ export const questionPool = {
         "Rebuilt Germany as prosperous democratic ally — different lesson from Versailles (1919) punishment approach",
         "Strategic success: prevented democratic communist takeovers while creating durable alliance",
         "Model for economic diplomacy that US has struggled to replicate in Vietnam, Iraq, Afghanistan"
+      ]
+    }    ,
+    {
+      "prompt": "Using at least three of Foner's Voices of Freedom texts (Commager, Handlin, Rev. Borders, Southern Manifesto, Clyde Warrior, NOW Statement, Commoner, Sagebrush Rebellion), explain how Americans have contested the meaning of freedom across the Cold War, civil rights, and rights-revolution eras.",
+      "rubric": [
+        "Commager (1947): dissent IS the American tradition — loyalty oaths betray it",
+        "Handlin (1952): McCarran-Walter's immigration quotas narrowed freedom along ethnic/racial lines",
+        "Rev. Borders (1957): freedom grounded in Christian theology; segregation is sin requiring resistance",
+        "Southern Manifesto (1956): appropriated 'freedom' language to defend states' rights and segregation",
+        "Clyde Warrior (1964): freedom requires Native self-determination, not federal paternalism",
+        "NOW Statement (1966): women's freedom requires 'full participation in the mainstream of American society'",
+        "Commoner (1971): ecological crisis required freedom FROM corporate pollution — a new positive freedom",
+        "Sagebrush Rebellion (1979): freedom as Western states reclaiming federal land — anti-regulatory, libertarian",
+        "Pattern: 'freedom' was contested terrain — each era's movements named their aspirations 'freedom'"
+      ]
+    },
+    {
+      "prompt": "Explain LBJ's Great Society. Which programs endured, which were dismantled or underfunded, and what does the partial legacy tell us about American liberalism?",
+      "rubric": [
+        "Enacted 1964-65 during brief Democratic supermajority",
+        "Civil Rights Act (1964), Voting Rights Act (1965), Immigration and Nationality Act (1965)",
+        "Medicare / Medicaid (1965) — Title XVIII and Title XIX of Social Security",
+        "Elementary and Secondary Education Act (1965) — first major federal education funding",
+        "Head Start, Job Corps, VISTA, Community Action Program — War on Poverty",
+        "Housing and Urban Development (1965), PBS/NPR (1967), NEA/NEH (1965)",
+        "Endured: Medicare, Medicaid, Head Start, PBS, immigration reform",
+        "Underfunded/dismantled: War on Poverty programs starved by Vietnam spending and later Republican administrations",
+        "Unfinished: universal healthcare (proposed since Truman's Fair Deal 1949)",
+        "Vietnam spending squeezed Great Society — 'guns and butter' tradeoff undermined both",
+        "Legacy: Great Society proved federal liberalism could deliver; also showed its fiscal and political fragility"
+      ]
+    },
+    {
+      "prompt": "Why did the religious right's mobilization originate with IRS actions against segregated Christian academies (Bob Jones, 1970s) rather than abortion, as commonly assumed? What does this origin tell us about the conservative movement of the late 1970s?",
+      "rubric": [
+        "Randall Balmer's argument: abortion was NOT initially a galvanizing evangelical issue",
+        "1970s IRS revoked tax-exempt status from racially segregated Christian schools (Bob Jones U. case, ruled 1983)",
+        "Paul Weyrich and others organized evangelicals around the perceived federal attack on Christian institutions",
+        "Abortion was adopted later as a more sympathetic, broader-appeal framing",
+        "Jerry Falwell's Moral Majority (1979), Phyllis Schlafly's STOP ERA, Heritage Foundation, all fused the religious right with free-market and anti-government conservatism",
+        "Reveals: the religious right's roots are partly in defense of segregation and school autonomy, partly in cultural opposition to feminism and gay rights",
+        "The narrative of abortion as the origin obscures a more complex and racially inflected history",
+        "Shaped Reagan's 1980 coalition and remains central to Republican Party politics"
+      ]
+    },
+    {
+      "prompt": "Trace how the environmental movement evolved from Rachel Carson (Silent Spring, 1962) through Barry Commoner (Closing Circle, 1971) to the Sagebrush Rebellion (1979). Identify the ideological shifts and the backlash.",
+      "rubric": [
+        "Carson (1962): documented DDT and pesticide harms; framed the problem as corporate/chemical abuses affecting all life",
+        "Earth Day (April 22, 1970) — 20 million Americans participated",
+        "Federal response: EPA (1970), Clean Air Act (1970), Clean Water Act (1972), Endangered Species Act (1973)",
+        "Commoner (1971): radicalized the framing — synthetic industrial production is the systemic problem; confronted Paul Ehrlich's population-focused alternative",
+        "Three Mile Island (1979) crystallized anti-nuclear sentiment",
+        "Sagebrush Rebellion (1979): Western states demanded federal land transfers; fused ranching interests with anti-regulatory politics",
+        "James Watt as Reagan's Interior Secretary exemplified the backlash — rolling back environmental regulation in the name of freedom",
+        "Pattern: the environmental movement's growth produced immediate conservative counter-organizing",
+        "Became part of Reagan's coalition: anti-EPA, anti-regulation, pro-private property, especially in the West"
+      ]
+    },
+    {
+      "prompt": "Using Foner's framing of 'freedom' as a contested concept, explain how the civil rights movement and the modern conservative movement each claimed the mantle of American freedom. Why did these competing definitions shape politics from the 1960s through the 1980s?",
+      "rubric": [
+        "Civil rights framing: freedom as equal citizenship, freedom from state-sanctioned discrimination, positive federal protection of rights (Brown, Civil Rights Act, Voting Rights Act)",
+        "King in Birmingham Jail: freedom as moral requirement, grounded in Augustine, Aquinas, Buber, Tillich",
+        "Conservative framing (post-Goldwater 1964, through Reagan 1980): freedom FROM federal power, freedom of property, freedom of religious institutions, freedom of association (including discriminatory association)",
+        "Sharon Statement (1960, YAF): 'political freedom requires economic freedom (free markets)'",
+        "Reagan 1981 inaugural: 'government is not the solution, government is the problem'",
+        "Both movements used the word 'freedom' but meant almost opposite things politically",
+        "Southern Manifesto (1956) appropriated 'freedom' for states' rights AGAINST Brown",
+        "Moral Majority (1979) framed 'religious freedom' as freedom from secular-liberal intrusion",
+        "Result: American politics from 1964 through today turns on which definition of freedom is authoritative",
+        "Foner's argument: freedom has always been contested — the civil rights and conservative movements are the defining post-WWII examples"
       ]
     }
   ]
