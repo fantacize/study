@@ -17,6 +17,11 @@ function generateCode() {
   return Math.random().toString(36).substring(2, 8).toUpperCase();
 }
 
+function clearTimers(room) {
+  if (room.timer) { clearTimeout(room.timer); room.timer = null; }
+  if (room.countdown) { clearInterval(room.countdown); room.countdown = null; }
+}
+
 io.on('connection', (socket) => {
   console.log('Connected:', socket.id);
 
@@ -26,12 +31,13 @@ io.on('connection', (socket) => {
       code,
       hostId: socket.id,
       hostName: hostName || 'Host',
-      players: [],
+      players: [{ id: socket.id, name: hostName || 'Host', score: 0, streak: 0 }],
       questions,
       currentQuestion: -1,
       state: 'lobby',
       answers: new Map(),
-      timer: null
+      timer: null,
+      countdown: null
     };
     rooms.set(code, room);
     socket.join(code);
@@ -90,7 +96,7 @@ io.on('connection', (socket) => {
     socket.emit('answer-result', { correct, points, score: player.score });
 
     if (room.answers.size === room.players.length) {
-      clearTimeout(room.timer);
+      clearTimers(room);
       showResults(code);
     }
   });
@@ -105,7 +111,7 @@ io.on('connection', (socket) => {
     for (const [code, room] of rooms) {
       if (room.hostId === socket.id) {
         io.to(code).emit('game-ended', { reason: 'Host disconnected' });
-        clearTimeout(room.timer);
+        clearTimers(room);
         rooms.delete(code);
       } else {
         const idx = room.players.findIndex(p => p.id === socket.id);
@@ -121,6 +127,8 @@ io.on('connection', (socket) => {
 function nextQuestion(code) {
   const room = rooms.get(code);
   if (!room) return;
+
+  clearTimers(room);
 
   room.currentQuestion++;
   if (room.currentQuestion >= room.questions.length) {
@@ -145,23 +153,23 @@ function nextQuestion(code) {
     timeLimit: 20
   });
 
-  const countdown = setInterval(() => {
+  room.countdown = setInterval(() => {
     room.timeLeft--;
     if (room.timeLeft <= 0) {
-      clearInterval(countdown);
+      clearTimers(room);
       showResults(code);
     }
   }, 1000);
 
   room.timer = setTimeout(() => {
-    clearInterval(countdown);
+    clearTimers(room);
     showResults(code);
-  }, 20000);
+  }, 20500);
 }
 
 function showResults(code) {
   const room = rooms.get(code);
-  if (!room) return;
+  if (!room || room.state === 'results') return;
   room.state = 'results';
 
   const q = room.questions[room.currentQuestion];
