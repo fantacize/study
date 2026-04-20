@@ -1345,24 +1345,20 @@ export default function Page() {
                 </p>
               </CardHeader>
               <CardContent className="space-y-4">
-                {currentCartoon.slug && currentCartoon.page ? (
+                {currentCartoon.image ? (
                   <a
-                    href={`/primary-sources/${currentCartoon.slug}/page-${String(currentCartoon.page).padStart(2, "0")}.jpg?v=2`}
+                    href={`${currentCartoon.image}?v=3`}
                     target="_blank"
                     rel="noreferrer"
                     className="block rounded-lg border-2 border-border bg-muted/30 p-3 transition hover:border-foreground/40"
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={`/primary-sources/${currentCartoon.slug}/page-${String(currentCartoon.page).padStart(2, "0")}.jpg?v=2`}
+                      src={`${currentCartoon.image}?v=3`}
                       alt={currentCartoon.title}
                       className="mx-auto block h-auto max-h-[700px] w-auto max-w-full rounded shadow"
                     />
-                    <p className="mt-2 text-center text-xs text-muted-foreground">
-                      From class deck <code>{currentCartoon.slug}</code>, page {currentCartoon.page}. Click to enlarge. If this page does not match the cartoon named above, browse
-                      {" "}
-                      <Link href="/primary-sources" className="underline">the full deck</Link>.
-                    </p>
+                    <p className="mt-2 text-center text-xs text-muted-foreground">Click to open full size.</p>
                   </a>
                 ) : (
                   <div className="rounded-lg border border-dashed border-border bg-muted/20 p-4 text-xs text-muted-foreground">
