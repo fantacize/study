@@ -2,11 +2,22 @@
 import { useState, useEffect, useRef } from 'react';
 import { io } from 'socket.io-client';
 import { questionPool } from '../../practice-tests.js';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Input } from '@/components/ui/input';
+import { Progress } from '@/components/ui/progress';
+import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 const SERVER_URL = process.env.NEXT_PUBLIC_KAHOOT_SERVER || 'http://localhost:3001';
 
-const COLORS = ['#e21b3c', '#1368ce', '#d89e00', '#26890c'];
-const SHAPES = ['triangle', 'diamond', 'circle', 'square'];
+const OPTION_COLORS = [
+  'bg-red-600 hover:bg-red-700',
+  'bg-blue-600 hover:bg-blue-700',
+  'bg-yellow-600 hover:bg-yellow-700',
+  'bg-green-600 hover:bg-green-700',
+];
 
 export default function KahootPage() {
   const [screen, setScreen] = useState('menu');
@@ -102,8 +113,8 @@ export default function KahootPage() {
 
   function createRoom() {
     const shuffled = [...questionPool.mcq].sort(() => Math.random() - 0.5);
-    const selected = shuffled.slice(0, questionCount);
-    socket.emit('create-room', { questions: selected, hostName: playerName || 'Host' });
+    const sel = shuffled.slice(0, questionCount);
+    socket.emit('create-room', { questions: sel, hostName: playerName || 'Host' });
   }
 
   function joinRoom() {
@@ -128,124 +139,176 @@ export default function KahootPage() {
     socket.emit('next-question', { code: roomCode });
   }
 
+  // Menu Screen
   if (screen === 'menu') {
     return (
-      <div style={styles.container}>
-        <div style={styles.card}>
-          <h1 style={styles.title}>AmStuds Kahoot!</h1>
-          <p style={styles.subtitle}>Multiplayer History Quiz</p>
+      <div className="flex min-h-screen items-center justify-center bg-background p-4">
+        <Card className="w-full max-w-md">
+          <CardHeader className="text-center">
+            <CardTitle className="text-3xl font-bold tracking-tight">AmStuds Kahoot!</CardTitle>
+            <p className="text-sm text-muted-foreground">Multiplayer History Quiz</p>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            {error && (
+              <div className="rounded-lg bg-destructive/10 p-3 text-center text-sm font-medium text-destructive">
+                {error}
+              </div>
+            )}
 
-          {error && <div style={styles.error}>{error}</div>}
-
-          <input
-            style={styles.input}
-            placeholder="Your Name"
-            value={playerName}
-            onChange={e => setPlayerName(e.target.value)}
-          />
-
-          <div style={styles.section}>
-            <h3 style={styles.sectionTitle}>Host a Game</h3>
-            <label style={styles.label}>
-              Questions: {questionCount}
-              <input
-                type="range"
-                min="5"
-                max="50"
-                value={questionCount}
-                onChange={e => setQuestionCount(Number(e.target.value))}
-                style={styles.slider}
-              />
-            </label>
-            <button style={styles.btnHost} onClick={createRoom}>
-              Create Room
-            </button>
-          </div>
-
-          <div style={styles.divider}>— OR —</div>
-
-          <div style={styles.section}>
-            <h3 style={styles.sectionTitle}>Join a Game</h3>
-            <input
-              style={styles.input}
-              placeholder="Room Code"
-              value={joinCode}
-              onChange={e => setJoinCode(e.target.value.toUpperCase())}
-              maxLength={6}
+            <Input
+              placeholder="Your Name"
+              value={playerName}
+              onChange={e => setPlayerName(e.target.value)}
             />
-            <button style={styles.btnJoin} onClick={joinRoom}>
-              Join
-            </button>
-          </div>
-        </div>
+
+            <div className="space-y-3">
+              <h3 className="text-sm font-semibold text-muted-foreground">Host a Game</h3>
+              <label className="block text-sm text-muted-foreground">
+                Questions: {questionCount}
+                <input
+                  type="range"
+                  min="5"
+                  max="50"
+                  value={questionCount}
+                  onChange={e => setQuestionCount(Number(e.target.value))}
+                  className="mt-1 w-full accent-primary"
+                />
+              </label>
+              <Button className="w-full" onClick={createRoom}>
+                Create Room
+              </Button>
+            </div>
+
+            <div className="text-center text-sm text-muted-foreground">— OR —</div>
+
+            <div className="space-y-3">
+              <h3 className="text-sm font-semibold text-muted-foreground">Join a Game</h3>
+              <Input
+                placeholder="Room Code"
+                value={joinCode}
+                onChange={e => setJoinCode(e.target.value.toUpperCase())}
+                maxLength={6}
+                className="text-center text-lg font-mono tracking-widest"
+              />
+              <Button variant="secondary" className="w-full" onClick={joinRoom}>
+                Join
+              </Button>
+            </div>
+
+            <div className="pt-2 text-center">
+              <Link href="/" className="text-sm text-muted-foreground underline-offset-4 hover:underline">
+                Back to Study Studio
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     );
   }
 
+  // Lobby Screen
   if (screen === 'lobby') {
     return (
-      <div style={styles.container}>
-        <div style={styles.card}>
-          <h2 style={styles.title}>Room: {roomCode}</h2>
-          <p style={styles.subtitle}>Share this code with friends!</p>
-          <div style={styles.codeDisplay}>{roomCode}</div>
+      <div className="flex min-h-screen items-center justify-center bg-background p-4">
+        <Card className="w-full max-w-md">
+          <CardHeader className="text-center">
+            <CardTitle className="text-2xl">Waiting Room</CardTitle>
+            <p className="text-sm text-muted-foreground">Share this code with friends!</p>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="rounded-xl bg-primary/10 py-4 text-center">
+              <span className="font-mono text-5xl font-black tracking-[0.3em] text-primary">
+                {roomCode}
+              </span>
+            </div>
 
-          <h3 style={styles.sectionTitle}>Players ({players.length})</h3>
-          <div style={styles.playerList}>
-            {players.map((p, i) => (
-              <div key={i} style={styles.playerChip}>{p.name}</div>
-            ))}
-            {players.length === 0 && <p style={styles.muted}>Waiting for players...</p>}
-          </div>
+            <div>
+              <h3 className="mb-2 text-sm font-semibold text-muted-foreground">
+                Players ({players.length})
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {players.map((p, i) => (
+                  <Badge key={i} variant="secondary" className="px-3 py-1.5 text-sm">
+                    {p.name}
+                  </Badge>
+                ))}
+                {players.length === 0 && (
+                  <p className="w-full text-center text-sm italic text-muted-foreground">
+                    Waiting for players...
+                  </p>
+                )}
+              </div>
+            </div>
 
-          {isHost && (
-            <button
-              style={{ ...styles.btnHost, opacity: players.length === 0 ? 0.5 : 1 }}
-              onClick={startGame}
-              disabled={players.length === 0}
-            >
-              Start Game ({questionCount} questions)
-            </button>
-          )}
-          {!isHost && <p style={styles.muted}>Waiting for host to start...</p>}
-        </div>
+            {isHost ? (
+              <Button
+                className="w-full"
+                onClick={startGame}
+                disabled={players.length === 0}
+              >
+                Start Game ({questionCount} questions)
+              </Button>
+            ) : (
+              <p className="text-center text-sm italic text-muted-foreground">
+                Waiting for host to start...
+              </p>
+            )}
+          </CardContent>
+        </Card>
       </div>
     );
   }
 
+  // Playing Screen
   if (screen === 'playing' && question) {
     return (
-      <div style={styles.gameContainer}>
-        <div style={styles.header}>
-          <span style={styles.questionNum}>Q{question.index + 1}/{question.total}</span>
-          <span style={styles.timer}>{timeLeft}s</span>
+      <div className="flex min-h-screen flex-col bg-background p-4">
+        <div className="mb-4 flex items-center justify-between">
+          <Badge variant="outline" className="text-sm">
+            Q{question.index + 1}/{question.total}
+          </Badge>
+          <div className={cn(
+            "flex h-12 w-12 items-center justify-center rounded-full text-lg font-black text-white",
+            timeLeft <= 5 ? "bg-destructive animate-pulse" : "bg-primary"
+          )}>
+            {timeLeft}
+          </div>
         </div>
 
-        <div style={styles.questionBox}>
-          <h2 style={styles.questionText}>{question.question}</h2>
-        </div>
+        <Progress value={(timeLeft / 20) * 100} className="mb-4" />
+
+        <Card className="mb-4">
+          <CardContent className="p-6">
+            <h2 className="text-center text-lg font-semibold leading-relaxed">
+              {question.question}
+            </h2>
+          </CardContent>
+        </Card>
 
         {result && (
-          <div style={{ ...styles.resultBanner, background: result.correct ? '#26890c' : '#e21b3c' }}>
+          <div className={cn(
+            "mb-4 rounded-lg p-3 text-center font-bold text-white",
+            result.correct ? "bg-green-600" : "bg-destructive"
+          )}>
             {result.correct ? `+${result.points} points!` : 'Wrong!'}
           </div>
         )}
 
-        <div style={styles.optionsGrid}>
+        <div className="grid flex-1 grid-cols-2 gap-3">
           {question.options.map((opt, i) => (
             <button
               key={i}
-              style={{
-                ...styles.optionBtn,
-                background: COLORS[i],
-                opacity: selected !== null && selected !== i ? 0.5 : 1,
-                border: selected === i ? '4px solid white' : 'none',
-              }}
+              className={cn(
+                "rounded-xl p-4 text-sm font-semibold text-white transition-all",
+                OPTION_COLORS[i],
+                selected !== null && selected !== i && "opacity-40",
+                selected === i && "ring-4 ring-white ring-offset-2 ring-offset-background",
+                selected !== null && "cursor-not-allowed"
+              )}
               onClick={() => submitAnswer(i)}
               disabled={selected !== null}
             >
-              <span style={styles.shape}>{SHAPES[i]}</span>
-              <span style={styles.optionText}>{opt}</span>
+              {opt}
             </button>
           ))}
         </div>
@@ -253,347 +316,113 @@ export default function KahootPage() {
     );
   }
 
+  // Results Screen
   if (screen === 'results') {
     return (
-      <div style={styles.container}>
-        <div style={styles.card}>
-          <h2 style={styles.title}>Results</h2>
-
-          {explanation && (
-            <div style={styles.explanationBox}>
-              <strong>Answer: {question?.options[correctIndex]}</strong>
-              <p>{explanation}</p>
-            </div>
-          )}
-
-          <h3 style={styles.sectionTitle}>Leaderboard</h3>
-          <div style={styles.leaderboard}>
-            {leaderboard.map((p, i) => (
-              <div key={i} style={styles.leaderRow}>
-                <span style={styles.rank}>#{i + 1}</span>
-                <span style={styles.playerName}>{p.name}</span>
-                <span style={styles.score}>{p.score}</span>
+      <div className="flex min-h-screen items-center justify-center bg-background p-4">
+        <Card className="w-full max-w-md">
+          <CardHeader className="text-center">
+            <CardTitle>Results</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {explanation && (
+              <div className="rounded-lg bg-green-50 p-4 dark:bg-green-950/30">
+                <p className="font-semibold text-green-800 dark:text-green-300">
+                  {question?.options[correctIndex]}
+                </p>
+                <p className="mt-1 text-sm text-green-700 dark:text-green-400">
+                  {explanation}
+                </p>
               </div>
-            ))}
-          </div>
+            )}
 
-          {isHost && (
-            <button style={styles.btnHost} onClick={nextQuestion}>
-              Next Question
-            </button>
-          )}
-          {!isHost && <p style={styles.muted}>Waiting for host...</p>}
-        </div>
+            <div>
+              <h3 className="mb-2 text-sm font-semibold text-muted-foreground">Leaderboard</h3>
+              <div className="divide-y rounded-lg border">
+                {leaderboard.map((p, i) => (
+                  <div key={i} className="flex items-center px-4 py-3">
+                    <span className="w-8 font-bold text-primary">#{i + 1}</span>
+                    <span className="flex-1 font-medium">{p.name}</span>
+                    <span className="font-bold text-green-600">{p.score}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {isHost ? (
+              <Button className="w-full" onClick={nextQuestion}>
+                Next Question
+              </Button>
+            ) : (
+              <p className="text-center text-sm italic text-muted-foreground">
+                Waiting for host...
+              </p>
+            )}
+          </CardContent>
+        </Card>
       </div>
     );
   }
 
+  // Game Over Screen
   if (screen === 'gameover') {
     return (
-      <div style={styles.container}>
-        <div style={styles.card}>
-          <h1 style={styles.title}>Game Over!</h1>
+      <div className="flex min-h-screen items-center justify-center bg-background p-4">
+        <Card className="w-full max-w-md">
+          <CardHeader className="text-center">
+            <CardTitle className="text-3xl">Game Over!</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="flex items-end justify-center gap-3">
+              {leaderboard.slice(0, 3).map((p, i) => {
+                const heights = ['h-32', 'h-24', 'h-16'];
+                const medals = ['\u{1F947}', '\u{1F948}', '\u{1F949}'];
+                const order = [1, 0, 2];
+                return (
+                  <div key={i} className="flex flex-col items-center" style={{ order: order[i] }}>
+                    <span className="text-2xl">{medals[i]}</span>
+                    <div className={cn(
+                      "flex w-24 flex-col items-center justify-center rounded-t-lg text-white",
+                      heights[i],
+                      i === 0 ? "bg-primary" : i === 1 ? "bg-blue-500" : "bg-yellow-600"
+                    )}>
+                      <span className="text-xs font-bold">{p.name}</span>
+                      <span className="text-sm font-black">{p.score}</span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
 
-          <div style={styles.podium}>
-            {leaderboard.slice(0, 3).map((p, i) => (
-              <div key={i} style={{ ...styles.podiumItem, order: i === 0 ? 1 : i === 1 ? 0 : 2 }}>
-                <div style={{ ...styles.podiumBar, height: i === 0 ? 160 : i === 1 ? 120 : 80, background: COLORS[i] }}>
-                  <span style={styles.podiumRank}>{i === 0 ? '🥇' : i === 1 ? '🥈' : '🥉'}</span>
-                  <span style={styles.podiumName}>{p.name}</span>
-                  <span style={styles.podiumScore}>{p.score}</span>
+            <div className="divide-y rounded-lg border">
+              {leaderboard.map((p, i) => (
+                <div key={i} className="flex items-center px-4 py-3">
+                  <span className="w-8 font-bold text-primary">#{i + 1}</span>
+                  <span className="flex-1 font-medium">{p.name}</span>
+                  <span className="font-bold text-green-600">{p.score}</span>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          <div style={styles.leaderboard}>
-            {leaderboard.map((p, i) => (
-              <div key={i} style={styles.leaderRow}>
-                <span style={styles.rank}>#{i + 1}</span>
-                <span style={styles.playerName}>{p.name}</span>
-                <span style={styles.score}>{p.score}</span>
-              </div>
-            ))}
-          </div>
-
-          <button style={styles.btnHost} onClick={() => { setScreen('menu'); setGameOver(false); }}>
-            Play Again
-          </button>
-        </div>
+            <div className="flex gap-3">
+              <Button className="flex-1" onClick={() => { setScreen('menu'); setGameOver(false); }}>
+                Play Again
+              </Button>
+              <Button variant="outline" className="flex-1" asChild>
+                <Link href="/">Study Studio</Link>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     );
   }
 
   return (
-    <div style={styles.container}>
-      <div style={styles.card}>
-        <p>Connecting...</p>
-      </div>
+    <div className="flex min-h-screen items-center justify-center bg-background p-4">
+      <Card className="w-full max-w-md p-8 text-center">
+        <p className="text-muted-foreground">Connecting...</p>
+      </Card>
     </div>
   );
 }
-
-const styles = {
-  container: {
-    minHeight: '100vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    background: '#46178f',
-    padding: 20,
-    fontFamily: 'system-ui, sans-serif',
-  },
-  gameContainer: {
-    minHeight: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
-    background: '#46178f',
-    padding: 20,
-    fontFamily: 'system-ui, sans-serif',
-  },
-  card: {
-    background: 'white',
-    borderRadius: 16,
-    padding: 32,
-    maxWidth: 500,
-    width: '100%',
-    boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
-  },
-  title: {
-    margin: 0,
-    fontSize: 28,
-    textAlign: 'center',
-    color: '#333',
-  },
-  subtitle: {
-    textAlign: 'center',
-    color: '#666',
-    margin: '8px 0 24px',
-  },
-  input: {
-    width: '100%',
-    padding: '12px 16px',
-    fontSize: 16,
-    border: '2px solid #ddd',
-    borderRadius: 8,
-    marginBottom: 12,
-    boxSizing: 'border-box',
-  },
-  section: {
-    marginTop: 16,
-  },
-  sectionTitle: {
-    fontSize: 16,
-    fontWeight: 600,
-    color: '#555',
-    marginBottom: 8,
-  },
-  label: {
-    display: 'block',
-    fontSize: 14,
-    color: '#666',
-    marginBottom: 8,
-  },
-  slider: {
-    width: '100%',
-    marginTop: 4,
-  },
-  btnHost: {
-    width: '100%',
-    padding: '14px',
-    fontSize: 16,
-    fontWeight: 700,
-    color: 'white',
-    background: '#26890c',
-    border: 'none',
-    borderRadius: 8,
-    cursor: 'pointer',
-    marginTop: 12,
-  },
-  btnJoin: {
-    width: '100%',
-    padding: '14px',
-    fontSize: 16,
-    fontWeight: 700,
-    color: 'white',
-    background: '#1368ce',
-    border: 'none',
-    borderRadius: 8,
-    cursor: 'pointer',
-  },
-  divider: {
-    textAlign: 'center',
-    color: '#999',
-    margin: '20px 0',
-    fontSize: 14,
-  },
-  codeDisplay: {
-    fontSize: 48,
-    fontWeight: 900,
-    textAlign: 'center',
-    letterSpacing: 8,
-    color: '#46178f',
-    background: '#f0e6ff',
-    borderRadius: 12,
-    padding: '16px 0',
-    margin: '16px 0',
-  },
-  playerList: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: 8,
-    marginBottom: 16,
-  },
-  playerChip: {
-    background: '#e8f5e9',
-    color: '#2e7d32',
-    padding: '8px 16px',
-    borderRadius: 20,
-    fontWeight: 600,
-  },
-  muted: {
-    color: '#999',
-    textAlign: 'center',
-    fontStyle: 'italic',
-  },
-  header: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '8px 0',
-  },
-  questionNum: {
-    color: 'white',
-    fontSize: 18,
-    fontWeight: 600,
-  },
-  timer: {
-    color: 'white',
-    fontSize: 24,
-    fontWeight: 900,
-    background: '#e21b3c',
-    borderRadius: '50%',
-    width: 50,
-    height: 50,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  questionBox: {
-    background: 'white',
-    borderRadius: 12,
-    padding: 24,
-    margin: '16px 0',
-    textAlign: 'center',
-  },
-  questionText: {
-    fontSize: 20,
-    color: '#333',
-    margin: 0,
-  },
-  resultBanner: {
-    color: 'white',
-    textAlign: 'center',
-    padding: 12,
-    borderRadius: 8,
-    fontWeight: 700,
-    fontSize: 18,
-    marginBottom: 12,
-  },
-  optionsGrid: {
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    gap: 12,
-    flex: 1,
-  },
-  optionBtn: {
-    padding: 20,
-    borderRadius: 8,
-    color: 'white',
-    fontSize: 15,
-    fontWeight: 600,
-    cursor: 'pointer',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    textAlign: 'center',
-    minHeight: 100,
-  },
-  shape: {
-    fontSize: 24,
-    marginBottom: 8,
-  },
-  optionText: {
-    lineHeight: 1.3,
-  },
-  explanationBox: {
-    background: '#e8f5e9',
-    borderRadius: 8,
-    padding: 16,
-    margin: '16px 0',
-    fontSize: 14,
-  },
-  leaderboard: {
-    marginTop: 12,
-  },
-  leaderRow: {
-    display: 'flex',
-    alignItems: 'center',
-    padding: '10px 12px',
-    borderBottom: '1px solid #eee',
-  },
-  rank: {
-    fontWeight: 700,
-    color: '#46178f',
-    width: 40,
-  },
-  playerName: {
-    flex: 1,
-    fontWeight: 600,
-  },
-  score: {
-    fontWeight: 700,
-    color: '#26890c',
-  },
-  error: {
-    background: '#fce4ec',
-    color: '#c62828',
-    padding: 12,
-    borderRadius: 8,
-    marginBottom: 12,
-    textAlign: 'center',
-  },
-  podium: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'flex-end',
-    gap: 12,
-    margin: '24px 0',
-  },
-  podiumItem: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  podiumBar: {
-    width: 100,
-    borderRadius: '8px 8px 0 0',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: 'white',
-  },
-  podiumRank: {
-    fontSize: 32,
-  },
-  podiumName: {
-    fontWeight: 700,
-    fontSize: 14,
-  },
-  podiumScore: {
-    fontSize: 12,
-    opacity: 0.9,
-  },
-};
