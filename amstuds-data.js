@@ -16,6 +16,7 @@ export const amstudsData = {
     { id: "quiz", label: "MCQ" },
     { id: "free-response", label: "Free Response" },
     { id: "matching", label: "Matching" },
+    { id: "cartoons", label: "Political Cartoons" },
     { id: "mock-test", label: "Mock Test" },
     { id: "cram", label: "Cram Sheet" },
     { id: "review-mistakes", label: "Review Mistakes" },
@@ -1362,6 +1363,8 @@ export const amstudsData = {
       year: "1960",
       source: "Catechetical Guild Educational Society",
       chapter: "cold-war",
+      slug: "cold-war-dbq",
+      page: 7,
       description: "Uncle Sam stands on a small boat labeled 'USA' sailing toward a massive red iceberg. Only the tip is visible above the water; beneath the surface, a huge submerged mass is visible, labeled with communist countries: North Korea, East Germany, Poland, Czechoslovakia, Hungary, China. The iceberg bears a hammer and sickle.",
       symbols: [
         "Uncle Sam = United States",
@@ -1386,6 +1389,8 @@ export const amstudsData = {
       year: "1951-52",
       source: "Federal civil defense campaign",
       chapter: "cold-war",
+      slug: "cold-war-dbq",
+      page: 5,
       description: "Cartoon turtle named Bert with a shelter on his back. Animated scenes show Bert ducking into his shell when danger appears. Text: 'Bert Ducks and Covers — He's smart, but HE has his shelter on his back. YOU must learn to find shelter.' Other civil defense posters showed children diving under desks during atomic attack.",
       symbols: [
         "Turtle = natural protection/shelter",
@@ -1405,6 +1410,8 @@ export const amstudsData = {
     },
     {
       title: "Split-Level Living",
+      slug: "affluent-society",
+      page: 12,
       artist: "Herbert Block (Herblock)",
       year: "1960",
       source: "Washington Post",
@@ -1429,6 +1436,8 @@ export const amstudsData = {
     },
     {
       title: "Herblock's McCarthyism",
+      slug: "cold-war-dbq",
+      page: 3,
       artist: "Herbert Block (Herblock)",
       year: "1954",
       source: "Washington Post",
@@ -1452,6 +1461,8 @@ export const amstudsData = {
     },
     {
       title: "Herblock's Watergate Cover-Up",
+      slug: "nixon-conservative",
+      page: 22,
       artist: "Herbert Block (Herblock)",
       year: "October 24, 1973",
       source: "Washington Post",
