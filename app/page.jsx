@@ -1325,114 +1325,26 @@ export default function Page() {
       {/* ===== POLITICAL CARTOONS ===== */}
       {mode === "cartoons" && (
         <div className="space-y-4 animate-in fade-in-0 slide-in-from-bottom-2 duration-300">
-          <div className="flex items-center justify-between">
-            <h2 className="text-lg font-semibold">Political Cartoon Analysis</h2>
-            <span className="text-sm text-muted-foreground">
-              {filteredCartoons.length ? `${cartoonIndex + 1} of ${filteredCartoons.length}` : "0 of 0"}
-            </span>
-          </div>
-
-          {currentCartoon ? (
-            <Card>
-              <CardHeader>
-                <div className="flex flex-wrap items-center gap-2">
-                  <Badge variant="secondary">{currentCartoon.chapter}</Badge>
-                  <Badge variant="outline">{currentCartoon.year}</Badge>
-                </div>
-                <CardTitle className="text-xl">{currentCartoon.title}</CardTitle>
-                <p className="text-sm text-muted-foreground">
-                  <strong>Artist:</strong> {currentCartoon.artist} · <strong>Source:</strong> {currentCartoon.source}
-                </p>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {/* Section tabs */}
-                <div className="flex flex-wrap gap-2">
-                  {["description", "symbols", "context", "message", "questions"].map((s) => (
-                    <Button
-                      key={s}
-                      variant={cartoonSection === s ? "default" : "outline"}
-                      size="sm"
-                      onClick={() => setCartoonSection(s)}
-                      className="capitalize"
-                    >
-                      {s}
-                    </Button>
-                  ))}
-                </div>
-
-                {cartoonSection === "description" && (
-                  <div className="space-y-2">
-                    <h4 className="font-semibold">What's in the cartoon:</h4>
-                    <p className="text-sm leading-relaxed">{currentCartoon.description}</p>
-                    <p className="text-xs text-muted-foreground">
-                      Read the description carefully, then move through the sections to practice analysis.
-                    </p>
-                  </div>
-                )}
-
-                {cartoonSection === "symbols" && (
-                  <div className="space-y-2">
-                    <h4 className="font-semibold">Key symbols and their meanings:</h4>
-                    <ul className="list-disc space-y-1 pl-5 text-sm">
-                      {(currentCartoon.symbols || []).map((sym, i) => (
-                        <li key={i}>{sym}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {cartoonSection === "context" && (
-                  <div className="space-y-2">
-                    <h4 className="font-semibold">Historical context:</h4>
-                    <p className="text-sm leading-relaxed">{currentCartoon.context}</p>
-                  </div>
-                )}
-
-                {cartoonSection === "message" && (
-                  <div className="space-y-2">
-                    <h4 className="font-semibold">The cartoon's argument:</h4>
-                    <p className="text-sm leading-relaxed">{currentCartoon.message}</p>
-                  </div>
-                )}
-
-                {cartoonSection === "questions" && (
-                  <div className="space-y-3">
-                    <h4 className="font-semibold">Analysis questions — write your own answers:</h4>
-                    {(currentCartoon.questions || []).map((q, i) => (
-                      <div key={i} className="space-y-1">
-                        <p className="text-sm font-medium">{i + 1}. {q}</p>
-                        <Textarea
-                          placeholder="Your analysis..."
-                          className="min-h-[60px]"
-                          value={(cartoonAnswers[currentCartoon.title] || {})[i] || ""}
-                          onChange={(e) => saveCartoonAnswer(currentCartoon.title, i, e.target.value)}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </CardContent>
-            </Card>
-          ) : (
-            <Card>
-              <CardContent className="p-6 text-sm text-muted-foreground">
-                No political cartoons match this filter.
-              </CardContent>
-            </Card>
-          )}
-
-          <div className="flex flex-wrap gap-2">
-            <Button variant="outline" size="sm" onClick={() => nextCartoon(-1)}>Previous</Button>
-            <Button variant="outline" size="sm" onClick={() => nextCartoon(1)}>Next</Button>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => { setCartoonIndex(Math.floor(Math.random() * filteredCartoons.length)); setCartoonSection("description"); }}
-              disabled={!filteredCartoons.length}
-            >
-              Random
-            </Button>
-          </div>
+          <Card>
+            <CardContent className="space-y-4 p-6 text-sm">
+              <p className="font-medium">The text-only 'Political Cartoons' mode was removed — it described cartoons without showing them.</p>
+              <p className="text-muted-foreground">
+                Real scanned cartoons and primary sources from your class PDFs live at
+                {" "}
+                <Link href="/primary-sources" className="font-medium underline underline-offset-4">
+                  /primary-sources
+                </Link>
+                . Browse any deck (Cold War DBQ, Affluent Society, Reagan Era, etc.) to see the actual images.
+              </p>
+              <p className="text-muted-foreground">
+                For timed source analysis practice, use{" "}
+                <Link href="/practice-test" className="font-medium underline underline-offset-4">
+                  /practice-test
+                </Link>
+                {" "}— each test shows one primary-source text and one image source with prompts.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       )}
 

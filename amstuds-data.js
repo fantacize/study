@@ -16,7 +16,6 @@ export const amstudsData = {
     { id: "quiz", label: "MCQ" },
     { id: "free-response", label: "Free Response" },
     { id: "matching", label: "Matching" },
-    { id: "cartoons", label: "Political Cartoons" },
     { id: "mock-test", label: "Mock Test" },
     { id: "cram", label: "Cram Sheet" },
     { id: "review-mistakes", label: "Review Mistakes" },

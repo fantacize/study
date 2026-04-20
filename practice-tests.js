@@ -2707,128 +2707,1058 @@ export const questionPool = {
     {
       "slug": "cold-war-dbq",
       "page": 1,
-      "title": "Cold War DBQ — Document Packet (opening)",
-      "prompt": "Using the document and your knowledge of the period, identify which Cold War strategy the source reflects (containment, rollback, detente) and explain what evidence in the text supports your choice. Then note one limitation of reading the period through this single source."
+      "title": "The Cold War \u2014 page 1",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
     },
     {
-      "slug": "birmingham-jail-activity",
-      "page": 3,
-      "title": "Letter from Birmingham Jail — Activity Packet",
-      "prompt": "Identify the specific argument King develops on this page. Name one philosopher or religious figure he cites (e.g., Aquinas, Augustine, Buber, Tillich) and explain how the reference strengthens his case. Then explain why the letter was addressed to 'moderate' clergymen rather than open segregationists."
-    },
-    {
-      "slug": "vietnam-primary",
+      "slug": "cold-war-dbq",
       "page": 2,
-      "title": "Vietnam Primary Sources — Ho Chi Minh / Early War",
-      "prompt": "Identify the author and context of this source. Explain how the speaker frames the war (national liberation vs. communist expansion vs. anti-colonial revolt). Then identify one specific American policy or document that this source either challenges or responds to, and explain how."
+      "title": "The Cold War \u2014 page 2",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
     },
     {
-      "slug": "nixon-conservative",
-      "page": 5,
-      "title": "Nixon & the Conservative Turn",
-      "prompt": "Identify the rhetorical move Nixon is making on this page (e.g., Silent Majority appeal, Southern Strategy framing, law-and-order). Explain what political coalition he is trying to build and name one specific group whose votes this move targeted. Then cite one Foner-identified consequence that persisted for decades."
-    },
-    {
-      "slug": "seventies-malaise",
-      "page": 4,
-      "title": "1970s — From Malaise to Morning in America",
-      "prompt": "Identify the specific 1970s crisis this page highlights (stagflation, oil shock, Iran hostages, or related). Explain why mainstream Keynesian economics could not account for it, and how the crisis opened rhetorical space for Reagan's 1980 campaign."
-    },
-    {
-      "slug": "reagan-era",
-      "page": 10,
-      "title": "Reagan Era Slide Deck",
-      "prompt": "Name the Reagan policy or event depicted on this page. Identify the rhetorical strategy (optimism, anti-government, anti-communism, moral-cultural appeal) and describe how it connected Reagan's domestic coalition (evangelicals, working-class whites, business conservatives) with his foreign policy goals."
-    }    ,
-    {
-      "slug": "affluent-society",
-      "page": 7,
-      "title": "Affluent Society Deck — cartoon / advertisement page",
-      "prompt": "Identify whether this is an advertisement, cartoon, or document excerpt. What argument or sales pitch does it make? How does the visual/textual rhetoric connect to 1950s consumer culture or its critics (Galbraith, Harrington, Beats)?"
-    },
-    {
-      "slug": "affluent-society",
-      "page": 12,
-      "title": "Affluent Society Deck — middle of unit",
-      "prompt": "Identify the 1950s theme this page addresses (consumerism, suburbia, gender roles, Cold War fear, or conformity). Pick one specific element of the image or text and connect it to either a specific historical development or a critic of 1950s culture."
-    },
-    {
-      "slug": "civil-rights-1950s",
-      "page": 6,
-      "title": "Civil Rights 1950s — Jim Crow / Plessy section",
-      "prompt": "Identify what this page documents. Explain how it illustrates de jure or de facto segregation. What legal or political response would eventually challenge what is shown?"
-    },
-    {
-      "slug": "civil-rights-1950s",
-      "page": 14,
-      "title": "Civil Rights 1950s — movement tactics",
-      "prompt": "Identify the event, organization, or tactic depicted. Explain how it fits King's 'four steps' framework (facts → negotiation → self-purification → direct action) or how it departs from nonviolent discipline."
-    },
-    {
-      "slug": "birmingham-jail",
-      "page": 4,
-      "title": "Letter from Birmingham Jail — argument passage",
-      "prompt": "Identify which of King's five major arguments this passage develops (outsider, four steps, case against waiting, just vs unjust laws, white moderate, extremism reframed). Explain the rhetorical move and name at least one philosophical or religious source King uses to support it."
-    },
-    {
-      "slug": "birmingham-jail",
-      "page": 11,
-      "title": "Letter from Birmingham Jail — later sections",
-      "prompt": "Summarize the argument on this page in one sentence. Then explain how King uses a specific example (biblical figure, historical parallel, or personal anecdote) to make his case more persuasive to the moderate clergymen audience."
+      "slug": "cold-war-dbq",
+      "page": 3,
+      "title": "The Cold War \u2014 page 3",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
     },
     {
       "slug": "cold-war-dbq",
       "page": 4,
-      "title": "Cold War DBQ — middle documents",
-      "prompt": "Identify which Cold War document or cartoon this is (Marshall Plan excerpt, NSC-68, home-front propaganda, etc.). Explain what fear or hope it is designed to provoke in its audience, and cite one specific historical development it responds to."
+      "title": "The Cold War \u2014 page 4",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "cold-war-dbq",
+      "page": 5,
+      "title": "The Cold War \u2014 page 5",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "cold-war-dbq",
+      "page": 6,
+      "title": "The Cold War \u2014 page 6",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "cold-war-dbq",
+      "page": 7,
+      "title": "The Cold War \u2014 page 7",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "affluent-society",
+      "page": 1,
+      "title": "An Affluent Society \u2014 page 1",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "affluent-society",
+      "page": 2,
+      "title": "An Affluent Society \u2014 page 2",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "affluent-society",
+      "page": 3,
+      "title": "An Affluent Society \u2014 page 3",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "affluent-society",
+      "page": 4,
+      "title": "An Affluent Society \u2014 page 4",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "affluent-society",
+      "page": 5,
+      "title": "An Affluent Society \u2014 page 5",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "affluent-society",
+      "page": 6,
+      "title": "An Affluent Society \u2014 page 6",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "affluent-society",
+      "page": 7,
+      "title": "An Affluent Society \u2014 page 7",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "affluent-society",
+      "page": 8,
+      "title": "An Affluent Society \u2014 page 8",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "affluent-society",
+      "page": 9,
+      "title": "An Affluent Society \u2014 page 9",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "affluent-society",
+      "page": 10,
+      "title": "An Affluent Society \u2014 page 10",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "affluent-society",
+      "page": 11,
+      "title": "An Affluent Society \u2014 page 11",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "affluent-society",
+      "page": 12,
+      "title": "An Affluent Society \u2014 page 12",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "affluent-society",
+      "page": 13,
+      "title": "An Affluent Society \u2014 page 13",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "affluent-society",
+      "page": 14,
+      "title": "An Affluent Society \u2014 page 14",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "affluent-society",
+      "page": 15,
+      "title": "An Affluent Society \u2014 page 15",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 1,
+      "title": "Civil Rights in the 1950s \u2014 page 1",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 2,
+      "title": "Civil Rights in the 1950s \u2014 page 2",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 3,
+      "title": "Civil Rights in the 1950s \u2014 page 3",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 4,
+      "title": "Civil Rights in the 1950s \u2014 page 4",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 5,
+      "title": "Civil Rights in the 1950s \u2014 page 5",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 6,
+      "title": "Civil Rights in the 1950s \u2014 page 6",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 7,
+      "title": "Civil Rights in the 1950s \u2014 page 7",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 8,
+      "title": "Civil Rights in the 1950s \u2014 page 8",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 9,
+      "title": "Civil Rights in the 1950s \u2014 page 9",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 10,
+      "title": "Civil Rights in the 1950s \u2014 page 10",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 11,
+      "title": "Civil Rights in the 1950s \u2014 page 11",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 12,
+      "title": "Civil Rights in the 1950s \u2014 page 12",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 13,
+      "title": "Civil Rights in the 1950s \u2014 page 13",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 14,
+      "title": "Civil Rights in the 1950s \u2014 page 14",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 15,
+      "title": "Civil Rights in the 1950s \u2014 page 15",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 16,
+      "title": "Civil Rights in the 1950s \u2014 page 16",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 17,
+      "title": "Civil Rights in the 1950s \u2014 page 17",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 18,
+      "title": "Civil Rights in the 1950s \u2014 page 18",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 19,
+      "title": "Civil Rights in the 1950s \u2014 page 19",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 20,
+      "title": "Civil Rights in the 1950s \u2014 page 20",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 21,
+      "title": "Civil Rights in the 1950s \u2014 page 21",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "civil-rights-1950s",
+      "page": 22,
+      "title": "Civil Rights in the 1950s \u2014 page 22",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 1,
+      "title": "Letter from Birmingham Jail \u2014 page 1",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 2,
+      "title": "Letter from Birmingham Jail \u2014 page 2",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 3,
+      "title": "Letter from Birmingham Jail \u2014 page 3",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 4,
+      "title": "Letter from Birmingham Jail \u2014 page 4",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 5,
+      "title": "Letter from Birmingham Jail \u2014 page 5",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 6,
+      "title": "Letter from Birmingham Jail \u2014 page 6",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 7,
+      "title": "Letter from Birmingham Jail \u2014 page 7",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 8,
+      "title": "Letter from Birmingham Jail \u2014 page 8",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 9,
+      "title": "Letter from Birmingham Jail \u2014 page 9",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 10,
+      "title": "Letter from Birmingham Jail \u2014 page 10",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 11,
+      "title": "Letter from Birmingham Jail \u2014 page 11",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 12,
+      "title": "Letter from Birmingham Jail \u2014 page 12",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 13,
+      "title": "Letter from Birmingham Jail \u2014 page 13",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 14,
+      "title": "Letter from Birmingham Jail \u2014 page 14",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 15,
+      "title": "Letter from Birmingham Jail \u2014 page 15",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 16,
+      "title": "Letter from Birmingham Jail \u2014 page 16",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 17,
+      "title": "Letter from Birmingham Jail \u2014 page 17",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 18,
+      "title": "Letter from Birmingham Jail \u2014 page 18",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail",
+      "page": 19,
+      "title": "Letter from Birmingham Jail \u2014 page 19",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail-activity",
+      "page": 1,
+      "title": "Birmingham Jail Activity \u2014 page 1",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail-activity",
+      "page": 2,
+      "title": "Birmingham Jail Activity \u2014 page 2",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail-activity",
+      "page": 3,
+      "title": "Birmingham Jail Activity \u2014 page 3",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail-activity",
+      "page": 4,
+      "title": "Birmingham Jail Activity \u2014 page 4",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail-activity",
+      "page": 5,
+      "title": "Birmingham Jail Activity \u2014 page 5",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail-activity",
+      "page": 6,
+      "title": "Birmingham Jail Activity \u2014 page 6",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "birmingham-jail-activity",
+      "page": 7,
+      "title": "Birmingham Jail Activity \u2014 page 7",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-war",
+      "page": 1,
+      "title": "The Vietnam War \u2014 page 1",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-war",
+      "page": 2,
+      "title": "The Vietnam War \u2014 page 2",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-war",
+      "page": 3,
+      "title": "The Vietnam War \u2014 page 3",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-war",
+      "page": 4,
+      "title": "The Vietnam War \u2014 page 4",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-war",
+      "page": 5,
+      "title": "The Vietnam War \u2014 page 5",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
     },
     {
       "slug": "vietnam-war",
       "page": 6,
-      "title": "Vietnam War Deck — escalation / combat",
-      "prompt": "Identify the phase of the Vietnam War this page addresses (French era, Diem/Geneva, Gulf of Tonkin, Tet, Vietnamization, Fall of Saigon). Explain one cause and one consequence of the event depicted, connecting it to a specific US policy document or decision."
+      "title": "The Vietnam War \u2014 page 6",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-war",
+      "page": 7,
+      "title": "The Vietnam War \u2014 page 7",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-war",
+      "page": 8,
+      "title": "The Vietnam War \u2014 page 8",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-war",
+      "page": 9,
+      "title": "The Vietnam War \u2014 page 9",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-war",
+      "page": 10,
+      "title": "The Vietnam War \u2014 page 10",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-war",
+      "page": 11,
+      "title": "The Vietnam War \u2014 page 11",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-war",
+      "page": 12,
+      "title": "The Vietnam War \u2014 page 12",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-war",
+      "page": 13,
+      "title": "The Vietnam War \u2014 page 13",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-war",
+      "page": 14,
+      "title": "The Vietnam War \u2014 page 14",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-war",
+      "page": 15,
+      "title": "The Vietnam War \u2014 page 15",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-war",
+      "page": 16,
+      "title": "The Vietnam War \u2014 page 16",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-war",
+      "page": 17,
+      "title": "The Vietnam War \u2014 page 17",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 1,
+      "title": "Vietnam Primary Sources \u2014 page 1",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 2,
+      "title": "Vietnam Primary Sources \u2014 page 2",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 3,
+      "title": "Vietnam Primary Sources \u2014 page 3",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 4,
+      "title": "Vietnam Primary Sources \u2014 page 4",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 5,
+      "title": "Vietnam Primary Sources \u2014 page 5",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 6,
+      "title": "Vietnam Primary Sources \u2014 page 6",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
     },
     {
       "slug": "vietnam-primary",
       "page": 7,
-      "title": "Vietnam Primary Sources — O'Brien or Caputo excerpt",
-      "prompt": "Identify the author and passage. Describe the emotional or moral argument being made. How does this literary source complicate the official US narrative of the Vietnam War? Cite at least one specific claim it undermines."
+      "title": "Vietnam Primary Sources \u2014 page 7",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 8,
+      "title": "Vietnam Primary Sources \u2014 page 8",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 9,
+      "title": "Vietnam Primary Sources \u2014 page 9",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 10,
+      "title": "Vietnam Primary Sources \u2014 page 10",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 11,
+      "title": "Vietnam Primary Sources \u2014 page 11",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 12,
+      "title": "Vietnam Primary Sources \u2014 page 12",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 13,
+      "title": "Vietnam Primary Sources \u2014 page 13",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
     },
     {
       "slug": "vietnam-primary",
       "page": 14,
-      "title": "Vietnam Primary Sources — late-war document",
-      "prompt": "Identify the source. Whose perspective does it represent (US policymaker, soldier, Vietnamese nationalist, antiwar American)? Explain how this perspective differs from the dominant framing of the war at the time it was produced."
+      "title": "Vietnam Primary Sources \u2014 page 14",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 15,
+      "title": "Vietnam Primary Sources \u2014 page 15",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 16,
+      "title": "Vietnam Primary Sources \u2014 page 16",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 17,
+      "title": "Vietnam Primary Sources \u2014 page 17",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 18,
+      "title": "Vietnam Primary Sources \u2014 page 18",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 19,
+      "title": "Vietnam Primary Sources \u2014 page 19",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "vietnam-primary",
+      "page": 20,
+      "title": "Vietnam Primary Sources \u2014 page 20",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 1,
+      "title": "Nixon & Conservative Turn \u2014 page 1",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 2,
+      "title": "Nixon & Conservative Turn \u2014 page 2",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 3,
+      "title": "Nixon & Conservative Turn \u2014 page 3",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 4,
+      "title": "Nixon & Conservative Turn \u2014 page 4",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 5,
+      "title": "Nixon & Conservative Turn \u2014 page 5",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 6,
+      "title": "Nixon & Conservative Turn \u2014 page 6",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 7,
+      "title": "Nixon & Conservative Turn \u2014 page 7",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 8,
+      "title": "Nixon & Conservative Turn \u2014 page 8",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 9,
+      "title": "Nixon & Conservative Turn \u2014 page 9",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 10,
+      "title": "Nixon & Conservative Turn \u2014 page 10",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 11,
+      "title": "Nixon & Conservative Turn \u2014 page 11",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
     },
     {
       "slug": "nixon-conservative",
       "page": 12,
-      "title": "Nixon Era Deck — middle of unit",
-      "prompt": "Identify the Nixon-era event, speech, or policy on this page. Explain how it fits Nixon's political strategy (Silent Majority, Southern Strategy, Vietnamization, detente) and name one specific consequence — intended or unintended."
+      "title": "Nixon & Conservative Turn \u2014 page 12",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 13,
+      "title": "Nixon & Conservative Turn \u2014 page 13",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 14,
+      "title": "Nixon & Conservative Turn \u2014 page 14",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 15,
+      "title": "Nixon & Conservative Turn \u2014 page 15",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 16,
+      "title": "Nixon & Conservative Turn \u2014 page 16",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 17,
+      "title": "Nixon & Conservative Turn \u2014 page 17",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 18,
+      "title": "Nixon & Conservative Turn \u2014 page 18",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 19,
+      "title": "Nixon & Conservative Turn \u2014 page 19",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 20,
+      "title": "Nixon & Conservative Turn \u2014 page 20",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 21,
+      "title": "Nixon & Conservative Turn \u2014 page 21",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
     },
     {
       "slug": "nixon-conservative",
       "page": 22,
-      "title": "Nixon Era Deck — Watergate / end of 60s",
-      "prompt": "Identify the event. Explain how it either revealed abuse of executive power or represented a broader cultural/political shift. Connect it to either Pentagon Papers, War Powers Resolution, or Watergate's legacy for public trust."
+      "title": "Nixon & Conservative Turn \u2014 page 22",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 23,
+      "title": "Nixon & Conservative Turn \u2014 page 23",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 24,
+      "title": "Nixon & Conservative Turn \u2014 page 24",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 25,
+      "title": "Nixon & Conservative Turn \u2014 page 25",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 26,
+      "title": "Nixon & Conservative Turn \u2014 page 26",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "nixon-conservative",
+      "page": 27,
+      "title": "Nixon & Conservative Turn \u2014 page 27",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "seventies-malaise",
+      "page": 1,
+      "title": "1970s: Malaise to Morning in America \u2014 page 1",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "seventies-malaise",
+      "page": 2,
+      "title": "1970s: Malaise to Morning in America \u2014 page 2",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "seventies-malaise",
+      "page": 3,
+      "title": "1970s: Malaise to Morning in America \u2014 page 3",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "seventies-malaise",
+      "page": 4,
+      "title": "1970s: Malaise to Morning in America \u2014 page 4",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "seventies-malaise",
+      "page": 5,
+      "title": "1970s: Malaise to Morning in America \u2014 page 5",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "seventies-malaise",
+      "page": 6,
+      "title": "1970s: Malaise to Morning in America \u2014 page 6",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
     },
     {
       "slug": "seventies-malaise",
       "page": 7,
-      "title": "1970s Deck — oil shock / stagflation",
-      "prompt": "Identify the 1970s phenomenon (oil crisis, stagflation, family demographic shift, Iran hostages, religious right rise). Explain its economic or political effect and connect it to Carter's or Reagan's 1980 campaign framing."
+      "title": "1970s: Malaise to Morning in America \u2014 page 7",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "seventies-malaise",
+      "page": 8,
+      "title": "1970s: Malaise to Morning in America \u2014 page 8",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "seventies-malaise",
+      "page": 9,
+      "title": "1970s: Malaise to Morning in America \u2014 page 9",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "seventies-malaise",
+      "page": 10,
+      "title": "1970s: Malaise to Morning in America \u2014 page 10",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 1,
+      "title": "Reagan Era \u2014 page 1",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 2,
+      "title": "Reagan Era \u2014 page 2",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 3,
+      "title": "Reagan Era \u2014 page 3",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 4,
+      "title": "Reagan Era \u2014 page 4",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 5,
+      "title": "Reagan Era \u2014 page 5",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 6,
+      "title": "Reagan Era \u2014 page 6",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 7,
+      "title": "Reagan Era \u2014 page 7",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 8,
+      "title": "Reagan Era \u2014 page 8",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 9,
+      "title": "Reagan Era \u2014 page 9",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 10,
+      "title": "Reagan Era \u2014 page 10",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 11,
+      "title": "Reagan Era \u2014 page 11",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 12,
+      "title": "Reagan Era \u2014 page 12",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 13,
+      "title": "Reagan Era \u2014 page 13",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 14,
+      "title": "Reagan Era \u2014 page 14",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 15,
+      "title": "Reagan Era \u2014 page 15",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 16,
+      "title": "Reagan Era \u2014 page 16",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 17,
+      "title": "Reagan Era \u2014 page 17",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
     },
     {
       "slug": "reagan-era",
       "page": 18,
-      "title": "Reagan Era Deck — foreign policy",
-      "prompt": "Identify the Reagan foreign-policy event or doctrine (SDI, Reagan Doctrine, Latin American intervention, Iran-Contra, INF Treaty, Berlin speech). Explain the strategy and name one specific supporter and one specific critic of the approach."
+      "title": "Reagan Era \u2014 page 18",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 19,
+      "title": "Reagan Era \u2014 page 19",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 20,
+      "title": "Reagan Era \u2014 page 20",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 21,
+      "title": "Reagan Era \u2014 page 21",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 22,
+      "title": "Reagan Era \u2014 page 22",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 23,
+      "title": "Reagan Era \u2014 page 23",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 24,
+      "title": "Reagan Era \u2014 page 24",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 25,
+      "title": "Reagan Era \u2014 page 25",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
     },
     {
       "slug": "reagan-era",
       "page": 26,
-      "title": "Reagan Era Deck — domestic / end of era",
-      "prompt": "Identify the Reagan domestic policy or end-of-Cold-War moment. Explain the policy's consequence for one specific group of Americans, and connect it to either Reaganomics, War on Drugs, or the broader conservative realignment."
+      "title": "Reagan Era \u2014 page 26",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 27,
+      "title": "Reagan Era \u2014 page 27",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 28,
+      "title": "Reagan Era \u2014 page 28",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 29,
+      "title": "Reagan Era \u2014 page 29",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 30,
+      "title": "Reagan Era \u2014 page 30",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 31,
+      "title": "Reagan Era \u2014 page 31",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
+    },
+    {
+      "slug": "reagan-era",
+      "page": 32,
+      "title": "Reagan Era \u2014 page 32",
+      "prompt": "Identify what this page of the class deck shows \u2014 a political cartoon, a primary-source document, a photograph, or a piece of textbook material. Describe what is visually or textually present. Then explain: (a) the historical context of what it shows, (b) the argument or perspective it conveys, and (c) how it connects to a specific decision, document, or movement from the midterm scope."
     }
   ],
   "shortAnswer": [
