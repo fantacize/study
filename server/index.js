@@ -77,7 +77,7 @@ io.on('connection', (socket) => {
     if (room.answers.has(socket.id)) return;
 
     const timeLeft = room.timeLeft || 0;
-    const correct = answerIndex === room.questions[room.currentQuestion].answerIndex;
+    const correct = answerIndex === room.shuffledAnswerIndex;
     let points = 0;
 
     const player = room.players.find(p => p.id === socket.id);
@@ -145,11 +145,19 @@ function nextQuestion(code) {
   room.timeLeft = 20;
 
   const q = room.questions[room.currentQuestion];
+  const indices = [0, 1, 2, 3];
+  for (let i = indices.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [indices[i], indices[j]] = [indices[j], indices[i]];
+  }
+  const shuffledOptions = indices.map(i => q.options[i]);
+  room.shuffledAnswerIndex = indices.indexOf(q.answerIndex);
+
   io.to(code).emit('new-question', {
     index: room.currentQuestion,
     total: room.questions.length,
     question: q.question,
-    options: q.options,
+    options: shuffledOptions,
     timeLimit: 20
   });
 
@@ -178,7 +186,7 @@ function showResults(code) {
     .map(p => ({ name: p.name, score: p.score }));
 
   io.to(code).emit('question-results', {
-    correctIndex: q.answerIndex,
+    correctIndex: room.shuffledAnswerIndex,
     explanation: q.explanation,
     leaderboard
   });
