@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { questionPool } from "../../practice-tests.js";
+import { primaryTexts } from "../../primary-texts.js";
 
 const TEST_LENGTH = { mcq: 22, sources: 2, shortAnswer: 5, minutes: 60 };
 
@@ -15,14 +16,34 @@ function shuffle(arr) {
   return copy;
 }
 
+// Combined source pool — image sources (PDF pages) tagged type:"image",
+// primary text sources tagged type:"text". One test mixes both.
+function buildSourcePool() {
+  const imageSources = (questionPool.sources || []).map((s) => ({ ...s, type: "image" }));
+  const textSources = (primaryTexts || []).map((s) => ({ ...s, type: "text" }));
+  return [...imageSources, ...textSources];
+}
+
 function generateTest(label) {
+  const pool = buildSourcePool();
+  // Ensure at least one text source per test if available
+  const texts = pool.filter((s) => s.type === "text");
+  const images = pool.filter((s) => s.type === "image");
+  const chosen = [];
+  if (texts.length) chosen.push(shuffle(texts)[0]);
+  if (images.length) chosen.push(shuffle(images)[0]);
+  // Fill remaining if TEST_LENGTH.sources > 2
+  const remaining = shuffle(pool.filter((s) => !chosen.includes(s)));
+  while (chosen.length < TEST_LENGTH.sources && remaining.length) {
+    chosen.push(remaining.shift());
+  }
   return {
     id: `${label}-${Date.now()}`,
     title: `Practice Test ${label}`,
     focus: "Randomized — full midterm scope (Chs 23-26)",
     minutes: TEST_LENGTH.minutes,
     mcq: shuffle(questionPool.mcq).slice(0, TEST_LENGTH.mcq),
-    sources: shuffle(questionPool.sources).slice(0, TEST_LENGTH.sources),
+    sources: shuffle(chosen),
     shortAnswer: shuffle(questionPool.shortAnswer).slice(0, TEST_LENGTH.shortAnswer),
   };
 }
@@ -272,32 +293,48 @@ export default function PracticeTestPage() {
                   </Link>
                 </div>
                 <div className="space-y-4">
-                  <a
-                    href={`/primary-sources/${s.slug}/page-${padPage(s.page)}.jpg?v=2`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="block rounded-lg border-2 border-border bg-muted/30 p-3 transition hover:border-foreground/40"
-                  >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={`/primary-sources/${s.slug}/page-${padPage(s.page)}.jpg?v=2`}
-                      alt={s.title}
-                      className="mx-auto block h-auto max-h-[800px] w-auto max-w-full rounded shadow"
-                      onError={(e) => {
-                        e.currentTarget.style.display = "none";
-                        const sib = e.currentTarget.nextElementSibling;
-                        if (sib) sib.style.display = "block";
-                      }}
-                    />
-                    <div
-                      style={{ display: "none" }}
-                      className="rounded bg-red-50 p-4 text-center text-sm text-red-700 dark:bg-red-950 dark:text-red-200"
-                    >
-                      Image failed to load at <code>/primary-sources/{s.slug}/page-{padPage(s.page)}.jpg</code>.
-                      Try hard-refresh (Cmd+Shift+R) or visit the full deck →
+                  {s.type === "text" ? (
+                    <div className="rounded-lg border-2 border-border bg-muted/20 p-5">
+                      <div className="mb-3 flex flex-wrap items-center gap-2">
+                        <Badge variant="secondary">Primary Source Text</Badge>
+                        {s.era && <Badge variant="outline">{s.era}</Badge>}
+                        {s.author && <span className="text-xs text-muted-foreground">— {s.author}</span>}
+                      </div>
+                      <div className="max-h-[500px] overflow-y-auto whitespace-pre-wrap rounded bg-background p-4 font-serif text-[15px] leading-relaxed">
+                        {s.body}
+                      </div>
                     </div>
-                    <p className="mt-2 text-center text-xs text-muted-foreground">Click image to open full-size in a new tab</p>
-                  </a>
+                  ) : (
+                    <a
+                      href={`/primary-sources/${s.slug}/page-${padPage(s.page)}.jpg?v=2`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="block rounded-lg border-2 border-border bg-muted/30 p-3 transition hover:border-foreground/40"
+                    >
+                      <div className="mb-2 flex items-center gap-2">
+                        <Badge variant="secondary">Political Cartoon / Document Image</Badge>
+                      </div>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={`/primary-sources/${s.slug}/page-${padPage(s.page)}.jpg?v=2`}
+                        alt={s.title}
+                        className="mx-auto block h-auto max-h-[800px] w-auto max-w-full rounded shadow"
+                        onError={(e) => {
+                          e.currentTarget.style.display = "none";
+                          const sib = e.currentTarget.nextElementSibling;
+                          if (sib) sib.style.display = "block";
+                        }}
+                      />
+                      <div
+                        style={{ display: "none" }}
+                        className="rounded bg-red-50 p-4 text-center text-sm text-red-700 dark:bg-red-950 dark:text-red-200"
+                      >
+                        Image failed to load at <code>/primary-sources/{s.slug}/page-{padPage(s.page)}.jpg</code>.
+                        Try hard-refresh (Cmd+Shift+R) or visit the full deck →
+                      </div>
+                      <p className="mt-2 text-center text-xs text-muted-foreground">Click image to open full-size in a new tab</p>
+                    </a>
+                  )}
                   <div>
                     <p className="mb-2 text-sm font-medium">Prompt</p>
                     <p className="mb-3 rounded bg-muted/50 p-3 text-sm">{s.prompt}</p>
