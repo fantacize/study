@@ -99,6 +99,10 @@ function LandingPage({ onSelect, darkMode, setDarkMode }) {
         <Link href="/practice-test" className="font-medium underline-offset-4 hover:underline">
           Practice Tests
         </Link>
+        <span className="text-muted-foreground">·</span>
+        <Link href="/kahoot" className="font-medium underline-offset-4 hover:underline">
+          Kahoot!
+        </Link>
       </div>
     </div>
   );
@@ -802,7 +806,7 @@ export default function Page() {
         <div>
           <div className="flex items-center gap-3">
             <Button variant="ghost" size="sm" className="text-muted-foreground" onClick={() => setSubject(null)}>
-              &larr; Back
+              &lt;&lt; Back
             </Button>
             <h1 className="text-3xl font-bold tracking-tight">{subjectLabel} Study Studio</h1>
           </div>
@@ -964,7 +968,7 @@ export default function Page() {
           <summary className="cursor-pointer hover:text-foreground">Keyboard shortcuts</summary>
           <div className="mt-2 grid grid-cols-2 gap-x-6 gap-y-1 sm:grid-cols-4">
             <span><kbd className="rounded border px-1">Space</kbd> Flip card</span>
-            <span><kbd className="rounded border px-1">&larr;</kbd><kbd className="rounded border px-1">&rarr;</kbd> Prev / Next</span>
+            <span><kbd className="rounded border px-1">&lt;&lt;</kbd><kbd className="rounded border px-1">&gt;&gt;</kbd> Prev / Next</span>
             <span><kbd className="rounded border px-1">1-4</kbd> Answer MCQ</span>
             <span><kbd className="rounded border px-1">S</kbd> Shuffle</span>
             <span><kbd className="rounded border px-1">T</kbd> Toggle tough</span>
