@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState, useCallback } from "react";
 import { studyData } from "../data.js";
 import { amstudsData } from "../amstuds-data.js";
+import { philosophyCh3Ch4Data } from "../philosophy-ch3-ch4-data.js";
 import { cn } from "@/lib/utils";
 import { useLocalStorage, useStudyTimer } from "@/lib/hooks";
 import { Button } from "@/components/ui/button";
@@ -60,7 +61,8 @@ import Link from "next/link";
 
 function LandingPage({ onSelect, darkMode, setDarkMode }) {
   const subjects = [
-    { id: "philosophy", label: "Philosophy", description: "Chapters 1 & 2 — What Philosophy Is, Models of Human Nature", icon: "🏛️", color: "from-violet-500 to-purple-600" },
+    { id: "philosophy", label: "Philosophy 1-2", description: "Chapters 1 & 2 — What Philosophy Is, Models of Human Nature", icon: "🏛️", color: "from-violet-500 to-purple-600" },
+    { id: "philosophy-ch3-ch4", label: "Philosophy 3-4", description: "Chapters 3 & 4 — Metaphysics and Reality, Theology", icon: "🔮", color: "from-indigo-500 to-violet-600" },
     { id: "amstuds", label: "AmStuds", description: "Cold War, Affluent Society, Civil Rights, Vietnam, Nixon", icon: "🇺🇸", color: "from-blue-500 to-red-500" },
   ];
 
@@ -110,7 +112,7 @@ function LandingPage({ onSelect, darkMode, setDarkMode }) {
 
 export default function Page() {
   const [subject, setSubject] = useLocalStorage("study-subject", null);
-  const activeData = subject === "amstuds" ? amstudsData : studyData;
+  const activeData = subject === "amstuds" ? amstudsData : subject === "philosophy-ch3-ch4" ? philosophyCh3Ch4Data : studyData;
 
   const [chapter, setChapter] = useState("all");
   const [mode, setMode] = useState("overview");
