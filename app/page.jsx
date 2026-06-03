@@ -181,7 +181,26 @@ export default function Page() {
   const [quizAnswered, setQuizAnswered] = useState(false);
   const [quizSelectedIndex, setQuizSelectedIndex] = useState(null);
   const [quizResults, setQuizResults] = useLocalStorage("study-quiz-results", []);
-  const [missedQuestions, setMissedQuestions] = useLocalStorage("study-missed-questions", []);
+  // Missed MCQs are stored PER study set (keyed by subject) so one set's
+  // mistakes never appear on another, and "Reset" only clears the current set.
+  // The localStorage key stays constant; the value is a { [subject]: string[] }
+  // map, which avoids the changing-key write race in useLocalStorage.
+  const [missedBySubject, setMissedBySubject] = useLocalStorage("study-missed-by-subject", {});
+  const missedSubjectKey = subject ?? "none";
+  const missedQuestions = useMemo(() => {
+    const arr = missedBySubject?.[missedSubjectKey];
+    return Array.isArray(arr) ? arr : [];
+  }, [missedBySubject, missedSubjectKey]);
+  const setMissedQuestions = useCallback(
+    (updater) =>
+      setMissedBySubject((prev) => {
+        const map = prev && typeof prev === "object" ? prev : {};
+        const current = Array.isArray(map[missedSubjectKey]) ? map[missedSubjectKey] : [];
+        const next = typeof updater === "function" ? updater(current) : updater;
+        return { ...map, [missedSubjectKey]: next };
+      }),
+    [setMissedBySubject, missedSubjectKey],
+  );
   const [tagStats, setTagStats] = useLocalStorage("study-tag-stats", {});
 
   // Free Response
