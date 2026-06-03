@@ -1073,8 +1073,8 @@ export default function Page() {
               </svg>
             </div>
           </div>
-          {missedQuestions.length > 0 && (
-            <Badge variant="destructive">{missedQuestions.length} missed</Badge>
+          {missedQuizItems.length > 0 && (
+            <Badge variant="destructive">{missedQuizItems.length} missed</Badge>
           )}
           <Button
             variant="outline"
@@ -1139,7 +1139,7 @@ export default function Page() {
                   <p className="text-xs text-muted-foreground">FR nailed</p>
                 </div>
                 <div className="rounded-lg border p-3">
-                  <p className="text-lg font-semibold">{missedQuestions.length}</p>
+                  <p className="text-lg font-semibold">{missedQuizItems.length}</p>
                   <p className="text-xs text-muted-foreground">Still missed</p>
                 </div>
               </div>
@@ -1199,9 +1199,9 @@ export default function Page() {
             {activeData.modes.map((m) => (
               <TabsTrigger key={m.id} value={m.id}>
                 {m.label}
-                {m.id === "review-mistakes" && missedQuestions.length > 0 && (
+                {m.id === "review-mistakes" && missedQuizItems.length > 0 && (
                   <span className="ml-1 rounded-full bg-destructive px-1.5 py-0.5 text-[10px] text-destructive-foreground">
-                    {missedQuestions.length}
+                    {missedQuizItems.length}
                   </span>
                 )}
               </TabsTrigger>
