@@ -1,9 +1,23 @@
 "use client";
 
 import { useEffect, useMemo, useState, useCallback } from "react";
+import Link from "next/link";
+import {
+  Brain,
+  CheckCircle2,
+  Clock3,
+  ListChecks,
+  Play,
+  RotateCcw,
+  Target,
+  TimerReset,
+} from "lucide-react";
 import { studyData } from "../data.js";
 import { amstudsData } from "../amstuds-data.js";
 import { philosophyCh3Ch4Data } from "../philosophy-ch3-ch4-data.js";
+import { tomorrowModeData } from "../tomorrow-mode-data.js";
+import { philosophyCh5Ch6Data } from "../philosophy-ch5-ch6-data.js";
+import { philosophyCh7Data } from "../philosophy-ch7-data.js";
 import { cn } from "@/lib/utils";
 import { useLocalStorage, useStudyTimer } from "@/lib/hooks";
 import { Button } from "@/components/ui/button";
@@ -57,12 +71,13 @@ function formatTime(seconds) {
   return `${m}:${s.toString().padStart(2, "0")}`;
 }
 
-import Link from "next/link";
-
 function LandingPage({ onSelect, darkMode, setDarkMode }) {
   const subjects = [
+    { id: "tomorrow-mode", label: "Tomorrow Mode", description: "A focused cram path for Philosophy Ch. 3-4", icon: "⏱️", color: "from-emerald-500 to-teal-600" },
     { id: "philosophy", label: "Philosophy 1-2", description: "Chapters 1 & 2 — What Philosophy Is, Models of Human Nature", icon: "🏛️", color: "from-violet-500 to-purple-600" },
     { id: "philosophy-ch3-ch4", label: "Philosophy 3-4", description: "Chapters 3 & 4 — Metaphysics and Reality, Theology", icon: "🔮", color: "from-indigo-500 to-violet-600" },
+    { id: "philosophy-ch5-ch6", label: "Philosophy 5-6", description: "Chapters 5 & 6 — Sources of Knowledge, Truth", icon: "🧠", color: "from-sky-500 to-indigo-600" },
+    { id: "philosophy-ch7", label: "Philosophy 7", description: "Chapter 7 — Ethics: egoism, utilitarianism, categorical imperative", icon: "⚖️", color: "from-amber-500 to-orange-600" },
     { id: "amstuds", label: "AmStuds", description: "Cold War, Affluent Society, Civil Rights, Vietnam, Nixon", icon: "🇺🇸", color: "from-blue-500 to-red-500" },
   ];
 
@@ -112,13 +127,27 @@ function LandingPage({ onSelect, darkMode, setDarkMode }) {
 
 export default function Page() {
   const [subject, setSubject] = useLocalStorage("study-subject", null);
-  const activeData = subject === "amstuds" ? amstudsData : subject === "philosophy-ch3-ch4" ? philosophyCh3Ch4Data : studyData;
+  const activeData =
+    subject === "amstuds"
+      ? amstudsData
+      : subject === "philosophy-ch3-ch4"
+        ? philosophyCh3Ch4Data
+        : subject === "philosophy-ch5-ch6"
+          ? philosophyCh5Ch6Data
+          : subject === "philosophy-ch7"
+            ? philosophyCh7Data
+            : subject === "tomorrow-mode"
+              ? tomorrowModeData
+              : studyData;
 
   const [chapter, setChapter] = useState("all");
   const [mode, setMode] = useState("overview");
   const [search, setSearch] = useState("");
   const [darkMode, setDarkMode] = useLocalStorage("study-dark-mode", false);
   const [showSummary, setShowSummary] = useState(false);
+  const [completedMemorizeTasks, setCompletedMemorizeTasks] = useLocalStorage("study-memorize-tasks", {});
+  const [memorizedAnchors, setMemorizedAnchors] = useLocalStorage("study-memorized-anchors", {});
+  const [autoOpenedMemorize, setAutoOpenedMemorize] = useState(false);
 
   // Term IDs state
   const [termIndex, setTermIndex] = useState(0);
@@ -131,6 +160,13 @@ export default function Page() {
   useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
   }, [darkMode]);
+
+  useEffect(() => {
+    if (!autoOpenedMemorize && (subject === "tomorrow-mode" || subject === "philosophy-ch5-ch6" || subject === "philosophy-ch7")) {
+      setMode("memorize");
+      setAutoOpenedMemorize(true);
+    }
+  }, [autoOpenedMemorize, subject]);
 
   // Flashcards
   const [flashcardIndex, setFlashcardIndex] = useState(0);
@@ -186,6 +222,12 @@ export default function Page() {
   const [mockTestComplete, setMockTestComplete] = useState(false);
   const [mockTestTimeLeft, setMockTestTimeLeft] = useState(0);
   const [mockTestStartTime, setMockTestStartTime] = useState(null);
+
+  // Teacher-style exam practice
+  const [examStyleTestIndex, setExamStyleTestIndex] = useState(0);
+  const [examStyleAnswers, setExamStyleAnswers] = useLocalStorage("study-exam-style-answers", {});
+  const [examStyleRevealed, setExamStyleRevealed] = useLocalStorage("study-exam-style-revealed", {});
+  const [examStyleCrossedOff, setExamStyleCrossedOff] = useLocalStorage("study-exam-style-crossed-off", {});
 
   // Spaced repetition — priority queue for flashcards
   const [srSmartMode, setSrSmartMode] = useState(false);
@@ -289,6 +331,32 @@ export default function Page() {
       likelyQuestions: activeData.overview.likelyQuestions.filter((q) => matchesSearch([q], search)),
       cramChecklist: activeData.overview.cramChecklist.filter((item) => matchesSearch([item], search)),
     };
+  }, [activeData, chapter, search]);
+
+  const filteredQuickLines = useMemo(() => {
+    if (!activeData.quickLines) return [];
+    return activeData.quickLines
+      .map((group) => ({
+        ...group,
+        items: group.items.filter((item) => {
+          const chapterMatch = chapter === "all" || group.chapter === chapter;
+          const searchMatch = matchesSearch([group.group, item.term, item.line], search);
+          return chapterMatch && searchMatch;
+        }),
+      }))
+      .filter((group) => group.items.length > 0);
+  }, [activeData, chapter, search]);
+
+  const filteredPeople = useMemo(() => {
+    if (!activeData.people) return [];
+    return activeData.people.filter((person) => {
+      const chapterMatch = chapter === "all" || person.chapter === chapter;
+      const searchMatch = matchesSearch(
+        [person.name, person.kind, person.belief, person.alignedWith, person.examCue],
+        search
+      );
+      return chapterMatch && searchMatch;
+    });
   }, [activeData, chapter, search]);
 
   // Weak topics — sorted by accuracy ascending
@@ -659,8 +727,112 @@ export default function Page() {
     setFreeResponseScores({});
     setMatchingAttempts(0);
     setMatchingCorrect(0);
+    setCompletedMemorizeTasks({});
+    setMemorizedAnchors({});
+    setExamStyleAnswers({});
+    setExamStyleRevealed({});
     timer.reset();
     setTimedMode(false);
+  }
+
+  function toggleMemorizeTask(taskId) {
+    setCompletedMemorizeTasks((current) => ({
+      ...current,
+      [taskId]: !current[taskId],
+    }));
+  }
+
+  function toggleMemorizedAnchor(key) {
+    setMemorizedAnchors((current) => ({
+      ...current,
+      [key]: !current[key],
+    }));
+  }
+
+  function startStudyTask(task) {
+    if (!task) return;
+    const nextMode = task.mode || "overview";
+    setChapter(task.chapter || "all");
+    setSearch((task.search || "").toLowerCase());
+    setMode(nextMode);
+    setTimedMode(Boolean(task.timed));
+
+    if (task.smart) {
+      setSrSmartMode(true);
+      setShowToughOnly(false);
+      setFlashcardIndex(0);
+      setFlashcardFlipped(false);
+    }
+
+    if (nextMode === "quiz" && task.timed) {
+      setQuizAnswered(false);
+      setQuizSelectedIndex(null);
+      timer.start(45, () => handleQuizTimeout());
+    } else if (nextMode === "free-response" && task.timed) {
+      setFreeResponseChecklistOpen(false);
+      timer.start(300);
+    } else {
+      timer.reset();
+    }
+
+    if (task.targetId) {
+      window.setTimeout(() => {
+        document.getElementById(task.targetId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
+    }
+  }
+
+  function saveExamStyleAnswer(testId, key, value) {
+    setExamStyleAnswers((current) => ({
+      ...current,
+      [testId]: {
+        ...(current[testId] || {}),
+        [key]: value,
+      },
+    }));
+  }
+
+  function toggleExamStyleReveal(testId, key) {
+    const revealKey = `${testId}:${key}`;
+    setExamStyleRevealed((current) => ({
+      ...current,
+      [revealKey]: !current[revealKey],
+    }));
+  }
+
+  function toggleExamStyleCrossedOff(testId, letter) {
+    const crossedKey = `${testId}:${letter}`;
+    setExamStyleCrossedOff((current) => ({
+      ...current,
+      [crossedKey]: !current[crossedKey],
+    }));
+  }
+
+  function clearExamStyleCrossedOff(testId) {
+    setExamStyleCrossedOff((current) => {
+      const next = { ...current };
+      Object.keys(next).forEach((key) => {
+        if (key.startsWith(`${testId}:`)) delete next[key];
+      });
+      return next;
+    });
+  }
+
+  function resetExamStyleTest(testId) {
+    if (!testId) return;
+    setExamStyleAnswers((current) => {
+      const next = { ...current };
+      delete next[testId];
+      return next;
+    });
+    setExamStyleRevealed((current) => {
+      const next = { ...current };
+      Object.keys(next).forEach((key) => {
+        if (key.startsWith(`${testId}:`)) delete next[key];
+      });
+      return next;
+    });
+    clearExamStyleCrossedOff(testId);
   }
 
   // ===== Keyboard Shortcuts =====
@@ -728,6 +900,44 @@ export default function Page() {
     { label: "Matching score", value: `${matchingCorrect}/${matchingAttempts}` },
   ];
 
+  const memorizationPlan =
+    subject === "tomorrow-mode" || subject === "philosophy-ch5-ch6" || subject === "philosophy-ch7"
+      ? activeData.memorizationPlan
+      : null;
+  const memorizationTasks = memorizationPlan?.schedule || [];
+  const completedMemorizeCount = memorizationTasks.filter((task) => completedMemorizeTasks[task.id]).length;
+  const memorizationTaskProgress = memorizationTasks.length
+    ? Math.round((completedMemorizeCount / memorizationTasks.length) * 100)
+    : 0;
+  const memorizationMinutes = memorizationTasks.reduce((sum, task) => sum + task.minutes, 0);
+  const totalAnchorCount = (memorizationPlan?.memoryAnchors || []).reduce(
+    (sum, group) => sum + group.items.length,
+    0
+  );
+  const memorizedAnchorCount = (memorizationPlan?.memoryAnchors || []).reduce(
+    (sum, group) =>
+      sum + group.items.filter((item) => memorizedAnchors[`${group.group}:${item.term}`]).length,
+    0
+  );
+  const anchorProgress = totalAnchorCount ? Math.round((memorizedAnchorCount / totalAnchorCount) * 100) : 0;
+  const examStyleTests = activeData.examStyleTests || [];
+  const activeExamStyleTest =
+    examStyleTests[Math.min(examStyleTestIndex, Math.max(examStyleTests.length - 1, 0))] || null;
+  const activeExamStyleAnswers = activeExamStyleTest
+    ? examStyleAnswers[activeExamStyleTest.id] || {}
+    : {};
+  const displayedExamStyleChoices = useMemo(() => {
+    if (!activeExamStyleTest) return [];
+    return seededShuffle(activeExamStyleTest.matching.choices, `${activeExamStyleTest.id}:choices`);
+  }, [activeExamStyleTest]);
+  const displayedExamStylePrompts = useMemo(() => {
+    if (!activeExamStyleTest) return [];
+    return seededShuffle(
+      activeExamStyleTest.matching.prompts.map((item, originalIndex) => ({ ...item, originalIndex })),
+      `${activeExamStyleTest.id}:prompts`
+    );
+  }, [activeExamStyleTest]);
+
   // Filtered term IDs
   const filteredTermIds = useMemo(() => {
     if (!activeData.termIds) return [];
@@ -767,7 +977,7 @@ export default function Page() {
   function selectSubject(id) {
     setSubject(id);
     setChapter("all");
-    setMode("overview");
+    setMode(id === "tomorrow-mode" || id === "philosophy-ch5-ch6" || id === "philosophy-ch7" ? "memorize" : "overview");
     setSearch("");
     setFlashcardIndex(0);
     setFlashcardFlipped(false);
@@ -796,10 +1006,33 @@ export default function Page() {
     return <LandingPage onSelect={selectSubject} darkMode={darkMode} setDarkMode={setDarkMode} />;
   }
 
-  const subjectLabel = subject === "amstuds" ? "AmStuds" : "Philosophy";
-  const subjectDesc = subject === "amstuds"
-    ? "Cold War, Affluent Society, Civil Rights, Vietnam, Nixon"
-    : "Active review for Chapters 1 & 2";
+  const subjectMeta = {
+    "tomorrow-mode": {
+      label: "Tomorrow Mode",
+      description: "A separate cram room for Philosophy Ch. 3-4",
+    },
+    amstuds: {
+      label: "AmStuds",
+      description: "Cold War, Affluent Society, Civil Rights, Vietnam, Nixon",
+    },
+    philosophy: {
+      label: "Philosophy 1-2",
+      description: "What Philosophy Is and Models of Human Nature",
+    },
+    "philosophy-ch3-ch4": {
+      label: "Philosophy 3-4",
+      description: "Metaphysics and Theology full review",
+    },
+    "philosophy-ch5-ch6": {
+      label: "Philosophy 5-6",
+      description: "Sources of Knowledge and Truth full review",
+    },
+    "philosophy-ch7": {
+      label: "Philosophy 7",
+      description: "Ethics: egoism, utilitarianism, and the categorical imperative",
+    },
+  };
+  const { label: subjectLabel, description: subjectDesc } = subjectMeta[subject] || subjectMeta.philosophy;
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
@@ -857,6 +1090,16 @@ export default function Page() {
           >
             Summary
           </Button>
+          {memorizationPlan && (
+            <Button
+              variant={mode === "memorize" ? "default" : "outline"}
+              size="sm"
+              onClick={() => startStudyTask({ mode: "memorize", chapter: "all" })}
+            >
+              <Brain />
+              Tomorrow Mode
+            </Button>
+          )}
         </div>
       </div>
 
@@ -952,7 +1195,7 @@ export default function Page() {
         </div>
 
         <Tabs value={mode} onValueChange={setMode}>
-          <TabsList>
+          <TabsList className="h-auto flex-wrap justify-start">
             {activeData.modes.map((m) => (
               <TabsTrigger key={m.id} value={m.id}>
                 {m.label}
@@ -995,6 +1238,544 @@ export default function Page() {
           </Button>
         </div>
       </div>
+
+      {/* ===== TOMORROW MODE ===== */}
+      {mode === "memorize" && memorizationPlan && (
+        <div className="space-y-6 animate-in fade-in-0 slide-in-from-bottom-2 duration-300 print:hidden">
+          <section className="rounded-xl border bg-card p-5">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+              <div className="max-w-3xl">
+                <div className="mb-3 flex flex-wrap items-center gap-2">
+                  <Badge variant="secondary">Due tomorrow</Badge>
+                  <Badge variant="outline">{memorizationMinutes} minute path</Badge>
+                  <Badge variant="outline">{activeData.flashcards.length} cards ready</Badge>
+                </div>
+                <h2 className="text-2xl font-semibold tracking-tight">{memorizationPlan.title}</h2>
+                <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-muted-foreground">
+                  {memorizationPlan.subtitle}
+                </p>
+              </div>
+              <div className="grid min-w-[240px] gap-3">
+                <div>
+                  <div className="mb-1 flex items-center justify-between text-sm">
+                    <span className="font-medium">Plan progress</span>
+                    <span className="text-muted-foreground">{completedMemorizeCount}/{memorizationTasks.length}</span>
+                  </div>
+                  <Progress value={memorizationTaskProgress} className="h-2" />
+                </div>
+                <div>
+                  <div className="mb-1 flex items-center justify-between text-sm">
+                    <span className="font-medium">Anchor recall</span>
+                    <span className="text-muted-foreground">{memorizedAnchorCount}/{totalAnchorCount}</span>
+                  </div>
+                  <Progress value={anchorProgress} className="h-2" />
+                </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    setCompletedMemorizeTasks({});
+                    setMemorizedAnchors({});
+                  }}
+                >
+                  <RotateCcw />
+                  Reset this plan
+                </Button>
+              </div>
+            </div>
+          </section>
+
+          <section className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="rounded-xl border bg-card p-5">
+              <div className="mb-4 flex items-center gap-2">
+                <Clock3 className="size-4 text-muted-foreground" />
+                <h3 className="font-semibold">Study Order</h3>
+              </div>
+              <div className="space-y-3">
+                {memorizationTasks.map((task, index) => {
+                  const complete = Boolean(completedMemorizeTasks[task.id]);
+                  return (
+                    <div
+                      key={task.id}
+                      className={cn(
+                        "grid gap-3 rounded-lg border p-3 sm:grid-cols-[auto_1fr_auto] sm:items-center",
+                        complete ? "bg-muted/50" : "bg-background"
+                      )}
+                    >
+                      <button
+                        type="button"
+                        onClick={() => toggleMemorizeTask(task.id)}
+                        className={cn(
+                          "flex size-8 items-center justify-center rounded-full border text-sm font-semibold transition",
+                          complete
+                            ? "border-green-500 bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400"
+                            : "border-border text-muted-foreground hover:bg-muted"
+                        )}
+                        aria-label={complete ? `Mark ${task.label} incomplete` : `Mark ${task.label} complete`}
+                      >
+                        {complete ? <CheckCircle2 className="size-4" /> : index + 1}
+                      </button>
+                      <div>
+                        <div className="flex flex-wrap items-center gap-2">
+                          <p className="font-medium">{task.label}</p>
+                          <Badge variant="outline">{task.minutes} min</Badge>
+                        </div>
+                        <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{task.goal}</p>
+                      </div>
+                      <Button size="sm" variant={task.mode === "memorize" ? "outline" : "default"} onClick={() => startStudyTask(task)}>
+                        {task.mode !== "memorize" && <Play />}
+                        {task.actionLabel}
+                      </Button>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="rounded-xl border bg-card p-5">
+              <div className="mb-4 flex items-center gap-2">
+                <Target className="size-4 text-muted-foreground" />
+                <h3 className="font-semibold">Rules For Tonight</h3>
+              </div>
+              <div className="space-y-2">
+                {memorizationPlan.rules.map((rule, index) => (
+                  <p key={rule} className="rounded-lg bg-muted/60 p-3 text-sm leading-relaxed">
+                    <span className="mr-2 font-semibold">{index + 1}.</span>
+                    {rule}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section id="anchor-table" className="scroll-mt-6 rounded-xl border bg-card p-5">
+            <div className="mb-4 flex items-center gap-2">
+              <Brain className="size-4 text-muted-foreground" />
+              <h3 className="font-semibold">Anchor Table: Say These Until They Are Automatic</h3>
+            </div>
+            <div className="grid gap-4 lg:grid-cols-2">
+              {memorizationPlan.memoryAnchors.map((group) => (
+                <div key={group.group} className="rounded-lg border bg-background p-4">
+                  <h4 className="mb-3 font-medium">{group.group}</h4>
+                  <div className="space-y-2">
+                    {group.items.map((item) => {
+                      const anchorKey = `${group.group}:${item.term}`;
+                      const checked = Boolean(memorizedAnchors[anchorKey]);
+                      return (
+                        <div key={anchorKey} className="grid gap-2 rounded-lg bg-muted/40 p-3 sm:grid-cols-[1fr_auto] sm:items-start">
+                          <div>
+                            <p className="text-sm font-semibold">{item.term}</p>
+                            <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{item.cue}</p>
+                          </div>
+                          <Button
+                            size="sm"
+                            variant={checked ? "default" : "outline"}
+                            onClick={() => toggleMemorizedAnchor(anchorKey)}
+                          >
+                            <CheckCircle2 />
+                            {checked ? "Got it" : "Test me"}
+                          </Button>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="rounded-xl border bg-card p-5">
+              <div className="mb-4 flex items-center gap-2">
+                <ListChecks className="size-4 text-muted-foreground" />
+                <h3 className="font-semibold">Answer Formulas</h3>
+              </div>
+              <div className="space-y-3">
+                {memorizationPlan.formulas.map((formula) => (
+                  <div key={formula.label} className="rounded-lg border bg-background p-3">
+                    <p className="text-sm font-semibold">{formula.label}</p>
+                    <p className="mt-2 font-mono text-xs leading-relaxed text-muted-foreground">{formula.template}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-xl border bg-card p-5">
+              <div className="mb-4 flex items-center gap-2">
+                <TimerReset className="size-4 text-muted-foreground" />
+                <h3 className="font-semibold">Final Blank-Page Dump</h3>
+              </div>
+              <div className="grid gap-2 sm:grid-cols-2">
+                {memorizationPlan.finalDump.map((item) => (
+                  <div key={item} className="rounded-lg bg-muted/60 p-3 text-sm leading-relaxed">
+                    {item}
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <Button size="sm" onClick={() => startStudyTask({ mode: "free-response", chapter: "all", timed: true })}>
+                  <Play />
+                  Practice writing
+                </Button>
+                <Button size="sm" variant="outline" onClick={() => startStudyTask({ mode: "cram", chapter: "all" })}>
+                  Open cram sheet
+                </Button>
+              </div>
+            </div>
+          </section>
+
+          <section className="rounded-xl border bg-card p-5">
+            <h3 className="mb-3 font-semibold">High-Yield Comparison Prompts</h3>
+            <div className="flex flex-wrap gap-2">
+              {memorizationPlan.comparisonDrills.map((prompt) => (
+                <Button
+                  key={prompt}
+                  variant="outline"
+                  size="sm"
+                  onClick={() => startStudyTask({ mode: "free-response", chapter: "all", search: prompt.split(" vs. ")[0], timed: true })}
+                >
+                  {prompt}
+                </Button>
+              ))}
+            </div>
+          </section>
+        </div>
+      )}
+
+      {/* ===== QUICK LINES ===== */}
+      {mode === "quick-lines" && activeData.quickLines && (
+        <div className="space-y-5 animate-in fade-in-0 slide-in-from-bottom-2 duration-300">
+          <div className="rounded-xl border bg-card p-5">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <Badge variant="secondary" className="mb-3">1-2 liners</Badge>
+                <h2 className="text-2xl font-semibold tracking-tight">Quick Lines For Every Topic</h2>
+                <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-muted-foreground">
+                  Read the line, cover it, then say it back without looking. If you can say it cleanly, you know enough to start an exam answer.
+                </p>
+              </div>
+              <Button size="sm" variant="outline" onClick={() => startStudyTask({ mode: "flashcards", chapter, smart: true })}>
+                <Brain />
+                Drill as cards
+              </Button>
+            </div>
+          </div>
+
+          {filteredQuickLines.length ? (
+            <div className="grid gap-4 lg:grid-cols-2">
+              {filteredQuickLines.map((group) => (
+                <section key={group.group} className="rounded-xl border bg-card p-5">
+                  <div className="mb-4 flex items-center justify-between gap-3">
+                    <h3 className="font-semibold">{group.group}</h3>
+                    <Badge variant="outline">{group.items.length} lines</Badge>
+                  </div>
+                  <div className="space-y-2">
+                    {group.items.map((item) => (
+                      <div key={`${group.group}-${item.term}`} className="rounded-lg border bg-background p-3">
+                        <p className="text-sm font-semibold">{item.term}</p>
+                        <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{item.line}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              ))}
+            </div>
+          ) : (
+            <Card>
+              <CardContent className="p-6 text-sm text-muted-foreground">
+                No quick lines match this filter.
+              </CardContent>
+            </Card>
+          )}
+        </div>
+      )}
+
+      {/* ===== PEOPLE ===== */}
+      {mode === "people" && activeData.people && (
+        <div className="space-y-5 animate-in fade-in-0 slide-in-from-bottom-2 duration-300">
+          <div className="rounded-xl border bg-card p-5">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <Badge variant="secondary" className="mb-3">people map</Badge>
+                <h2 className="text-2xl font-semibold tracking-tight">People And Thought Alignments</h2>
+                <p className="mt-2 max-w-[72ch] text-sm leading-relaxed text-muted-foreground">
+                  Memorize each name as a chain: person, belief, aligned form of thought, exam cue.
+                </p>
+              </div>
+              <Button size="sm" variant="outline" onClick={() => startStudyTask({ mode: "matching", chapter, search: "" })}>
+                <ListChecks />
+                Match names
+              </Button>
+            </div>
+          </div>
+
+          {filteredPeople.length ? (
+            <div className="grid gap-3 lg:grid-cols-2">
+              {filteredPeople.map((person) => (
+                <section key={person.name} className="rounded-xl border bg-card p-4">
+                  <div className="mb-3 flex flex-wrap items-start justify-between gap-2">
+                    <div>
+                      <h3 className="text-base font-semibold leading-tight">{person.name}</h3>
+                      <p className="mt-1 text-xs uppercase tracking-wide text-muted-foreground">
+                        {person.chapter === "metaphysics" ? "Chapter 3: Metaphysics" : "Chapter 4: Theology"}
+                      </p>
+                    </div>
+                    <div className="flex flex-wrap justify-end gap-2">
+                      <Badge variant="secondary">{person.kind}</Badge>
+                      <Badge variant="outline">{person.alignedWith}</Badge>
+                    </div>
+                  </div>
+                  <div className="space-y-2 text-sm leading-relaxed">
+                    <p>
+                      <span className="font-medium">Belief: </span>
+                      <span className="text-muted-foreground">{person.belief}</span>
+                    </p>
+                    <p>
+                      <span className="font-medium">Exam cue: </span>
+                      <span className="text-muted-foreground">{person.examCue}</span>
+                    </p>
+                  </div>
+                </section>
+              ))}
+            </div>
+          ) : (
+            <Card>
+              <CardContent className="p-6 text-sm text-muted-foreground">
+                No people match this filter.
+              </CardContent>
+            </Card>
+          )}
+        </div>
+      )}
+
+      {/* ===== TEACHER-STYLE MOCK TESTS ===== */}
+      {mode === "exam-tests" && activeData.examStyleTests && (
+        <div className="space-y-5 animate-in fade-in-0 slide-in-from-bottom-2 duration-300">
+          <div className="rounded-xl border bg-card p-5">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <Badge variant="secondary" className="mb-3">teacher format</Badge>
+                <h2 className="text-2xl font-semibold tracking-tight">Mock Tests Like The Last One</h2>
+                <p className="mt-2 max-w-[72ch] text-sm leading-relaxed text-muted-foreground">
+                  Each test has 12 matching, 3 one-sentence definitions, then complete explanation prompts. Write first, reveal second.
+                </p>
+              </div>
+              {activeExamStyleTest && (
+                <Button size="sm" variant="outline" onClick={() => resetExamStyleTest(activeExamStyleTest.id)}>
+                  <RotateCcw />
+                  Clear this test
+                </Button>
+              )}
+            </div>
+          </div>
+
+          <div className="grid gap-3 md:grid-cols-3">
+            {examStyleTests.map((test, index) => (
+              <button
+                key={test.id}
+                type="button"
+                onClick={() => setExamStyleTestIndex(index)}
+                className={cn(
+                  "rounded-xl border bg-card p-4 text-left transition hover:border-foreground/30",
+                  activeExamStyleTest?.id === test.id && "border-primary ring-2 ring-primary/15"
+                )}
+              >
+                <div className="mb-2 flex flex-wrap gap-2">
+                  <Badge variant={activeExamStyleTest?.id === test.id ? "default" : "secondary"}>
+                    Test {String.fromCharCode(65 + index)}
+                  </Badge>
+                  <Badge variant="outline">{test.minutes} min</Badge>
+                </div>
+                <h3 className="font-semibold">{test.title}</h3>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  12 matching, 3 definitions, {test.longAnswer.length} full explanations.
+                </p>
+              </button>
+            ))}
+          </div>
+
+          {activeExamStyleTest ? (
+            <div className="space-y-6">
+              <section className="rounded-xl border bg-card p-5">
+                <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <h3 className="font-semibold">Section 1: Matching</h3>
+                    <p className="mt-1 text-sm text-muted-foreground">{activeExamStyleTest.matching.instructions}</p>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={() => clearExamStyleCrossedOff(activeExamStyleTest.id)}
+                    >
+                      Clear crossed
+                    </Button>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={() => toggleExamStyleReveal(activeExamStyleTest.id, "matching")}
+                    >
+                      {examStyleRevealed[`${activeExamStyleTest.id}:matching`] ? "Hide answers" : "Reveal answers"}
+                    </Button>
+                  </div>
+                </div>
+
+                <div className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
+                  <div className="rounded-lg border bg-background p-4">
+                    <h4 className="mb-3 text-sm font-semibold">Choices</h4>
+                    <div className="space-y-2">
+                      {displayedExamStyleChoices.map((choice) => {
+                        const crossed = Boolean(examStyleCrossedOff[`${activeExamStyleTest.id}:${choice.letter}`]);
+                        return (
+                          <button
+                            key={choice.letter}
+                            type="button"
+                            aria-pressed={crossed}
+                            aria-label={`${crossed ? "Restore" : "Cross off"} choice ${choice.letter}`}
+                            onClick={() => toggleExamStyleCrossedOff(activeExamStyleTest.id, choice.letter)}
+                            className={cn(
+                              "flex w-full items-start gap-2 rounded-md border px-3 py-2 text-left text-sm leading-relaxed transition hover:border-foreground/30",
+                              crossed ? "border-muted bg-muted/40 text-muted-foreground opacity-60" : "border-transparent bg-transparent"
+                            )}
+                          >
+                            <span className="font-mono font-semibold">{choice.letter}.</span>
+                            <span className={cn("text-muted-foreground", crossed && "line-through decoration-2")}>
+                              {choice.text}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    {displayedExamStylePrompts.map((item, idx) => {
+                      const answerKey = `matching-${item.originalIndex}`;
+                      const userAnswer = activeExamStyleAnswers[answerKey] || "";
+                      const matchingRevealed = Boolean(examStyleRevealed[`${activeExamStyleTest.id}:matching`]);
+                      const isCorrect = userAnswer && userAnswer.toUpperCase() === item.answer;
+                      return (
+                        <div key={item.term} className="grid gap-2 rounded-lg border bg-background p-3 sm:grid-cols-[1fr_auto] sm:items-center">
+                          <div>
+                            <p className="text-sm font-medium">{idx + 1}. {item.term}</p>
+                            {matchingRevealed && (
+                              <p className={cn("mt-1 text-xs", isCorrect ? "text-green-600 dark:text-green-400" : "text-muted-foreground")}>
+                                Answer: {item.answer}
+                                {userAnswer && ` - yours: ${userAnswer}`}
+                              </p>
+                            )}
+                          </div>
+                          <Input
+                            aria-label={`Answer for ${item.term}`}
+                            value={userAnswer}
+                            onChange={(e) => saveExamStyleAnswer(activeExamStyleTest.id, answerKey, e.target.value.toUpperCase().slice(0, 1))}
+                            className="h-9 w-16 text-center font-mono uppercase"
+                            maxLength={1}
+                            placeholder="?"
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </section>
+
+              <section className="rounded-xl border bg-card p-5">
+                <h3 className="mb-1 font-semibold">Section 2: One-Sentence Definitions</h3>
+                <p className="mb-4 text-sm text-muted-foreground">
+                  Keep these short. One clean sentence is the whole point.
+                </p>
+                <div className="space-y-3">
+                  {activeExamStyleTest.oneSentence.map((item, idx) => {
+                    const answerKey = `one-${idx}`;
+                    const revealKey = `${activeExamStyleTest.id}:${answerKey}`;
+                    return (
+                      <div key={item.term} className="rounded-lg border bg-background p-4">
+                        <div className="mb-2 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                          <div>
+                            <p className="text-sm font-semibold">{idx + 1}. {item.prompt}</p>
+                            <Badge variant="outline" className="mt-2">{item.term}</Badge>
+                          </div>
+                          <Button size="sm" variant="outline" onClick={() => toggleExamStyleReveal(activeExamStyleTest.id, answerKey)}>
+                            {examStyleRevealed[revealKey] ? "Hide model" : "Reveal model"}
+                          </Button>
+                        </div>
+                        <Textarea
+                          placeholder="Write one sentence..."
+                          className="min-h-[70px]"
+                          value={activeExamStyleAnswers[answerKey] || ""}
+                          onChange={(e) => saveExamStyleAnswer(activeExamStyleTest.id, answerKey, e.target.value)}
+                        />
+                        {examStyleRevealed[revealKey] && (
+                          <div className="mt-3 rounded-lg bg-muted/60 p-3 text-sm leading-relaxed">
+                            <span className="font-medium">Model: </span>
+                            {item.model}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+
+              <section className="rounded-xl border bg-card p-5">
+                <h3 className="mb-1 font-semibold">Section 3: Complete Explanations</h3>
+                <p className="mb-4 text-sm text-muted-foreground">
+                  These are the "be complete" answers. Aim for key terms plus reasons, not a giant paragraph cloud.
+                </p>
+                <div className="space-y-4">
+                  {activeExamStyleTest.longAnswer.map((item, idx) => {
+                    const answerKey = `long-${idx}`;
+                    const revealKey = `${activeExamStyleTest.id}:${answerKey}`;
+                    return (
+                      <div key={item.prompt} className="rounded-lg border bg-background p-4">
+                        <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                          <p className="max-w-[78ch] text-sm font-semibold leading-relaxed">
+                            {idx + 1}. {item.prompt}
+                          </p>
+                          <Button size="sm" variant="outline" onClick={() => toggleExamStyleReveal(activeExamStyleTest.id, answerKey)}>
+                            {examStyleRevealed[revealKey] ? "Hide guide" : "Reveal guide"}
+                          </Button>
+                        </div>
+                        <Textarea
+                          placeholder="Write your full answer from memory..."
+                          className="min-h-[170px]"
+                          value={activeExamStyleAnswers[answerKey] || ""}
+                          onChange={(e) => saveExamStyleAnswer(activeExamStyleTest.id, answerKey, e.target.value)}
+                        />
+                        {examStyleRevealed[revealKey] && (
+                          <div className="mt-3 rounded-lg bg-muted/60 p-3">
+                            <p className="mb-2 text-sm font-semibold">Checklist</p>
+                            <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+                              {item.include.map((point) => (
+                                <li key={point}>{point}</li>
+                              ))}
+                            </ul>
+                            {item.demoAnswer && (
+                              <div className="mt-4 rounded-lg border bg-background p-3">
+                                <p className="mb-2 text-sm font-semibold">Demo answer</p>
+                                <p className="whitespace-pre-wrap text-sm leading-relaxed text-muted-foreground">
+                                  {item.demoAnswer}
+                                </p>
+                              </div>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+            </div>
+          ) : (
+            <Card>
+              <CardContent className="p-6 text-sm text-muted-foreground">
+                No teacher-style mock tests are available for this subject.
+              </CardContent>
+            </Card>
+          )}
+        </div>
+      )}
 
       {/* ===== TERM IDs ===== */}
       {mode === "term-ids" && activeData.termIds && (
@@ -1940,8 +2721,8 @@ export default function Page() {
             </div>
           </div>
           <div className="hidden print:block print:mb-4">
-            <h1 className="text-2xl font-bold">Philosophy Cram Sheet</h1>
-            <p className="text-sm text-gray-600">Chapters 1 & 2 — Comparisons & Memory Anchors</p>
+            <h1 className="text-2xl font-bold">{subjectLabel} Cram Sheet</h1>
+            <p className="text-sm text-gray-600">{subjectDesc}</p>
           </div>
           <div id="cram-content" className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 print:grid-cols-2 print:gap-2">
             {activeData.comparisons.map((item, i) => (

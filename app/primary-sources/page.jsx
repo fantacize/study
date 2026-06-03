@@ -152,7 +152,7 @@ export default function PrimarySourcesPage() {
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
             <div className="min-w-0">
               <Button variant="ghost" size="sm" onClick={closeDeck} className="-ml-2">
-                ← Back to sources
+                &lt;&lt; Back to sources
               </Button>
               <div className="mt-1 flex flex-wrap items-center gap-2">
                 <h1 className="truncate text-lg font-semibold">{activeDeck.title}</h1>
@@ -162,13 +162,13 @@ export default function PrimarySourcesPage() {
             </div>
             <div className="flex items-center gap-2 whitespace-nowrap">
               <Button variant="outline" size="sm" onClick={prevPage} disabled={pageIndex === 0}>
-                ← Prev
+                &lt;&lt; Prev
               </Button>
               <span className="text-sm tabular-nums text-muted-foreground">
                 {pageIndex + 1} / {activeDeck.pages}
               </span>
               <Button variant="outline" size="sm" onClick={nextPage} disabled={pageIndex === activeDeck.pages - 1}>
-                Next →
+                Next &gt;&gt;
               </Button>
             </div>
           </div>
@@ -233,7 +233,7 @@ export default function PrimarySourcesPage() {
       <header className="border-b border-border">
         <div className="mx-auto max-w-6xl px-4 py-6">
           <Link href="/" className="text-sm text-muted-foreground hover:text-foreground">
-            ← Back to study app
+            &lt;&lt; Back to study app
           </Link>
           <h1 className="mt-2 text-3xl font-bold tracking-tight">Primary Sources</h1>
           <p className="mt-2 max-w-3xl text-muted-foreground">

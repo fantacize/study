@@ -1589,7 +1589,7 @@ export const studyData = {
     },
     {
       chapter: "chapter-2",
-      title: "Chapter 2: Theory → Problem It Creates",
+      title: "Chapter 2: Theory >> Problem It Creates",
       pairs: [
         {
           term: "Dualism",
@@ -2091,7 +2091,7 @@ export const studyData = {
         "Buddhism: no permanent self at all — the ego is an illusion. Release it to end suffering.",
         "Feminist view: the 'essential self' was always a narrow Western male model. The real self is relational, intersectional, and socially shaped.",
         "All three reject a fixed built-in nature, but for completely different reasons and toward different goals.",
-        "Sartre → individual creation. Buddhism → dissolution of self. Feminism → social reconstruction of identity."
+        "Sartre >> individual creation. Buddhism >> dissolution of self. Feminism >> social reconstruction of identity."
       ]
     },
     {
@@ -2297,7 +2297,7 @@ export const studyData = {
     // ── Deeper Connection Comparisons ──
     {
       chapter: "chapter-1",
-      title: "Cave → Socrates → Buddhism: the liberation theme",
+      title: "Cave >> Socrates >> Buddhism: the liberation theme",
       summary: "All three describe waking up from comfortable illusion. The Cave from shadows, Socrates from false certainty, Buddhism from craving. Philosophy IS this waking-up process.",
       whyItMatters: "This is the thread that unifies Chapter 1. If you can explain this connection, you understand the chapter's core argument."
     },

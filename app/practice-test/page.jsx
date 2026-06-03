@@ -121,7 +121,7 @@ export default function PracticeTestPage() {
         <header className="border-b border-border">
           <div className="mx-auto max-w-6xl px-4 py-6">
             <Link href="/" className="text-sm text-muted-foreground hover:text-foreground">
-              ← Back to study app
+              &lt;&lt; Back to study app
             </Link>
             <h1 className="mt-2 text-3xl font-bold tracking-tight">Practice Tests</h1>
             <p className="mt-2 max-w-3xl text-muted-foreground">
@@ -190,7 +190,7 @@ export default function PracticeTestPage() {
         <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3">
           <div className="min-w-0">
             <Button variant="ghost" size="sm" onClick={exitTest} className="-ml-2">
-              ← Exit
+              &lt;&lt; Exit
             </Button>
             <h1 className="mt-1 truncate text-lg font-semibold">{activeTest.title}</h1>
           </div>
@@ -330,7 +330,7 @@ export default function PracticeTestPage() {
                         className="rounded bg-red-50 p-4 text-center text-sm text-red-700 dark:bg-red-950 dark:text-red-200"
                       >
                         Image failed to load at <code>/primary-sources/{s.slug}/page-{padPage(s.page)}.jpg</code>.
-                        Try hard-refresh (Cmd+Shift+R) or visit the full deck →
+                        Try hard-refresh (Cmd+Shift+R) or visit the full deck &gt;&gt;
                       </div>
                       <p className="mt-2 text-center text-xs text-muted-foreground">Click image to open full-size in a new tab</p>
                     </a>

@@ -9,6 +9,9 @@ export const metadata = {
   title: "Study Studio",
   description:
     "Study app with flashcards, MCQs, free response, matching, and cram tools.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {

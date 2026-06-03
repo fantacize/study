@@ -1960,7 +1960,7 @@ export const questionPool = {
         "40% to 20%"
       ],
       "answerIndex": 1,
-      "explanation": "1981: 70→50. 1986 Tax Reform: 50→28. Biggest change in tax progressivity since the income tax was created."
+      "explanation": "1981: 70>>50. 1986 Tax Reform: 50>>28. Biggest change in tax progressivity since the income tax was created."
     },
     {
       "question": "The Laffer Curve argues tax cuts increase revenue when rates are:",
@@ -3887,9 +3887,9 @@ export const questionPool = {
     {
       "prompt": "Assess Reaganomics. Did supply-side economics 'work'? Use evidence both for and against the claim.",
       "rubric": [
-        "For: ended stagflation, long expansion, top rate cut 70%→28%",
+        "For: ended stagflation, long expansion, top rate cut 70%>>28%",
         "For: renewed optimism, broader ideological shift that outlasted Reagan",
-        "Against: tripled national debt ($908B → $2.87T)",
+        "Against: tripled national debt ($908B >> $2.87T)",
         "Against: widened income inequality significantly",
         "Against: Laffer promise (self-financing cuts) did not pan out",
         "Evaluation: depends on metric — growth vs. distribution vs. debt"
@@ -3994,7 +3994,7 @@ export const questionPool = {
         "Emmett Till (1955): open casket + Jet photos galvanized movement",
         "Montgomery Bus Boycott (1955-56): Rosa Parks (NAACP secretary, trained), 381 days; made MLK national figure",
         "Little Rock (1957): Eisenhower sent 101st Airborne; first federal troops for Black rights since Reconstruction",
-        "Greensboro sit-ins (1960) → SNCC; Freedom Rides (1961) tested Boynton ruling",
+        "Greensboro sit-ins (1960) >> SNCC; Freedom Rides (1961) tested Boynton ruling",
         "Birmingham (1963): Bull Connor's violence on TV; King's Letter from Birmingham Jail",
         "March on Washington (Aug 1963): 'I Have a Dream'; ~250k attendees; set stage for Civil Rights Act 1964",
         "Pattern: combination of legal strategy + direct action + TV coverage — no single tactic was sufficient"
@@ -4004,7 +4004,7 @@ export const questionPool = {
       "prompt": "Reconstruct King's 'Letter from Birmingham Jail.' Identify all five of his major arguments and explain which philosophical or religious sources he uses to support them.",
       "rubric": [
         "1. 'Outsider' rebuttal: 'injustice anywhere is a threat to justice everywhere'; 'network of mutuality'; Paul/prophets traveled beyond home",
-        "2. Four steps of nonviolent campaign: facts → negotiation → self-purification → direct action; Birmingham activists completed all four; Socratic 'creative tension'",
+        "2. Four steps of nonviolent campaign: facts >> negotiation >> self-purification >> direct action; Birmingham activists completed all four; Socratic 'creative tension'",
         "3. Case against waiting: 340 years; 'wait has almost always meant never'; litany of suffering (Funtown, 'nobodiness')",
         "4. Just vs. unjust laws: Augustine ('unjust law is no law at all'), Aquinas (natural law), Buber (I-thou vs I-it), Tillich (sin is separation); break openly, lovingly, accept penalty",
         "5. White moderate critique: more devoted to 'order' than justice; 'negative peace' vs 'positive peace'; Niebuhr on groups needing pressure",
@@ -4113,7 +4113,7 @@ export const questionPool = {
       "rubric": [
         "1981 ERTA: cut top marginal rate from 70% to 50%; 1986 TRA cut further to 28%",
         "Supply-side theory (Laffer): cuts would generate enough growth to be self-financing",
-        "Reality: national debt roughly tripled ($908B → $2.87T by end of Reagan presidency)",
+        "Reality: national debt roughly tripled ($908B >> $2.87T by end of Reagan presidency)",
         "Income inequality rose sharply — top 1% share of income increased significantly",
         "Inflation did fall — but that was primarily Volcker's Fed, not Reagan's tax policy",
         "Long 1983-89 expansion happened — but 1981-82 Volcker recession was severe and PATCO firing broke unions",
@@ -4270,7 +4270,7 @@ export const questionPool = {
         "Open to all European nations including USSR — Stalin refused and forced Eastern Bloc to refuse",
         "Czechoslovakia initially accepted; Stalin forced reversal, contributing to 1948 communist coup there",
         "Results: industrial production +35% over pre-war by 1952; GDP +15-25% in recipient countries; communist parties' vote shares collapsed",
-        "Foundation for European integration (European Coal and Steel Community 1951 → EEC → EU)",
+        "Foundation for European integration (European Coal and Steel Community 1951 >> EEC >> EU)",
         "Rebuilt Germany as prosperous democratic ally — different lesson from Versailles (1919) punishment approach",
         "Strategic success: prevented democratic communist takeovers while creating durable alliance",
         "Model for economic diplomacy that US has struggled to replicate in Vietnam, Iraq, Afghanistan"
